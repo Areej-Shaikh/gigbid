@@ -1,0 +1,110 @@
+# GigBid configuration. Rules, models, budgets and thresholds live HERE, never in code.
+# The "platform policy update" change request should only need edits in this file + prompts.
+
+profile: open            # open | ollama | paid | fake   (override with env LLM_PROFILE)
+
+profiles:
+  open:                  # hosted open-weight models (works on the free deployment, no GPU)
+    base_url: https://api.groq.com/openai/v1
+    api_key_env: GROQ_API_KEY
+    models:
+      small: openai/gpt-oss-20b        # cheap, frequent nodes
+      strong: openai/gpt-oss-120b      # writer, critic
+      fallback: llama-3.1-8b-instant   # used if a cheap node's model fails
+  ollama:                # fully local
+    base_url: http://localhost:11434/v1
+    api_key_env: OLLAMA_API_KEY        # any value works for Ollama
+    models: {small: "qwen3:4b", strong: "qwen3:8b", fallback: "qwen3:4b"}
+  paid:                  # optional; report its cost if used
+    base_url: https://api.openai.com/v1
+    api_key_env: OPENAI_API_KEY
+    models: {small: gpt-4.1-mini, strong: gpt-4.1, fallback: gpt-4.1-mini}
+  fake:                  # no LLM at all: every node uses its rule-based fallback (tests, offline demo)
+    models: {}
+
+# which model size each node uses ("route by node")
+nodes:
+  analyst: small
+  risk: small
+  verifier: small
+  writer: strong
+  critic: strong
+  liaison: strong
+llm_timeout_s: 60
+temperature: 0.2
+
+# the freelancer's own settings (later edited from the Settings screen)
+user:
+  min_hourly_rate: 25
+  min_fixed_budget: 150
+  weekly_connects_budget: 80
+
+budgets:
+  max_steps: 40               # LangGraph recursion limit per thread
+  max_tokens_per_thread: 60000
+  max_revisions: 2            # Critic can send a draft back at most twice
+
+decision:
+  min_fit: 0.5                # below -> skip
+  watch_fit: 0.3              # between watch_fit and min_fit -> watch
+  scam_flags: [unpaid_work, off_platform_contact, payment_or_identity_request, zero_budget]
+
+fit:
+  min_evidence_score: 2.0     # BM25 score that counts as "covered" (retriever-specific)
+  evidence_per_requirement: 3
+
+risk:                         # weights add up to a 0..1 risk score
+  high: 0.6
+  medium: 0.3
+  rules:
+    - {flag: unpaid_work, weight: 0.5, pattern: "unpaid|for free|free test|free trial|test task.*free|trial task"}
+    - {flag: off_platform_contact, weight: 0.5, pattern: "whats ?app|telegram|skype|signal app|wechat|outside (of )?(the )?platform|contact me (at|on)"}
+    - {flag: payment_or_identity_request, weight: 0.6, pattern: "bank (account|details)|crypto|western union|send (me )?your (id|passport|cnic)|gift card"}
+    - {flag: prompt_injection, weight: 0.2, pattern: "ignore (all )?(previous|prior|above) instructions|^system:|\\bsystem:|forget (your|all) (rules|instructions)|you are now|assistant,"}
+  client:
+    payment_unverified: 0.25
+    no_history: 0.15          # $0 spent and 0 hires
+    low_rating_below: 4.0
+    low_rating: 0.1
+    zero_budget: 0.4
+
+pricing:
+  market_position: median     # p25 | median | p75
+  big_spender_usd: 10000      # clients above this get +10%
+  new_client_discount: 0.05
+
+# Compliance Guard = the marketplace policy pack as rules
+compliance:
+  rules:
+    - {id: contact_email, action: remove, pattern: "[\\w.+-]+@[\\w-]+\\.[\\w.]+"}
+    - {id: contact_phone, action: remove, pattern: "\\+?\\d[\\d\\s().-]{7,}\\d"}
+    - {id: external_link, action: remove, pattern: "https?://(?!github\\.com)\\S+"}
+    - {id: off_platform_contact, action: remove, pattern: "(?i)whats ?app|telegram|skype|wechat|contact me outside"}
+    - {id: off_platform_payment, action: remove, pattern: "(?i)paypal|crypto|bank transfer|western union|pay (me )?outside"}
+    - {id: guarantee, action: remove, pattern: "(?i)\\bguarantee[ds]?\\b|100% (success|results|satisfaction)|risk[- ]free"}
+  block_if_removed_more_than: 3   # too many violations -> block, needs human attention
+
+critic:
+  min_words: 90
+  max_words: 260
+  min_citations: 2
+  generic_openings: ["dear sir", "dear madam", "i am very passionate", "i have read your job post", "hardworking professional", "i am the best fit"]
+
+# MCP access: which agent may call which tool (least privilege)
+tool_allowlist:
+  intake: [get_job, get_client_history]
+  analyst: []
+  risk: [get_client_history]
+  fit: [search_evidence, list_skills]
+  pricing: [get_price_stats, get_connects_balance]
+  writer: [search_evidence, get_case_study]
+  verifier: []
+  critic: []
+  compliance: []
+  preview: [create_proposal_draft, submit_proposal]   # dry_run only, enforced in code
+  submit: [create_proposal_draft, submit_proposal]
+  scout: [search_jobs]
+
+mcp_servers:
+  marketplace: {transport: stdio, command: python, args: ["-m", "mcp_servers.marketplace.server"], env: {FASTMCP_LOG_LEVEL: WARNING}}
+  portfolio: {transport: stdio, command: python, args: ["-m", "mcp_servers.portfolio.server"], env: {FASTMCP_LOG_LEVEL: WARNING}}
