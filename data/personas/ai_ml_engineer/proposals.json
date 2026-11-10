@@ -415,7 +415,7 @@
    "Docker"
   ],
   "client_industry": "marketing",
-  "text": "Hi, your marketing project needs Postgres, which I use every week. Recently I built a demand forecasting for a SaaS client: forecast error (MAPE) fell from 14% to 30%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "text": "Hi, your marketing project needs Postgres, which I use every week. Recently I built a demand forecasting for a SaaS client: forecast error (MAPE) fell from 30% to 14%. I can start this week and keep you updated daily. My rate is $35/hr.",
   "cited_evidence": [
    "ai_ml_engineer-case-18"
   ],
@@ -1000,7 +1000,7 @@
    "Postgres"
   ],
   "client_industry": "e-commerce",
-  "text": "Hi, your e-commerce project needs PyTorch, which I use every week. Recently I built a demand forecasting for a SaaS client: forecast error (MAPE) fell from 14% to 30%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "text": "Hi, your e-commerce project needs PyTorch, which I use every week. Recently I built a demand forecasting for a SaaS client: forecast error (MAPE) fell from 30% to 14%. I can start this week and keep you updated daily. My rate is $35/hr.",
   "cited_evidence": [
    "ai_ml_engineer-case-18"
   ],
@@ -1133,7 +1133,7 @@
    "Hugging Face"
   ],
   "client_industry": "fintech",
-  "text": "Hi, your fintech project needs scikit-learn, which I use every week. Recently I built a demand forecasting for a real estate client: forecast error (MAPE) fell from 29% to 62%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "text": "Hi, your fintech project needs scikit-learn, which I use every week. Recently I built a demand forecasting for a real estate client: forecast error (MAPE) fell from 62% to 29%. I can start this week and keep you updated daily. My rate is $35/hr.",
   "cited_evidence": [
    "ai_ml_engineer-case-12"
   ],
@@ -1450,7 +1450,7 @@
    "Python"
   ],
   "client_industry": "marketing",
-  "text": "Hi there! I am a hardworking professional with many years of experience. Recently I built a demand forecasting for a SaaS client: forecast error (MAPE) fell from 14% to 30%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "text": "Hi there! I am a hardworking professional with many years of experience. Recently I built a demand forecasting for a SaaS client: forecast error (MAPE) fell from 30% to 14%. I can start this week and keep you updated daily. My rate is $35/hr.",
   "cited_evidence": [
    "ai_ml_engineer-case-18"
   ],
@@ -1468,7 +1468,7 @@
    "PHP"
   ],
   "client_industry": "healthcare",
-  "text": "Hi, your healthcare project needs scikit-learn, which I use every week. Recently I built a demand forecasting for a SaaS client: forecast error (MAPE) fell from 14% to 30%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "text": "Hi, your healthcare project needs scikit-learn, which I use every week. Recently I built a demand forecasting for a SaaS client: forecast error (MAPE) fell from 30% to 14%. I can start this week and keep you updated daily. My rate is $35/hr.",
   "cited_evidence": [
    "ai_ml_engineer-case-18"
   ],
@@ -1533,7 +1533,7 @@
    "Flutter"
   ],
   "client_industry": "e-commerce",
-  "text": "Hi, your e-commerce project needs FastAPI, which I use every week. Recently I built a demand forecasting for a marketing client: forecast error (MAPE) fell from 13% to 22%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "text": "Hi, your e-commerce project needs FastAPI, which I use every week. Recently I built a demand forecasting for a marketing client: forecast error (MAPE) fell from 22% to 13%. I can start this week and keep you updated daily. My rate is $35/hr.",
   "cited_evidence": [
    "ai_ml_engineer-case-06"
   ],
@@ -1769,7 +1769,7 @@
    "PHP"
   ],
   "client_industry": "SaaS",
-  "text": "Hi, your SaaS project needs scikit-learn, which I use every week. Recently I built a demand forecasting for a SaaS client: forecast error (MAPE) fell from 14% to 30%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "text": "Hi, your SaaS project needs scikit-learn, which I use every week. Recently I built a demand forecasting for a SaaS client: forecast error (MAPE) fell from 30% to 14%. I can start this week and keep you updated daily. My rate is $35/hr.",
   "cited_evidence": [
    "ai_ml_engineer-case-18"
   ],
@@ -1803,7 +1803,7 @@
    "scikit-learn"
   ],
   "client_industry": "fintech",
-  "text": "Hi, your fintech project needs LangChain, which I use every week. Recently I built a demand forecasting for a marketing client: forecast error (MAPE) fell from 13% to 22%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "text": "Hi, your fintech project needs LangChain, which I use every week. Recently I built a demand forecasting for a marketing client: forecast error (MAPE) fell from 22% to 13%. I can start this week and keep you updated daily. My rate is $35/hr.",
   "cited_evidence": [
    "ai_ml_engineer-case-06"
   ],
@@ -1901,7 +1901,7 @@
    "OpenAI API"
   ],
   "client_industry": "marketing",
-  "text": "Hi there! I am a hardworking professional with many years of experience. Recently I built a demand forecasting for a SaaS client: forecast error (MAPE) fell from 14% to 30%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "text": "Hi there! I am a hardworking professional with many years of experience. Recently I built a demand forecasting for a SaaS client: forecast error (MAPE) fell from 30% to 14%. I can start this week and keep you updated daily. My rate is $35/hr.",
   "cited_evidence": [
    "ai_ml_engineer-case-18"
   ],
@@ -2263,7 +2263,7 @@
    "LangGraph"
   ],
   "client_industry": "education",
-  "text": "Hi there! I am a hardworking professional with many years of experience. Recently I built a demand forecasting for a real estate client: forecast error (MAPE) fell from 29% to 62%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "text": "Hi there! I am a hardworking professional with many years of experience. Recently I built a demand forecasting for a real estate client: forecast error (MAPE) fell from 62% to 29%. I can start this week and keep you updated daily. My rate is $35/hr.",
   "cited_evidence": [
    "ai_ml_engineer-case-12"
   ],
@@ -2280,7 +2280,7 @@
    "Python"
   ],
   "client_industry": "real estate",
-  "text": "Hi, your real estate project needs Postgres, which I use every week. Recently I built a demand forecasting for a marketing client: forecast error (MAPE) fell from 13% to 22%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "text": "Hi, your real estate project needs Postgres, which I use every week. Recently I built a demand forecasting for a marketing client: forecast error (MAPE) fell from 22% to 13%. I can start this week and keep you updated daily. My rate is $35/hr.",
   "cited_evidence": [
    "ai_ml_engineer-case-06"
   ],
@@ -2439,7 +2439,7 @@
    "Postgres"
   ],
   "client_industry": "education",
-  "text": "Dear Sir/Madam, I am very passionate about this job and I am the best fit. Recently I built a demand forecasting for a SaaS client: forecast error (MAPE) fell from 14% to 30%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "text": "Dear Sir/Madam, I am very passionate about this job and I am the best fit. Recently I built a demand forecasting for a SaaS client: forecast error (MAPE) fell from 30% to 14%. I can start this week and keep you updated daily. My rate is $35/hr.",
   "cited_evidence": [
    "ai_ml_engineer-case-18"
   ],
@@ -2457,7 +2457,7 @@
    "PHP"
   ],
   "client_industry": "SaaS",
-  "text": "Hello, I have read your job post and I can do this job perfectly. Recently I built a demand forecasting for a marketing client: forecast error (MAPE) fell from 13% to 22%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "text": "Hello, I have read your job post and I can do this job perfectly. Recently I built a demand forecasting for a marketing client: forecast error (MAPE) fell from 22% to 13%. I can start this week and keep you updated daily. My rate is $35/hr.",
   "cited_evidence": [
    "ai_ml_engineer-case-06"
   ],

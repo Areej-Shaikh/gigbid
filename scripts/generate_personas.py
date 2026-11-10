@@ -17,6 +17,7 @@ Everything here is synthetic: source = "synthetic".
 """
 import json
 import random
+import re
 from datetime import date, timedelta
 from pathlib import Path
 
@@ -123,6 +124,9 @@ def make_case_studies(pid, p):
         title, what, skills, detail, result = p["projects"][i % len(p["projects"])]
         industry = random.choice(INDUSTRIES)
         v = nums()
+        # nums() gives b > a; a "fell/dropped from {a}X to {b}X" result (same unit) must go DOWN
+        if re.search(r"(fell|dropped) from \{a\}(\S*) to \{b\}\2", result):
+            v["a"], v["b"] = v["b"], v["a"]
         d = date(2023, 1, 1) + timedelta(days=random.randint(0, 900))
         # every 3rd case: skill only IMPLIED in text, not in tags
         tags = skills if i % 3 else skills[:-1]

@@ -40,7 +40,7 @@ async def critic(state, config=None):
     max_rev = cfg()["budgets"]["max_revisions"]
     send_back = not result.approved and revisions < max_rev
     out = {"critique": result.model_dump(), "tokens": info["tokens"],
-           "trace": [trace("critic", approved=result.approved, issues=issues, revision=revisions, send_back=send_back)]}
+           "trace": [trace("critic", approved=result.approved, issues=issues, revision=revisions, send_back=send_back, **info)]}
     if send_back:
         out["revisions"] = revisions + 1
     if budget_exceeded(state):

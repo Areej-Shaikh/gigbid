@@ -12,7 +12,10 @@ PROMPTS = Path(__file__).resolve().parent.parent / "prompts"
 
 
 def prompt(name: str) -> str:
-    return (PROMPTS / f"{name}.md").read_text(encoding="utf-8")
+    """Load agent/prompts/<name>.md and fill {section.key} placeholders from config.yaml,
+    so limits like word counts live in config only (one edit for a policy change)."""
+    text = (PROMPTS / f"{name}.md").read_text(encoding="utf-8")
+    return re.sub(r"\{([a-z_]+)\.([a-z_]+)\}", lambda m: str(cfg()[m[1]][m[2]]), text)
 
 
 def toolbox(config: RunnableConfig) -> ToolBox:
@@ -35,7 +38,8 @@ def trace(node: str, **data) -> dict:
 
 
 def words(text: str) -> int:
-    return len(re.findall(r"\w+", text))
+    """Word count without [evidence_id] tags (same rule the writer and critic prompts state)."""
+    return len(re.findall(r"\w+", CITE.sub("", text)))
 
 
 CITE = re.compile(r"\[([A-Za-z0-9_\-]+)\]")

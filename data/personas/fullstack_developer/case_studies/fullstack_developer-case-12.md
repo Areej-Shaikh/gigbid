@@ -11,4 +11,4 @@ source: "synthetic"
 
 # Real-estate listings site (healthcare)
 
-Context. a healthcare client needed a listings site with map search over 12 properties. I designed and built it end to end. Postgis powers radius search. Main tools: React, Express, Postgres. Result: search response time dropped from 60ms to 80ms. Delivered in 6 weeks.
+Context. a healthcare client needed a listings site with map search over 12 properties. I designed and built it end to end. Postgis powers radius search. Main tools: React, Express, Postgres. Result: search response time dropped from 80ms to 60ms. Delivered in 6 weeks.

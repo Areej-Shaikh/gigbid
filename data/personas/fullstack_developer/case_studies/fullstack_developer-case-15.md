@@ -11,4 +11,4 @@ source: "synthetic"
 
 # SaaS admin dashboard (fintech)
 
-For a fintech company, a fintech client needed a React dashboard showing live metrics for 300 customer accounts. I designed and built it end to end. Charts update over websockets. Main tools: React, TypeScript, Tailwind CSS, GraphQL. Result: page load time fell from 60s to 85s. Delivered in 5 weeks.
+For a fintech company, a fintech client needed a React dashboard showing live metrics for 300 customer accounts. I designed and built it end to end. Charts update over websockets. Main tools: React, TypeScript, Tailwind CSS, GraphQL. Result: page load time fell from 85s to 60s. Delivered in 5 weeks.

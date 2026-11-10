@@ -11,4 +11,4 @@ source: "synthetic"
 
 # Demand forecasting (marketing)
 
-Client problem: a marketing client needed a weekly demand forecasts for 40 SKUs. I designed and built it end to end. Backtested on two years of sales history. Main tools: Python, scikit-learn, Postgres. Result: forecast error (MAPE) fell from 13% to 22%. Delivered in 8 weeks.
+Client problem: a marketing client needed a weekly demand forecasts for 40 SKUs. I designed and built it end to end. Backtested on two years of sales history. Main tools: Python, scikit-learn, Postgres. Result: forecast error (MAPE) fell from 22% to 13%. Delivered in 8 weeks.

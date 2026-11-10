@@ -11,4 +11,4 @@ source: "synthetic"
 
 # Demand forecasting (SaaS)
 
-For a SaaS company, a SaaS client needed a weekly demand forecasts for 12 SKUs. I designed and built it end to end. Backtested on two years of sales history. Main tools: Python, scikit-learn, Postgres. Result: forecast error (MAPE) fell from 14% to 30%. Delivered in 7 weeks.
+For a SaaS company, a SaaS client needed a weekly demand forecasts for 12 SKUs. I designed and built it end to end. Backtested on two years of sales history. Main tools: Python, scikit-learn, Postgres. Result: forecast error (MAPE) fell from 30% to 14%. Delivered in 7 weeks.

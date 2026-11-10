@@ -11,4 +11,4 @@ source: "synthetic"
 
 # Demand forecasting (real estate)
 
-Context. a real estate client needed a weekly demand forecasts for 40 SKUs. I designed and built it end to end. Backtested on two years of sales history. Main tools: Python, scikit-learn, Postgres. Result: forecast error (MAPE) fell from 29% to 62%. Delivered in 7 weeks.
+Context. a real estate client needed a weekly demand forecasts for 40 SKUs. I designed and built it end to end. Backtested on two years of sales history. Main tools: Python, scikit-learn, Postgres. Result: forecast error (MAPE) fell from 62% to 29%. Delivered in 7 weeks.
