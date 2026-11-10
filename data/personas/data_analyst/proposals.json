@@ -1,0 +1,2469 @@
+[
+ {
+  "id": "data_analyst-prop-001",
+  "job_title": "Fix and improve our ETL / Excel / Flutter project",
+  "job_skills": [
+   "ETL",
+   "Excel",
+   "Flutter"
+  ],
+  "client_industry": "healthcare",
+  "text": "Hi, your healthcare project needs ETL, which I use every week. Recently I built a inventory excel automation for a real estate client: month-end close took 39% less time. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-05"
+  ],
+  "bid": 26,
+  "date": "2024-03-09",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-002",
+  "job_title": "Need help with BigQuery / A/B testing project",
+  "job_skills": [
+   "BigQuery",
+   "A/B testing"
+  ],
+  "client_industry": "SaaS",
+  "text": "Hello, I have read your job post and I can do this job perfectly. Recently I built a pricing a/b test for a education client: the winning price lifted revenue per user by 49%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-10"
+  ],
+  "bid": 25,
+  "date": "2024-09-14",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-003",
+  "job_title": "Urgent: Excel / Power BI project",
+  "job_skills": [
+   "Excel",
+   "Power BI"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hi there! I am a hardworking professional with many years of experience. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 23,
+  "date": "2023-03-06",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-004",
+  "job_title": "Fix and improve our Excel / Data Visualization / Rust project",
+  "job_skills": [
+   "Excel",
+   "Data Visualization",
+   "Rust"
+  ],
+  "client_industry": "marketing",
+  "text": "Hi, your marketing project needs Excel, which I use every week. Recently I built a inventory excel automation for a marketing client: month-end close took 16% less time. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-17"
+  ],
+  "bid": 20,
+  "date": "2023-01-27",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-005",
+  "job_title": "Fix and improve our BigQuery / ETL project",
+  "job_skills": [
+   "BigQuery",
+   "ETL"
+  ],
+  "client_industry": "marketing",
+  "text": "Hi, your marketing project needs BigQuery, which I use every week. Recently I built a dbt warehouse rebuild for a fintech client: data-quality incidents fell by 55%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-03"
+  ],
+  "bid": 21,
+  "date": "2024-05-18",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-006",
+  "job_title": "Looking for an expert in Postgres / A/B testing project",
+  "job_skills": [
+   "Postgres",
+   "A/B testing"
+  ],
+  "client_industry": "education",
+  "text": "Hi there! I am a hardworking professional with many years of experience. Recently I built a pricing a/b test for a education client: the winning price lifted revenue per user by 49%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-10"
+  ],
+  "bid": 29,
+  "date": "2025-02-26",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-007",
+  "job_title": "Need help with A/B testing / Airflow / PHP project",
+  "job_skills": [
+   "A/B testing",
+   "Airflow",
+   "PHP"
+  ],
+  "client_industry": "fintech",
+  "text": "Dear Sir/Madam, I am very passionate about this job and I am the best fit. Recently I built a pricing a/b test for a marketing client: the winning price lifted revenue per user by 17%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-16"
+  ],
+  "bid": 23,
+  "date": "2025-04-23",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-008",
+  "job_title": "Need help with Statistics / Excel project",
+  "job_skills": [
+   "Statistics",
+   "Excel"
+  ],
+  "client_industry": "marketing",
+  "text": "Hello, I have read your job post and I can do this job perfectly. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 21,
+  "date": "2025-06-11",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-009",
+  "job_title": "Looking for an expert in Excel / ETL / Java project",
+  "job_skills": [
+   "Excel",
+   "ETL",
+   "Java"
+  ],
+  "client_industry": "logistics",
+  "text": "Hello, I have read your job post and I can do this job perfectly. Recently I built a inventory excel automation for a real estate client: month-end close took 43% less time. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-11"
+  ],
+  "bid": 29,
+  "date": "2023-11-02",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-010",
+  "job_title": "Build a Postgres / dbt project",
+  "job_skills": [
+   "Postgres",
+   "dbt"
+  ],
+  "client_industry": "logistics",
+  "text": "Hi, your logistics project needs Postgres, which I use every week. Recently I built a dbt warehouse rebuild for a real estate client: data-quality incidents fell by 14%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-09"
+  ],
+  "bid": 26,
+  "date": "2023-09-21",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-011",
+  "job_title": "Build a Power BI / Pandas / SAP project",
+  "job_skills": [
+   "Power BI",
+   "Pandas",
+   "SAP"
+  ],
+  "client_industry": "SaaS",
+  "text": "Hi, your SaaS project needs Power BI, which I use every week. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 27,
+  "date": "2025-08-10",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-012",
+  "job_title": "Urgent: Power BI / Airflow project",
+  "job_skills": [
+   "Power BI",
+   "Airflow"
+  ],
+  "client_industry": "fintech",
+  "text": "Dear Sir/Madam, I am very passionate about this job and I am the best fit. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 27,
+  "date": "2024-08-01",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-013",
+  "job_title": "Build a SQL / Tableau / Rust project",
+  "job_skills": [
+   "SQL",
+   "Tableau",
+   "Rust"
+  ],
+  "client_industry": "education",
+  "text": "Hi, your education project needs SQL, which I use every week. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 29,
+  "date": "2024-04-10",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-014",
+  "job_title": "Looking for an expert in ETL / Statistics project",
+  "job_skills": [
+   "ETL",
+   "Statistics"
+  ],
+  "client_industry": "fintech",
+  "text": "Hi, your fintech project needs ETL, which I use every week. Recently I built a pricing a/b test for a real estate client: the winning price lifted revenue per user by 53%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-04"
+  ],
+  "bid": 19,
+  "date": "2025-06-02",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-015",
+  "job_title": "Need help with Data Visualization / BigQuery project",
+  "job_skills": [
+   "Data Visualization",
+   "BigQuery"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hi, your e-commerce project needs Data Visualization, which I use every week. Recently I built a dbt warehouse rebuild for a fintech client: data-quality incidents fell by 30%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-15"
+  ],
+  "bid": 23,
+  "date": "2025-04-01",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-016",
+  "job_title": "Urgent: Postgres / Data Visualization / PHP project",
+  "job_skills": [
+   "Postgres",
+   "Data Visualization",
+   "PHP"
+  ],
+  "client_industry": "healthcare",
+  "text": "Dear Sir/Madam, I am very passionate about this job and I am the best fit. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 24,
+  "date": "2024-02-29",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-017",
+  "job_title": "Fix and improve our Google Data Studio / Data Visualization / Rust project",
+  "job_skills": [
+   "Google Data Studio",
+   "Data Visualization",
+   "Rust"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hi, your e-commerce project needs Google Data Studio, which I use every week. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 31,
+  "date": "2023-06-13",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-018",
+  "job_title": "Build a Tableau / A/B testing / SAP project",
+  "job_skills": [
+   "Tableau",
+   "A/B testing",
+   "SAP"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hi there! I am a hardworking professional with many years of experience. Recently I built a customer segmentation for a SaaS client: email click-through rose from 42% to 68%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-06"
+  ],
+  "bid": 24,
+  "date": "2025-03-29",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-019",
+  "job_title": "Looking for an expert in dbt / SQL project",
+  "job_skills": [
+   "dbt",
+   "SQL"
+  ],
+  "client_industry": "logistics",
+  "text": "Hi, your logistics project needs dbt, which I use every week. Recently I built a sales performance dashboard for a fintech client: weekly reporting time fell from 25 hours to 49 minutes. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-01"
+  ],
+  "bid": 22,
+  "date": "2023-06-02",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-020",
+  "job_title": "Need help with dbt / Excel project",
+  "job_skills": [
+   "dbt",
+   "Excel"
+  ],
+  "client_industry": "fintech",
+  "text": "Dear Sir/Madam, I am very passionate about this job and I am the best fit. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 19,
+  "date": "2025-08-19",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-021",
+  "job_title": "Fix and improve our Tableau / Airflow project",
+  "job_skills": [
+   "Tableau",
+   "Airflow"
+  ],
+  "client_industry": "healthcare",
+  "text": "Hello, I have read your job post and I can do this job perfectly. Recently I built a customer segmentation for a logistics client: email click-through rose from 38% to 48%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-18"
+  ],
+  "bid": 19,
+  "date": "2025-02-13",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-022",
+  "job_title": "Looking for an expert in Power BI / Pandas project",
+  "job_skills": [
+   "Power BI",
+   "Pandas"
+  ],
+  "client_industry": "logistics",
+  "text": "Hi, your logistics project needs Power BI, which I use every week. Recently I built a sales performance dashboard for a fintech client: weekly reporting time fell from 25 hours to 49 minutes. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-01"
+  ],
+  "bid": 21,
+  "date": "2025-08-25",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-023",
+  "job_title": "Build a Google Data Studio / Tableau / Flutter project",
+  "job_skills": [
+   "Google Data Studio",
+   "Tableau",
+   "Flutter"
+  ],
+  "client_industry": "SaaS",
+  "text": "Hello, I have read your job post and I can do this job perfectly. Recently I built a customer segmentation for a SaaS client: email click-through rose from 42% to 68%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-06"
+  ],
+  "bid": 26,
+  "date": "2025-05-01",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-024",
+  "job_title": "Fix and improve our A/B testing / Python project",
+  "job_skills": [
+   "A/B testing",
+   "Python"
+  ],
+  "client_industry": "healthcare",
+  "text": "Dear Sir/Madam, I am very passionate about this job and I am the best fit. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 18,
+  "date": "2024-04-17",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-025",
+  "job_title": "Need help with SQL / ETL project",
+  "job_skills": [
+   "SQL",
+   "ETL"
+  ],
+  "client_industry": "marketing",
+  "text": "Hi there! I am a hardworking professional with many years of experience. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 28,
+  "date": "2023-03-20",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-026",
+  "job_title": "Build a Statistics / Google Data Studio project",
+  "job_skills": [
+   "Statistics",
+   "Google Data Studio"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Dear Sir/Madam, I am very passionate about this job and I am the best fit. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 32,
+  "date": "2025-06-13",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-027",
+  "job_title": "Looking for an expert in Tableau / Pandas / Java project",
+  "job_skills": [
+   "Tableau",
+   "Pandas",
+   "Java"
+  ],
+  "client_industry": "healthcare",
+  "text": "Hi there! I am a hardworking professional with many years of experience. Recently I built a marketing attribution analysis for a marketing client: budget shifted to channels with 25% higher ROI. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-02"
+  ],
+  "bid": 22,
+  "date": "2023-09-09",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-028",
+  "job_title": "Build a BigQuery / Postgres / Flutter project",
+  "job_skills": [
+   "BigQuery",
+   "Postgres",
+   "Flutter"
+  ],
+  "client_industry": "education",
+  "text": "Hi, your education project needs BigQuery, which I use every week. Recently I built a dbt warehouse rebuild for a fintech client: data-quality incidents fell by 55%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-03"
+  ],
+  "bid": 24,
+  "date": "2025-01-14",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-029",
+  "job_title": "Fix and improve our ETL / Python / Java project",
+  "job_skills": [
+   "ETL",
+   "Python",
+   "Java"
+  ],
+  "client_industry": "education",
+  "text": "Dear Sir/Madam, I am very passionate about this job and I am the best fit. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 17,
+  "date": "2023-09-28",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-030",
+  "job_title": "Need help with dbt / ETL project",
+  "job_skills": [
+   "dbt",
+   "ETL"
+  ],
+  "client_industry": "logistics",
+  "text": "Hi there! I am a hardworking professional with many years of experience. Recently I built a dbt warehouse rebuild for a fintech client: data-quality incidents fell by 30%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-15"
+  ],
+  "bid": 18,
+  "date": "2023-09-07",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-031",
+  "job_title": "Need help with Data Visualization / Power BI / Flutter project",
+  "job_skills": [
+   "Data Visualization",
+   "Power BI",
+   "Flutter"
+  ],
+  "client_industry": "fintech",
+  "text": "Hi, your fintech project needs Data Visualization, which I use every week. Recently I built a sales performance dashboard for a fintech client: weekly reporting time fell from 25 hours to 49 minutes. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-01"
+  ],
+  "bid": 19,
+  "date": "2023-12-17",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-032",
+  "job_title": "Looking for an expert in A/B testing / ETL project",
+  "job_skills": [
+   "A/B testing",
+   "ETL"
+  ],
+  "client_industry": "fintech",
+  "text": "Hi, your fintech project needs A/B testing, which I use every week. Recently I built a inventory excel automation for a real estate client: month-end close took 43% less time. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-11"
+  ],
+  "bid": 24,
+  "date": "2025-03-18",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-033",
+  "job_title": "Looking for an expert in Pandas / Statistics project",
+  "job_skills": [
+   "Pandas",
+   "Statistics"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hi, your e-commerce project needs Pandas, which I use every week. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 24,
+  "date": "2025-08-05",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-034",
+  "job_title": "Need help with Google Data Studio / Excel project",
+  "job_skills": [
+   "Google Data Studio",
+   "Excel"
+  ],
+  "client_industry": "fintech",
+  "text": "Hi, your fintech project needs Google Data Studio, which I use every week. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 27,
+  "date": "2025-03-08",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-035",
+  "job_title": "Need help with ETL / Python project",
+  "job_skills": [
+   "ETL",
+   "Python"
+  ],
+  "client_industry": "education",
+  "text": "Hello, I have read your job post and I can do this job perfectly. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 28,
+  "date": "2023-04-05",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-036",
+  "job_title": "Fix and improve our BigQuery / Pandas project",
+  "job_skills": [
+   "BigQuery",
+   "Pandas"
+  ],
+  "client_industry": "SaaS",
+  "text": "Hi, your SaaS project needs BigQuery, which I use every week. Recently I built a dbt warehouse rebuild for a real estate client: data-quality incidents fell by 14%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-09"
+  ],
+  "bid": 31,
+  "date": "2025-02-01",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-037",
+  "job_title": "Urgent: Data Visualization / A/B testing project",
+  "job_skills": [
+   "Data Visualization",
+   "A/B testing"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hi, your e-commerce project needs Data Visualization, which I use every week. Recently I built a pricing a/b test for a marketing client: the winning price lifted revenue per user by 17%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-16"
+  ],
+  "bid": 20,
+  "date": "2025-09-10",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-038",
+  "job_title": "Build a Python / A/B testing project",
+  "job_skills": [
+   "Python",
+   "A/B testing"
+  ],
+  "client_industry": "education",
+  "text": "Hi, your education project needs Python, which I use every week. Recently I built a marketing attribution analysis for a SaaS client: budget shifted to channels with 21% higher ROI. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-14"
+  ],
+  "bid": 18,
+  "date": "2024-05-19",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-039",
+  "job_title": "Build a dbt / Google Data Studio project",
+  "job_skills": [
+   "dbt",
+   "Google Data Studio"
+  ],
+  "client_industry": "marketing",
+  "text": "Hi there! I am a hardworking professional with many years of experience. Recently I built a dbt warehouse rebuild for a fintech client: data-quality incidents fell by 30%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-15"
+  ],
+  "bid": 30,
+  "date": "2023-12-14",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-040",
+  "job_title": "Urgent: A/B testing / Tableau / Rust project",
+  "job_skills": [
+   "A/B testing",
+   "Tableau",
+   "Rust"
+  ],
+  "client_industry": "fintech",
+  "text": "Hi, your fintech project needs A/B testing, which I use every week. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 26,
+  "date": "2024-02-25",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-041",
+  "job_title": "Looking for an expert in Airflow / Pandas project",
+  "job_skills": [
+   "Airflow",
+   "Pandas"
+  ],
+  "client_industry": "healthcare",
+  "text": "Hi, your healthcare project needs Airflow, which I use every week. Recently I built a marketing attribution analysis for a SaaS client: budget shifted to channels with 21% higher ROI. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-14"
+  ],
+  "bid": 19,
+  "date": "2023-12-10",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-042",
+  "job_title": "Fix and improve our Tableau / Pandas project",
+  "job_skills": [
+   "Tableau",
+   "Pandas"
+  ],
+  "client_industry": "marketing",
+  "text": "Hi, your marketing project needs Tableau, which I use every week. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 18,
+  "date": "2024-11-30",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-043",
+  "job_title": "Fix and improve our dbt / Data Visualization project",
+  "job_skills": [
+   "dbt",
+   "Data Visualization"
+  ],
+  "client_industry": "logistics",
+  "text": "Dear Sir/Madam, I am very passionate about this job and I am the best fit. Recently I built a dbt warehouse rebuild for a fintech client: data-quality incidents fell by 55%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-03"
+  ],
+  "bid": 29,
+  "date": "2025-04-15",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-044",
+  "job_title": "Urgent: Tableau / Airflow project",
+  "job_skills": [
+   "Tableau",
+   "Airflow"
+  ],
+  "client_industry": "education",
+  "text": "Hi, your education project needs Tableau, which I use every week. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 17,
+  "date": "2023-01-10",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-045",
+  "job_title": "Fix and improve our Data Visualization / Pandas / PHP project",
+  "job_skills": [
+   "Data Visualization",
+   "Pandas",
+   "PHP"
+  ],
+  "client_industry": "logistics",
+  "text": "Hi, your logistics project needs Data Visualization, which I use every week. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 29,
+  "date": "2025-01-22",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-046",
+  "job_title": "Fix and improve our Pandas / A/B testing project",
+  "job_skills": [
+   "Pandas",
+   "A/B testing"
+  ],
+  "client_industry": "healthcare",
+  "text": "Hello, I have read your job post and I can do this job perfectly. Recently I built a pricing a/b test for a education client: the winning price lifted revenue per user by 49%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-10"
+  ],
+  "bid": 29,
+  "date": "2024-11-08",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-047",
+  "job_title": "Fix and improve our Postgres / A/B testing project",
+  "job_skills": [
+   "Postgres",
+   "A/B testing"
+  ],
+  "client_industry": "SaaS",
+  "text": "Hi, your SaaS project needs Postgres, which I use every week. Recently I built a pricing a/b test for a real estate client: the winning price lifted revenue per user by 53%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-04"
+  ],
+  "bid": 20,
+  "date": "2025-06-28",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-048",
+  "job_title": "Urgent: Postgres / dbt project",
+  "job_skills": [
+   "Postgres",
+   "dbt"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hi, your e-commerce project needs Postgres, which I use every week. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 32,
+  "date": "2023-11-30",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-049",
+  "job_title": "Build a Pandas / SQL project",
+  "job_skills": [
+   "Pandas",
+   "SQL"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hi, your e-commerce project needs Pandas, which I use every week. Recently I built a sales performance dashboard for a e-commerce client: weekly reporting time fell from 33 hours to 62 minutes. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-13"
+  ],
+  "bid": 22,
+  "date": "2024-02-06",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-050",
+  "job_title": "Build a Statistics / BigQuery project",
+  "job_skills": [
+   "Statistics",
+   "BigQuery"
+  ],
+  "client_industry": "education",
+  "text": "Hi, your education project needs Statistics, which I use every week. Recently I built a marketing attribution analysis for a SaaS client: budget shifted to channels with 21% higher ROI. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-14"
+  ],
+  "bid": 19,
+  "date": "2024-02-22",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-051",
+  "job_title": "Fix and improve our A/B testing / Google Data Studio project",
+  "job_skills": [
+   "A/B testing",
+   "Google Data Studio"
+  ],
+  "client_industry": "real estate",
+  "text": "Dear Sir/Madam, I am very passionate about this job and I am the best fit. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 18,
+  "date": "2024-05-22",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-052",
+  "job_title": "Looking for an expert in A/B testing / Postgres project",
+  "job_skills": [
+   "A/B testing",
+   "Postgres"
+  ],
+  "client_industry": "education",
+  "text": "Hi, your education project needs A/B testing, which I use every week. Recently I built a pricing a/b test for a real estate client: the winning price lifted revenue per user by 53%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-04"
+  ],
+  "bid": 22,
+  "date": "2024-06-17",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-053",
+  "job_title": "Urgent: Google Data Studio / Tableau project",
+  "job_skills": [
+   "Google Data Studio",
+   "Tableau"
+  ],
+  "client_industry": "logistics",
+  "text": "Hi, your logistics project needs Google Data Studio, which I use every week. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 22,
+  "date": "2024-12-11",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-054",
+  "job_title": "Fix and improve our Tableau / ETL project",
+  "job_skills": [
+   "Tableau",
+   "ETL"
+  ],
+  "client_industry": "education",
+  "text": "Hi, your education project needs Tableau, which I use every week. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 25,
+  "date": "2024-11-28",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-055",
+  "job_title": "Fix and improve our Excel / dbt project",
+  "job_skills": [
+   "Excel",
+   "dbt"
+  ],
+  "client_industry": "logistics",
+  "text": "Hi, your logistics project needs Excel, which I use every week. Recently I built a dbt warehouse rebuild for a fintech client: data-quality incidents fell by 30%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-15"
+  ],
+  "bid": 30,
+  "date": "2025-05-07",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-056",
+  "job_title": "Build a Google Data Studio / Pandas project",
+  "job_skills": [
+   "Google Data Studio",
+   "Pandas"
+  ],
+  "client_industry": "fintech",
+  "text": "Hi, your fintech project needs Google Data Studio, which I use every week. Recently I built a customer segmentation for a e-commerce client: email click-through rose from 14% to 33%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-12"
+  ],
+  "bid": 30,
+  "date": "2025-05-18",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-057",
+  "job_title": "Fix and improve our A/B testing / Python / Flutter project",
+  "job_skills": [
+   "A/B testing",
+   "Python",
+   "Flutter"
+  ],
+  "client_industry": "logistics",
+  "text": "Hello, I have read your job post and I can do this job perfectly. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 26,
+  "date": "2023-02-12",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-058",
+  "job_title": "Build a Excel / BigQuery project",
+  "job_skills": [
+   "Excel",
+   "BigQuery"
+  ],
+  "client_industry": "education",
+  "text": "Hi, your education project needs Excel, which I use every week. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 30,
+  "date": "2024-09-09",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-059",
+  "job_title": "Build a Data Visualization / A/B testing project",
+  "job_skills": [
+   "Data Visualization",
+   "A/B testing"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hi, your e-commerce project needs Data Visualization, which I use every week. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 20,
+  "date": "2024-12-09",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-060",
+  "job_title": "Build a A/B testing / dbt project",
+  "job_skills": [
+   "A/B testing",
+   "dbt"
+  ],
+  "client_industry": "marketing",
+  "text": "Hi, your marketing project needs A/B testing, which I use every week. Recently I built a dbt warehouse rebuild for a real estate client: data-quality incidents fell by 14%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-09"
+  ],
+  "bid": 21,
+  "date": "2024-12-30",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-061",
+  "job_title": "Build a Postgres / Statistics project",
+  "job_skills": [
+   "Postgres",
+   "Statistics"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hi, your e-commerce project needs Postgres, which I use every week. Recently I built a pricing a/b test for a education client: the winning price lifted revenue per user by 49%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-10"
+  ],
+  "bid": 24,
+  "date": "2023-01-04",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-062",
+  "job_title": "Urgent: BigQuery / dbt project",
+  "job_skills": [
+   "BigQuery",
+   "dbt"
+  ],
+  "client_industry": "logistics",
+  "text": "Hi, your logistics project needs BigQuery, which I use every week. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 21,
+  "date": "2023-05-16",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-063",
+  "job_title": "Looking for an expert in Power BI / Google Data Studio project",
+  "job_skills": [
+   "Power BI",
+   "Google Data Studio"
+  ],
+  "client_industry": "healthcare",
+  "text": "Hi, your healthcare project needs Power BI, which I use every week. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 29,
+  "date": "2025-04-20",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-064",
+  "job_title": "Urgent: ETL / Tableau / Rust project",
+  "job_skills": [
+   "ETL",
+   "Tableau",
+   "Rust"
+  ],
+  "client_industry": "logistics",
+  "text": "Hi, your logistics project needs ETL, which I use every week. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 25,
+  "date": "2024-06-05",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-065",
+  "job_title": "Build a BigQuery / Power BI project",
+  "job_skills": [
+   "BigQuery",
+   "Power BI"
+  ],
+  "client_industry": "healthcare",
+  "text": "Hi, your healthcare project needs BigQuery, which I use every week. Recently I built a sales performance dashboard for a fintech client: weekly reporting time fell from 25 hours to 49 minutes. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-01"
+  ],
+  "bid": 19,
+  "date": "2024-12-17",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-066",
+  "job_title": "Looking for an expert in Python / Data Visualization project",
+  "job_skills": [
+   "Python",
+   "Data Visualization"
+  ],
+  "client_industry": "fintech",
+  "text": "Hi, your fintech project needs Python, which I use every week. Recently I built a inventory excel automation for a marketing client: month-end close took 16% less time. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-17"
+  ],
+  "bid": 31,
+  "date": "2023-03-02",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-067",
+  "job_title": "Need help with BigQuery / Postgres project",
+  "job_skills": [
+   "BigQuery",
+   "Postgres"
+  ],
+  "client_industry": "fintech",
+  "text": "Hi, your fintech project needs BigQuery, which I use every week. Recently I built a dbt warehouse rebuild for a real estate client: data-quality incidents fell by 14%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-09"
+  ],
+  "bid": 27,
+  "date": "2024-10-06",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-068",
+  "job_title": "Looking for an expert in Excel / Postgres project",
+  "job_skills": [
+   "Excel",
+   "Postgres"
+  ],
+  "client_industry": "education",
+  "text": "Hi, your education project needs Excel, which I use every week. Recently I built a inventory excel automation for a marketing client: month-end close took 16% less time. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-17"
+  ],
+  "bid": 24,
+  "date": "2023-02-01",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-069",
+  "job_title": "Build a A/B testing / Pandas / SAP project",
+  "job_skills": [
+   "A/B testing",
+   "Pandas",
+   "SAP"
+  ],
+  "client_industry": "marketing",
+  "text": "Hi, your marketing project needs A/B testing, which I use every week. Recently I built a pricing a/b test for a education client: the winning price lifted revenue per user by 49%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-10"
+  ],
+  "bid": 20,
+  "date": "2024-08-21",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-070",
+  "job_title": "Urgent: dbt / ETL project",
+  "job_skills": [
+   "dbt",
+   "ETL"
+  ],
+  "client_industry": "marketing",
+  "text": "Hi, your marketing project needs dbt, which I use every week. Recently I built a dbt warehouse rebuild for a fintech client: data-quality incidents fell by 55%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-03"
+  ],
+  "bid": 27,
+  "date": "2025-09-11",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-071",
+  "job_title": "Urgent: Google Data Studio / Tableau / Rust project",
+  "job_skills": [
+   "Google Data Studio",
+   "Tableau",
+   "Rust"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hi, your e-commerce project needs Google Data Studio, which I use every week. Recently I built a customer segmentation for a logistics client: email click-through rose from 38% to 48%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-18"
+  ],
+  "bid": 27,
+  "date": "2023-07-15",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-072",
+  "job_title": "Build a BigQuery / Power BI / PHP project",
+  "job_skills": [
+   "BigQuery",
+   "Power BI",
+   "PHP"
+  ],
+  "client_industry": "education",
+  "text": "Hi, your education project needs BigQuery, which I use every week. Recently I built a sales performance dashboard for a fintech client: weekly reporting time fell from 25 hours to 49 minutes. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-01"
+  ],
+  "bid": 23,
+  "date": "2023-07-22",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-073",
+  "job_title": "Need help with A/B testing / Tableau / Flutter project",
+  "job_skills": [
+   "A/B testing",
+   "Tableau",
+   "Flutter"
+  ],
+  "client_industry": "fintech",
+  "text": "Dear Sir/Madam, I am very passionate about this job and I am the best fit. Recently I built a customer segmentation for a logistics client: email click-through rose from 38% to 48%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-18"
+  ],
+  "bid": 25,
+  "date": "2024-10-07",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-074",
+  "job_title": "Urgent: Postgres / Excel project",
+  "job_skills": [
+   "Postgres",
+   "Excel"
+  ],
+  "client_industry": "real estate",
+  "text": "Dear Sir/Madam, I am very passionate about this job and I am the best fit. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 28,
+  "date": "2024-12-08",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-075",
+  "job_title": "Fix and improve our dbt / SQL project",
+  "job_skills": [
+   "dbt",
+   "SQL"
+  ],
+  "client_industry": "healthcare",
+  "text": "Hi, your healthcare project needs dbt, which I use every week. Recently I built a sales performance dashboard for a education client: weekly reporting time fell from 50 hours to 85 minutes. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-07"
+  ],
+  "bid": 32,
+  "date": "2024-04-27",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-076",
+  "job_title": "Fix and improve our Python / Excel project",
+  "job_skills": [
+   "Python",
+   "Excel"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hi, your e-commerce project needs Python, which I use every week. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 23,
+  "date": "2024-02-03",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-077",
+  "job_title": "Looking for an expert in Excel / Tableau project",
+  "job_skills": [
+   "Excel",
+   "Tableau"
+  ],
+  "client_industry": "logistics",
+  "text": "Hi, your logistics project needs Excel, which I use every week. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 29,
+  "date": "2025-01-19",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-078",
+  "job_title": "Fix and improve our Pandas / A/B testing project",
+  "job_skills": [
+   "Pandas",
+   "A/B testing"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hi there! I am a hardworking professional with many years of experience. Recently I built a customer segmentation for a logistics client: email click-through rose from 38% to 48%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-18"
+  ],
+  "bid": 19,
+  "date": "2023-01-10",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-079",
+  "job_title": "Urgent: Airflow / A/B testing / SAP project",
+  "job_skills": [
+   "Airflow",
+   "A/B testing",
+   "SAP"
+  ],
+  "client_industry": "healthcare",
+  "text": "Hi there! I am a hardworking professional with many years of experience. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 23,
+  "date": "2024-05-11",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-080",
+  "job_title": "Fix and improve our SQL / Power BI / Flutter project",
+  "job_skills": [
+   "SQL",
+   "Power BI",
+   "Flutter"
+  ],
+  "client_industry": "healthcare",
+  "text": "Hi, your healthcare project needs SQL, which I use every week. Recently I built a dbt warehouse rebuild for a fintech client: data-quality incidents fell by 55%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-03"
+  ],
+  "bid": 31,
+  "date": "2024-08-08",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-081",
+  "job_title": "Need help with A/B testing / Python project",
+  "job_skills": [
+   "A/B testing",
+   "Python"
+  ],
+  "client_industry": "SaaS",
+  "text": "Hi, your SaaS project needs A/B testing, which I use every week. Recently I built a customer segmentation for a logistics client: email click-through rose from 38% to 48%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-18"
+  ],
+  "bid": 32,
+  "date": "2025-01-04",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-082",
+  "job_title": "Need help with Statistics / Airflow project",
+  "job_skills": [
+   "Statistics",
+   "Airflow"
+  ],
+  "client_industry": "SaaS",
+  "text": "Dear Sir/Madam, I am very passionate about this job and I am the best fit. Recently I built a pricing a/b test for a real estate client: the winning price lifted revenue per user by 53%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-04"
+  ],
+  "bid": 24,
+  "date": "2024-08-02",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-083",
+  "job_title": "Need help with Google Data Studio / Statistics project",
+  "job_skills": [
+   "Google Data Studio",
+   "Statistics"
+  ],
+  "client_industry": "education",
+  "text": "Hi, your education project needs Google Data Studio, which I use every week. Recently I built a marketing attribution analysis for a marketing client: budget shifted to channels with 25% higher ROI. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-02"
+  ],
+  "bid": 29,
+  "date": "2023-02-19",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-084",
+  "job_title": "Need help with Power BI / ETL project",
+  "job_skills": [
+   "Power BI",
+   "ETL"
+  ],
+  "client_industry": "marketing",
+  "text": "Dear Sir/Madam, I am very passionate about this job and I am the best fit. Recently I built a inventory excel automation for a real estate client: month-end close took 43% less time. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-11"
+  ],
+  "bid": 20,
+  "date": "2023-04-17",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-085",
+  "job_title": "Looking for an expert in Pandas / ETL project",
+  "job_skills": [
+   "Pandas",
+   "ETL"
+  ],
+  "client_industry": "real estate",
+  "text": "Hi, your real estate project needs Pandas, which I use every week. Recently I built a marketing attribution analysis for a SaaS client: budget shifted to channels with 21% higher ROI. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-14"
+  ],
+  "bid": 19,
+  "date": "2023-01-03",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-086",
+  "job_title": "Need help with Data Visualization / SQL project",
+  "job_skills": [
+   "Data Visualization",
+   "SQL"
+  ],
+  "client_industry": "healthcare",
+  "text": "Hi, your healthcare project needs Data Visualization, which I use every week. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 29,
+  "date": "2024-04-13",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-087",
+  "job_title": "Looking for an expert in Google Data Studio / SQL project",
+  "job_skills": [
+   "Google Data Studio",
+   "SQL"
+  ],
+  "client_industry": "fintech",
+  "text": "Hi, your fintech project needs Google Data Studio, which I use every week. Recently I built a dbt warehouse rebuild for a real estate client: data-quality incidents fell by 14%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-09"
+  ],
+  "bid": 23,
+  "date": "2024-12-26",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-088",
+  "job_title": "Urgent: Google Data Studio / dbt project",
+  "job_skills": [
+   "Google Data Studio",
+   "dbt"
+  ],
+  "client_industry": "healthcare",
+  "text": "Hi, your healthcare project needs Google Data Studio, which I use every week. Recently I built a dbt warehouse rebuild for a fintech client: data-quality incidents fell by 55%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-03"
+  ],
+  "bid": 20,
+  "date": "2023-09-02",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-089",
+  "job_title": "Build a Python / Excel / Flutter project",
+  "job_skills": [
+   "Python",
+   "Excel",
+   "Flutter"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hi, your e-commerce project needs Python, which I use every week. Recently I built a customer segmentation for a e-commerce client: email click-through rose from 14% to 33%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-12"
+  ],
+  "bid": 19,
+  "date": "2023-01-08",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-090",
+  "job_title": "Looking for an expert in Python / SQL / SAP project",
+  "job_skills": [
+   "Python",
+   "SQL",
+   "SAP"
+  ],
+  "client_industry": "marketing",
+  "text": "Hi, your marketing project needs Python, which I use every week. Recently I built a customer segmentation for a e-commerce client: email click-through rose from 14% to 33%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-12"
+  ],
+  "bid": 19,
+  "date": "2023-08-04",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-091",
+  "job_title": "Need help with ETL / SQL project",
+  "job_skills": [
+   "ETL",
+   "SQL"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hi, your e-commerce project needs ETL, which I use every week. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 26,
+  "date": "2023-07-04",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-092",
+  "job_title": "Build a Airflow / Tableau project",
+  "job_skills": [
+   "Airflow",
+   "Tableau"
+  ],
+  "client_industry": "logistics",
+  "text": "Hello, I have read your job post and I can do this job perfectly. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 22,
+  "date": "2024-03-29",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-093",
+  "job_title": "Urgent: Google Data Studio / ETL project",
+  "job_skills": [
+   "Google Data Studio",
+   "ETL"
+  ],
+  "client_industry": "real estate",
+  "text": "Hello, I have read your job post and I can do this job perfectly. Recently I built a inventory excel automation for a marketing client: month-end close took 16% less time. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-17"
+  ],
+  "bid": 28,
+  "date": "2023-08-25",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-094",
+  "job_title": "Looking for an expert in ETL / Data Visualization project",
+  "job_skills": [
+   "ETL",
+   "Data Visualization"
+  ],
+  "client_industry": "real estate",
+  "text": "Hi, your real estate project needs ETL, which I use every week. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 27,
+  "date": "2025-04-25",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-095",
+  "job_title": "Need help with dbt / Google Data Studio project",
+  "job_skills": [
+   "dbt",
+   "Google Data Studio"
+  ],
+  "client_industry": "healthcare",
+  "text": "Hi there! I am a hardworking professional with many years of experience. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 24,
+  "date": "2024-11-10",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-096",
+  "job_title": "Urgent: ETL / dbt project",
+  "job_skills": [
+   "ETL",
+   "dbt"
+  ],
+  "client_industry": "healthcare",
+  "text": "Dear Sir/Madam, I am very passionate about this job and I am the best fit. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 20,
+  "date": "2024-03-17",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-097",
+  "job_title": "Looking for an expert in Pandas / BigQuery project",
+  "job_skills": [
+   "Pandas",
+   "BigQuery"
+  ],
+  "client_industry": "logistics",
+  "text": "Hello, I have read your job post and I can do this job perfectly. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 23,
+  "date": "2023-04-04",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-098",
+  "job_title": "Urgent: Google Data Studio / Tableau project",
+  "job_skills": [
+   "Google Data Studio",
+   "Tableau"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hi, your e-commerce project needs Google Data Studio, which I use every week. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 19,
+  "date": "2023-11-08",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-099",
+  "job_title": "Need help with Python / Statistics / Java project",
+  "job_skills": [
+   "Python",
+   "Statistics",
+   "Java"
+  ],
+  "client_industry": "real estate",
+  "text": "Hi, your real estate project needs Python, which I use every week. Recently I built a customer segmentation for a logistics client: email click-through rose from 38% to 48%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-18"
+  ],
+  "bid": 25,
+  "date": "2025-09-19",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-100",
+  "job_title": "Need help with ETL / A/B testing project",
+  "job_skills": [
+   "ETL",
+   "A/B testing"
+  ],
+  "client_industry": "logistics",
+  "text": "Hi, your logistics project needs ETL, which I use every week. Recently I built a inventory excel automation for a marketing client: month-end close took 16% less time. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-17"
+  ],
+  "bid": 20,
+  "date": "2025-01-15",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-101",
+  "job_title": "Looking for an expert in Data Visualization / Airflow project",
+  "job_skills": [
+   "Data Visualization",
+   "Airflow"
+  ],
+  "client_industry": "fintech",
+  "text": "Hi, your fintech project needs Data Visualization, which I use every week. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 28,
+  "date": "2023-08-02",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-102",
+  "job_title": "Looking for an expert in Google Data Studio / Excel / Java project",
+  "job_skills": [
+   "Google Data Studio",
+   "Excel",
+   "Java"
+  ],
+  "client_industry": "healthcare",
+  "text": "Hi there! I am a hardworking professional with many years of experience. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 25,
+  "date": "2023-11-16",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-103",
+  "job_title": "Need help with Pandas / SQL / Java project",
+  "job_skills": [
+   "Pandas",
+   "SQL",
+   "Java"
+  ],
+  "client_industry": "marketing",
+  "text": "Hi there! I am a hardworking professional with many years of experience. Recently I built a customer segmentation for a SaaS client: email click-through rose from 42% to 68%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-06"
+  ],
+  "bid": 17,
+  "date": "2023-10-30",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-104",
+  "job_title": "Build a Tableau / Data Visualization project",
+  "job_skills": [
+   "Tableau",
+   "Data Visualization"
+  ],
+  "client_industry": "real estate",
+  "text": "Hello, I have read your job post and I can do this job perfectly. Recently I built a customer segmentation for a logistics client: email click-through rose from 38% to 48%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-18"
+  ],
+  "bid": 22,
+  "date": "2024-01-11",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-105",
+  "job_title": "Looking for an expert in Postgres / Google Data Studio / PHP project",
+  "job_skills": [
+   "Postgres",
+   "Google Data Studio",
+   "PHP"
+  ],
+  "client_industry": "logistics",
+  "text": "Hi, your logistics project needs Postgres, which I use every week. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 23,
+  "date": "2024-10-26",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-106",
+  "job_title": "Build a ETL / Power BI project",
+  "job_skills": [
+   "ETL",
+   "Power BI"
+  ],
+  "client_industry": "education",
+  "text": "Hi, your education project needs ETL, which I use every week. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 20,
+  "date": "2023-02-21",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-107",
+  "job_title": "Looking for an expert in Google Data Studio / dbt project",
+  "job_skills": [
+   "Google Data Studio",
+   "dbt"
+  ],
+  "client_industry": "logistics",
+  "text": "Hi, your logistics project needs Google Data Studio, which I use every week. Recently I built a dbt warehouse rebuild for a fintech client: data-quality incidents fell by 55%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-03"
+  ],
+  "bid": 32,
+  "date": "2024-07-22",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-108",
+  "job_title": "Looking for an expert in Python / dbt / Rust project",
+  "job_skills": [
+   "Python",
+   "dbt",
+   "Rust"
+  ],
+  "client_industry": "education",
+  "text": "Dear Sir/Madam, I am very passionate about this job and I am the best fit. Recently I built a dbt warehouse rebuild for a fintech client: data-quality incidents fell by 55%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-03"
+  ],
+  "bid": 32,
+  "date": "2024-03-30",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-109",
+  "job_title": "Need help with Power BI / Excel project",
+  "job_skills": [
+   "Power BI",
+   "Excel"
+  ],
+  "client_industry": "education",
+  "text": "Hi there! I am a hardworking professional with many years of experience. Recently I built a inventory excel automation for a real estate client: month-end close took 43% less time. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-11"
+  ],
+  "bid": 30,
+  "date": "2025-08-24",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-110",
+  "job_title": "Urgent: Postgres / SQL / PHP project",
+  "job_skills": [
+   "Postgres",
+   "SQL",
+   "PHP"
+  ],
+  "client_industry": "real estate",
+  "text": "Hello, I have read your job post and I can do this job perfectly. Recently I built a dbt warehouse rebuild for a real estate client: data-quality incidents fell by 14%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-09"
+  ],
+  "bid": 21,
+  "date": "2024-04-16",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-111",
+  "job_title": "Build a Python / A/B testing project",
+  "job_skills": [
+   "Python",
+   "A/B testing"
+  ],
+  "client_industry": "healthcare",
+  "text": "Hi, your healthcare project needs Python, which I use every week. Recently I built a pricing a/b test for a education client: the winning price lifted revenue per user by 49%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-10"
+  ],
+  "bid": 32,
+  "date": "2024-12-21",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-112",
+  "job_title": "Urgent: Airflow / Tableau / Java project",
+  "job_skills": [
+   "Airflow",
+   "Tableau",
+   "Java"
+  ],
+  "client_industry": "fintech",
+  "text": "Hi, your fintech project needs Airflow, which I use every week. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 24,
+  "date": "2024-10-25",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-113",
+  "job_title": "Looking for an expert in A/B testing / Airflow project",
+  "job_skills": [
+   "A/B testing",
+   "Airflow"
+  ],
+  "client_industry": "real estate",
+  "text": "Hi, your real estate project needs A/B testing, which I use every week. Recently I built a pricing a/b test for a education client: the winning price lifted revenue per user by 49%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-10"
+  ],
+  "bid": 28,
+  "date": "2025-05-27",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-114",
+  "job_title": "Need help with Google Data Studio / ETL / PHP project",
+  "job_skills": [
+   "Google Data Studio",
+   "ETL",
+   "PHP"
+  ],
+  "client_industry": "SaaS",
+  "text": "Dear Sir/Madam, I am very passionate about this job and I am the best fit. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 31,
+  "date": "2023-10-20",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-115",
+  "job_title": "Urgent: Pandas / Data Visualization / Flutter project",
+  "job_skills": [
+   "Pandas",
+   "Data Visualization",
+   "Flutter"
+  ],
+  "client_industry": "education",
+  "text": "Hi, your education project needs Pandas, which I use every week. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 28,
+  "date": "2023-01-13",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-116",
+  "job_title": "Urgent: Airflow / Power BI / Flutter project",
+  "job_skills": [
+   "Airflow",
+   "Power BI",
+   "Flutter"
+  ],
+  "client_industry": "SaaS",
+  "text": "Dear Sir/Madam, I am very passionate about this job and I am the best fit. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 23,
+  "date": "2024-04-26",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-117",
+  "job_title": "Looking for an expert in Tableau / A/B testing project",
+  "job_skills": [
+   "Tableau",
+   "A/B testing"
+  ],
+  "client_industry": "real estate",
+  "text": "Hello, I have read your job post and I can do this job perfectly. Recently I built a customer segmentation for a logistics client: email click-through rose from 38% to 48%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-18"
+  ],
+  "bid": 28,
+  "date": "2024-08-05",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-118",
+  "job_title": "Looking for an expert in A/B testing / Pandas / Java project",
+  "job_skills": [
+   "A/B testing",
+   "Pandas",
+   "Java"
+  ],
+  "client_industry": "logistics",
+  "text": "Hi, your logistics project needs A/B testing, which I use every week. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 21,
+  "date": "2024-01-31",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-119",
+  "job_title": "Build a Tableau / Power BI project",
+  "job_skills": [
+   "Tableau",
+   "Power BI"
+  ],
+  "client_industry": "marketing",
+  "text": "Hi there! I am a hardworking professional with many years of experience. Recently I built a customer segmentation for a SaaS client: email click-through rose from 42% to 68%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-06"
+  ],
+  "bid": 18,
+  "date": "2025-06-26",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-120",
+  "job_title": "Need help with Pandas / Power BI project",
+  "job_skills": [
+   "Pandas",
+   "Power BI"
+  ],
+  "client_industry": "SaaS",
+  "text": "Hi there! I am a hardworking professional with many years of experience. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 21,
+  "date": "2025-05-30",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-121",
+  "job_title": "Fix and improve our Statistics / Tableau project",
+  "job_skills": [
+   "Statistics",
+   "Tableau"
+  ],
+  "client_industry": "healthcare",
+  "text": "Hi, your healthcare project needs Statistics, which I use every week. Recently I built a pricing a/b test for a real estate client: the winning price lifted revenue per user by 53%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-04"
+  ],
+  "bid": 26,
+  "date": "2025-07-14",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-122",
+  "job_title": "Looking for an expert in Python / Tableau project",
+  "job_skills": [
+   "Python",
+   "Tableau"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hi, your e-commerce project needs Python, which I use every week. Recently I built a inventory excel automation for a real estate client: month-end close took 43% less time. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-11"
+  ],
+  "bid": 20,
+  "date": "2024-10-31",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-123",
+  "job_title": "Urgent: Airflow / Power BI project",
+  "job_skills": [
+   "Airflow",
+   "Power BI"
+  ],
+  "client_industry": "real estate",
+  "text": "Hi, your real estate project needs Airflow, which I use every week. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 25,
+  "date": "2023-03-19",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-124",
+  "job_title": "Looking for an expert in BigQuery / dbt / Flutter project",
+  "job_skills": [
+   "BigQuery",
+   "dbt",
+   "Flutter"
+  ],
+  "client_industry": "marketing",
+  "text": "Hi, your marketing project needs BigQuery, which I use every week. Recently I built a dbt warehouse rebuild for a fintech client: data-quality incidents fell by 30%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-15"
+  ],
+  "bid": 18,
+  "date": "2024-12-18",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-125",
+  "job_title": "Build a BigQuery / Google Data Studio project",
+  "job_skills": [
+   "BigQuery",
+   "Google Data Studio"
+  ],
+  "client_industry": "fintech",
+  "text": "Hi there! I am a hardworking professional with many years of experience. Recently I built a dbt warehouse rebuild for a fintech client: data-quality incidents fell by 30%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-15"
+  ],
+  "bid": 27,
+  "date": "2024-04-21",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-126",
+  "job_title": "Need help with A/B testing / Power BI project",
+  "job_skills": [
+   "A/B testing",
+   "Power BI"
+  ],
+  "client_industry": "education",
+  "text": "Hi, your education project needs A/B testing, which I use every week. Recently I built a pricing a/b test for a real estate client: the winning price lifted revenue per user by 53%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-04"
+  ],
+  "bid": 28,
+  "date": "2023-08-27",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-127",
+  "job_title": "Fix and improve our Statistics / ETL project",
+  "job_skills": [
+   "Statistics",
+   "ETL"
+  ],
+  "client_industry": "real estate",
+  "text": "Dear Sir/Madam, I am very passionate about this job and I am the best fit. Recently I built a pricing a/b test for a education client: the winning price lifted revenue per user by 49%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-10"
+  ],
+  "bid": 21,
+  "date": "2024-06-06",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-128",
+  "job_title": "Need help with ETL / dbt project",
+  "job_skills": [
+   "ETL",
+   "dbt"
+  ],
+  "client_industry": "SaaS",
+  "text": "Hi, your SaaS project needs ETL, which I use every week. Recently I built a dbt warehouse rebuild for a fintech client: data-quality incidents fell by 30%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-15"
+  ],
+  "bid": 30,
+  "date": "2023-12-20",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-129",
+  "job_title": "Need help with Excel / Pandas project",
+  "job_skills": [
+   "Excel",
+   "Pandas"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hi there! I am a hardworking professional with many years of experience. Recently I built a inventory excel automation for a real estate client: month-end close took 43% less time. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-11"
+  ],
+  "bid": 23,
+  "date": "2024-10-19",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-130",
+  "job_title": "Looking for an expert in Google Data Studio / Power BI project",
+  "job_skills": [
+   "Google Data Studio",
+   "Power BI"
+  ],
+  "client_industry": "real estate",
+  "text": "Hello, I have read your job post and I can do this job perfectly. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 31,
+  "date": "2023-03-08",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-131",
+  "job_title": "Urgent: Data Visualization / Google Data Studio project",
+  "job_skills": [
+   "Data Visualization",
+   "Google Data Studio"
+  ],
+  "client_industry": "fintech",
+  "text": "Hi there! I am a hardworking professional with many years of experience. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 25,
+  "date": "2024-07-28",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-132",
+  "job_title": "Looking for an expert in SQL / Python project",
+  "job_skills": [
+   "SQL",
+   "Python"
+  ],
+  "client_industry": "healthcare",
+  "text": "Dear Sir/Madam, I am very passionate about this job and I am the best fit. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 24,
+  "date": "2025-07-11",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-133",
+  "job_title": "Looking for an expert in SQL / ETL / Java project",
+  "job_skills": [
+   "SQL",
+   "ETL",
+   "Java"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hello, I have read your job post and I can do this job perfectly. Recently I built a inventory excel automation for a real estate client: month-end close took 43% less time. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-11"
+  ],
+  "bid": 32,
+  "date": "2025-02-04",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-134",
+  "job_title": "Need help with Data Visualization / Tableau project",
+  "job_skills": [
+   "Data Visualization",
+   "Tableau"
+  ],
+  "client_industry": "logistics",
+  "text": "Hi there! I am a hardworking professional with many years of experience. Recently I built a customer segmentation for a SaaS client: email click-through rose from 42% to 68%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-06"
+  ],
+  "bid": 21,
+  "date": "2023-09-27",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-135",
+  "job_title": "Build a A/B testing / Data Visualization project",
+  "job_skills": [
+   "A/B testing",
+   "Data Visualization"
+  ],
+  "client_industry": "SaaS",
+  "text": "Hi, your SaaS project needs A/B testing, which I use every week. Recently I built a pricing a/b test for a marketing client: the winning price lifted revenue per user by 17%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-16"
+  ],
+  "bid": 21,
+  "date": "2025-02-08",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-136",
+  "job_title": "Build a Data Visualization / Statistics project",
+  "job_skills": [
+   "Data Visualization",
+   "Statistics"
+  ],
+  "client_industry": "fintech",
+  "text": "Hi, your fintech project needs Data Visualization, which I use every week. Recently I built a pricing a/b test for a education client: the winning price lifted revenue per user by 49%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-10"
+  ],
+  "bid": 21,
+  "date": "2024-08-23",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-137",
+  "job_title": "Fix and improve our Power BI / A/B testing project",
+  "job_skills": [
+   "Power BI",
+   "A/B testing"
+  ],
+  "client_industry": "education",
+  "text": "Hi, your education project needs Power BI, which I use every week. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 21,
+  "date": "2024-03-21",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-138",
+  "job_title": "Looking for an expert in SQL / Power BI project",
+  "job_skills": [
+   "SQL",
+   "Power BI"
+  ],
+  "client_industry": "healthcare",
+  "text": "Hi, your healthcare project needs SQL, which I use every week. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 30,
+  "date": "2024-05-28",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-139",
+  "job_title": "Need help with Postgres / ETL project",
+  "job_skills": [
+   "Postgres",
+   "ETL"
+  ],
+  "client_industry": "fintech",
+  "text": "Hi there! I am a hardworking professional with many years of experience. Recently I built a inventory excel automation for a real estate client: month-end close took 43% less time. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-11"
+  ],
+  "bid": 31,
+  "date": "2025-01-05",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-140",
+  "job_title": "Looking for an expert in BigQuery / Power BI project",
+  "job_skills": [
+   "BigQuery",
+   "Power BI"
+  ],
+  "client_industry": "logistics",
+  "text": "Hi, your logistics project needs BigQuery, which I use every week. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 24,
+  "date": "2023-03-05",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-141",
+  "job_title": "Build a Airflow / A/B testing project",
+  "job_skills": [
+   "Airflow",
+   "A/B testing"
+  ],
+  "client_industry": "marketing",
+  "text": "Hi, your marketing project needs Airflow, which I use every week. Recently I built a pricing a/b test for a real estate client: the winning price lifted revenue per user by 53%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-04"
+  ],
+  "bid": 19,
+  "date": "2023-11-20",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-142",
+  "job_title": "Looking for an expert in Tableau / SQL project",
+  "job_skills": [
+   "Tableau",
+   "SQL"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hi, your e-commerce project needs Tableau, which I use every week. Recently I built a sales performance dashboard for a education client: weekly reporting time fell from 50 hours to 85 minutes. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-07"
+  ],
+  "bid": 27,
+  "date": "2023-07-22",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-143",
+  "job_title": "Urgent: Python / A/B testing project",
+  "job_skills": [
+   "Python",
+   "A/B testing"
+  ],
+  "client_industry": "real estate",
+  "text": "Hi, your real estate project needs Python, which I use every week. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 20,
+  "date": "2023-03-18",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-144",
+  "job_title": "Fix and improve our Google Data Studio / Python project",
+  "job_skills": [
+   "Google Data Studio",
+   "Python"
+  ],
+  "client_industry": "SaaS",
+  "text": "Hi, your SaaS project needs Google Data Studio, which I use every week. Recently I built a customer segmentation for a logistics client: email click-through rose from 38% to 48%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-18"
+  ],
+  "bid": 32,
+  "date": "2023-11-22",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-145",
+  "job_title": "Build a Statistics / dbt project",
+  "job_skills": [
+   "Statistics",
+   "dbt"
+  ],
+  "client_industry": "SaaS",
+  "text": "Hi, your SaaS project needs Statistics, which I use every week. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 20,
+  "date": "2023-02-22",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-146",
+  "job_title": "Looking for an expert in A/B testing / Airflow / Flutter project",
+  "job_skills": [
+   "A/B testing",
+   "Airflow",
+   "Flutter"
+  ],
+  "client_industry": "fintech",
+  "text": "Hi, your fintech project needs A/B testing, which I use every week. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 31,
+  "date": "2023-03-06",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-147",
+  "job_title": "Build a Google Data Studio / BigQuery / Java project",
+  "job_skills": [
+   "Google Data Studio",
+   "BigQuery",
+   "Java"
+  ],
+  "client_industry": "marketing",
+  "text": "Hi there! I am a hardworking professional with many years of experience. Recently I built a dbt warehouse rebuild for a fintech client: data-quality incidents fell by 55%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-03"
+  ],
+  "bid": 18,
+  "date": "2025-01-23",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-148",
+  "job_title": "Looking for an expert in SQL / Tableau project",
+  "job_skills": [
+   "SQL",
+   "Tableau"
+  ],
+  "client_industry": "healthcare",
+  "text": "Hi there! I am a hardworking professional with many years of experience. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [],
+  "bid": 22,
+  "date": "2024-02-21",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-149",
+  "job_title": "Fix and improve our Power BI / Pandas project",
+  "job_skills": [
+   "Power BI",
+   "Pandas"
+  ],
+  "client_industry": "real estate",
+  "text": "Hi, your real estate project needs Power BI, which I use every week. Recently I built a marketing attribution analysis for a SaaS client: budget shifted to channels with 21% higher ROI. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-14"
+  ],
+  "bid": 19,
+  "date": "2023-04-30",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-prop-150",
+  "job_title": "Fix and improve our Tableau / Statistics project",
+  "job_skills": [
+   "Tableau",
+   "Statistics"
+  ],
+  "client_industry": "SaaS",
+  "text": "Hello, I have read your job post and I can do this job perfectly. Recently I built a pricing a/b test for a marketing client: the winning price lifted revenue per user by 17%. I can start this week and keep you updated daily. My rate is $22/hr.",
+  "cited_evidence": [
+   "data_analyst-case-16"
+  ],
+  "bid": 21,
+  "date": "2023-07-26",
+  "outcome": "replied",
+  "source": "synthetic"
+ }
+]

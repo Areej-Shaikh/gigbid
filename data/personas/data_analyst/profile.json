@@ -1,0 +1,25 @@
+{
+ "persona_id": "data_analyst",
+ "name": "Ayesha Raza (synthetic)",
+ "headline": "Data Analyst: SQL, Power BI, Python, dbt",
+ "hourly_rate": 22,
+ "minimum_project_budget": 150,
+ "skills": [
+  "SQL",
+  "Python",
+  "Pandas",
+  "Power BI",
+  "Tableau",
+  "Excel",
+  "dbt",
+  "Airflow",
+  "Postgres",
+  "BigQuery",
+  "Google Data Studio",
+  "Statistics",
+  "A/B testing",
+  "Data Visualization",
+  "ETL"
+ ],
+ "source": "synthetic"
+}

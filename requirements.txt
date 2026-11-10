@@ -52,6 +52,7 @@ python-dotenv==1.2.4
 python-multipart==0.0.33
 pywin32==312
 PyYAML==6.0.3
+rank-bm25==0.2.2
 referencing==0.37.0
 requests==2.34.2
 requests-toolbelt==1.0.0

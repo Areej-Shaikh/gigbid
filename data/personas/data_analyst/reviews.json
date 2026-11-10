@@ -1,0 +1,102 @@
+[
+ {
+  "id": "data_analyst-review-01",
+  "project": "Pricing A/B test",
+  "case_id": "data_analyst-case-10",
+  "client_industry": "education",
+  "rating": 5,
+  "text": "Clear explanations, solid code, will hire again.",
+  "date": "2025-05-11",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-review-02",
+  "project": "dbt warehouse rebuild",
+  "case_id": "data_analyst-case-15",
+  "client_industry": "fintech",
+  "rating": 5,
+  "text": "Great work, the results speak for themselves.",
+  "date": "2025-05-02",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-review-03",
+  "project": "Pricing A/B test",
+  "case_id": "data_analyst-case-04",
+  "client_industry": "real estate",
+  "rating": 4,
+  "text": "Clear explanations, solid code, will hire again.",
+  "date": "2024-07-16",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-review-04",
+  "project": "Marketing attribution analysis",
+  "case_id": "data_analyst-case-08",
+  "client_industry": "healthcare",
+  "rating": 4,
+  "text": "Understood our business problem quickly.",
+  "date": "2024-09-19",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-review-05",
+  "project": "Inventory Excel automation",
+  "case_id": "data_analyst-case-11",
+  "client_industry": "real estate",
+  "rating": 4,
+  "text": "Understood our business problem quickly.",
+  "date": "2024-08-07",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-review-06",
+  "project": "Inventory Excel automation",
+  "case_id": "data_analyst-case-17",
+  "client_industry": "marketing",
+  "rating": 4,
+  "text": "Understood our business problem quickly.",
+  "date": "2024-11-09",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-review-07",
+  "project": "Customer segmentation",
+  "case_id": "data_analyst-case-12",
+  "client_industry": "e-commerce",
+  "rating": 5,
+  "text": "Clear explanations, solid code, will hire again.",
+  "date": "2024-06-20",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-review-08",
+  "project": "dbt warehouse rebuild",
+  "case_id": "data_analyst-case-03",
+  "client_industry": "fintech",
+  "rating": 5,
+  "text": "Understood our business problem quickly.",
+  "date": "2024-12-11",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-review-09",
+  "project": "dbt warehouse rebuild",
+  "case_id": "data_analyst-case-09",
+  "client_industry": "real estate",
+  "rating": 5,
+  "text": "Clear explanations, solid code, will hire again.",
+  "date": "2024-07-10",
+  "source": "synthetic"
+ },
+ {
+  "id": "data_analyst-review-10",
+  "project": "Marketing attribution analysis",
+  "case_id": "data_analyst-case-14",
+  "client_industry": "SaaS",
+  "rating": 5,
+  "text": "Understood our business problem quickly.",
+  "date": "2025-05-26",
+  "source": "synthetic"
+ }
+]

@@ -1,0 +1,2484 @@
+[
+ {
+  "id": "ai_ml_engineer-prop-001",
+  "job_title": "Urgent: Celery / scikit-learn project",
+  "job_skills": [
+   "Celery",
+   "scikit-learn"
+  ],
+  "client_industry": "logistics",
+  "text": "Hi, your logistics project needs Celery, which I use every week. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 37,
+  "date": "2024-01-25",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-002",
+  "job_title": "Looking for an expert in scikit-learn / PyTorch / PHP project",
+  "job_skills": [
+   "scikit-learn",
+   "PyTorch",
+   "PHP"
+  ],
+  "client_industry": "fintech",
+  "text": "Hi, your fintech project needs scikit-learn, which I use every week. Recently I built a support ticket classifier for a education client: manual triage time fell by 33%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-09"
+  ],
+  "bid": 43,
+  "date": "2023-05-30",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-003",
+  "job_title": "Build a Postgres / RAG project",
+  "job_skills": [
+   "Postgres",
+   "RAG"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hi, your e-commerce project needs Postgres, which I use every week. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 31,
+  "date": "2024-11-23",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-004",
+  "job_title": "Urgent: Docker / MLflow project",
+  "job_skills": [
+   "Docker",
+   "MLflow"
+  ],
+  "client_industry": "marketing",
+  "text": "Hi, your marketing project needs Docker, which I use every week. Recently I built a churn prediction model for a logistics client: recall on churners improved from 45% to 58%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-08"
+  ],
+  "bid": 36,
+  "date": "2023-03-05",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-005",
+  "job_title": "Need help with PyTorch / LangChain project",
+  "job_skills": [
+   "PyTorch",
+   "LangChain"
+  ],
+  "client_industry": "real estate",
+  "text": "Hi there! I am a hardworking professional with many years of experience. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 41,
+  "date": "2023-04-14",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-006",
+  "job_title": "Urgent: pgvector / Python / PHP project",
+  "job_skills": [
+   "pgvector",
+   "Python",
+   "PHP"
+  ],
+  "client_industry": "marketing",
+  "text": "Hello, I have read your job post and I can do this job perfectly. Recently I built a invoice data extraction for a e-commerce client: field-level accuracy reached 50% with a 41% cost cut vs manual entry. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-16"
+  ],
+  "bid": 33,
+  "date": "2023-05-06",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-007",
+  "job_title": "Fix and improve our MLflow / Docker project",
+  "job_skills": [
+   "MLflow",
+   "Docker"
+  ],
+  "client_industry": "SaaS",
+  "text": "Dear Sir/Madam, I am very passionate about this job and I am the best fit. Recently I built a churn prediction model for a real estate client: recall on churners improved from 56% to 73%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-14"
+  ],
+  "bid": 45,
+  "date": "2023-09-29",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-008",
+  "job_title": "Looking for an expert in MLflow / OpenAI API / Java project",
+  "job_skills": [
+   "MLflow",
+   "OpenAI API",
+   "Java"
+  ],
+  "client_industry": "real estate",
+  "text": "Hi, your real estate project needs MLflow, which I use every week. Recently I built a churn prediction model for a healthcare client: recall on churners improved from 33% to 42%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-02"
+  ],
+  "bid": 32,
+  "date": "2023-11-02",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-009",
+  "job_title": "Looking for an expert in OpenAI API / MLflow / Flutter project",
+  "job_skills": [
+   "OpenAI API",
+   "MLflow",
+   "Flutter"
+  ],
+  "client_industry": "real estate",
+  "text": "Hi, your real estate project needs OpenAI API, which I use every week. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 37,
+  "date": "2023-12-04",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-010",
+  "job_title": "Looking for an expert in pgvector / NLP project",
+  "job_skills": [
+   "pgvector",
+   "NLP"
+  ],
+  "client_industry": "education",
+  "text": "Hi, your education project needs pgvector, which I use every week. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 45,
+  "date": "2024-06-14",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-011",
+  "job_title": "Build a RAG / OpenAI API / Java project",
+  "job_skills": [
+   "RAG",
+   "OpenAI API",
+   "Java"
+  ],
+  "client_industry": "SaaS",
+  "text": "Hi, your SaaS project needs RAG, which I use every week. Recently I built a contract q&a assistant for a e-commerce client: answer accuracy rose from 28% to 40% on a 200-question test set. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-07"
+  ],
+  "bid": 41,
+  "date": "2025-08-17",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-012",
+  "job_title": "Fix and improve our RAG / PyTorch / PHP project",
+  "job_skills": [
+   "RAG",
+   "PyTorch",
+   "PHP"
+  ],
+  "client_industry": "education",
+  "text": "Hi, your education project needs RAG, which I use every week. Recently I built a contract q&a assistant for a education client: answer accuracy rose from 15% to 32% on a 200-question test set. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-13"
+  ],
+  "bid": 41,
+  "date": "2024-05-05",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-013",
+  "job_title": "Fix and improve our NLP / Hugging Face / Java project",
+  "job_skills": [
+   "NLP",
+   "Hugging Face",
+   "Java"
+  ],
+  "client_industry": "education",
+  "text": "Hi there! I am a hardworking professional with many years of experience. Recently I built a support ticket classifier for a education client: manual triage time fell by 33%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-09"
+  ],
+  "bid": 42,
+  "date": "2025-08-26",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-014",
+  "job_title": "Need help with Docker / FastAPI project",
+  "job_skills": [
+   "Docker",
+   "FastAPI"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Dear Sir/Madam, I am very passionate about this job and I am the best fit. Recently I built a contract q&a assistant for a education client: answer accuracy rose from 15% to 32% on a 200-question test set. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-13"
+  ],
+  "bid": 34,
+  "date": "2025-04-05",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-015",
+  "job_title": "Fix and improve our pgvector / MLflow project",
+  "job_skills": [
+   "pgvector",
+   "MLflow"
+  ],
+  "client_industry": "real estate",
+  "text": "Hi, your real estate project needs pgvector, which I use every week. Recently I built a churn prediction model for a healthcare client: recall on churners improved from 33% to 42%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-02"
+  ],
+  "bid": 33,
+  "date": "2025-09-21",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-016",
+  "job_title": "Fix and improve our Postgres / OpenAI API project",
+  "job_skills": [
+   "Postgres",
+   "OpenAI API"
+  ],
+  "client_industry": "education",
+  "text": "Hello, I have read your job post and I can do this job perfectly. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 37,
+  "date": "2024-05-28",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-017",
+  "job_title": "Urgent: NLP / pgvector project",
+  "job_skills": [
+   "NLP",
+   "pgvector"
+  ],
+  "client_industry": "marketing",
+  "text": "Hi there! I am a hardworking professional with many years of experience. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 43,
+  "date": "2024-04-14",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-018",
+  "job_title": "Urgent: MLflow / Postgres / PHP project",
+  "job_skills": [
+   "MLflow",
+   "Postgres",
+   "PHP"
+  ],
+  "client_industry": "fintech",
+  "text": "Hi, your fintech project needs MLflow, which I use every week. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 34,
+  "date": "2025-03-05",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-019",
+  "job_title": "Need help with scikit-learn / Celery project",
+  "job_skills": [
+   "scikit-learn",
+   "Celery"
+  ],
+  "client_industry": "fintech",
+  "text": "Hi, your fintech project needs scikit-learn, which I use every week. Recently I built a churn prediction model for a real estate client: recall on churners improved from 56% to 73%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-14"
+  ],
+  "bid": 33,
+  "date": "2025-03-06",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-020",
+  "job_title": "Build a Celery / Postgres / PHP project",
+  "job_skills": [
+   "Celery",
+   "Postgres",
+   "PHP"
+  ],
+  "client_industry": "fintech",
+  "text": "Hi, your fintech project needs Celery, which I use every week. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 32,
+  "date": "2025-02-17",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-021",
+  "job_title": "Urgent: Docker / RAG project",
+  "job_skills": [
+   "Docker",
+   "RAG"
+  ],
+  "client_industry": "education",
+  "text": "Hi, your education project needs Docker, which I use every week. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 37,
+  "date": "2024-05-04",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-022",
+  "job_title": "Build a OpenAI API / Postgres project",
+  "job_skills": [
+   "OpenAI API",
+   "Postgres"
+  ],
+  "client_industry": "education",
+  "text": "Dear Sir/Madam, I am very passionate about this job and I am the best fit. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 32,
+  "date": "2023-11-20",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-023",
+  "job_title": "Looking for an expert in Hugging Face / LangChain project",
+  "job_skills": [
+   "Hugging Face",
+   "LangChain"
+  ],
+  "client_industry": "logistics",
+  "text": "Hi, your logistics project needs Hugging Face, which I use every week. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 41,
+  "date": "2025-01-03",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-024",
+  "job_title": "Fix and improve our scikit-learn / LangGraph project",
+  "job_skills": [
+   "scikit-learn",
+   "LangGraph"
+  ],
+  "client_industry": "education",
+  "text": "Hello, I have read your job post and I can do this job perfectly. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 37,
+  "date": "2024-11-14",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-025",
+  "job_title": "Urgent: scikit-learn / OpenAI API project",
+  "job_skills": [
+   "scikit-learn",
+   "OpenAI API"
+  ],
+  "client_industry": "marketing",
+  "text": "Hello, I have read your job post and I can do this job perfectly. Recently I built a invoice data extraction for a healthcare client: field-level accuracy reached 54% with a 45% cost cut vs manual entry. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-04"
+  ],
+  "bid": 40,
+  "date": "2023-01-20",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-026",
+  "job_title": "Need help with Postgres / Docker project",
+  "job_skills": [
+   "Postgres",
+   "Docker"
+  ],
+  "client_industry": "marketing",
+  "text": "Hi, your marketing project needs Postgres, which I use every week. Recently I built a demand forecasting for a SaaS client: forecast error (MAPE) fell from 14% to 30%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-18"
+  ],
+  "bid": 37,
+  "date": "2023-04-26",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-027",
+  "job_title": "Need help with Celery / PyTorch / Flutter project",
+  "job_skills": [
+   "Celery",
+   "PyTorch",
+   "Flutter"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hello, I have read your job post and I can do this job perfectly. Recently I built a support ticket classifier for a healthcare client: manual triage time fell by 42%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-15"
+  ],
+  "bid": 42,
+  "date": "2023-09-22",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-028",
+  "job_title": "Urgent: scikit-learn / Postgres project",
+  "job_skills": [
+   "scikit-learn",
+   "Postgres"
+  ],
+  "client_industry": "SaaS",
+  "text": "Dear Sir/Madam, I am very passionate about this job and I am the best fit. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 43,
+  "date": "2023-07-07",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-029",
+  "job_title": "Need help with Celery / PyTorch / Java project",
+  "job_skills": [
+   "Celery",
+   "PyTorch",
+   "Java"
+  ],
+  "client_industry": "logistics",
+  "text": "Hi, your logistics project needs Celery, which I use every week. Recently I built a support ticket classifier for a fintech client: manual triage time fell by 15%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-03"
+  ],
+  "bid": 44,
+  "date": "2023-05-05",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-030",
+  "job_title": "Fix and improve our Python / RAG project",
+  "job_skills": [
+   "Python",
+   "RAG"
+  ],
+  "client_industry": "logistics",
+  "text": "Hi there! I am a hardworking professional with many years of experience. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 35,
+  "date": "2023-04-23",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-031",
+  "job_title": "Build a LangGraph / Python / Flutter project",
+  "job_skills": [
+   "LangGraph",
+   "Python",
+   "Flutter"
+  ],
+  "client_industry": "education",
+  "text": "Hi, your education project needs LangGraph, which I use every week. Recently I built a multi-agent research assistant for a healthcare client: report drafting time dropped from 24 hours to 52 minutes. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-05"
+  ],
+  "bid": 30,
+  "date": "2025-04-02",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-032",
+  "job_title": "Urgent: LangGraph / Python / SAP project",
+  "job_skills": [
+   "LangGraph",
+   "Python",
+   "SAP"
+  ],
+  "client_industry": "education",
+  "text": "Hello, I have read your job post and I can do this job perfectly. Recently I built a invoice data extraction for a healthcare client: field-level accuracy reached 54% with a 45% cost cut vs manual entry. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-04"
+  ],
+  "bid": 43,
+  "date": "2024-10-27",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-033",
+  "job_title": "Fix and improve our Hugging Face / Docker project",
+  "job_skills": [
+   "Hugging Face",
+   "Docker"
+  ],
+  "client_industry": "logistics",
+  "text": "Hi, your logistics project needs Hugging Face, which I use every week. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 34,
+  "date": "2025-05-02",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-034",
+  "job_title": "Looking for an expert in FastAPI / RAG project",
+  "job_skills": [
+   "FastAPI",
+   "RAG"
+  ],
+  "client_industry": "fintech",
+  "text": "Hi, your fintech project needs FastAPI, which I use every week. Recently I built a contract q&a assistant for a e-commerce client: answer accuracy rose from 28% to 40% on a 200-question test set. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-07"
+  ],
+  "bid": 32,
+  "date": "2023-02-26",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-035",
+  "job_title": "Urgent: Hugging Face / MLflow project",
+  "job_skills": [
+   "Hugging Face",
+   "MLflow"
+  ],
+  "client_industry": "logistics",
+  "text": "Hi, your logistics project needs Hugging Face, which I use every week. Recently I built a churn prediction model for a healthcare client: recall on churners improved from 33% to 42%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-02"
+  ],
+  "bid": 38,
+  "date": "2023-06-11",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-036",
+  "job_title": "Urgent: Docker / Python / Flutter project",
+  "job_skills": [
+   "Docker",
+   "Python",
+   "Flutter"
+  ],
+  "client_industry": "real estate",
+  "text": "Hi, your real estate project needs Docker, which I use every week. Recently I built a churn prediction model for a logistics client: recall on churners improved from 45% to 58%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-08"
+  ],
+  "bid": 30,
+  "date": "2023-07-07",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-037",
+  "job_title": "Urgent: RAG / FastAPI / Flutter project",
+  "job_skills": [
+   "RAG",
+   "FastAPI",
+   "Flutter"
+  ],
+  "client_industry": "education",
+  "text": "Hi, your education project needs RAG, which I use every week. Recently I built a contract q&a assistant for a real estate client: answer accuracy rose from 19% to 47% on a 200-question test set. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-01"
+  ],
+  "bid": 34,
+  "date": "2023-04-02",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-038",
+  "job_title": "Build a FastAPI / pgvector / Java project",
+  "job_skills": [
+   "FastAPI",
+   "pgvector",
+   "Java"
+  ],
+  "client_industry": "logistics",
+  "text": "Hi there! I am a hardworking professional with many years of experience. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 42,
+  "date": "2023-06-08",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-039",
+  "job_title": "Fix and improve our NLP / RAG project",
+  "job_skills": [
+   "NLP",
+   "RAG"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hi, your e-commerce project needs NLP, which I use every week. Recently I built a support ticket classifier for a fintech client: manual triage time fell by 15%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-03"
+  ],
+  "bid": 43,
+  "date": "2025-05-05",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-040",
+  "job_title": "Looking for an expert in OpenAI API / Celery project",
+  "job_skills": [
+   "OpenAI API",
+   "Celery"
+  ],
+  "client_industry": "fintech",
+  "text": "Hi, your fintech project needs OpenAI API, which I use every week. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 37,
+  "date": "2024-11-30",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-041",
+  "job_title": "Need help with PyTorch / Python / Flutter project",
+  "job_skills": [
+   "PyTorch",
+   "Python",
+   "Flutter"
+  ],
+  "client_industry": "marketing",
+  "text": "Hi, your marketing project needs PyTorch, which I use every week. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 37,
+  "date": "2024-10-03",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-042",
+  "job_title": "Urgent: Docker / LangGraph / Java project",
+  "job_skills": [
+   "Docker",
+   "LangGraph",
+   "Java"
+  ],
+  "client_industry": "healthcare",
+  "text": "Hi there! I am a hardworking professional with many years of experience. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 32,
+  "date": "2025-04-08",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-043",
+  "job_title": "Looking for an expert in MLflow / LangGraph / PHP project",
+  "job_skills": [
+   "MLflow",
+   "LangGraph",
+   "PHP"
+  ],
+  "client_industry": "SaaS",
+  "text": "Hi, your SaaS project needs MLflow, which I use every week. Recently I built a multi-agent research assistant for a marketing client: report drafting time dropped from 59 hours to 81 minutes. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-11"
+  ],
+  "bid": 31,
+  "date": "2023-10-22",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-044",
+  "job_title": "Need help with pgvector / Hugging Face project",
+  "job_skills": [
+   "pgvector",
+   "Hugging Face"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hi, your e-commerce project needs pgvector, which I use every week. Recently I built a support ticket classifier for a healthcare client: manual triage time fell by 42%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-15"
+  ],
+  "bid": 34,
+  "date": "2024-08-04",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-045",
+  "job_title": "Need help with Python / Docker / Flutter project",
+  "job_skills": [
+   "Python",
+   "Docker",
+   "Flutter"
+  ],
+  "client_industry": "education",
+  "text": "Hi there! I am a hardworking professional with many years of experience. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 44,
+  "date": "2024-04-22",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-046",
+  "job_title": "Urgent: NLP / PyTorch project",
+  "job_skills": [
+   "NLP",
+   "PyTorch"
+  ],
+  "client_industry": "education",
+  "text": "Hello, I have read your job post and I can do this job perfectly. Recently I built a support ticket classifier for a fintech client: manual triage time fell by 15%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-03"
+  ],
+  "bid": 44,
+  "date": "2023-03-20",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-047",
+  "job_title": "Need help with LangGraph / FastAPI / PHP project",
+  "job_skills": [
+   "LangGraph",
+   "FastAPI",
+   "PHP"
+  ],
+  "client_industry": "healthcare",
+  "text": "Hi, your healthcare project needs LangGraph, which I use every week. Recently I built a contract q&a assistant for a e-commerce client: answer accuracy rose from 28% to 40% on a 200-question test set. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-07"
+  ],
+  "bid": 38,
+  "date": "2025-04-19",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-048",
+  "job_title": "Looking for an expert in Celery / PyTorch project",
+  "job_skills": [
+   "Celery",
+   "PyTorch"
+  ],
+  "client_industry": "SaaS",
+  "text": "Hi, your SaaS project needs Celery, which I use every week. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 45,
+  "date": "2023-01-04",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-049",
+  "job_title": "Looking for an expert in Hugging Face / Docker project",
+  "job_skills": [
+   "Hugging Face",
+   "Docker"
+  ],
+  "client_industry": "marketing",
+  "text": "Hello, I have read your job post and I can do this job perfectly. Recently I built a support ticket classifier for a fintech client: manual triage time fell by 15%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-03"
+  ],
+  "bid": 42,
+  "date": "2023-12-13",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-050",
+  "job_title": "Build a PyTorch / LangChain project",
+  "job_skills": [
+   "PyTorch",
+   "LangChain"
+  ],
+  "client_industry": "logistics",
+  "text": "Hi, your logistics project needs PyTorch, which I use every week. Recently I built a support ticket classifier for a fintech client: manual triage time fell by 15%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-03"
+  ],
+  "bid": 38,
+  "date": "2024-03-14",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-051",
+  "job_title": "Build a MLflow / Python / Java project",
+  "job_skills": [
+   "MLflow",
+   "Python",
+   "Java"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hi there! I am a hardworking professional with many years of experience. Recently I built a invoice data extraction for a fintech client: field-level accuracy reached 72% with a 49% cost cut vs manual entry. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-10"
+  ],
+  "bid": 43,
+  "date": "2024-01-18",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-052",
+  "job_title": "Fix and improve our Celery / Python project",
+  "job_skills": [
+   "Celery",
+   "Python"
+  ],
+  "client_industry": "education",
+  "text": "Hi there! I am a hardworking professional with many years of experience. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 34,
+  "date": "2024-09-21",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-053",
+  "job_title": "Urgent: Hugging Face / MLflow / Java project",
+  "job_skills": [
+   "Hugging Face",
+   "MLflow",
+   "Java"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hi, your e-commerce project needs Hugging Face, which I use every week. Recently I built a churn prediction model for a logistics client: recall on churners improved from 45% to 58%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-08"
+  ],
+  "bid": 38,
+  "date": "2025-01-26",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-054",
+  "job_title": "Urgent: FastAPI / Hugging Face / Rust project",
+  "job_skills": [
+   "FastAPI",
+   "Hugging Face",
+   "Rust"
+  ],
+  "client_industry": "marketing",
+  "text": "Hi, your marketing project needs FastAPI, which I use every week. Recently I built a contract q&a assistant for a real estate client: answer accuracy rose from 19% to 47% on a 200-question test set. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-01"
+  ],
+  "bid": 45,
+  "date": "2025-07-16",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-055",
+  "job_title": "Build a Postgres / LangChain project",
+  "job_skills": [
+   "Postgres",
+   "LangChain"
+  ],
+  "client_industry": "SaaS",
+  "text": "Hi, your SaaS project needs Postgres, which I use every week. Recently I built a contract q&a assistant for a e-commerce client: answer accuracy rose from 28% to 40% on a 200-question test set. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-07"
+  ],
+  "bid": 32,
+  "date": "2023-12-17",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-056",
+  "job_title": "Urgent: RAG / LangChain project",
+  "job_skills": [
+   "RAG",
+   "LangChain"
+  ],
+  "client_industry": "education",
+  "text": "Hi, your education project needs RAG, which I use every week. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 36,
+  "date": "2024-02-28",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-057",
+  "job_title": "Need help with FastAPI / LangGraph project",
+  "job_skills": [
+   "FastAPI",
+   "LangGraph"
+  ],
+  "client_industry": "SaaS",
+  "text": "Hi, your SaaS project needs FastAPI, which I use every week. Recently I built a multi-agent research assistant for a healthcare client: report drafting time dropped from 24 hours to 52 minutes. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-05"
+  ],
+  "bid": 36,
+  "date": "2024-06-25",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-058",
+  "job_title": "Fix and improve our PyTorch / LangGraph project",
+  "job_skills": [
+   "PyTorch",
+   "LangGraph"
+  ],
+  "client_industry": "marketing",
+  "text": "Hi, your marketing project needs PyTorch, which I use every week. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 30,
+  "date": "2025-04-13",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-059",
+  "job_title": "Fix and improve our scikit-learn / Python project",
+  "job_skills": [
+   "scikit-learn",
+   "Python"
+  ],
+  "client_industry": "SaaS",
+  "text": "Hi, your SaaS project needs scikit-learn, which I use every week. Recently I built a churn prediction model for a real estate client: recall on churners improved from 56% to 73%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-14"
+  ],
+  "bid": 44,
+  "date": "2025-09-22",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-060",
+  "job_title": "Looking for an expert in LangChain / NLP / PHP project",
+  "job_skills": [
+   "LangChain",
+   "NLP",
+   "PHP"
+  ],
+  "client_industry": "healthcare",
+  "text": "Hi, your healthcare project needs LangChain, which I use every week. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 44,
+  "date": "2025-02-22",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-061",
+  "job_title": "Need help with PyTorch / Postgres project",
+  "job_skills": [
+   "PyTorch",
+   "Postgres"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hi, your e-commerce project needs PyTorch, which I use every week. Recently I built a demand forecasting for a SaaS client: forecast error (MAPE) fell from 14% to 30%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-18"
+  ],
+  "bid": 34,
+  "date": "2025-09-12",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-062",
+  "job_title": "Fix and improve our Hugging Face / LangGraph project",
+  "job_skills": [
+   "Hugging Face",
+   "LangGraph"
+  ],
+  "client_industry": "healthcare",
+  "text": "Hi there! I am a hardworking professional with many years of experience. Recently I built a multi-agent research assistant for a healthcare client: report drafting time dropped from 24 hours to 52 minutes. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-05"
+  ],
+  "bid": 30,
+  "date": "2023-08-17",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-063",
+  "job_title": "Fix and improve our Python / Postgres project",
+  "job_skills": [
+   "Python",
+   "Postgres"
+  ],
+  "client_industry": "logistics",
+  "text": "Hi, your logistics project needs Python, which I use every week. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 37,
+  "date": "2024-05-01",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-064",
+  "job_title": "Build a Postgres / LangChain / Rust project",
+  "job_skills": [
+   "Postgres",
+   "LangChain",
+   "Rust"
+  ],
+  "client_industry": "fintech",
+  "text": "Hi, your fintech project needs Postgres, which I use every week. Recently I built a contract q&a assistant for a education client: answer accuracy rose from 15% to 32% on a 200-question test set. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-13"
+  ],
+  "bid": 43,
+  "date": "2023-08-22",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-065",
+  "job_title": "Build a Celery / RAG / Java project",
+  "job_skills": [
+   "Celery",
+   "RAG",
+   "Java"
+  ],
+  "client_industry": "marketing",
+  "text": "Hi, your marketing project needs Celery, which I use every week. Recently I built a contract q&a assistant for a real estate client: answer accuracy rose from 19% to 47% on a 200-question test set. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-01"
+  ],
+  "bid": 32,
+  "date": "2025-01-26",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-066",
+  "job_title": "Build a LangChain / Docker project",
+  "job_skills": [
+   "LangChain",
+   "Docker"
+  ],
+  "client_industry": "education",
+  "text": "Hello, I have read your job post and I can do this job perfectly. Recently I built a contract q&a assistant for a real estate client: answer accuracy rose from 19% to 47% on a 200-question test set. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-01"
+  ],
+  "bid": 35,
+  "date": "2024-05-22",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-067",
+  "job_title": "Need help with Celery / LangChain project",
+  "job_skills": [
+   "Celery",
+   "LangChain"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Dear Sir/Madam, I am very passionate about this job and I am the best fit. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 43,
+  "date": "2023-05-26",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-068",
+  "job_title": "Fix and improve our Python / OpenAI API / Rust project",
+  "job_skills": [
+   "Python",
+   "OpenAI API",
+   "Rust"
+  ],
+  "client_industry": "real estate",
+  "text": "Hi, your real estate project needs Python, which I use every week. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 36,
+  "date": "2023-12-04",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-069",
+  "job_title": "Fix and improve our scikit-learn / Hugging Face project",
+  "job_skills": [
+   "scikit-learn",
+   "Hugging Face"
+  ],
+  "client_industry": "fintech",
+  "text": "Hi, your fintech project needs scikit-learn, which I use every week. Recently I built a demand forecasting for a real estate client: forecast error (MAPE) fell from 29% to 62%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-12"
+  ],
+  "bid": 35,
+  "date": "2024-03-29",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-070",
+  "job_title": "Build a PyTorch / Python / Java project",
+  "job_skills": [
+   "PyTorch",
+   "Python",
+   "Java"
+  ],
+  "client_industry": "marketing",
+  "text": "Dear Sir/Madam, I am very passionate about this job and I am the best fit. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 39,
+  "date": "2025-02-26",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-071",
+  "job_title": "Need help with MLflow / NLP project",
+  "job_skills": [
+   "MLflow",
+   "NLP"
+  ],
+  "client_industry": "SaaS",
+  "text": "Hi, your SaaS project needs MLflow, which I use every week. Recently I built a support ticket classifier for a education client: manual triage time fell by 33%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-09"
+  ],
+  "bid": 45,
+  "date": "2024-01-08",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-072",
+  "job_title": "Fix and improve our Python / Hugging Face project",
+  "job_skills": [
+   "Python",
+   "Hugging Face"
+  ],
+  "client_industry": "fintech",
+  "text": "Hi, your fintech project needs Python, which I use every week. Recently I built a invoice data extraction for a e-commerce client: field-level accuracy reached 50% with a 41% cost cut vs manual entry. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-16"
+  ],
+  "bid": 36,
+  "date": "2023-09-21",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-073",
+  "job_title": "Build a OpenAI API / PyTorch project",
+  "job_skills": [
+   "OpenAI API",
+   "PyTorch"
+  ],
+  "client_industry": "real estate",
+  "text": "Hi, your real estate project needs OpenAI API, which I use every week. Recently I built a support ticket classifier for a healthcare client: manual triage time fell by 42%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-15"
+  ],
+  "bid": 40,
+  "date": "2025-02-03",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-074",
+  "job_title": "Need help with Celery / LangGraph / SAP project",
+  "job_skills": [
+   "Celery",
+   "LangGraph",
+   "SAP"
+  ],
+  "client_industry": "fintech",
+  "text": "Hi there! I am a hardworking professional with many years of experience. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 42,
+  "date": "2025-09-03",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-075",
+  "job_title": "Fix and improve our NLP / LangGraph project",
+  "job_skills": [
+   "NLP",
+   "LangGraph"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hi there! I am a hardworking professional with many years of experience. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 34,
+  "date": "2024-12-09",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-076",
+  "job_title": "Build a pgvector / LangChain project",
+  "job_skills": [
+   "pgvector",
+   "LangChain"
+  ],
+  "client_industry": "SaaS",
+  "text": "Hi, your SaaS project needs pgvector, which I use every week. Recently I built a contract q&a assistant for a real estate client: answer accuracy rose from 19% to 47% on a 200-question test set. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-01"
+  ],
+  "bid": 35,
+  "date": "2024-02-06",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-077",
+  "job_title": "Fix and improve our LangChain / FastAPI / Java project",
+  "job_skills": [
+   "LangChain",
+   "FastAPI",
+   "Java"
+  ],
+  "client_industry": "real estate",
+  "text": "Hi, your real estate project needs LangChain, which I use every week. Recently I built a contract q&a assistant for a real estate client: answer accuracy rose from 19% to 47% on a 200-question test set. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-01"
+  ],
+  "bid": 32,
+  "date": "2023-09-29",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-078",
+  "job_title": "Fix and improve our LangChain / PyTorch project",
+  "job_skills": [
+   "LangChain",
+   "PyTorch"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hi, your e-commerce project needs LangChain, which I use every week. Recently I built a contract q&a assistant for a e-commerce client: answer accuracy rose from 28% to 40% on a 200-question test set. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-07"
+  ],
+  "bid": 33,
+  "date": "2025-05-17",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-079",
+  "job_title": "Urgent: NLP / MLflow / Flutter project",
+  "job_skills": [
+   "NLP",
+   "MLflow",
+   "Flutter"
+  ],
+  "client_industry": "logistics",
+  "text": "Hi, your logistics project needs NLP, which I use every week. Recently I built a support ticket classifier for a fintech client: manual triage time fell by 15%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-03"
+  ],
+  "bid": 37,
+  "date": "2023-07-10",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-080",
+  "job_title": "Looking for an expert in LangChain / scikit-learn / SAP project",
+  "job_skills": [
+   "LangChain",
+   "scikit-learn",
+   "SAP"
+  ],
+  "client_industry": "real estate",
+  "text": "Dear Sir/Madam, I am very passionate about this job and I am the best fit. Recently I built a contract q&a assistant for a education client: answer accuracy rose from 15% to 32% on a 200-question test set. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-13"
+  ],
+  "bid": 33,
+  "date": "2024-10-27",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-081",
+  "job_title": "Need help with Hugging Face / Docker project",
+  "job_skills": [
+   "Hugging Face",
+   "Docker"
+  ],
+  "client_industry": "fintech",
+  "text": "Hi, your fintech project needs Hugging Face, which I use every week. Recently I built a support ticket classifier for a education client: manual triage time fell by 33%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-09"
+  ],
+  "bid": 39,
+  "date": "2023-02-11",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-082",
+  "job_title": "Urgent: LangChain / PyTorch / SAP project",
+  "job_skills": [
+   "LangChain",
+   "PyTorch",
+   "SAP"
+  ],
+  "client_industry": "education",
+  "text": "Hi, your education project needs LangChain, which I use every week. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 38,
+  "date": "2024-04-04",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-083",
+  "job_title": "Need help with NLP / Celery project",
+  "job_skills": [
+   "NLP",
+   "Celery"
+  ],
+  "client_industry": "healthcare",
+  "text": "Hi, your healthcare project needs NLP, which I use every week. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 41,
+  "date": "2023-02-08",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-084",
+  "job_title": "Need help with RAG / scikit-learn / Flutter project",
+  "job_skills": [
+   "RAG",
+   "scikit-learn",
+   "Flutter"
+  ],
+  "client_industry": "education",
+  "text": "Hi, your education project needs RAG, which I use every week. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 35,
+  "date": "2024-01-16",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-085",
+  "job_title": "Fix and improve our pgvector / LangGraph / Java project",
+  "job_skills": [
+   "pgvector",
+   "LangGraph",
+   "Java"
+  ],
+  "client_industry": "SaaS",
+  "text": "Hello, I have read your job post and I can do this job perfectly. Recently I built a multi-agent research assistant for a real estate client: report drafting time dropped from 31 hours to 50 minutes. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-17"
+  ],
+  "bid": 32,
+  "date": "2024-10-16",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-086",
+  "job_title": "Build a Hugging Face / scikit-learn project",
+  "job_skills": [
+   "Hugging Face",
+   "scikit-learn"
+  ],
+  "client_industry": "marketing",
+  "text": "Hi, your marketing project needs Hugging Face, which I use every week. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 39,
+  "date": "2023-02-22",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-087",
+  "job_title": "Fix and improve our OpenAI API / pgvector project",
+  "job_skills": [
+   "OpenAI API",
+   "pgvector"
+  ],
+  "client_industry": "marketing",
+  "text": "Hi, your marketing project needs OpenAI API, which I use every week. Recently I built a invoice data extraction for a fintech client: field-level accuracy reached 72% with a 49% cost cut vs manual entry. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-10"
+  ],
+  "bid": 42,
+  "date": "2024-02-05",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-088",
+  "job_title": "Looking for an expert in LangChain / Python project",
+  "job_skills": [
+   "LangChain",
+   "Python"
+  ],
+  "client_industry": "marketing",
+  "text": "Hi there! I am a hardworking professional with many years of experience. Recently I built a demand forecasting for a SaaS client: forecast error (MAPE) fell from 14% to 30%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-18"
+  ],
+  "bid": 35,
+  "date": "2025-03-02",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-089",
+  "job_title": "Fix and improve our scikit-learn / Python / PHP project",
+  "job_skills": [
+   "scikit-learn",
+   "Python",
+   "PHP"
+  ],
+  "client_industry": "healthcare",
+  "text": "Hi, your healthcare project needs scikit-learn, which I use every week. Recently I built a demand forecasting for a SaaS client: forecast error (MAPE) fell from 14% to 30%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-18"
+  ],
+  "bid": 41,
+  "date": "2023-05-30",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-090",
+  "job_title": "Need help with LangGraph / scikit-learn project",
+  "job_skills": [
+   "LangGraph",
+   "scikit-learn"
+  ],
+  "client_industry": "healthcare",
+  "text": "Hi, your healthcare project needs LangGraph, which I use every week. Recently I built a churn prediction model for a logistics client: recall on churners improved from 45% to 58%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-08"
+  ],
+  "bid": 31,
+  "date": "2025-05-07",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-091",
+  "job_title": "Urgent: Celery / Docker project",
+  "job_skills": [
+   "Celery",
+   "Docker"
+  ],
+  "client_industry": "marketing",
+  "text": "Hi, your marketing project needs Celery, which I use every week. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 35,
+  "date": "2025-07-01",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-092",
+  "job_title": "Urgent: Hugging Face / NLP project",
+  "job_skills": [
+   "Hugging Face",
+   "NLP"
+  ],
+  "client_industry": "marketing",
+  "text": "Hello, I have read your job post and I can do this job perfectly. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 31,
+  "date": "2023-08-12",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-093",
+  "job_title": "Need help with FastAPI / Postgres / Flutter project",
+  "job_skills": [
+   "FastAPI",
+   "Postgres",
+   "Flutter"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hi, your e-commerce project needs FastAPI, which I use every week. Recently I built a demand forecasting for a marketing client: forecast error (MAPE) fell from 13% to 22%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-06"
+  ],
+  "bid": 31,
+  "date": "2024-07-29",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-094",
+  "job_title": "Fix and improve our Hugging Face / MLflow project",
+  "job_skills": [
+   "Hugging Face",
+   "MLflow"
+  ],
+  "client_industry": "SaaS",
+  "text": "Hi, your SaaS project needs Hugging Face, which I use every week. Recently I built a churn prediction model for a logistics client: recall on churners improved from 45% to 58%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-08"
+  ],
+  "bid": 37,
+  "date": "2023-11-12",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-095",
+  "job_title": "Fix and improve our FastAPI / Celery project",
+  "job_skills": [
+   "FastAPI",
+   "Celery"
+  ],
+  "client_industry": "SaaS",
+  "text": "Hello, I have read your job post and I can do this job perfectly. Recently I built a contract q&a assistant for a e-commerce client: answer accuracy rose from 28% to 40% on a 200-question test set. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-07"
+  ],
+  "bid": 44,
+  "date": "2025-02-20",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-096",
+  "job_title": "Fix and improve our MLflow / scikit-learn project",
+  "job_skills": [
+   "MLflow",
+   "scikit-learn"
+  ],
+  "client_industry": "healthcare",
+  "text": "Hi, your healthcare project needs MLflow, which I use every week. Recently I built a churn prediction model for a logistics client: recall on churners improved from 45% to 58%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-08"
+  ],
+  "bid": 31,
+  "date": "2024-03-28",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-097",
+  "job_title": "Urgent: Python / Hugging Face / Flutter project",
+  "job_skills": [
+   "Python",
+   "Hugging Face",
+   "Flutter"
+  ],
+  "client_industry": "healthcare",
+  "text": "Hi, your healthcare project needs Python, which I use every week. Recently I built a support ticket classifier for a education client: manual triage time fell by 33%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-09"
+  ],
+  "bid": 34,
+  "date": "2025-03-14",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-098",
+  "job_title": "Need help with Python / MLflow / SAP project",
+  "job_skills": [
+   "Python",
+   "MLflow",
+   "SAP"
+  ],
+  "client_industry": "education",
+  "text": "Hi, your education project needs Python, which I use every week. Recently I built a churn prediction model for a logistics client: recall on churners improved from 45% to 58%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-08"
+  ],
+  "bid": 35,
+  "date": "2025-07-27",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-099",
+  "job_title": "Looking for an expert in Hugging Face / NLP project",
+  "job_skills": [
+   "Hugging Face",
+   "NLP"
+  ],
+  "client_industry": "healthcare",
+  "text": "Hi, your healthcare project needs Hugging Face, which I use every week. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 38,
+  "date": "2023-11-28",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-100",
+  "job_title": "Build a Celery / MLflow project",
+  "job_skills": [
+   "Celery",
+   "MLflow"
+  ],
+  "client_industry": "SaaS",
+  "text": "Hi there! I am a hardworking professional with many years of experience. Recently I built a churn prediction model for a healthcare client: recall on churners improved from 33% to 42%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-02"
+  ],
+  "bid": 36,
+  "date": "2023-02-07",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-101",
+  "job_title": "Build a scikit-learn / FastAPI / Flutter project",
+  "job_skills": [
+   "scikit-learn",
+   "FastAPI",
+   "Flutter"
+  ],
+  "client_industry": "marketing",
+  "text": "Hi, your marketing project needs scikit-learn, which I use every week. Recently I built a churn prediction model for a healthcare client: recall on churners improved from 33% to 42%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-02"
+  ],
+  "bid": 41,
+  "date": "2023-02-19",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-102",
+  "job_title": "Urgent: MLflow / Docker project",
+  "job_skills": [
+   "MLflow",
+   "Docker"
+  ],
+  "client_industry": "healthcare",
+  "text": "Hi, your healthcare project needs MLflow, which I use every week. Recently I built a churn prediction model for a logistics client: recall on churners improved from 45% to 58%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-08"
+  ],
+  "bid": 38,
+  "date": "2024-01-16",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-103",
+  "job_title": "Build a FastAPI / RAG project",
+  "job_skills": [
+   "FastAPI",
+   "RAG"
+  ],
+  "client_industry": "real estate",
+  "text": "Hi, your real estate project needs FastAPI, which I use every week. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 31,
+  "date": "2025-01-31",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-104",
+  "job_title": "Build a LangGraph / MLflow project",
+  "job_skills": [
+   "LangGraph",
+   "MLflow"
+  ],
+  "client_industry": "real estate",
+  "text": "Hi, your real estate project needs LangGraph, which I use every week. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 43,
+  "date": "2023-10-25",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-105",
+  "job_title": "Need help with FastAPI / Postgres project",
+  "job_skills": [
+   "FastAPI",
+   "Postgres"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hi, your e-commerce project needs FastAPI, which I use every week. Recently I built a contract q&a assistant for a real estate client: answer accuracy rose from 19% to 47% on a 200-question test set. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-01"
+  ],
+  "bid": 41,
+  "date": "2023-01-03",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-106",
+  "job_title": "Urgent: LangGraph / PyTorch project",
+  "job_skills": [
+   "LangGraph",
+   "PyTorch"
+  ],
+  "client_industry": "education",
+  "text": "Dear Sir/Madam, I am very passionate about this job and I am the best fit. Recently I built a multi-agent research assistant for a healthcare client: report drafting time dropped from 24 hours to 52 minutes. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-05"
+  ],
+  "bid": 45,
+  "date": "2025-04-28",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-107",
+  "job_title": "Looking for an expert in scikit-learn / Celery / PHP project",
+  "job_skills": [
+   "scikit-learn",
+   "Celery",
+   "PHP"
+  ],
+  "client_industry": "SaaS",
+  "text": "Hi, your SaaS project needs scikit-learn, which I use every week. Recently I built a demand forecasting for a SaaS client: forecast error (MAPE) fell from 14% to 30%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-18"
+  ],
+  "bid": 38,
+  "date": "2024-02-16",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-108",
+  "job_title": "Urgent: Python / Celery project",
+  "job_skills": [
+   "Python",
+   "Celery"
+  ],
+  "client_industry": "real estate",
+  "text": "Hi, your real estate project needs Python, which I use every week. Recently I built a invoice data extraction for a e-commerce client: field-level accuracy reached 50% with a 41% cost cut vs manual entry. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-16"
+  ],
+  "bid": 45,
+  "date": "2025-01-21",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-109",
+  "job_title": "Need help with LangChain / scikit-learn project",
+  "job_skills": [
+   "LangChain",
+   "scikit-learn"
+  ],
+  "client_industry": "fintech",
+  "text": "Hi, your fintech project needs LangChain, which I use every week. Recently I built a demand forecasting for a marketing client: forecast error (MAPE) fell from 13% to 22%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-06"
+  ],
+  "bid": 33,
+  "date": "2025-07-22",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-110",
+  "job_title": "Looking for an expert in Python / pgvector project",
+  "job_skills": [
+   "Python",
+   "pgvector"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hi, your e-commerce project needs Python, which I use every week. Recently I built a multi-agent research assistant for a real estate client: report drafting time dropped from 31 hours to 50 minutes. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-17"
+  ],
+  "bid": 43,
+  "date": "2024-10-18",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-111",
+  "job_title": "Need help with MLflow / pgvector / Flutter project",
+  "job_skills": [
+   "MLflow",
+   "pgvector",
+   "Flutter"
+  ],
+  "client_industry": "logistics",
+  "text": "Hi, your logistics project needs MLflow, which I use every week. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 30,
+  "date": "2024-05-04",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-112",
+  "job_title": "Fix and improve our FastAPI / MLflow project",
+  "job_skills": [
+   "FastAPI",
+   "MLflow"
+  ],
+  "client_industry": "healthcare",
+  "text": "Hi, your healthcare project needs FastAPI, which I use every week. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 38,
+  "date": "2023-04-18",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-113",
+  "job_title": "Build a LangChain / Hugging Face / Flutter project",
+  "job_skills": [
+   "LangChain",
+   "Hugging Face",
+   "Flutter"
+  ],
+  "client_industry": "fintech",
+  "text": "Hi, your fintech project needs LangChain, which I use every week. Recently I built a contract q&a assistant for a education client: answer accuracy rose from 15% to 32% on a 200-question test set. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-13"
+  ],
+  "bid": 38,
+  "date": "2025-07-28",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-114",
+  "job_title": "Looking for an expert in LangGraph / Hugging Face project",
+  "job_skills": [
+   "LangGraph",
+   "Hugging Face"
+  ],
+  "client_industry": "healthcare",
+  "text": "Hello, I have read your job post and I can do this job perfectly. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 36,
+  "date": "2025-05-11",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-115",
+  "job_title": "Looking for an expert in scikit-learn / OpenAI API project",
+  "job_skills": [
+   "scikit-learn",
+   "OpenAI API"
+  ],
+  "client_industry": "marketing",
+  "text": "Hi there! I am a hardworking professional with many years of experience. Recently I built a demand forecasting for a SaaS client: forecast error (MAPE) fell from 14% to 30%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-18"
+  ],
+  "bid": 30,
+  "date": "2025-05-09",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-116",
+  "job_title": "Looking for an expert in MLflow / Python project",
+  "job_skills": [
+   "MLflow",
+   "Python"
+  ],
+  "client_industry": "logistics",
+  "text": "Hi, your logistics project needs MLflow, which I use every week. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 35,
+  "date": "2024-08-01",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-117",
+  "job_title": "Urgent: scikit-learn / Python / Java project",
+  "job_skills": [
+   "scikit-learn",
+   "Python",
+   "Java"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Dear Sir/Madam, I am very passionate about this job and I am the best fit. Recently I built a churn prediction model for a healthcare client: recall on churners improved from 33% to 42%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-02"
+  ],
+  "bid": 31,
+  "date": "2024-12-10",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-118",
+  "job_title": "Need help with OpenAI API / PyTorch project",
+  "job_skills": [
+   "OpenAI API",
+   "PyTorch"
+  ],
+  "client_industry": "real estate",
+  "text": "Hi, your real estate project needs OpenAI API, which I use every week. Recently I built a support ticket classifier for a healthcare client: manual triage time fell by 42%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-15"
+  ],
+  "bid": 42,
+  "date": "2023-03-09",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-119",
+  "job_title": "Need help with PyTorch / LangChain / Java project",
+  "job_skills": [
+   "PyTorch",
+   "LangChain",
+   "Java"
+  ],
+  "client_industry": "fintech",
+  "text": "Hi, your fintech project needs PyTorch, which I use every week. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 39,
+  "date": "2023-03-31",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-120",
+  "job_title": "Build a Docker / PyTorch / PHP project",
+  "job_skills": [
+   "Docker",
+   "PyTorch",
+   "PHP"
+  ],
+  "client_industry": "real estate",
+  "text": "Hello, I have read your job post and I can do this job perfectly. Recently I built a support ticket classifier for a education client: manual triage time fell by 33%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-09"
+  ],
+  "bid": 41,
+  "date": "2023-02-19",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-121",
+  "job_title": "Urgent: Celery / RAG project",
+  "job_skills": [
+   "Celery",
+   "RAG"
+  ],
+  "client_industry": "SaaS",
+  "text": "Hi, your SaaS project needs Celery, which I use every week. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 30,
+  "date": "2024-02-27",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-122",
+  "job_title": "Build a FastAPI / Postgres project",
+  "job_skills": [
+   "FastAPI",
+   "Postgres"
+  ],
+  "client_industry": "SaaS",
+  "text": "Hi, your SaaS project needs FastAPI, which I use every week. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 32,
+  "date": "2025-06-01",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-123",
+  "job_title": "Need help with pgvector / MLflow / Rust project",
+  "job_skills": [
+   "pgvector",
+   "MLflow",
+   "Rust"
+  ],
+  "client_industry": "education",
+  "text": "Hi, your education project needs pgvector, which I use every week. Recently I built a churn prediction model for a healthcare client: recall on churners improved from 33% to 42%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-02"
+  ],
+  "bid": 33,
+  "date": "2024-05-17",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-124",
+  "job_title": "Looking for an expert in Docker / OpenAI API project",
+  "job_skills": [
+   "Docker",
+   "OpenAI API"
+  ],
+  "client_industry": "SaaS",
+  "text": "Hi, your SaaS project needs Docker, which I use every week. Recently I built a invoice data extraction for a e-commerce client: field-level accuracy reached 50% with a 41% cost cut vs manual entry. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-16"
+  ],
+  "bid": 35,
+  "date": "2025-08-24",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-125",
+  "job_title": "Fix and improve our LangGraph / MLflow / PHP project",
+  "job_skills": [
+   "LangGraph",
+   "MLflow",
+   "PHP"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hi, your e-commerce project needs LangGraph, which I use every week. Recently I built a churn prediction model for a healthcare client: recall on churners improved from 33% to 42%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-02"
+  ],
+  "bid": 33,
+  "date": "2024-12-14",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-126",
+  "job_title": "Fix and improve our Hugging Face / RAG project",
+  "job_skills": [
+   "Hugging Face",
+   "RAG"
+  ],
+  "client_industry": "marketing",
+  "text": "Hi, your marketing project needs Hugging Face, which I use every week. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 30,
+  "date": "2024-10-23",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-127",
+  "job_title": "Fix and improve our RAG / LangChain project",
+  "job_skills": [
+   "RAG",
+   "LangChain"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hi, your e-commerce project needs RAG, which I use every week. Recently I built a multi-agent research assistant for a healthcare client: report drafting time dropped from 24 hours to 52 minutes. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-05"
+  ],
+  "bid": 31,
+  "date": "2023-05-10",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-128",
+  "job_title": "Looking for an expert in RAG / pgvector project",
+  "job_skills": [
+   "RAG",
+   "pgvector"
+  ],
+  "client_industry": "SaaS",
+  "text": "Hi, your SaaS project needs RAG, which I use every week. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 38,
+  "date": "2024-03-25",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-129",
+  "job_title": "Looking for an expert in pgvector / LangChain / Rust project",
+  "job_skills": [
+   "pgvector",
+   "LangChain",
+   "Rust"
+  ],
+  "client_industry": "education",
+  "text": "Hi, your education project needs pgvector, which I use every week. Recently I built a contract q&a assistant for a education client: answer accuracy rose from 15% to 32% on a 200-question test set. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-13"
+  ],
+  "bid": 37,
+  "date": "2023-06-09",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-130",
+  "job_title": "Build a OpenAI API / RAG project",
+  "job_skills": [
+   "OpenAI API",
+   "RAG"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hi, your e-commerce project needs OpenAI API, which I use every week. Recently I built a contract q&a assistant for a e-commerce client: answer accuracy rose from 28% to 40% on a 200-question test set. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-07"
+  ],
+  "bid": 33,
+  "date": "2025-01-16",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-131",
+  "job_title": "Looking for an expert in scikit-learn / Hugging Face / Rust project",
+  "job_skills": [
+   "scikit-learn",
+   "Hugging Face",
+   "Rust"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hi, your e-commerce project needs scikit-learn, which I use every week. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 33,
+  "date": "2023-07-20",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-132",
+  "job_title": "Fix and improve our Hugging Face / PyTorch / Rust project",
+  "job_skills": [
+   "Hugging Face",
+   "PyTorch",
+   "Rust"
+  ],
+  "client_industry": "fintech",
+  "text": "Hi, your fintech project needs Hugging Face, which I use every week. Recently I built a support ticket classifier for a education client: manual triage time fell by 33%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-09"
+  ],
+  "bid": 39,
+  "date": "2024-05-27",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-133",
+  "job_title": "Fix and improve our Docker / Python / SAP project",
+  "job_skills": [
+   "Docker",
+   "Python",
+   "SAP"
+  ],
+  "client_industry": "fintech",
+  "text": "Hi, your fintech project needs Docker, which I use every week. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 43,
+  "date": "2024-08-10",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-134",
+  "job_title": "Urgent: MLflow / LangChain project",
+  "job_skills": [
+   "MLflow",
+   "LangChain"
+  ],
+  "client_industry": "education",
+  "text": "Hi, your education project needs MLflow, which I use every week. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 38,
+  "date": "2023-11-17",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-135",
+  "job_title": "Looking for an expert in Hugging Face / OpenAI API / Rust project",
+  "job_skills": [
+   "Hugging Face",
+   "OpenAI API",
+   "Rust"
+  ],
+  "client_industry": "marketing",
+  "text": "Hi, your marketing project needs Hugging Face, which I use every week. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 45,
+  "date": "2024-03-09",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-136",
+  "job_title": "Fix and improve our Docker / Python project",
+  "job_skills": [
+   "Docker",
+   "Python"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Dear Sir/Madam, I am very passionate about this job and I am the best fit. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 33,
+  "date": "2024-05-16",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-137",
+  "job_title": "Looking for an expert in Python / LangGraph project",
+  "job_skills": [
+   "Python",
+   "LangGraph"
+  ],
+  "client_industry": "education",
+  "text": "Hi there! I am a hardworking professional with many years of experience. Recently I built a demand forecasting for a real estate client: forecast error (MAPE) fell from 29% to 62%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-12"
+  ],
+  "bid": 45,
+  "date": "2025-01-04",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-138",
+  "job_title": "Build a Postgres / Python project",
+  "job_skills": [
+   "Postgres",
+   "Python"
+  ],
+  "client_industry": "real estate",
+  "text": "Hi, your real estate project needs Postgres, which I use every week. Recently I built a demand forecasting for a marketing client: forecast error (MAPE) fell from 13% to 22%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-06"
+  ],
+  "bid": 42,
+  "date": "2023-07-08",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-139",
+  "job_title": "Urgent: Postgres / NLP project",
+  "job_skills": [
+   "Postgres",
+   "NLP"
+  ],
+  "client_industry": "real estate",
+  "text": "Hello, I have read your job post and I can do this job perfectly. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 32,
+  "date": "2023-01-14",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-140",
+  "job_title": "Build a FastAPI / Celery project",
+  "job_skills": [
+   "FastAPI",
+   "Celery"
+  ],
+  "client_industry": "logistics",
+  "text": "Hello, I have read your job post and I can do this job perfectly. Recently I built a contract q&a assistant for a education client: answer accuracy rose from 15% to 32% on a 200-question test set. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-13"
+  ],
+  "bid": 42,
+  "date": "2025-03-31",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-141",
+  "job_title": "Looking for an expert in Docker / LangChain / Java project",
+  "job_skills": [
+   "Docker",
+   "LangChain",
+   "Java"
+  ],
+  "client_industry": "SaaS",
+  "text": "Hi, your SaaS project needs Docker, which I use every week. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 41,
+  "date": "2023-05-30",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-142",
+  "job_title": "Fix and improve our Hugging Face / Celery project",
+  "job_skills": [
+   "Hugging Face",
+   "Celery"
+  ],
+  "client_industry": "SaaS",
+  "text": "Hi, your SaaS project needs Hugging Face, which I use every week. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 45,
+  "date": "2025-03-09",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-143",
+  "job_title": "Build a RAG / NLP project",
+  "job_skills": [
+   "RAG",
+   "NLP"
+  ],
+  "client_industry": "marketing",
+  "text": "Hi, your marketing project needs RAG, which I use every week. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 30,
+  "date": "2024-05-08",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-144",
+  "job_title": "Build a NLP / OpenAI API project",
+  "job_skills": [
+   "NLP",
+   "OpenAI API"
+  ],
+  "client_industry": "education",
+  "text": "Hello, I have read your job post and I can do this job perfectly. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 32,
+  "date": "2024-10-14",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-145",
+  "job_title": "Fix and improve our Hugging Face / RAG / Flutter project",
+  "job_skills": [
+   "Hugging Face",
+   "RAG",
+   "Flutter"
+  ],
+  "client_industry": "fintech",
+  "text": "Hi, your fintech project needs Hugging Face, which I use every week. Recently I built a contract q&a assistant for a e-commerce client: answer accuracy rose from 28% to 40% on a 200-question test set. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-07"
+  ],
+  "bid": 41,
+  "date": "2023-05-24",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-146",
+  "job_title": "Looking for an expert in Hugging Face / pgvector / Java project",
+  "job_skills": [
+   "Hugging Face",
+   "pgvector",
+   "Java"
+  ],
+  "client_industry": "healthcare",
+  "text": "Dear Sir/Madam, I am very passionate about this job and I am the best fit. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 37,
+  "date": "2025-05-24",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-147",
+  "job_title": "Looking for an expert in scikit-learn / NLP project",
+  "job_skills": [
+   "scikit-learn",
+   "NLP"
+  ],
+  "client_industry": "education",
+  "text": "Hi, your education project needs scikit-learn, which I use every week. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 32,
+  "date": "2025-07-01",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-148",
+  "job_title": "Build a Hugging Face / Postgres project",
+  "job_skills": [
+   "Hugging Face",
+   "Postgres"
+  ],
+  "client_industry": "education",
+  "text": "Dear Sir/Madam, I am very passionate about this job and I am the best fit. Recently I built a demand forecasting for a SaaS client: forecast error (MAPE) fell from 14% to 30%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-18"
+  ],
+  "bid": 33,
+  "date": "2024-11-18",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-149",
+  "job_title": "Looking for an expert in Postgres / PyTorch / PHP project",
+  "job_skills": [
+   "Postgres",
+   "PyTorch",
+   "PHP"
+  ],
+  "client_industry": "SaaS",
+  "text": "Hello, I have read your job post and I can do this job perfectly. Recently I built a demand forecasting for a marketing client: forecast error (MAPE) fell from 13% to 22%. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [
+   "ai_ml_engineer-case-06"
+  ],
+  "bid": 45,
+  "date": "2023-09-10",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-prop-150",
+  "job_title": "Need help with scikit-learn / Postgres project",
+  "job_skills": [
+   "scikit-learn",
+   "Postgres"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hi, your e-commerce project needs scikit-learn, which I use every week. I can start this week and keep you updated daily. My rate is $35/hr.",
+  "cited_evidence": [],
+  "bid": 39,
+  "date": "2024-11-12",
+  "outcome": "ignored",
+  "source": "synthetic"
+ }
+]

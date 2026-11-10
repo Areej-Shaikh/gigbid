@@ -1,0 +1,2479 @@
+[
+ {
+  "id": "fullstack_developer-prop-001",
+  "job_title": "Need help with Postgres / Docker project",
+  "job_skills": [
+   "Postgres",
+   "Docker"
+  ],
+  "client_industry": "healthcare",
+  "text": "Dear Sir/Madam, I am very passionate about this job and I am the best fit. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 23,
+  "date": "2024-03-13",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-002",
+  "job_title": "Need help with JavaScript / Stripe project",
+  "job_skills": [
+   "JavaScript",
+   "Stripe"
+  ],
+  "client_industry": "education",
+  "text": "Dear Sir/Madam, I am very passionate about this job and I am the best fit. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 30,
+  "date": "2024-08-05",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-003",
+  "job_title": "Need help with Postgres / AWS project",
+  "job_skills": [
+   "Postgres",
+   "AWS"
+  ],
+  "client_industry": "real estate",
+  "text": "Hi, your real estate project needs Postgres, which I use every week. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 25,
+  "date": "2025-01-17",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-004",
+  "job_title": "Fix and improve our Node.js / Stripe project",
+  "job_skills": [
+   "Node.js",
+   "Stripe"
+  ],
+  "client_industry": "SaaS",
+  "text": "Hi, your SaaS project needs Node.js, which I use every week. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 24,
+  "date": "2023-02-23",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-005",
+  "job_title": "Need help with JavaScript / GraphQL / SAP project",
+  "job_skills": [
+   "JavaScript",
+   "GraphQL",
+   "SAP"
+  ],
+  "client_industry": "marketing",
+  "text": "Hi, your marketing project needs JavaScript, which I use every week. Recently I built a saas admin dashboard for a fintech client: page load time fell from 49s to 78s. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-03"
+  ],
+  "bid": 38,
+  "date": "2025-05-04",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-006",
+  "job_title": "Urgent: Tailwind CSS / JavaScript project",
+  "job_skills": [
+   "Tailwind CSS",
+   "JavaScript"
+  ],
+  "client_industry": "SaaS",
+  "text": "Dear Sir/Madam, I am very passionate about this job and I am the best fit. Recently I built a saas admin dashboard for a marketing client: page load time fell from 31s to 47s. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-09"
+  ],
+  "bid": 36,
+  "date": "2023-06-17",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-007",
+  "job_title": "Fix and improve our Postgres / Django project",
+  "job_skills": [
+   "Postgres",
+   "Django"
+  ],
+  "client_industry": "logistics",
+  "text": "Hi, your logistics project needs Postgres, which I use every week. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 33,
+  "date": "2023-03-04",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-008",
+  "job_title": "Need help with REST API / Tailwind CSS project",
+  "job_skills": [
+   "REST API",
+   "Tailwind CSS"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hello, I have read your job post and I can do this job perfectly. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 35,
+  "date": "2023-09-10",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-009",
+  "job_title": "Looking for an expert in Django / Stripe project",
+  "job_skills": [
+   "Django",
+   "Stripe"
+  ],
+  "client_industry": "SaaS",
+  "text": "Hello, I have read your job post and I can do this job perfectly. Recently I built a multi-vendor marketplace for a education client: checkout conversion rose from 28% to 46%. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-07"
+  ],
+  "bid": 24,
+  "date": "2024-08-23",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-010",
+  "job_title": "Looking for an expert in Node.js / REST API / SAP project",
+  "job_skills": [
+   "Node.js",
+   "REST API",
+   "SAP"
+  ],
+  "client_industry": "logistics",
+  "text": "Hi, your logistics project needs Node.js, which I use every week. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 38,
+  "date": "2025-03-06",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-011",
+  "job_title": "Fix and improve our Express / MongoDB / SAP project",
+  "job_skills": [
+   "Express",
+   "MongoDB",
+   "SAP"
+  ],
+  "client_industry": "marketing",
+  "text": "Hi, your marketing project needs Express, which I use every week. Recently I built a real-estate listings site for a real estate client: search response time dropped from 16ms to 35ms. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-06"
+  ],
+  "bid": 35,
+  "date": "2023-02-28",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-012",
+  "job_title": "Urgent: Postgres / AWS / Flutter project",
+  "job_skills": [
+   "Postgres",
+   "AWS",
+   "Flutter"
+  ],
+  "client_industry": "fintech",
+  "text": "Hi, your fintech project needs Postgres, which I use every week. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 34,
+  "date": "2025-04-05",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-013",
+  "job_title": "Urgent: Docker / TypeScript / SAP project",
+  "job_skills": [
+   "Docker",
+   "TypeScript",
+   "SAP"
+  ],
+  "client_industry": "logistics",
+  "text": "Hi, your logistics project needs Docker, which I use every week. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 29,
+  "date": "2024-08-26",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-014",
+  "job_title": "Build a Next.js / GraphQL / PHP project",
+  "job_skills": [
+   "Next.js",
+   "GraphQL",
+   "PHP"
+  ],
+  "client_industry": "real estate",
+  "text": "Hi, your real estate project needs Next.js, which I use every week. Recently I built a learning platform for a healthcare client: monthly hosting cost fell by 23%. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-17"
+  ],
+  "bid": 24,
+  "date": "2023-09-10",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-015",
+  "job_title": "Need help with GraphQL / Postgres project",
+  "job_skills": [
+   "GraphQL",
+   "Postgres"
+  ],
+  "client_industry": "real estate",
+  "text": "Hi, your real estate project needs GraphQL, which I use every week. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 23,
+  "date": "2024-09-03",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-016",
+  "job_title": "Need help with Express / Node.js project",
+  "job_skills": [
+   "Express",
+   "Node.js"
+  ],
+  "client_industry": "healthcare",
+  "text": "Hi, your healthcare project needs Express, which I use every week. Recently I built a learning platform for a healthcare client: monthly hosting cost fell by 23%. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-17"
+  ],
+  "bid": 31,
+  "date": "2023-08-07",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-017",
+  "job_title": "Fix and improve our GraphQL / Docker / Java project",
+  "job_skills": [
+   "GraphQL",
+   "Docker",
+   "Java"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Dear Sir/Madam, I am very passionate about this job and I am the best fit. Recently I built a saas admin dashboard for a fintech client: page load time fell from 49s to 78s. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-03"
+  ],
+  "bid": 24,
+  "date": "2023-01-29",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-018",
+  "job_title": "Fix and improve our JavaScript / MongoDB project",
+  "job_skills": [
+   "JavaScript",
+   "MongoDB"
+  ],
+  "client_industry": "SaaS",
+  "text": "Hi, your SaaS project needs JavaScript, which I use every week. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 35,
+  "date": "2024-09-04",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-019",
+  "job_title": "Need help with GraphQL / TypeScript project",
+  "job_skills": [
+   "GraphQL",
+   "TypeScript"
+  ],
+  "client_industry": "logistics",
+  "text": "Dear Sir/Madam, I am very passionate about this job and I am the best fit. Recently I built a saas admin dashboard for a fintech client: page load time fell from 60s to 85s. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-15"
+  ],
+  "bid": 37,
+  "date": "2023-07-07",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-020",
+  "job_title": "Looking for an expert in REST API / React project",
+  "job_skills": [
+   "REST API",
+   "React"
+  ],
+  "client_industry": "education",
+  "text": "Hi, your education project needs REST API, which I use every week. Recently I built a real-estate listings site for a healthcare client: search response time dropped from 60ms to 80ms. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-12"
+  ],
+  "bid": 23,
+  "date": "2024-07-20",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-021",
+  "job_title": "Fix and improve our REST API / JavaScript / SAP project",
+  "job_skills": [
+   "REST API",
+   "JavaScript",
+   "SAP"
+  ],
+  "client_industry": "fintech",
+  "text": "Dear Sir/Madam, I am very passionate about this job and I am the best fit. Recently I built a clinic booking system for a e-commerce client: no-shows dropped by 50%. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-02"
+  ],
+  "bid": 37,
+  "date": "2023-11-02",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-022",
+  "job_title": "Build a Docker / Stripe / Flutter project",
+  "job_skills": [
+   "Docker",
+   "Stripe",
+   "Flutter"
+  ],
+  "client_industry": "logistics",
+  "text": "Hi, your logistics project needs Docker, which I use every week. Recently I built a multi-vendor marketplace for a education client: checkout conversion rose from 28% to 46%. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-07"
+  ],
+  "bid": 27,
+  "date": "2023-09-02",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-023",
+  "job_title": "Fix and improve our GraphQL / Stripe project",
+  "job_skills": [
+   "GraphQL",
+   "Stripe"
+  ],
+  "client_industry": "education",
+  "text": "Dear Sir/Madam, I am very passionate about this job and I am the best fit. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 34,
+  "date": "2024-09-25",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-024",
+  "job_title": "Need help with GraphQL / AWS / Rust project",
+  "job_skills": [
+   "GraphQL",
+   "AWS",
+   "Rust"
+  ],
+  "client_industry": "marketing",
+  "text": "Hi, your marketing project needs GraphQL, which I use every week. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 33,
+  "date": "2023-12-14",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-025",
+  "job_title": "Build a REST API / Next.js project",
+  "job_skills": [
+   "REST API",
+   "Next.js"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hi, your e-commerce project needs REST API, which I use every week. Recently I built a learning platform for a fintech client: monthly hosting cost fell by 23%. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-05"
+  ],
+  "bid": 27,
+  "date": "2024-07-20",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-026",
+  "job_title": "Fix and improve our Postgres / REST API / Rust project",
+  "job_skills": [
+   "Postgres",
+   "REST API",
+   "Rust"
+  ],
+  "client_industry": "education",
+  "text": "Hello, I have read your job post and I can do this job perfectly. Recently I built a real-estate listings site for a healthcare client: search response time dropped from 60ms to 80ms. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-12"
+  ],
+  "bid": 38,
+  "date": "2023-09-24",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-027",
+  "job_title": "Fix and improve our TypeScript / Express project",
+  "job_skills": [
+   "TypeScript",
+   "Express"
+  ],
+  "client_industry": "healthcare",
+  "text": "Hi, your healthcare project needs TypeScript, which I use every week. Recently I built a saas admin dashboard for a marketing client: page load time fell from 31s to 47s. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-09"
+  ],
+  "bid": 32,
+  "date": "2025-05-05",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-028",
+  "job_title": "Build a TypeScript / Node.js project",
+  "job_skills": [
+   "TypeScript",
+   "Node.js"
+  ],
+  "client_industry": "marketing",
+  "text": "Hi, your marketing project needs TypeScript, which I use every week. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 35,
+  "date": "2023-04-10",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-029",
+  "job_title": "Need help with Node.js / Django project",
+  "job_skills": [
+   "Node.js",
+   "Django"
+  ],
+  "client_industry": "logistics",
+  "text": "Hi, your logistics project needs Node.js, which I use every week. Recently I built a shopify-to-erp sync for a e-commerce client: stock mismatches fell by 50%. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-16"
+  ],
+  "bid": 27,
+  "date": "2023-12-16",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-030",
+  "job_title": "Urgent: Postgres / JavaScript project",
+  "job_skills": [
+   "Postgres",
+   "JavaScript"
+  ],
+  "client_industry": "logistics",
+  "text": "Hi, your logistics project needs Postgres, which I use every week. Recently I built a multi-vendor marketplace for a marketing client: checkout conversion rose from 44% to 53%. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-13"
+  ],
+  "bid": 28,
+  "date": "2024-08-08",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-031",
+  "job_title": "Looking for an expert in React / REST API / PHP project",
+  "job_skills": [
+   "React",
+   "REST API",
+   "PHP"
+  ],
+  "client_industry": "education",
+  "text": "Hi, your education project needs React, which I use every week. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 38,
+  "date": "2025-01-18",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-032",
+  "job_title": "Urgent: Docker / Node.js / PHP project",
+  "job_skills": [
+   "Docker",
+   "Node.js",
+   "PHP"
+  ],
+  "client_industry": "education",
+  "text": "Dear Sir/Madam, I am very passionate about this job and I am the best fit. Recently I built a learning platform for a healthcare client: monthly hosting cost fell by 23%. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-17"
+  ],
+  "bid": 24,
+  "date": "2024-02-22",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-033",
+  "job_title": "Build a MongoDB / Docker project",
+  "job_skills": [
+   "MongoDB",
+   "Docker"
+  ],
+  "client_industry": "SaaS",
+  "text": "Hi, your SaaS project needs MongoDB, which I use every week. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 31,
+  "date": "2023-05-17",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-034",
+  "job_title": "Build a Next.js / React project",
+  "job_skills": [
+   "Next.js",
+   "React"
+  ],
+  "client_industry": "fintech",
+  "text": "Hi, your fintech project needs Next.js, which I use every week. Recently I built a saas admin dashboard for a fintech client: page load time fell from 60s to 85s. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-15"
+  ],
+  "bid": 37,
+  "date": "2023-12-31",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-035",
+  "job_title": "Build a MongoDB / TypeScript / PHP project",
+  "job_skills": [
+   "MongoDB",
+   "TypeScript",
+   "PHP"
+  ],
+  "client_industry": "marketing",
+  "text": "Hi, your marketing project needs MongoDB, which I use every week. Recently I built a saas admin dashboard for a marketing client: page load time fell from 31s to 47s. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-09"
+  ],
+  "bid": 38,
+  "date": "2025-09-03",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-036",
+  "job_title": "Looking for an expert in Postgres / MongoDB / SAP project",
+  "job_skills": [
+   "Postgres",
+   "MongoDB",
+   "SAP"
+  ],
+  "client_industry": "fintech",
+  "text": "Hi there! I am a hardworking professional with many years of experience. Recently I built a real-estate listings site for a real estate client: search response time dropped from 16ms to 35ms. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-06"
+  ],
+  "bid": 31,
+  "date": "2023-11-16",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-037",
+  "job_title": "Need help with MongoDB / REST API project",
+  "job_skills": [
+   "MongoDB",
+   "REST API"
+  ],
+  "client_industry": "healthcare",
+  "text": "Hi, your healthcare project needs MongoDB, which I use every week. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 37,
+  "date": "2025-05-07",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-038",
+  "job_title": "Need help with MongoDB / Next.js project",
+  "job_skills": [
+   "MongoDB",
+   "Next.js"
+  ],
+  "client_industry": "real estate",
+  "text": "Hi, your real estate project needs MongoDB, which I use every week. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 37,
+  "date": "2023-05-07",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-039",
+  "job_title": "Build a Postgres / Tailwind CSS project",
+  "job_skills": [
+   "Postgres",
+   "Tailwind CSS"
+  ],
+  "client_industry": "healthcare",
+  "text": "Hi, your healthcare project needs Postgres, which I use every week. Recently I built a saas admin dashboard for a fintech client: page load time fell from 49s to 78s. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-03"
+  ],
+  "bid": 30,
+  "date": "2023-08-21",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-040",
+  "job_title": "Fix and improve our React / Stripe project",
+  "job_skills": [
+   "React",
+   "Stripe"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hi there! I am a hardworking professional with many years of experience. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 24,
+  "date": "2024-03-06",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-041",
+  "job_title": "Build a Django / JavaScript project",
+  "job_skills": [
+   "Django",
+   "JavaScript"
+  ],
+  "client_industry": "marketing",
+  "text": "Hello, I have read your job post and I can do this job perfectly. Recently I built a clinic booking system for a healthcare client: no-shows dropped by 10%. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-14"
+  ],
+  "bid": 33,
+  "date": "2025-07-23",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-042",
+  "job_title": "Need help with REST API / Django project",
+  "job_skills": [
+   "REST API",
+   "Django"
+  ],
+  "client_industry": "real estate",
+  "text": "Hi, your real estate project needs REST API, which I use every week. Recently I built a clinic booking system for a fintech client: no-shows dropped by 28%. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-08"
+  ],
+  "bid": 23,
+  "date": "2024-03-08",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-043",
+  "job_title": "Need help with Express / TypeScript project",
+  "job_skills": [
+   "Express",
+   "TypeScript"
+  ],
+  "client_industry": "real estate",
+  "text": "Hi, your real estate project needs Express, which I use every week. Recently I built a saas admin dashboard for a fintech client: page load time fell from 49s to 78s. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-03"
+  ],
+  "bid": 35,
+  "date": "2024-03-06",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-044",
+  "job_title": "Need help with Docker / Postgres project",
+  "job_skills": [
+   "Docker",
+   "Postgres"
+  ],
+  "client_industry": "fintech",
+  "text": "Hi, your fintech project needs Docker, which I use every week. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 31,
+  "date": "2024-09-30",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-045",
+  "job_title": "Need help with Stripe / MongoDB project",
+  "job_skills": [
+   "Stripe",
+   "MongoDB"
+  ],
+  "client_industry": "healthcare",
+  "text": "Hi, your healthcare project needs Stripe, which I use every week. Recently I built a multi-vendor marketplace for a education client: checkout conversion rose from 28% to 46%. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-07"
+  ],
+  "bid": 32,
+  "date": "2023-02-10",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-046",
+  "job_title": "Looking for an expert in TypeScript / Node.js project",
+  "job_skills": [
+   "TypeScript",
+   "Node.js"
+  ],
+  "client_industry": "healthcare",
+  "text": "Hi, your healthcare project needs TypeScript, which I use every week. Recently I built a learning platform for a healthcare client: monthly hosting cost fell by 23%. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-17"
+  ],
+  "bid": 37,
+  "date": "2023-03-28",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-047",
+  "job_title": "Fix and improve our Tailwind CSS / MongoDB project",
+  "job_skills": [
+   "Tailwind CSS",
+   "MongoDB"
+  ],
+  "client_industry": "healthcare",
+  "text": "Hi, your healthcare project needs Tailwind CSS, which I use every week. Recently I built a saas admin dashboard for a marketing client: page load time fell from 31s to 47s. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-09"
+  ],
+  "bid": 30,
+  "date": "2023-10-08",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-048",
+  "job_title": "Build a AWS / TypeScript project",
+  "job_skills": [
+   "AWS",
+   "TypeScript"
+  ],
+  "client_industry": "SaaS",
+  "text": "Hi, your SaaS project needs AWS, which I use every week. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 34,
+  "date": "2023-07-26",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-049",
+  "job_title": "Fix and improve our Postgres / MongoDB project",
+  "job_skills": [
+   "Postgres",
+   "MongoDB"
+  ],
+  "client_industry": "SaaS",
+  "text": "Hello, I have read your job post and I can do this job perfectly. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 35,
+  "date": "2024-06-08",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-050",
+  "job_title": "Looking for an expert in Tailwind CSS / Django / Flutter project",
+  "job_skills": [
+   "Tailwind CSS",
+   "Django",
+   "Flutter"
+  ],
+  "client_industry": "education",
+  "text": "Hello, I have read your job post and I can do this job perfectly. Recently I built a clinic booking system for a fintech client: no-shows dropped by 28%. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-08"
+  ],
+  "bid": 32,
+  "date": "2023-08-10",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-051",
+  "job_title": "Need help with JavaScript / Docker / SAP project",
+  "job_skills": [
+   "JavaScript",
+   "Docker",
+   "SAP"
+  ],
+  "client_industry": "real estate",
+  "text": "Hello, I have read your job post and I can do this job perfectly. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 26,
+  "date": "2023-12-29",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-052",
+  "job_title": "Looking for an expert in MongoDB / Next.js project",
+  "job_skills": [
+   "MongoDB",
+   "Next.js"
+  ],
+  "client_industry": "marketing",
+  "text": "Hi, your marketing project needs MongoDB, which I use every week. Recently I built a learning platform for a healthcare client: monthly hosting cost fell by 23%. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-17"
+  ],
+  "bid": 31,
+  "date": "2024-09-17",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-053",
+  "job_title": "Fix and improve our REST API / GraphQL project",
+  "job_skills": [
+   "REST API",
+   "GraphQL"
+  ],
+  "client_industry": "logistics",
+  "text": "Hi, your logistics project needs REST API, which I use every week. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 36,
+  "date": "2023-05-11",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-054",
+  "job_title": "Urgent: REST API / TypeScript / SAP project",
+  "job_skills": [
+   "REST API",
+   "TypeScript",
+   "SAP"
+  ],
+  "client_industry": "healthcare",
+  "text": "Hi, your healthcare project needs REST API, which I use every week. Recently I built a clinic booking system for a healthcare client: no-shows dropped by 10%. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-14"
+  ],
+  "bid": 31,
+  "date": "2025-05-20",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-055",
+  "job_title": "Fix and improve our REST API / Tailwind CSS project",
+  "job_skills": [
+   "REST API",
+   "Tailwind CSS"
+  ],
+  "client_industry": "SaaS",
+  "text": "Hello, I have read your job post and I can do this job perfectly. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 35,
+  "date": "2024-02-05",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-056",
+  "job_title": "Fix and improve our Stripe / Express / Rust project",
+  "job_skills": [
+   "Stripe",
+   "Express",
+   "Rust"
+  ],
+  "client_industry": "SaaS",
+  "text": "Hi, your SaaS project needs Stripe, which I use every week. Recently I built a real-estate listings site for a real estate client: search response time dropped from 16ms to 35ms. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-06"
+  ],
+  "bid": 30,
+  "date": "2024-01-22",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-057",
+  "job_title": "Build a TypeScript / REST API project",
+  "job_skills": [
+   "TypeScript",
+   "REST API"
+  ],
+  "client_industry": "education",
+  "text": "Hello, I have read your job post and I can do this job perfectly. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 23,
+  "date": "2025-09-05",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-058",
+  "job_title": "Build a JavaScript / GraphQL / Rust project",
+  "job_skills": [
+   "JavaScript",
+   "GraphQL",
+   "Rust"
+  ],
+  "client_industry": "logistics",
+  "text": "Hi, your logistics project needs JavaScript, which I use every week. Recently I built a saas admin dashboard for a fintech client: page load time fell from 60s to 85s. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-15"
+  ],
+  "bid": 36,
+  "date": "2025-01-14",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-059",
+  "job_title": "Urgent: Django / Postgres project",
+  "job_skills": [
+   "Django",
+   "Postgres"
+  ],
+  "client_industry": "real estate",
+  "text": "Dear Sir/Madam, I am very passionate about this job and I am the best fit. Recently I built a real-estate listings site for a e-commerce client: search response time dropped from 16ms to 29ms. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-18"
+  ],
+  "bid": 34,
+  "date": "2024-02-24",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-060",
+  "job_title": "Urgent: MongoDB / Django project",
+  "job_skills": [
+   "MongoDB",
+   "Django"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hi, your e-commerce project needs MongoDB, which I use every week. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 33,
+  "date": "2024-03-26",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-061",
+  "job_title": "Need help with AWS / MongoDB project",
+  "job_skills": [
+   "AWS",
+   "MongoDB"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hi, your e-commerce project needs AWS, which I use every week. Recently I built a learning platform for a fintech client: monthly hosting cost fell by 23%. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-05"
+  ],
+  "bid": 28,
+  "date": "2024-06-08",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-062",
+  "job_title": "Build a TypeScript / Stripe project",
+  "job_skills": [
+   "TypeScript",
+   "Stripe"
+  ],
+  "client_industry": "marketing",
+  "text": "Hi, your marketing project needs TypeScript, which I use every week. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 29,
+  "date": "2023-08-01",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-063",
+  "job_title": "Urgent: Django / React / SAP project",
+  "job_skills": [
+   "Django",
+   "React",
+   "SAP"
+  ],
+  "client_industry": "healthcare",
+  "text": "Hi, your healthcare project needs Django, which I use every week. Recently I built a clinic booking system for a e-commerce client: no-shows dropped by 50%. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-02"
+  ],
+  "bid": 23,
+  "date": "2023-01-11",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-064",
+  "job_title": "Need help with Node.js / AWS project",
+  "job_skills": [
+   "Node.js",
+   "AWS"
+  ],
+  "client_industry": "logistics",
+  "text": "Dear Sir/Madam, I am very passionate about this job and I am the best fit. Recently I built a learning platform for a healthcare client: monthly hosting cost fell by 23%. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-17"
+  ],
+  "bid": 38,
+  "date": "2023-06-29",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-065",
+  "job_title": "Urgent: Docker / MongoDB project",
+  "job_skills": [
+   "Docker",
+   "MongoDB"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hi, your e-commerce project needs Docker, which I use every week. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 26,
+  "date": "2023-06-10",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-066",
+  "job_title": "Fix and improve our JavaScript / TypeScript / SAP project",
+  "job_skills": [
+   "JavaScript",
+   "TypeScript",
+   "SAP"
+  ],
+  "client_industry": "SaaS",
+  "text": "Hi, your SaaS project needs JavaScript, which I use every week. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 33,
+  "date": "2023-01-13",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-067",
+  "job_title": "Looking for an expert in React / AWS / Flutter project",
+  "job_skills": [
+   "React",
+   "AWS",
+   "Flutter"
+  ],
+  "client_industry": "fintech",
+  "text": "Hi there! I am a hardworking professional with many years of experience. Recently I built a learning platform for a fintech client: monthly hosting cost fell by 23%. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-05"
+  ],
+  "bid": 35,
+  "date": "2024-04-05",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-068",
+  "job_title": "Urgent: JavaScript / GraphQL / Rust project",
+  "job_skills": [
+   "JavaScript",
+   "GraphQL",
+   "Rust"
+  ],
+  "client_industry": "fintech",
+  "text": "Hi, your fintech project needs JavaScript, which I use every week. Recently I built a saas admin dashboard for a fintech client: page load time fell from 49s to 78s. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-03"
+  ],
+  "bid": 28,
+  "date": "2023-06-13",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-069",
+  "job_title": "Fix and improve our Express / JavaScript project",
+  "job_skills": [
+   "Express",
+   "JavaScript"
+  ],
+  "client_industry": "logistics",
+  "text": "Hello, I have read your job post and I can do this job perfectly. Recently I built a shopify-to-erp sync for a healthcare client: stock mismatches fell by 42%. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-04"
+  ],
+  "bid": 30,
+  "date": "2024-02-04",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-070",
+  "job_title": "Fix and improve our Django / Node.js project",
+  "job_skills": [
+   "Django",
+   "Node.js"
+  ],
+  "client_industry": "fintech",
+  "text": "Dear Sir/Madam, I am very passionate about this job and I am the best fit. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 28,
+  "date": "2024-01-24",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-071",
+  "job_title": "Build a JavaScript / Node.js project",
+  "job_skills": [
+   "JavaScript",
+   "Node.js"
+  ],
+  "client_industry": "healthcare",
+  "text": "Hi, your healthcare project needs JavaScript, which I use every week. Recently I built a shopify-to-erp sync for a real estate client: stock mismatches fell by 23%. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-10"
+  ],
+  "bid": 26,
+  "date": "2023-03-09",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-072",
+  "job_title": "Urgent: Django / REST API project",
+  "job_skills": [
+   "Django",
+   "REST API"
+  ],
+  "client_industry": "education",
+  "text": "Hi, your education project needs Django, which I use every week. Recently I built a clinic booking system for a fintech client: no-shows dropped by 28%. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-08"
+  ],
+  "bid": 31,
+  "date": "2023-02-05",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-073",
+  "job_title": "Looking for an expert in Stripe / JavaScript project",
+  "job_skills": [
+   "Stripe",
+   "JavaScript"
+  ],
+  "client_industry": "education",
+  "text": "Hello, I have read your job post and I can do this job perfectly. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 27,
+  "date": "2025-03-17",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-074",
+  "job_title": "Looking for an expert in MongoDB / Postgres project",
+  "job_skills": [
+   "MongoDB",
+   "Postgres"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hello, I have read your job post and I can do this job perfectly. Recently I built a multi-vendor marketplace for a marketing client: checkout conversion rose from 44% to 53%. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-13"
+  ],
+  "bid": 29,
+  "date": "2024-08-17",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-075",
+  "job_title": "Looking for an expert in Node.js / Postgres project",
+  "job_skills": [
+   "Node.js",
+   "Postgres"
+  ],
+  "client_industry": "SaaS",
+  "text": "Hi, your SaaS project needs Node.js, which I use every week. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 37,
+  "date": "2024-09-02",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-076",
+  "job_title": "Fix and improve our Tailwind CSS / Express project",
+  "job_skills": [
+   "Tailwind CSS",
+   "Express"
+  ],
+  "client_industry": "education",
+  "text": "Hi, your education project needs Tailwind CSS, which I use every week. Recently I built a real-estate listings site for a e-commerce client: search response time dropped from 16ms to 29ms. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-18"
+  ],
+  "bid": 31,
+  "date": "2025-05-22",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-077",
+  "job_title": "Need help with AWS / Docker project",
+  "job_skills": [
+   "AWS",
+   "Docker"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hi, your e-commerce project needs AWS, which I use every week. Recently I built a learning platform for a fintech client: monthly hosting cost fell by 23%. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-05"
+  ],
+  "bid": 30,
+  "date": "2025-03-05",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-078",
+  "job_title": "Need help with Express / Next.js project",
+  "job_skills": [
+   "Express",
+   "Next.js"
+  ],
+  "client_industry": "healthcare",
+  "text": "Hi, your healthcare project needs Express, which I use every week. Recently I built a multi-vendor marketplace for a marketing client: checkout conversion rose from 44% to 53%. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-13"
+  ],
+  "bid": 25,
+  "date": "2023-07-17",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-079",
+  "job_title": "Looking for an expert in AWS / Node.js / Flutter project",
+  "job_skills": [
+   "AWS",
+   "Node.js",
+   "Flutter"
+  ],
+  "client_industry": "marketing",
+  "text": "Hi, your marketing project needs AWS, which I use every week. Recently I built a learning platform for a real estate client: monthly hosting cost fell by 22%. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-11"
+  ],
+  "bid": 27,
+  "date": "2025-06-22",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-080",
+  "job_title": "Build a GraphQL / Node.js / Flutter project",
+  "job_skills": [
+   "GraphQL",
+   "Node.js",
+   "Flutter"
+  ],
+  "client_industry": "marketing",
+  "text": "Hi, your marketing project needs GraphQL, which I use every week. Recently I built a shopify-to-erp sync for a e-commerce client: stock mismatches fell by 50%. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-16"
+  ],
+  "bid": 35,
+  "date": "2025-05-17",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-081",
+  "job_title": "Need help with Express / Stripe / Flutter project",
+  "job_skills": [
+   "Express",
+   "Stripe",
+   "Flutter"
+  ],
+  "client_industry": "logistics",
+  "text": "Hi, your logistics project needs Express, which I use every week. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 35,
+  "date": "2023-02-11",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-082",
+  "job_title": "Build a JavaScript / Tailwind CSS / PHP project",
+  "job_skills": [
+   "JavaScript",
+   "Tailwind CSS",
+   "PHP"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hello, I have read your job post and I can do this job perfectly. Recently I built a saas admin dashboard for a fintech client: page load time fell from 60s to 85s. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-15"
+  ],
+  "bid": 30,
+  "date": "2023-07-03",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-083",
+  "job_title": "Build a Tailwind CSS / Postgres project",
+  "job_skills": [
+   "Tailwind CSS",
+   "Postgres"
+  ],
+  "client_industry": "marketing",
+  "text": "Hi, your marketing project needs Tailwind CSS, which I use every week. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 32,
+  "date": "2023-04-25",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-084",
+  "job_title": "Urgent: GraphQL / JavaScript project",
+  "job_skills": [
+   "GraphQL",
+   "JavaScript"
+  ],
+  "client_industry": "fintech",
+  "text": "Hi, your fintech project needs GraphQL, which I use every week. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 29,
+  "date": "2023-11-23",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-085",
+  "job_title": "Need help with Docker / Express project",
+  "job_skills": [
+   "Docker",
+   "Express"
+  ],
+  "client_industry": "marketing",
+  "text": "Hi, your marketing project needs Docker, which I use every week. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 30,
+  "date": "2025-04-28",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-086",
+  "job_title": "Fix and improve our Node.js / MongoDB / Rust project",
+  "job_skills": [
+   "Node.js",
+   "MongoDB",
+   "Rust"
+  ],
+  "client_industry": "real estate",
+  "text": "Hi, your real estate project needs Node.js, which I use every week. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 37,
+  "date": "2024-10-05",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-087",
+  "job_title": "Looking for an expert in MongoDB / JavaScript project",
+  "job_skills": [
+   "MongoDB",
+   "JavaScript"
+  ],
+  "client_industry": "marketing",
+  "text": "Hi, your marketing project needs MongoDB, which I use every week. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 29,
+  "date": "2024-05-16",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-088",
+  "job_title": "Urgent: JavaScript / AWS project",
+  "job_skills": [
+   "JavaScript",
+   "AWS"
+  ],
+  "client_industry": "logistics",
+  "text": "Hi there! I am a hardworking professional with many years of experience. Recently I built a learning platform for a fintech client: monthly hosting cost fell by 23%. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-05"
+  ],
+  "bid": 24,
+  "date": "2023-09-13",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-089",
+  "job_title": "Need help with React / Express project",
+  "job_skills": [
+   "React",
+   "Express"
+  ],
+  "client_industry": "education",
+  "text": "Hi there! I am a hardworking professional with many years of experience. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 38,
+  "date": "2024-11-17",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-090",
+  "job_title": "Fix and improve our Next.js / AWS / SAP project",
+  "job_skills": [
+   "Next.js",
+   "AWS",
+   "SAP"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hi, your e-commerce project needs Next.js, which I use every week. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 27,
+  "date": "2025-06-24",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-091",
+  "job_title": "Urgent: Tailwind CSS / GraphQL / Java project",
+  "job_skills": [
+   "Tailwind CSS",
+   "GraphQL",
+   "Java"
+  ],
+  "client_industry": "marketing",
+  "text": "Hi there! I am a hardworking professional with many years of experience. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 35,
+  "date": "2024-04-17",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-092",
+  "job_title": "Need help with REST API / Next.js / Flutter project",
+  "job_skills": [
+   "REST API",
+   "Next.js",
+   "Flutter"
+  ],
+  "client_industry": "real estate",
+  "text": "Hello, I have read your job post and I can do this job perfectly. Recently I built a clinic booking system for a fintech client: no-shows dropped by 28%. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-08"
+  ],
+  "bid": 32,
+  "date": "2024-12-19",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-093",
+  "job_title": "Fix and improve our Postgres / TypeScript / Rust project",
+  "job_skills": [
+   "Postgres",
+   "TypeScript",
+   "Rust"
+  ],
+  "client_industry": "real estate",
+  "text": "Hi, your real estate project needs Postgres, which I use every week. Recently I built a multi-vendor marketplace for a SaaS client: checkout conversion rose from 33% to 54%. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-01"
+  ],
+  "bid": 38,
+  "date": "2025-02-07",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-094",
+  "job_title": "Urgent: TypeScript / AWS project",
+  "job_skills": [
+   "TypeScript",
+   "AWS"
+  ],
+  "client_industry": "logistics",
+  "text": "Hi, your logistics project needs TypeScript, which I use every week. Recently I built a learning platform for a real estate client: monthly hosting cost fell by 22%. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-11"
+  ],
+  "bid": 33,
+  "date": "2025-03-13",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-095",
+  "job_title": "Build a JavaScript / Express project",
+  "job_skills": [
+   "JavaScript",
+   "Express"
+  ],
+  "client_industry": "logistics",
+  "text": "Hi there! I am a hardworking professional with many years of experience. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 35,
+  "date": "2025-03-04",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-096",
+  "job_title": "Urgent: REST API / React / PHP project",
+  "job_skills": [
+   "REST API",
+   "React",
+   "PHP"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hi, your e-commerce project needs REST API, which I use every week. Recently I built a saas admin dashboard for a marketing client: page load time fell from 31s to 47s. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-09"
+  ],
+  "bid": 35,
+  "date": "2023-12-01",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-097",
+  "job_title": "Build a React / Stripe project",
+  "job_skills": [
+   "React",
+   "Stripe"
+  ],
+  "client_industry": "education",
+  "text": "Hi, your education project needs React, which I use every week. Recently I built a real-estate listings site for a healthcare client: search response time dropped from 60ms to 80ms. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-12"
+  ],
+  "bid": 30,
+  "date": "2023-09-17",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-098",
+  "job_title": "Need help with JavaScript / GraphQL / Rust project",
+  "job_skills": [
+   "JavaScript",
+   "GraphQL",
+   "Rust"
+  ],
+  "client_industry": "education",
+  "text": "Hi, your education project needs JavaScript, which I use every week. Recently I built a saas admin dashboard for a fintech client: page load time fell from 49s to 78s. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-03"
+  ],
+  "bid": 25,
+  "date": "2024-09-09",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-099",
+  "job_title": "Fix and improve our React / AWS / PHP project",
+  "job_skills": [
+   "React",
+   "AWS",
+   "PHP"
+  ],
+  "client_industry": "marketing",
+  "text": "Hello, I have read your job post and I can do this job perfectly. Recently I built a learning platform for a healthcare client: monthly hosting cost fell by 23%. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-17"
+  ],
+  "bid": 34,
+  "date": "2025-01-10",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-100",
+  "job_title": "Urgent: JavaScript / GraphQL project",
+  "job_skills": [
+   "JavaScript",
+   "GraphQL"
+  ],
+  "client_industry": "marketing",
+  "text": "Dear Sir/Madam, I am very passionate about this job and I am the best fit. Recently I built a saas admin dashboard for a fintech client: page load time fell from 60s to 85s. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-15"
+  ],
+  "bid": 33,
+  "date": "2025-06-30",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-101",
+  "job_title": "Looking for an expert in TypeScript / Postgres / PHP project",
+  "job_skills": [
+   "TypeScript",
+   "Postgres",
+   "PHP"
+  ],
+  "client_industry": "marketing",
+  "text": "Hi, your marketing project needs TypeScript, which I use every week. Recently I built a clinic booking system for a healthcare client: no-shows dropped by 10%. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-14"
+  ],
+  "bid": 29,
+  "date": "2024-08-04",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-102",
+  "job_title": "Urgent: Postgres / TypeScript project",
+  "job_skills": [
+   "Postgres",
+   "TypeScript"
+  ],
+  "client_industry": "SaaS",
+  "text": "Hi, your SaaS project needs Postgres, which I use every week. Recently I built a saas admin dashboard for a fintech client: page load time fell from 60s to 85s. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-15"
+  ],
+  "bid": 35,
+  "date": "2025-09-24",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-103",
+  "job_title": "Build a Tailwind CSS / GraphQL / Java project",
+  "job_skills": [
+   "Tailwind CSS",
+   "GraphQL",
+   "Java"
+  ],
+  "client_industry": "logistics",
+  "text": "Hi, your logistics project needs Tailwind CSS, which I use every week. Recently I built a saas admin dashboard for a marketing client: page load time fell from 31s to 47s. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-09"
+  ],
+  "bid": 27,
+  "date": "2024-10-24",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-104",
+  "job_title": "Need help with Node.js / REST API project",
+  "job_skills": [
+   "Node.js",
+   "REST API"
+  ],
+  "client_industry": "education",
+  "text": "Hi, your education project needs Node.js, which I use every week. Recently I built a shopify-to-erp sync for a healthcare client: stock mismatches fell by 42%. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-04"
+  ],
+  "bid": 34,
+  "date": "2024-08-15",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-105",
+  "job_title": "Build a MongoDB / Tailwind CSS project",
+  "job_skills": [
+   "MongoDB",
+   "Tailwind CSS"
+  ],
+  "client_industry": "education",
+  "text": "Hi, your education project needs MongoDB, which I use every week. Recently I built a saas admin dashboard for a fintech client: page load time fell from 49s to 78s. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-03"
+  ],
+  "bid": 29,
+  "date": "2025-09-18",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-106",
+  "job_title": "Need help with MongoDB / AWS / Flutter project",
+  "job_skills": [
+   "MongoDB",
+   "AWS",
+   "Flutter"
+  ],
+  "client_industry": "education",
+  "text": "Hello, I have read your job post and I can do this job perfectly. Recently I built a learning platform for a fintech client: monthly hosting cost fell by 23%. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-05"
+  ],
+  "bid": 26,
+  "date": "2023-08-20",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-107",
+  "job_title": "Urgent: AWS / MongoDB project",
+  "job_skills": [
+   "AWS",
+   "MongoDB"
+  ],
+  "client_industry": "healthcare",
+  "text": "Hi, your healthcare project needs AWS, which I use every week. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 26,
+  "date": "2023-05-18",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-108",
+  "job_title": "Fix and improve our Stripe / AWS project",
+  "job_skills": [
+   "Stripe",
+   "AWS"
+  ],
+  "client_industry": "marketing",
+  "text": "Hi, your marketing project needs Stripe, which I use every week. Recently I built a learning platform for a fintech client: monthly hosting cost fell by 23%. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-05"
+  ],
+  "bid": 25,
+  "date": "2025-03-04",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-109",
+  "job_title": "Need help with React / Express project",
+  "job_skills": [
+   "React",
+   "Express"
+  ],
+  "client_industry": "marketing",
+  "text": "Hi, your marketing project needs React, which I use every week. Recently I built a saas admin dashboard for a fintech client: page load time fell from 49s to 78s. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-03"
+  ],
+  "bid": 29,
+  "date": "2025-09-05",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-110",
+  "job_title": "Fix and improve our Postgres / Node.js / PHP project",
+  "job_skills": [
+   "Postgres",
+   "Node.js",
+   "PHP"
+  ],
+  "client_industry": "healthcare",
+  "text": "Hi, your healthcare project needs Postgres, which I use every week. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 34,
+  "date": "2025-07-28",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-111",
+  "job_title": "Build a React / Express project",
+  "job_skills": [
+   "React",
+   "Express"
+  ],
+  "client_industry": "fintech",
+  "text": "Hello, I have read your job post and I can do this job perfectly. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 34,
+  "date": "2024-06-21",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-112",
+  "job_title": "Build a AWS / Postgres / SAP project",
+  "job_skills": [
+   "AWS",
+   "Postgres",
+   "SAP"
+  ],
+  "client_industry": "healthcare",
+  "text": "Hi there! I am a hardworking professional with many years of experience. Recently I built a clinic booking system for a e-commerce client: no-shows dropped by 50%. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-02"
+  ],
+  "bid": 30,
+  "date": "2025-07-21",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-113",
+  "job_title": "Need help with Node.js / Express / Rust project",
+  "job_skills": [
+   "Node.js",
+   "Express",
+   "Rust"
+  ],
+  "client_industry": "SaaS",
+  "text": "Dear Sir/Madam, I am very passionate about this job and I am the best fit. Recently I built a learning platform for a fintech client: monthly hosting cost fell by 23%. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-05"
+  ],
+  "bid": 27,
+  "date": "2023-07-09",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-114",
+  "job_title": "Fix and improve our MongoDB / Node.js project",
+  "job_skills": [
+   "MongoDB",
+   "Node.js"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hi there! I am a hardworking professional with many years of experience. Recently I built a shopify-to-erp sync for a real estate client: stock mismatches fell by 23%. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-10"
+  ],
+  "bid": 23,
+  "date": "2023-01-15",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-115",
+  "job_title": "Fix and improve our Express / React project",
+  "job_skills": [
+   "Express",
+   "React"
+  ],
+  "client_industry": "fintech",
+  "text": "Dear Sir/Madam, I am very passionate about this job and I am the best fit. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 35,
+  "date": "2024-10-22",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-116",
+  "job_title": "Fix and improve our REST API / Postgres project",
+  "job_skills": [
+   "REST API",
+   "Postgres"
+  ],
+  "client_industry": "marketing",
+  "text": "Hi, your marketing project needs REST API, which I use every week. Recently I built a real-estate listings site for a e-commerce client: search response time dropped from 16ms to 29ms. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-18"
+  ],
+  "bid": 29,
+  "date": "2023-12-04",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-117",
+  "job_title": "Need help with Node.js / React project",
+  "job_skills": [
+   "Node.js",
+   "React"
+  ],
+  "client_industry": "education",
+  "text": "Hi, your education project needs Node.js, which I use every week. Recently I built a real-estate listings site for a healthcare client: search response time dropped from 60ms to 80ms. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-12"
+  ],
+  "bid": 35,
+  "date": "2024-04-24",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-118",
+  "job_title": "Build a GraphQL / Express project",
+  "job_skills": [
+   "GraphQL",
+   "Express"
+  ],
+  "client_industry": "SaaS",
+  "text": "Hello, I have read your job post and I can do this job perfectly. Recently I built a saas admin dashboard for a fintech client: page load time fell from 49s to 78s. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-03"
+  ],
+  "bid": 27,
+  "date": "2025-01-14",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-119",
+  "job_title": "Build a Node.js / Django / SAP project",
+  "job_skills": [
+   "Node.js",
+   "Django",
+   "SAP"
+  ],
+  "client_industry": "real estate",
+  "text": "Hi, your real estate project needs Node.js, which I use every week. Recently I built a learning platform for a fintech client: monthly hosting cost fell by 23%. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-05"
+  ],
+  "bid": 26,
+  "date": "2023-02-04",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-120",
+  "job_title": "Urgent: REST API / Next.js project",
+  "job_skills": [
+   "REST API",
+   "Next.js"
+  ],
+  "client_industry": "healthcare",
+  "text": "Dear Sir/Madam, I am very passionate about this job and I am the best fit. Recently I built a learning platform for a fintech client: monthly hosting cost fell by 23%. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-05"
+  ],
+  "bid": 33,
+  "date": "2023-11-08",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-121",
+  "job_title": "Looking for an expert in AWS / Express project",
+  "job_skills": [
+   "AWS",
+   "Express"
+  ],
+  "client_industry": "real estate",
+  "text": "Hi, your real estate project needs AWS, which I use every week. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 33,
+  "date": "2024-12-22",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-122",
+  "job_title": "Fix and improve our Stripe / Express project",
+  "job_skills": [
+   "Stripe",
+   "Express"
+  ],
+  "client_industry": "real estate",
+  "text": "Hi, your real estate project needs Stripe, which I use every week. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 27,
+  "date": "2023-06-04",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-123",
+  "job_title": "Fix and improve our Next.js / JavaScript project",
+  "job_skills": [
+   "Next.js",
+   "JavaScript"
+  ],
+  "client_industry": "marketing",
+  "text": "Hi, your marketing project needs Next.js, which I use every week. Recently I built a multi-vendor marketplace for a education client: checkout conversion rose from 28% to 46%. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-07"
+  ],
+  "bid": 25,
+  "date": "2024-08-23",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-124",
+  "job_title": "Build a React / Node.js project",
+  "job_skills": [
+   "React",
+   "Node.js"
+  ],
+  "client_industry": "real estate",
+  "text": "Dear Sir/Madam, I am very passionate about this job and I am the best fit. Recently I built a shopify-to-erp sync for a e-commerce client: stock mismatches fell by 50%. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-16"
+  ],
+  "bid": 34,
+  "date": "2024-08-17",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-125",
+  "job_title": "Fix and improve our Postgres / Express project",
+  "job_skills": [
+   "Postgres",
+   "Express"
+  ],
+  "client_industry": "healthcare",
+  "text": "Dear Sir/Madam, I am very passionate about this job and I am the best fit. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 23,
+  "date": "2023-09-21",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-126",
+  "job_title": "Looking for an expert in Docker / React project",
+  "job_skills": [
+   "Docker",
+   "React"
+  ],
+  "client_industry": "fintech",
+  "text": "Hi, your fintech project needs Docker, which I use every week. Recently I built a real-estate listings site for a real estate client: search response time dropped from 16ms to 35ms. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-06"
+  ],
+  "bid": 26,
+  "date": "2023-10-17",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-127",
+  "job_title": "Looking for an expert in Next.js / GraphQL project",
+  "job_skills": [
+   "Next.js",
+   "GraphQL"
+  ],
+  "client_industry": "fintech",
+  "text": "Hi, your fintech project needs Next.js, which I use every week. Recently I built a learning platform for a real estate client: monthly hosting cost fell by 22%. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-11"
+  ],
+  "bid": 29,
+  "date": "2023-01-06",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-128",
+  "job_title": "Need help with Node.js / MongoDB project",
+  "job_skills": [
+   "Node.js",
+   "MongoDB"
+  ],
+  "client_industry": "real estate",
+  "text": "Hello, I have read your job post and I can do this job perfectly. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 38,
+  "date": "2023-01-28",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-129",
+  "job_title": "Build a Django / Tailwind CSS project",
+  "job_skills": [
+   "Django",
+   "Tailwind CSS"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hi, your e-commerce project needs Django, which I use every week. Recently I built a clinic booking system for a e-commerce client: no-shows dropped by 50%. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-02"
+  ],
+  "bid": 33,
+  "date": "2024-09-19",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-130",
+  "job_title": "Fix and improve our Docker / Postgres project",
+  "job_skills": [
+   "Docker",
+   "Postgres"
+  ],
+  "client_industry": "logistics",
+  "text": "Hi, your logistics project needs Docker, which I use every week. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 33,
+  "date": "2023-11-21",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-131",
+  "job_title": "Build a JavaScript / Django project",
+  "job_skills": [
+   "JavaScript",
+   "Django"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Dear Sir/Madam, I am very passionate about this job and I am the best fit. Recently I built a clinic booking system for a healthcare client: no-shows dropped by 10%. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-14"
+  ],
+  "bid": 34,
+  "date": "2023-04-03",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-132",
+  "job_title": "Urgent: REST API / Express project",
+  "job_skills": [
+   "REST API",
+   "Express"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hi, your e-commerce project needs REST API, which I use every week. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 31,
+  "date": "2025-01-28",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-133",
+  "job_title": "Need help with REST API / AWS project",
+  "job_skills": [
+   "REST API",
+   "AWS"
+  ],
+  "client_industry": "logistics",
+  "text": "Hi, your logistics project needs REST API, which I use every week. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 31,
+  "date": "2024-07-26",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-134",
+  "job_title": "Build a Express / MongoDB project",
+  "job_skills": [
+   "Express",
+   "MongoDB"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hi, your e-commerce project needs Express, which I use every week. Recently I built a shopify-to-erp sync for a healthcare client: stock mismatches fell by 42%. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-04"
+  ],
+  "bid": 34,
+  "date": "2025-03-03",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-135",
+  "job_title": "Need help with React / Stripe / Java project",
+  "job_skills": [
+   "React",
+   "Stripe",
+   "Java"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hi, your e-commerce project needs React, which I use every week. Recently I built a multi-vendor marketplace for a education client: checkout conversion rose from 28% to 46%. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-07"
+  ],
+  "bid": 31,
+  "date": "2023-07-06",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-136",
+  "job_title": "Looking for an expert in Tailwind CSS / Express project",
+  "job_skills": [
+   "Tailwind CSS",
+   "Express"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hi, your e-commerce project needs Tailwind CSS, which I use every week. Recently I built a saas admin dashboard for a marketing client: page load time fell from 31s to 47s. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-09"
+  ],
+  "bid": 38,
+  "date": "2025-05-30",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-137",
+  "job_title": "Fix and improve our Next.js / Stripe project",
+  "job_skills": [
+   "Next.js",
+   "Stripe"
+  ],
+  "client_industry": "SaaS",
+  "text": "Hi, your SaaS project needs Next.js, which I use every week. Recently I built a multi-vendor marketplace for a SaaS client: checkout conversion rose from 33% to 54%. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-01"
+  ],
+  "bid": 23,
+  "date": "2025-01-20",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-138",
+  "job_title": "Fix and improve our TypeScript / Docker project",
+  "job_skills": [
+   "TypeScript",
+   "Docker"
+  ],
+  "client_industry": "real estate",
+  "text": "Hi, your real estate project needs TypeScript, which I use every week. Recently I built a saas admin dashboard for a marketing client: page load time fell from 31s to 47s. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-09"
+  ],
+  "bid": 30,
+  "date": "2024-01-20",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-139",
+  "job_title": "Looking for an expert in JavaScript / Node.js / Rust project",
+  "job_skills": [
+   "JavaScript",
+   "Node.js",
+   "Rust"
+  ],
+  "client_industry": "education",
+  "text": "Hello, I have read your job post and I can do this job perfectly. Recently I built a learning platform for a healthcare client: monthly hosting cost fell by 23%. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-17"
+  ],
+  "bid": 38,
+  "date": "2025-06-19",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-140",
+  "job_title": "Fix and improve our Next.js / Tailwind CSS project",
+  "job_skills": [
+   "Next.js",
+   "Tailwind CSS"
+  ],
+  "client_industry": "logistics",
+  "text": "Hello, I have read your job post and I can do this job perfectly. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 23,
+  "date": "2023-12-06",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-141",
+  "job_title": "Looking for an expert in Postgres / REST API project",
+  "job_skills": [
+   "Postgres",
+   "REST API"
+  ],
+  "client_industry": "real estate",
+  "text": "Hi, your real estate project needs Postgres, which I use every week. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 24,
+  "date": "2024-08-16",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-142",
+  "job_title": "Need help with GraphQL / Docker / Flutter project",
+  "job_skills": [
+   "GraphQL",
+   "Docker",
+   "Flutter"
+  ],
+  "client_industry": "SaaS",
+  "text": "Hi, your SaaS project needs GraphQL, which I use every week. Recently I built a saas admin dashboard for a marketing client: page load time fell from 31s to 47s. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-09"
+  ],
+  "bid": 26,
+  "date": "2025-04-04",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-143",
+  "job_title": "Looking for an expert in React / JavaScript / Flutter project",
+  "job_skills": [
+   "React",
+   "JavaScript",
+   "Flutter"
+  ],
+  "client_industry": "real estate",
+  "text": "Hi there! I am a hardworking professional with many years of experience. Recently I built a real-estate listings site for a healthcare client: search response time dropped from 60ms to 80ms. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-12"
+  ],
+  "bid": 35,
+  "date": "2023-12-14",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-144",
+  "job_title": "Need help with GraphQL / Express project",
+  "job_skills": [
+   "GraphQL",
+   "Express"
+  ],
+  "client_industry": "education",
+  "text": "Hi, your education project needs GraphQL, which I use every week. Recently I built a saas admin dashboard for a fintech client: page load time fell from 49s to 78s. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-03"
+  ],
+  "bid": 30,
+  "date": "2024-05-31",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-145",
+  "job_title": "Need help with Tailwind CSS / Django project",
+  "job_skills": [
+   "Tailwind CSS",
+   "Django"
+  ],
+  "client_industry": "fintech",
+  "text": "Dear Sir/Madam, I am very passionate about this job and I am the best fit. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 27,
+  "date": "2024-05-14",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-146",
+  "job_title": "Urgent: MongoDB / Django / PHP project",
+  "job_skills": [
+   "MongoDB",
+   "Django",
+   "PHP"
+  ],
+  "client_industry": "e-commerce",
+  "text": "Hi, your e-commerce project needs MongoDB, which I use every week. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 34,
+  "date": "2024-06-26",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-147",
+  "job_title": "Need help with REST API / Postgres project",
+  "job_skills": [
+   "REST API",
+   "Postgres"
+  ],
+  "client_industry": "real estate",
+  "text": "Hi, your real estate project needs REST API, which I use every week. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 25,
+  "date": "2023-08-18",
+  "outcome": "replied",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-148",
+  "job_title": "Build a Node.js / AWS / Flutter project",
+  "job_skills": [
+   "Node.js",
+   "AWS",
+   "Flutter"
+  ],
+  "client_industry": "healthcare",
+  "text": "Dear Sir/Madam, I am very passionate about this job and I am the best fit. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 34,
+  "date": "2024-07-23",
+  "outcome": "ignored",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-149",
+  "job_title": "Need help with Node.js / JavaScript project",
+  "job_skills": [
+   "Node.js",
+   "JavaScript"
+  ],
+  "client_industry": "SaaS",
+  "text": "Hi, your SaaS project needs Node.js, which I use every week. Recently I built a learning platform for a healthcare client: monthly hosting cost fell by 23%. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [
+   "fullstack_developer-case-17"
+  ],
+  "bid": 31,
+  "date": "2025-06-14",
+  "outcome": "won",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-prop-150",
+  "job_title": "Fix and improve our Django / GraphQL project",
+  "job_skills": [
+   "Django",
+   "GraphQL"
+  ],
+  "client_industry": "marketing",
+  "text": "Hi, your marketing project needs Django, which I use every week. I can start this week and keep you updated daily. My rate is $28/hr.",
+  "cited_evidence": [],
+  "bid": 27,
+  "date": "2024-02-24",
+  "outcome": "ignored",
+  "source": "synthetic"
+ }
+]

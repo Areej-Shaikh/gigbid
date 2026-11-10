@@ -1,0 +1,102 @@
+[
+ {
+  "id": "fullstack_developer-review-01",
+  "project": "Clinic booking system",
+  "case_id": "fullstack_developer-case-14",
+  "client_industry": "healthcare",
+  "rating": 5,
+  "text": "Great work, the results speak for themselves.",
+  "date": "2025-04-21",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-review-02",
+  "project": "Shopify-to-ERP sync",
+  "case_id": "fullstack_developer-case-04",
+  "client_industry": "healthcare",
+  "rating": 5,
+  "text": "Understood our business problem quickly.",
+  "date": "2025-02-14",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-review-03",
+  "project": "Multi-vendor marketplace",
+  "case_id": "fullstack_developer-case-01",
+  "client_industry": "SaaS",
+  "rating": 5,
+  "text": "Great work, the results speak for themselves.",
+  "date": "2024-11-23",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-review-04",
+  "project": "Real-estate listings site",
+  "case_id": "fullstack_developer-case-06",
+  "client_industry": "real estate",
+  "rating": 4,
+  "text": "Excellent communication and delivered ahead of schedule.",
+  "date": "2023-12-16",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-review-05",
+  "project": "Real-estate listings site",
+  "case_id": "fullstack_developer-case-18",
+  "client_industry": "e-commerce",
+  "rating": 4,
+  "text": "Excellent communication and delivered ahead of schedule.",
+  "date": "2025-06-09",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-review-06",
+  "project": "SaaS admin dashboard",
+  "case_id": "fullstack_developer-case-03",
+  "client_industry": "fintech",
+  "rating": 5,
+  "text": "Great work, the results speak for themselves.",
+  "date": "2025-01-24",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-review-07",
+  "project": "Learning platform",
+  "case_id": "fullstack_developer-case-05",
+  "client_industry": "fintech",
+  "rating": 4,
+  "text": "Great work, the results speak for themselves.",
+  "date": "2024-10-02",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-review-08",
+  "project": "SaaS admin dashboard",
+  "case_id": "fullstack_developer-case-09",
+  "client_industry": "marketing",
+  "rating": 4,
+  "text": "Excellent communication and delivered ahead of schedule.",
+  "date": "2025-06-12",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-review-09",
+  "project": "Real-estate listings site",
+  "case_id": "fullstack_developer-case-12",
+  "client_industry": "healthcare",
+  "rating": 5,
+  "text": "Great work, the results speak for themselves.",
+  "date": "2025-01-10",
+  "source": "synthetic"
+ },
+ {
+  "id": "fullstack_developer-review-10",
+  "project": "Shopify-to-ERP sync",
+  "case_id": "fullstack_developer-case-10",
+  "client_industry": "real estate",
+  "rating": 4,
+  "text": "Clear explanations, solid code, will hire again.",
+  "date": "2025-03-21",
+  "source": "synthetic"
+ }
+]

@@ -22,7 +22,17 @@ Every call: per-user rate limit (20/min, under GigSim's 30/min), append-only aud
 Errors the agents/UI can rely on: `marketplace_unavailable` (degraded mode), `not_found`, `rate_limited`, `not_enough_connects`.
 
 ## Portfolio server (`mcp_servers/portfolio`), written by us
-_TODO_
+
+Read-only. Persona chosen by `PORTFOLIO_PERSONA`; retriever chosen by `RAG_VARIANT`. Auth: stdio (local, single user).
+
+| Tool | Read / Write | readOnly | destructive | idempotent | Notes |
+|---|---|---|---|---|---|
+| `search_evidence(requirement, k, types?, outcomes?, since?)` | Read | ✓ | ✗ | ✓ | Returns evidence with type, source, date, outcome, score |
+| `get_case_study(evidence_id)` | Read | ✓ | ✗ | ✓ | Full text of any evidence item |
+| `list_skills()` | Read | ✓ | ✗ | ✓ | Skills with evidence counts |
+
+Resources: `portfolio://case/{case_id}`, `portfolio://proposal/{proposal_id}`, `portfolio://profile`.
+Prompts: `answer_screening_question(question)`, `best_proof_for_job(job_description)`.
 
 ## Workspace server (`mcp_servers/workspace`), written by us
 _TODO_

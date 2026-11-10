@@ -1,0 +1,25 @@
+{
+ "persona_id": "fullstack_developer",
+ "name": "Bilal Khan (synthetic)",
+ "headline": "Full-Stack Web Developer: Next.js, Node, Django",
+ "hourly_rate": 28,
+ "minimum_project_budget": 200,
+ "skills": [
+  "JavaScript",
+  "TypeScript",
+  "React",
+  "Next.js",
+  "Node.js",
+  "Express",
+  "Django",
+  "Postgres",
+  "MongoDB",
+  "Tailwind CSS",
+  "Stripe",
+  "AWS",
+  "Docker",
+  "REST API",
+  "GraphQL"
+ ],
+ "source": "synthetic"
+}
