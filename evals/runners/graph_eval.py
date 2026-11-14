@@ -94,6 +94,7 @@ async def run(jobs, label: str, graph_builder=build_bid_graph, outcomes: bool = 
                 "claims": len(v.get("checks", [])), "unsupported_before": v.get("unsupported_before"),
                 "unsupported_after": v.get("unsupported_after"), "critic_ok": (out.get("critique") or {}).get("approved"),
                 "revisions": out.get("revisions", 0), "tokens": out.get("tokens", 0), "seconds": round(secs, 2),
+                "cost_usd": round(sum(t.get("cost_usd") or 0 for t in out.get("trace", [])), 6),
                 "fallbacks": sum(1 for t in out.get("trace", []) if t.get("fallback_used")),
                 "status": out.get("status"), "outcome": outcome,
             })
@@ -123,6 +124,8 @@ def summary(rows):
         "avg_tokens_per_job": round(statistics.mean(r["tokens"] for r in rows), 1),
         "p50_s": round(statistics.median(secs), 2), "p95_s": round(statistics.quantiles(secs, n=20)[18], 2) if len(secs) > 1 else secs[0],
         "llm_fallbacks": sum(r["fallbacks"] for r in rows),
+        "usd_per_job_analysed": round(statistics.mean(r["cost_usd"] for r in rows), 6),
+        "usd_per_proposal": round(statistics.mean(r["cost_usd"] for r in drafted), 6) if drafted else None,
         **outcome_summary(rows),
     }
 

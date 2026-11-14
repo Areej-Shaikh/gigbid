@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { auth, type TraceItem } from "../lib/api/client";
 
-interface Ev { event: string; data: { node?: string; status?: string; trace?: TraceItem[]; message?: string } }
+interface Ev { event: string; data: { node?: string; status?: string; trace?: TraceItem[]; message?: string; trace_url?: string | null } }
 
 const NAMES: Record<string, string> = {
   intake: "Load job + client", analyst: "Job Analyst", risk: "Risk Assessor", fit: "Fit Matcher", decide: "Bid / skip decision",
@@ -42,10 +42,14 @@ export function RunTimeline({ jobId, active, onDone, eventsPath }: {
     return () => es.close();
   }, [jobId, active, eventsPath]);
 
+  const traceUrl = events.find((e) => e.event === "start")?.data.trace_url;
   if (!active && !events.length) return null;
   return (
     <section className="card">
-      <h3>Agent run {live && <span className="pulse" aria-label="running" />}</h3>
+      <div className="row between wrap gap">
+        <h3>Agent run {live && <span className="pulse" aria-label="running" />}</h3>
+        {traceUrl && <a href={traceUrl} target="_blank" rel="noreferrer" className="small">View full trace ↗</a>}
+      </div>
       <ol className="timeline">
         {events.filter((e) => e.event !== "start" && e.event !== "done").map((e, i) => {
           if (e.event === "error") return <li key={i} className="tl-error">Error: {e.data.message}</li>;

@@ -19,6 +19,8 @@ from mcp.server.fastmcp.exceptions import ToolError
 from mcp.types import ToolAnnotations
 from pydantic import BaseModel, Field
 
+from agent.tracing import setup_tracing, traced_tool
+
 mcp = FastMCP("gigbid-workspace")
 READ = ToolAnnotations(readOnlyHint=True, destructiveHint=False, idempotentHint=True, openWorldHint=False)
 WRITE = ToolAnnotations(readOnlyHint=False, destructiveHint=False, idempotentHint=True, openWorldHint=False)
@@ -71,6 +73,7 @@ class EmailDraft(BaseModel):
 
 # ---------------------------------------------------------------- tools
 @mcp.tool(annotations=READ)
+@traced_tool("workspace")
 def free_slots(
     days_ahead: Annotated[int, Field(ge=1, le=14, description="How many days to look ahead, starting tomorrow")] = 5,
     duration_min: Annotated[int, Field(ge=15, le=120)] = 30,
@@ -97,6 +100,7 @@ def free_slots(
 
 
 @mcp.tool(annotations=WRITE)
+@traced_tool("workspace")
 def create_hold(
     start: Annotated[str, Field(description="ISO start time from free_slots")],
     title: Annotated[str, Field(min_length=3, max_length=200)],
@@ -121,12 +125,14 @@ def create_hold(
 
 
 @mcp.tool(annotations=READ)
+@traced_tool("workspace")
 def list_holds() -> HoldList:
     """All tentative holds on the calendar."""
     return HoldList(holds=[Hold(**h) for h in _load()["holds"].values()])
 
 
 @mcp.tool(annotations=WRITE)
+@traced_tool("workspace")
 def create_email_draft(
     to: Annotated[str, Field(min_length=3, max_length=200)],
     subject: Annotated[str, Field(min_length=1, max_length=200)],
@@ -143,4 +149,5 @@ def create_email_draft(
 
 
 if __name__ == "__main__":
+    setup_tracing("gigbid-mcp-workspace")
     mcp.run()

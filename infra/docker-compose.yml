@@ -24,6 +24,15 @@ services:
       timeout: 3s
       retries: 5
 
+  phoenix:                          # self-hosted tracing UI (E3): http://localhost:6006
+    image: arizephoenix/phoenix:21.1.0
+    environment:
+      PHOENIX_ENABLE_AUTH: "false"    # local only; never expose this port publicly without auth
+      PHOENIX_WORKING_DIR: /mnt/data
+    ports: ["6006:6006"]
+    volumes:
+      - gigbid-traces:/mnt/data
+
   gigsim:
     build:
       context: ..
@@ -50,6 +59,9 @@ services:
       RAG_VARIANT: ${DEPLOY_RAG_VARIANT:-bm25}
       # checkpoints (pending approvals) + long-term memory live in Postgres (C6)
       DATABASE_URL: postgresql://gigbid:${POSTGRES_PASSWORD:-gigbid-local}@postgres:5432/gigbid
+      # tracing (E3): spans go to Phoenix; the run viewer links to the trace ("gigbid" = project 2 in a fresh Phoenix)
+      OTEL_EXPORTER_OTLP_TRACES_ENDPOINT: http://phoenix:6006/v1/traces
+      TRACE_URL_TEMPLATE: http://localhost:6006/projects/UHJvamVjdDoy/traces/{trace_id}
     ports: ["8000:8000"]
     volumes:
       - gigbid-state:/app/data/processed    # small UI indexes + mock calendar
@@ -62,3 +74,4 @@ services:
 volumes:
   gigbid-state:
   gigbid-pg:
+  gigbid-traces:

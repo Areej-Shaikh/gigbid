@@ -14,6 +14,7 @@ from mcp.server.fastmcp.exceptions import ToolError
 from mcp.types import ToolAnnotations
 from pydantic import BaseModel, Field
 
+from agent.tracing import setup_tracing, traced_tool
 from rag.ingest.portfolio_loader import load_portfolio, load_profile
 from rag.retriever import build_retriever
 
@@ -80,6 +81,7 @@ class SkillList(BaseModel):
 
 # ---------------------------------------------------------------- tools
 @mcp.tool(annotations=READ)
+@traced_tool("portfolio")
 def search_evidence(
     requirement: Annotated[str, Field(min_length=2, max_length=500,
                                       description="One job requirement, e.g. 'RAG chatbot with citations'")],
@@ -99,6 +101,7 @@ def search_evidence(
 
 
 @mcp.tool(annotations=READ)
+@traced_tool("portfolio")
 def get_case_study(evidence_id: Annotated[str, Field(min_length=1, max_length=100)]) -> CaseStudy:
     """Get the full text of one case study (or any evidence item) by id."""
     i = store()["by_id"].get(evidence_id)
@@ -109,6 +112,7 @@ def get_case_study(evidence_id: Annotated[str, Field(min_length=1, max_length=10
 
 
 @mcp.tool(annotations=READ)
+@traced_tool("portfolio")
 def list_skills() -> SkillList:
     """List the freelancer's skills and how many evidence items support each one."""
     s = store()
@@ -163,4 +167,5 @@ def best_proof_for_job(job_description: str) -> str:
 
 
 if __name__ == "__main__":
+    setup_tracing("gigbid-mcp-portfolio")
     mcp.run()

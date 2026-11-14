@@ -11,6 +11,7 @@ from contextlib import AsyncExitStack, asynccontextmanager
 from mcp import ClientSession
 
 from agent.config import cfg
+from agent.tracing import inject_meta, span
 
 
 class ToolCallError(Exception):
@@ -35,18 +36,24 @@ class ToolBox:
             raise PermissionError(f"agent '{agent}' may not call '{tool}' (allowed: {allowed})")
         if tool not in self.server_of:
             raise ToolCallError(f"tool '{tool}' not available (is its MCP server running?)")
-        for attempt in range(4):
-            try:
-                res = await asyncio.wait_for(self.sessions[self.server_of[tool]].call_tool(tool, args), self.timeout_s)
-            except asyncio.TimeoutError:
-                raise ToolCallError(f"marketplace_unavailable: {tool} timed out after {self.timeout_s}s")
-            if not res.isError:
-                return res.structuredContent or {}
-            text = res.content[0].text if res.content else f"{tool} failed"
-            if "rate_limited" not in text or attempt == 3:
-                raise ToolCallError(text)
-            await asyncio.sleep(3 * 2 ** attempt)   # polite: back off and retry when rate-limited
-        raise ToolCallError(f"{tool} failed")
+        server = self.server_of[tool]
+        with span(f"mcp.call.{tool}", **{"mcp.server": server, "mcp.tool": tool, "gigbid.agent": agent}) as sp:
+            for attempt in range(4):
+                try:          # the trace context travels to the MCP server in the request _meta (E3)
+                    res = await asyncio.wait_for(self.sessions[server].call_tool(tool, args, meta=inject_meta() or None),
+                                                 self.timeout_s)
+                except asyncio.TimeoutError:
+                    sp.set_attribute("gigbid.error", "timeout")
+                    raise ToolCallError(f"marketplace_unavailable: {tool} timed out after {self.timeout_s}s")
+                if not res.isError:
+                    return res.structuredContent or {}
+                text = res.content[0].text if res.content else f"{tool} failed"
+                if "rate_limited" not in text or attempt == 3:
+                    sp.set_attribute("gigbid.error", text[:200])
+                    raise ToolCallError(text)
+                sp.add_event("rate_limited_retry", {"attempt": attempt + 1})
+                await asyncio.sleep(3 * 2 ** attempt)   # polite: back off and retry when rate-limited
+            raise ToolCallError(f"{tool} failed")
 
 
 @asynccontextmanager

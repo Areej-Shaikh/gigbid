@@ -25,6 +25,7 @@ from agent.graphs.bid_graph import build_bid_graph  # noqa: E402
 from agent.graphs.conversation_graph import build_conversation_graph  # noqa: E402
 from agent.mcp_client import open_toolbox  # noqa: E402
 from agent.persistence import backend, open_persistence  # noqa: E402
+from agent.tracing import current_trace_id, endpoint, setup_tracing  # noqa: E402
 from apps.api.routers import analytics, auth, conversations, jobs, memory, runs  # noqa: E402
 from apps.api.schemas.models import Health  # noqa: E402
 from apps.api.streaming import ConversationManager, RunIndex, RunManager  # noqa: E402
@@ -32,9 +33,12 @@ from apps.api.streaming import ConversationManager, RunIndex, RunManager  # noqa
 WEB_DIST = Path("apps/web/dist")
 
 
+TRACING = setup_tracing("gigbid-api")      # no-op unless an OTLP endpoint is configured (E3)
+
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    print(f"persistence: {backend()} (checkpoints + memory)", flush=True)
+    print(f"persistence: {backend()} (checkpoints + memory) | tracing: {endpoint() or 'off'}", flush=True)
     async with open_persistence() as (saver, store), open_toolbox() as tb:
         app.state.toolbox, app.state.store, app.state.checkpointer = tb, store, saver
         app.state.runs = RunManager(build_bid_graph(saver, store), tb, RunIndex())
@@ -45,7 +49,21 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(title="GigBid API", version="0.1.0", lifespan=lifespan)
 app.add_middleware(CORSMiddleware, allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
-                   allow_methods=["*"], allow_headers=["*"])
+                   allow_methods=["*"], allow_headers=["*"], expose_headers=["x-trace-id"])
+
+
+@app.middleware("http")
+async def trace_header(request: Request, call_next):
+    """Every response says which trace it belongs to (the browser sends `traceparent`, so the id starts there)."""
+    response = await call_next(request)
+    if tid := current_trace_id():
+        response.headers["x-trace-id"] = tid
+    return response
+
+
+if TRACING:
+    from opentelemetry.instrumentation.fastapi import FastAPIInstrumentor
+    FastAPIInstrumentor.instrument_app(app, excluded_urls="api/health,assets")
 for r in (auth.router, jobs.router, runs.router, analytics.router, conversations.router, memory.router):
     app.include_router(r, prefix="/api")
 

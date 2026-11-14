@@ -10,7 +10,6 @@ import contextvars
 import functools
 import json
 import os
-import re
 import sys
 import time
 import uuid
@@ -23,6 +22,8 @@ from mcp.types import ToolAnnotations
 from pydantic import BaseModel, Field
 
 from agent.marketplace_port import MarketplacePort, MarketplaceUnavailable, NotFound, get_marketplace
+from agent.pii import mask
+from agent.tracing import current_trace_id, mcp_request_meta, setup_tracing, span
 
 mcp = FastMCP("gigbid-marketplace")
 
@@ -53,9 +54,8 @@ def set_marketplace(m: MarketplacePort) -> None:
 
 
 def _mask(text: str) -> str:
-    """Hide emails and phone numbers in logs (R9)."""
-    text = re.sub(r"[\w.+-]+@[\w-]+\.[\w.]+", "[email]", text)
-    return re.sub(r"\+?\d[\d\s().-]{7,}\d", "[phone]", text)
+    """Hide emails, phone numbers and payment details in the audit log (R9). Same rules as the traces."""
+    return mask(text)
 
 
 def _audit(tool: str, args: dict, result: Any, error: str | None = None) -> None:
@@ -78,20 +78,27 @@ def _check_rate_limit() -> None:
 
 
 def guarded(fn):
-    """Rate limit + error mapping + audit log around every tool."""
+    """Trace span + rate limit + error mapping + audit log around every tool. The span continues the caller's
+    trace (MCP request _meta), and the audit log records that same trace id (E3)."""
     @functools.wraps(fn)
     async def wrapper(**kwargs):
-        _check_rate_limit()
-        try:
-            result = await fn(**kwargs)
-        except MarketplaceUnavailable as e:
-            _audit(fn.__name__, kwargs, None, str(e))
-            raise ToolError(f"marketplace_unavailable: {e}")
-        except NotFound as e:
-            _audit(fn.__name__, kwargs, None, str(e))
-            raise ToolError(f"not_found: {e}")
-        _audit(fn.__name__, kwargs, result.model_dump() if isinstance(result, BaseModel) else result)
-        return result
+        with span(f"mcp.marketplace.{fn.__name__}", mcp_request_meta(),
+                  **{"mcp.server": "marketplace", "mcp.tool": fn.__name__, "gigbid.user": current_user.get()}):
+            t = current_trace.set(current_trace_id() or current_trace.get())
+            try:
+                _check_rate_limit()
+                try:
+                    result = await fn(**kwargs)
+                except MarketplaceUnavailable as e:
+                    _audit(fn.__name__, kwargs, None, str(e))
+                    raise ToolError(f"marketplace_unavailable: {e}")
+                except NotFound as e:
+                    _audit(fn.__name__, kwargs, None, str(e))
+                    raise ToolError(f"not_found: {e}")
+                _audit(fn.__name__, kwargs, result.model_dump() if isinstance(result, BaseModel) else result)
+                return result
+            finally:
+                current_trace.reset(t)
     return wrapper
 
 
@@ -354,6 +361,7 @@ def http_app():
 
 
 if __name__ == "__main__":
+    setup_tracing("gigbid-mcp-marketplace")
     if "--http" in sys.argv:
         import uvicorn
         from dotenv import load_dotenv

@@ -29,8 +29,10 @@ async def get_run(job_id: str, request: Request, user: str = User):
     if not s.values:
         raise HTTPException(404, "this job has not been analysed yet")
     interrupt = s.tasks[0].interrupts[0].value if s.tasks and s.tasks[0].interrupts else None
+    row = m.index.data.get(job_id, {})
     return RunState(job_id=job_id, status=s.values.get("status", "unknown"), running=m.running(job_id),
-                    next=list(s.next), interrupt=interrupt, values={k: s.values.get(k) for k in KEEP})
+                    next=list(s.next), interrupt=interrupt, values={k: s.values.get(k) for k in KEEP},
+                    trace_id=row.get("trace_id"), trace_url=row.get("trace_url"))
 
 
 @router.post("/{job_id}/resume", response_model=Started)

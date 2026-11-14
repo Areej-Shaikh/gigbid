@@ -8,6 +8,16 @@ export type RunState = S["RunState"];
 export type RunSummary = S["RunSummary"];
 
 const KEY = "gigbid.token";
+
+// W3C trace context: a new trace per user action, continued by the API, the agents and every MCP server.
+function hex(bytes: number): string {
+  const a = new Uint8Array(bytes);
+  crypto.getRandomValues(a);
+  return Array.from(a, (b) => b.toString(16).padStart(2, "0")).join("");
+}
+export function traceparent(): string {
+  return `00-${hex(16)}-${hex(8)}-01`;
+}
 export const auth = {
   get(): string | null {
     try { return localStorage.getItem(KEY); } catch { return null; }
@@ -21,6 +31,7 @@ const withAuth: Middleware = {
   onRequest({ request }) {
     const t = auth.get();
     if (t) request.headers.set("Authorization", `Bearer ${t}`);
+    request.headers.set("traceparent", traceparent());   // the trace id starts here, in the browser (E3)
     return request;
   },
   onResponse({ response }) {

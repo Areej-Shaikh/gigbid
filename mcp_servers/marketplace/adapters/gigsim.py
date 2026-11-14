@@ -5,6 +5,7 @@ import random
 from typing import Any
 
 import httpx
+from opentelemetry import propagate
 
 from agent.marketplace_port import MarketplaceUnavailable, NotFound
 
@@ -20,6 +21,9 @@ class GigSimAdapter:
             timeout=timeout, transport=transport)
 
     async def _request(self, method: str, path: str, **kw) -> Any:
+        headers = dict(kw.pop("headers", None) or {})
+        propagate.inject(headers)                    # pass the trace on to the marketplace backend (W3C traceparent)
+        kw["headers"] = headers
         last_error = "unknown error"
         for attempt in range(self.max_retries + 1):
             wait = 0.5 * 2 ** attempt + random.uniform(0, 0.3)  # exponential backoff + jitter

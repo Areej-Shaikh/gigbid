@@ -13,6 +13,7 @@ from typing import Any
 from langgraph.types import Command
 
 from agent.config import cfg
+from agent.tracing import current_trace_id, span, trace_url
 
 INDEX = Path("data/processed/runs.json")
 
@@ -95,19 +96,27 @@ class RunManager:
         run_conf = self.conf(job_id)
         if checkpoint_id:                                  # replay: continue from an earlier checkpoint
             run_conf["configurable"]["checkpoint_id"] = checkpoint_id
-        self._emit(job_id, "start", {"job_id": job_id, "replay_from": checkpoint_id})
-        try:
-            async for chunk in self.graph.astream(inp, run_conf, stream_mode="updates"):
-                for node, update in chunk.items():
-                    if node == "__interrupt__":
-                        self._emit(job_id, "interrupt", {"node": "approval"})
-                        continue
-                    update = update or {}
-                    self._emit(job_id, "node", {"node": node, "status": update.get("status"),
-                                                "trace": update.get("trace", [])})
-        except Exception as e:  # noqa: BLE001 - shown in the UI, thread stays resumable
-            self._emit(job_id, "error", {"message": f"{type(e).__name__}: {e}"})
-            self.index.update(job_id, status="error_retry")
+        kind = "conversation" if self.input_key == "client_id" else "bid"
+        # one span per graph run, child of the API request that started it (same trace id as the UI request)
+        with span(f"graph.{kind}", **{"gigbid.thread": run_conf["configurable"]["thread_id"],
+                                      "gigbid.user": run_conf["configurable"]["user_id"],
+                                      "gigbid.resume": not fresh and checkpoint_id is None, "gigbid.replay_from": checkpoint_id}):
+            tid = current_trace_id()
+            self.index.update(job_id, trace_id=tid, trace_url=trace_url(tid))
+            self._emit(job_id, "start", {"job_id": job_id, "replay_from": checkpoint_id, "trace_id": tid,
+                                         "trace_url": trace_url(tid)})
+            try:
+                async for chunk in self.graph.astream(inp, run_conf, stream_mode="updates"):
+                    for node, update in chunk.items():
+                        if node == "__interrupt__":
+                            self._emit(job_id, "interrupt", {"node": "approval"})
+                            continue
+                        update = update or {}
+                        self._emit(job_id, "node", {"node": node, "status": update.get("status"),
+                                                    "trace": update.get("trace", [])})
+            except Exception as e:  # noqa: BLE001 - shown in the UI, thread stays resumable
+                self._emit(job_id, "error", {"message": f"{type(e).__name__}: {e}"})
+                self.index.update(job_id, status="error_retry")
         state = await self.graph.aget_state(self.conf(job_id))
         self._record(job_id, state.values, time.time() - t0)
         self._emit(job_id, "done", {"status": state.values.get("status"), "next": list(state.next)})

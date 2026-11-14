@@ -48,6 +48,7 @@ class RunSummary(BaseModel):
     tokens: int = 0
     duration_s: float | None = None
     reject_reason: str | None = None
+    trace_url: str | None = None
     updated: str
 
 
@@ -62,6 +63,8 @@ class RunState(BaseModel):
     next: list[str]
     interrupt: dict[str, Any] | None = None
     values: dict[str, Any]
+    trace_id: str | None = None           # latest run's trace (E3)
+    trace_url: str | None = None
 
 
 class ResumeIn(BaseModel):
