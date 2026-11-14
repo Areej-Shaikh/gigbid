@@ -16,7 +16,7 @@ async def list_jobs(request: Request, q: str = "", limit: int = 30, offset: int 
         raise HTTPException(503, f"marketplace unavailable: {e}")
     cards = []
     for j in res["jobs"]:
-        r = app.runs.index.data.get(j["job_id"], {})
+        r = app.runs.index.row(j["job_id"], user)
         cards.append(JobCard(**{k: j.get(k) for k in JobCard.model_fields if k in j},
                              status=r.get("status"), action=r.get("action"), fit=r.get("fit"),
                              risk=r.get("risk"), risk_flags=r.get("risk_flags") or [], price=r.get("price")))

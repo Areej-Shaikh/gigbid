@@ -10,7 +10,7 @@ profiles:
     models:
       small: openai/gpt-oss-20b        # cheap, frequent nodes
       strong: openai/gpt-oss-120b      # writer, critic
-      fallback: llama-3.1-8b-instant   # used if a cheap node's model fails
+      fallback: openai/gpt-oss-120b    # used if a cheap node's model fails (llama-3.1-8b-instant was retired by Groq)
   ollama:                # fully local
     base_url: http://localhost:11434/v1
     api_key_env: OLLAMA_API_KEY        # any value works for Ollama
@@ -36,8 +36,8 @@ nodes:
 llm_pricing:
   openai/gpt-oss-20b: {input_per_m: 0.075, output_per_m: 0.30}
   openai/gpt-oss-120b: {input_per_m: 0.15, output_per_m: 0.60}
-  llama-3.1-8b-instant: {input_per_m: 0.05, output_per_m: 0.08}
 llm_timeout_s: 60
+llm_rate_limit_retries: 2   # wait out a per-minute provider limit this many times before falling back
 temperature: 0.2
 
 # the freelancer's own settings (later edited from the Settings screen)

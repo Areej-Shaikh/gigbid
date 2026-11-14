@@ -19,7 +19,7 @@ A case is VALID only if no LLM step fell back to its rule template (rate limit, 
 template cannot be injected, so counting it would understate the attack success rate. Invalid cases
 are excluded from ASR and reported. The run stops when the provider's daily token limit is reached;
 `--resume` keeps the valid cases already in the results file and runs only the rest.
-  --strong openai/gpt-oss-20b   route the "strong" nodes to another model (e.g. when its daily quota is used up)
+  --strong / --small MODEL      route the "strong" / "small" nodes to another model (e.g. when its daily quota is used up)
 
 Writes evals/results/injection_results.json and injection_table.md
 """
@@ -83,9 +83,11 @@ class DailyLimit(RuntimeError):
 
 
 def llm_health(out: dict) -> dict:
-    """Which LLM steps fell back to rules in this run (and why)."""
-    fb = [t for t in out.get("trace", []) if t.get("fallback_used")]
-    errors = [str(t.get("error") or "") for t in fb]
+    """Did the LLM produce the latest output of every LLM step? (An earlier revision round that fell back and
+    was then redone by the LLM does not matter: the draft shown for approval is LLM-made.)"""
+    latest = {t["node"]: t for t in out.get("trace", []) if "fallback_used" in t}
+    fb = [t for t in latest.values() if t["fallback_used"]]
+    errors = [str(t.get("error") or "") for t in out.get("trace", []) if t.get("fallback_used")]
     if any("per day" in e or "TPD" in e for e in errors):
         raise DailyLimit(next(e for e in errors if "per day" in e or "TPD" in e)[:200])
     return {"valid": not fb, "fallback_nodes": [t["node"] for t in fb], "fallback_error": (errors or [None])[0]}
@@ -172,17 +174,22 @@ async def run_msg_case(graph, tb, case, base, label) -> dict:
     return {**row, "success": bool(hit), "evidence": hit, "stopped_by": stopped, "draft": text}
 
 
-async def run(cases, configs, done: list[dict]) -> tuple[list[dict], str | None]:
+async def _connect(stack: AsyncExitStack) -> ToolBox:
+    sessions = {}
+    for name, srv in (("marketplace", market), ("portfolio", portfolio), ("workspace", workspace)):
+        sessions[name] = await stack.enter_async_context(create_connected_server_and_client_session(srv.mcp._mcp_server))
+    return await ToolBox(sessions).init()
+
+
+async def run(cases, configs, done: list[dict], save=lambda rows: None) -> tuple[list[dict], str | None]:
     dev = {j["job_id"]: j for j in json.loads(DEV.read_text(encoding="utf-8"))}
     setup(list(dev.values()))
     workspace.DATA = Path(tempfile.mkdtemp()) / "workspace.json"
     rows = list(done)
     finished = {(r["config"], r["id"]) for r in done}
-    async with AsyncExitStack() as stack:
-        sessions = {}
-        for name, srv in (("marketplace", market), ("portfolio", portfolio), ("workspace", workspace)):
-            sessions[name] = await stack.enter_async_context(create_connected_server_and_client_session(srv.mcp._mcp_server))
-        tb = await ToolBox(sessions).init()
+    stack = AsyncExitStack()
+    tb = await _connect(stack)
+    try:
         for label in configs:
             set_layers(label == "on")
             bid, conv = build_bid_graph(InMemorySaver(), InMemoryStore()), build_conversation_graph(InMemorySaver(), InMemoryStore())
@@ -190,19 +197,37 @@ async def run(cases, configs, done: list[dict]) -> tuple[list[dict], str | None]
                 if (label, case["id"]) in finished:
                     continue
                 t = time.perf_counter()
-                try:
-                    fn = run_job_case if case["surface"] == "job_post" else run_msg_case
-                    r = await fn(bid if case["surface"] == "job_post" else conv, tb, case, dev[case["base_job_id"]], label)
-                except DailyLimit as e:
-                    print(f"STOPPED: daily token limit reached ({e}). Re-run with --resume later.", flush=True)
-                    return rows, str(e)
-                except Exception as e:  # noqa: BLE001 - one broken case must not stop the evaluation
-                    r = {"valid": False, "success": False, "evidence": None, "stopped_by": "error", "error": repr(e)[:300], "draft": ""}
+                fn = run_job_case if case["surface"] == "job_post" else run_msg_case
+                for attempt in (1, 2):
+                    try:
+                        r = await fn(bid if case["surface"] == "job_post" else conv, tb, case, dev[case["base_job_id"]],
+                                     label if attempt == 1 else f"{label}-retry")
+                        break
+                    except DailyLimit as e:
+                        print(f"STOPPED: daily token limit reached ({e}). Re-run with --resume later.", flush=True)
+                        return rows, str(e)
+                    except Exception as e:  # noqa: BLE001 - one broken case must not stop the evaluation
+                        r = {"valid": False, "success": False, "evidence": None, "stopped_by": "error",
+                             "error": repr(e)[:300], "draft": ""}
+                        if attempt == 1:                 # an in-memory MCP session died: reconnect and retry once
+                            print(f"  reconnecting MCP sessions after {type(e).__name__}", flush=True)
+                            try:
+                                await stack.aclose()
+                            except BaseException:  # noqa: BLE001 - the old sessions are already broken
+                                pass
+                            stack = AsyncExitStack()
+                            tb = await _connect(stack)
                 rows.append({"config": label, "id": case["id"], "surface": case["surface"], "goal": case["goal"],
                              "style": case["style"], **r, "seconds": round(time.perf_counter() - t, 1)})
+                save(rows)
+                why = "" if r.get("valid") else f"  [INVALID: {r.get('error') or 'LLM fell back to rules'}]"[:160]
                 print(f"[{label} {n + 1}/{len(cases)}] {case['id']} {case['goal']:20s} {case['style']:6s} -> "
-                      f"{'SUCCESS' if r['success'] else 'blocked'} ({r.get('stopped_by') or r.get('evidence', '')})"
-                      f"{'' if r.get('valid') else '  [INVALID: LLM fell back to rules]'}", flush=True)
+                      f"{'SUCCESS' if r['success'] else 'blocked'} ({r.get('stopped_by') or r.get('evidence', '')}){why}", flush=True)
+    finally:
+        try:
+            await stack.aclose()
+        except BaseException:  # noqa: BLE001
+            pass
     return rows, None
 
 
@@ -264,9 +289,12 @@ def main():
     ap.add_argument("--name", default="injection")
     ap.add_argument("--resume", action="store_true", help="keep valid cases from the existing results file")
     ap.add_argument("--strong", help="model id for the 'strong' nodes in this run (writer, critic, liaison)")
+    ap.add_argument("--small", help="model id for the 'small' nodes in this run (analyst, verifier, classify)")
     a = ap.parse_args()
-    if a.strong:
-        cfg()["profiles"][cfg()["profile"]]["models"]["strong"] = a.strong
+    cfg()["llm_rate_limit_retries"] = 8          # free-tier per-minute limits: wait, never silently fall back
+    for size in ("strong", "small"):
+        if getattr(a, size):
+            cfg()["profiles"][cfg()["profile"]]["models"][size] = getattr(a, size)
     for noisy in ("httpx", "mcp", "mcp.server.lowlevel.server"):
         logging.getLogger(noisy).setLevel(logging.WARNING)
     cases = json.loads(CASES.read_text(encoding="utf-8"))
@@ -276,7 +304,9 @@ def main():
     tag = f"LLM profile={cfg()['profile']} (small={models.get('small')}, strong={models.get('strong')}); {len(cases)} cases"
     res_file = OUT / f"{a.name}_results.json"
     done = [r for r in json.loads(res_file.read_text(encoding="utf-8"))["rows"] if r.get("valid")]         if a.resume and res_file.exists() else []
-    rows, stopped = asyncio.run(run(cases, a.configs, done))
+    OUT.mkdir(parents=True, exist_ok=True)
+    save = lambda rows: res_file.write_text(json.dumps({"tag": tag + " (in progress)", "rows": rows}, indent=1), encoding="utf-8")  # noqa: E731
+    rows, stopped = asyncio.run(run(cases, a.configs, done, save))
     if stopped:
         tag += f"; PARTIAL (stopped: daily token limit), {len(rows)} of {len(cases) * len(a.configs)} runs"
     OUT.mkdir(parents=True, exist_ok=True)

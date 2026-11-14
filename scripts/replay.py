@@ -3,10 +3,12 @@
 
   python scripts/replay.py job-00044                       # list every checkpoint of the job's thread
   python scripts/replay.py job-00044 <checkpoint_id>       # replay from that checkpoint (stops at approval)
+  python scripts/replay.py job-00044 --user reviewer       # runs are per user (thread id = <user>:<job_id>)
 
 Replaying is safe: the graph still pauses at human approval, and submit reuses the thread's idempotency key,
 so a replay can never send a proposal twice or spend Connects twice.
 """
+import argparse
 import asyncio
 import sys
 from pathlib import Path
@@ -20,14 +22,20 @@ from agent.config import cfg  # noqa: E402
 from agent.graphs.bid_graph import build_bid_graph  # noqa: E402
 from agent.mcp_client import open_toolbox  # noqa: E402
 from agent.persistence import backend, open_persistence  # noqa: E402
+from apps.api.streaming import scoped  # noqa: E402
 
 
 async def main():
-    job_id, ckpt = sys.argv[1], (sys.argv[2] if len(sys.argv) > 2 else None)
+    ap = argparse.ArgumentParser()
+    ap.add_argument("job_id")
+    ap.add_argument("checkpoint_id", nargs="?")
+    ap.add_argument("--user", default="demo", help="the user who ran the job in the web app")
+    a = ap.parse_args()
+    job_id, ckpt, thread = a.job_id, a.checkpoint_id, scoped(a.job_id, a.user)
     print(f"persistence: {backend()}")
     async with open_persistence() as (saver, store), open_toolbox() as tb:
         g = build_bid_graph(saver, store)
-        conf = {"configurable": {"toolbox": tb, "thread_id": job_id}, "recursion_limit": cfg()["budgets"]["max_steps"]}
+        conf = {"configurable": {"toolbox": tb, "thread_id": thread, "user_id": a.user}, "recursion_limit": cfg()["budgets"]["max_steps"]}
         snaps = [s async for s in g.aget_state_history(conf)]
         if not snaps:
             return print(f"no checkpoints for {job_id}: analyse it first")
@@ -42,7 +50,7 @@ async def main():
         async for chunk in g.astream(None, conf, stream_mode="updates"):
             for node in chunk:
                 print(f"  ran: {node}")
-        final = await g.aget_state({"configurable": {"thread_id": job_id}})
+        final = await g.aget_state({"configurable": {"thread_id": thread}})
         print(f"status: {final.values.get('status')} | next: {list(final.next)}")
 
 

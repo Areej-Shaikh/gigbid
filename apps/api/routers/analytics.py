@@ -12,7 +12,7 @@ router = APIRouter(tags=["analytics"])
 
 @router.get("/analytics", response_model=Analytics)
 def analytics(request: Request, user: str = User):
-    rows = list(request.app.state.runs.index.data.values())
+    rows = request.app.state.runs.index.rows(user)
     lat = sorted(r["duration_s"] for r in rows if r.get("duration_s"))
     q = statistics.quantiles(lat, n=20) if len(lat) >= 2 else None
     return Analytics(

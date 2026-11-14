@@ -20,11 +20,11 @@ async def list_conversations(request: Request, user: str = User):
     by_client: dict[str, list[dict]] = {}
     for m in sorted(await _messages(request), key=lambda m: m["sent_at"]):
         by_client.setdefault(m["client_id"], []).append(m)
-    idx = request.app.state.convs.index.data
+    idx = request.app.state.convs.index
     out = []
     for cid, ms in by_client.items():
         last_mine = max((i for i, m in enumerate(ms) if m["sender"] == "freelancer"), default=-1)
-        row = idx.get(cid, {})
+        row = idx.row(cid, user)
         out.append(ConversationSummary(
             client_id=cid, job_id=next((m["job_id"] for m in reversed(ms) if m.get("job_id")), None),
             last_text=ms[-1]["text"][:160], last_sender=ms[-1]["sender"], last_at=ms[-1]["sent_at"],
@@ -55,7 +55,7 @@ async def get_conversation(client_id: str, request: Request, user: str = User):
     if not msgs and not s.values:
         raise HTTPException(404, "no conversation with this client")
     return ConversationState(client_id=client_id, status=(s.values or {}).get("status", "new"),
-                             running=m.running(client_id), next=list(s.next), interrupt=interrupt,
+                             running=m.running(client_id, user), next=list(s.next), interrupt=interrupt,
                              messages=[Message(**x) for x in msgs],
                              values={k: (s.values or {}).get(k) for k in KEEP})
 
@@ -75,4 +75,4 @@ async def resume_liaison(client_id: str, body: MessageResumeIn, request: Request
 @router.get("/{client_id}/events")
 async def conversation_events(client_id: str, request: Request, user: str = User):
     """Server-Sent Events: start, node, interrupt, error, done."""
-    return EventSourceResponse(request.app.state.convs.subscribe(client_id))
+    return EventSourceResponse(request.app.state.convs.subscribe(client_id, user))
