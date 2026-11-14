@@ -5,7 +5,9 @@
 # Then open http://localhost:8000 and sign in with a login from APP_USERS in .env.
 #
 # Secrets (GROQ_API_KEY, APP_SECRET, APP_USERS, MARKETPLACE_MCP_TOKENS) come from ../.env,
-# never from the image. Redis and the worker are added in a later step.
+# never from the image.
+#
+# Optional local LLM (open profile without Groq):  docker compose -f infra/docker-compose.yml --profile local-llm up
 
 services:
   postgres:
@@ -71,7 +73,41 @@ services:
       postgres:
         condition: service_healthy
 
+  redis:                            # queue + de-duplication for the worker (E1)
+    image: redis:7-alpine
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      start_period: 10s
+      start_interval: 2s
+      timeout: 3s
+      retries: 5
+
+  worker:                           # scheduled scouting of saved searches (E1); never submits anything
+    build:
+      context: ..
+      dockerfile: infra/docker/api.Dockerfile
+    command: ["python", "-m", "arq", "worker.main.WorkerSettings"]
+    env_file: ../.env
+    environment:
+      API_URL: http://api:8000
+      REDIS_URL: redis://redis:6379
+      RAG_VARIANT: ${DEPLOY_RAG_VARIANT:-bm25}
+    depends_on:
+      redis:
+        condition: service_healthy
+      api:
+        condition: service_started
+
+  ollama:                           # local open-weight models (LLM_PROFILE=ollama); opt-in, large download
+    image: ollama/ollama:0.12.6
+    profiles: ["local-llm"]
+    ports: ["11434:11434"]
+    volumes:
+      - gigbid-ollama:/root/.ollama
+
 volumes:
   gigbid-state:
   gigbid-pg:
   gigbid-traces:
+  gigbid-ollama:

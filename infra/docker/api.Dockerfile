@@ -27,6 +27,7 @@ COPY rag/ rag/
 COPY gigsim/ gigsim/
 COPY data/ data/
 COPY scripts/ scripts/
+COPY worker/ worker/
 COPY infra/docker/start.sh /app/start.sh
 COPY --from=web /web/dist apps/web/dist
 
