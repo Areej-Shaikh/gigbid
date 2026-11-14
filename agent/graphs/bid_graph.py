@@ -29,7 +29,7 @@ def fan_out(state):
     return [Send("analyst", state), Send("risk", state), Send("fit", state)]
 
 
-def build_bid_graph(checkpointer=None):
+def build_bid_graph(checkpointer=None, store=None):
     retry = RetryPolicy(max_attempts=2)
     g = StateGraph(BidState)
     g.add_node("intake", intake, retry_policy=retry)
@@ -58,4 +58,4 @@ def build_bid_graph(checkpointer=None):
     g.add_edge("preview", "human_approval")
     g.add_conditional_edges("human_approval", route_after_approval, {"submit": "submit", "compliance": "compliance", "end": END})
     g.add_edge("submit", END)
-    return g.compile(checkpointer=checkpointer)
+    return g.compile(checkpointer=checkpointer, store=store)   # store = long-term memory (R7)

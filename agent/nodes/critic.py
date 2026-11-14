@@ -2,6 +2,8 @@
 from agent.config import cfg
 from agent.handoffs import Critique
 from agent.llm import structured
+from agent.memory.promotion_rules import style_rules, style_violations
+from agent.memory.store import current_store, user_of
 from agent.nodes.common import CITE, budget_exceeded, fence, prompt, trace, words
 
 
@@ -30,6 +32,11 @@ def _rules(state) -> Critique:
 
 async def critic(state, config=None):
     rules = _rules(state)
+    # style memory: words the user removed from earlier drafts must not come back
+    style = style_violations(state["draft"]["cover_letter"], await style_rules(current_store(), user_of(config)))
+    if style:
+        rules = Critique(approved=False, issues=rules.issues + style,
+                         instructions="; ".join(filter(None, [rules.instructions] + [f"fix: {s}" for s in style])))
     user = f"{fence(state['job'])}\n\nSCREENING QUESTIONS: {state['job'].get('screening_questions', [])}\n\nDRAFT:\n{state['draft']}"
     llm, info = await structured("critic", Critique, prompt("critic"), user, lambda: rules)
     use_llm = not info["fallback_used"] and not llm.approved

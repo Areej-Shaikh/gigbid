@@ -6,6 +6,8 @@ from langchain_core.runnables import RunnableConfig
 
 from agent.handoffs import DraftText
 from agent.llm import structured
+from agent.memory.promotion_rules import apply_style, outcome_hint, style_rules
+from agent.memory.store import current_store, user_of
 from agent.nodes.common import budget_exceeded, fence, prompt, toolbox, trace
 
 
@@ -68,6 +70,8 @@ async def writer(state, config: RunnableConfig):
         answers_ev.append(await tb.call("writer", "get_case_study", evidence_id=hits[0]["evidence_id"]) if hits else None)
     pool = {c["evidence_id"]: c for c in cases + [a for a in answers_ev if a]}
 
+    store, user = current_store(), user_of(config)
+    rules, outcome = await style_rules(store, user), await outcome_hint(store, user, job)
     critique = state.get("critique") or {}
     revising = bool(critique) and not critique.get("approved")
     # on a revision, tell the writer exactly which claims the claim checker removed and why,
@@ -84,9 +88,16 @@ async def writer(state, config: RunnableConfig):
         (f"REVISION REQUEST FROM CRITIC:\n{critique.get('instructions')}" if revising else ""),
         ("CLAIMS REMOVED BY THE CLAIM CHECKER (do not repeat or reword them; use other facts from the EVIDENCE):\n" +
          "\n".join(f"- {c['claim']}  -> reason: {c.get('note') or 'not supported'}" for c in removed) if removed else ""),
+        ("STYLE RULES (learned from the freelancer's own edits; follow them):\n" +
+         "\n".join(f"- {r['rule']}" for r in rules)) if rules else "",
+        (f"WHAT WORKED BEFORE in {outcome['category']} jobs: {outcome['positive']}/{outcome['samples']} got replies; "
+         f"evidence that won: {', '.join(outcome['winning_evidence']) or 'none yet'}. Prefer that evidence if it fits.")
+        if outcome else "",
     ])
     draft, info = await structured("writer", DraftText, prompt("writer"), user,
                                    lambda: _rules(job, spec, cases, price, answers_ev))
+    if info["fallback_used"] and rules:      # no LLM to instruct: apply style memory deterministically
+        draft = DraftText(cover_letter=apply_style(draft.cover_letter, rules), screening_answers=draft.screening_answers)
     return {"draft": draft.model_dump(), "evidence": {k: {**v, "snippet": v["text"][:400]} for k, v in pool.items()},
             "tokens": info["tokens"],
             "trace": [trace("writer", revision=state.get("revisions", 0), cited=list(pool), **info)]}

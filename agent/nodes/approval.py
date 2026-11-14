@@ -7,6 +7,8 @@ from langgraph.types import interrupt
 
 from agent.handoffs import ApprovalDecision
 from agent.mcp_client import ToolCallError
+from agent.memory.promotion_rules import record_edit
+from agent.memory.store import current_store, user_of
 from agent.nodes.common import CITE, thread_id, toolbox, trace
 
 
@@ -49,7 +51,12 @@ async def human_approval(state, config: RunnableConfig):
                "screening_answers": decision.screening_answers or d.get("screening_answers", [])}
         diff = list(difflib.unified_diff(d["cover_letter"].split(". "), new["cover_letter"].split(". "), lineterm="", n=0))
         out["draft"] = new
-        out["edits"] = [{"before": d["cover_letter"], "after": new["cover_letter"], "diff": diff}]  # -> style memory
+        out["edits"] = [{"before": d["cover_letter"], "after": new["cover_letter"], "diff": diff}]
+        store = current_store()
+        if store is not None:          # the edit goes to style memory ONLY through the promotion rule
+            promoted = await record_edit(store, user_of(config), state["job"]["job_id"],
+                                         d["cover_letter"], new["cover_letter"])
+            out["trace"].append(trace("style_memory", promoted=promoted))
     elif decision.action == "reject":
         out["status"] = "rejected"
     return out
