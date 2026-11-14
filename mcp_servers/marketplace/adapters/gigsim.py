@@ -63,6 +63,9 @@ class GigSimAdapter:
     async def list_messages(self, client_id: str | None = None):
         return await self._request("GET", "/messages", params={"client_id": client_id} if client_id else {})
 
+    async def list_proposals(self):
+        return await self._request("GET", "/proposals")
+
     # ---- write ----
     async def submit_proposal(self, job_id, cover_letter, bid_amount, screening_answers, idempotency_key):
         return await self._request(

@@ -33,3 +33,25 @@ class BidState(TypedDict, total=False):
     trace: Annotated[list[dict], operator.add]
     tokens: Annotated[int, operator.add]
     errors: Annotated[list[str], operator.add]
+
+
+class ConvState(TypedDict, total=False):
+    """Conversation graph state: one thread per client conversation (thread id = conv-<client_id>)."""
+    client_id: str
+    job_id: str | None
+    job: dict[str, Any]
+    history: list[dict]          # the conversation so far (client + freelancer messages)
+    incoming: dict               # the newest client message not handled yet
+    intent: dict
+    slots: list[dict]
+    draft: dict                  # {"text"}
+    compliance: dict
+    preview: dict
+    approval: dict
+    sent: dict
+    handled: Annotated[list[str], operator.add]     # message ids already answered (never answer twice)
+    edits: Annotated[list[dict], operator.add]
+    status: str                  # running | no_new_messages | awaiting_approval | sent | rejected | needs_attention
+    trace: Annotated[list[dict], operator.add]
+    tokens: Annotated[int, operator.add]
+    errors: Annotated[list[str], operator.add]

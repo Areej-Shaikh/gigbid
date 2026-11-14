@@ -129,10 +129,61 @@ def submit_proposal(p: ProposalIn, idempotency_key: str = Header(...)):
     state["connects"] -= job["connects_cost"]
     pid = f"prop-{uuid.uuid4().hex[:8]}"
     proposal = {"proposal_id": pid, **p.model_dump(), "status": "submitted",
-                "connects_spent": job["connects_cost"]}
+                "connects_spent": job["connects_cost"], "client_id": job.get("client_id")}
     state["proposals"][pid] = proposal
     state["idempotency"][idempotency_key] = pid
+    client_reacts(proposal, job)
     return proposal
+
+
+# ---------------- SIMULATED CLIENTS ----------------
+# Each client decides whether to reply. Deterministic per (job, letter), so evaluations are repeatable.
+# Hidden preferences: wants proof (evidence citations), wants its own skills mentioned, dislikes generic openings.
+GENERIC = ("dear sir", "dear madam", "i am very passionate", "i have read your job post", "hardworking professional",
+           "i am the best fit", "to whom it may concern")
+REPLIES = {
+    "question": "Thanks for the proposal. How would you approach {skill} for our project, and what would you deliver first?",
+    "interview_request": "Your proposal stood out. Are you available for a short call this week to discuss {title}?",
+    "negotiation": "Your experience looks right, but the rate is above our budget. Could you do it for ${counter}?",
+}
+
+
+def reply_probability(letter: str, job: dict) -> float:
+    text = letter.lower()
+    p = 0.15
+    p += 0.30 if "[" in letter and "]" in letter else 0          # cites concrete evidence
+    p += 0.25 if any(s.lower() in text for s in job.get("skills", [])) else 0
+    p -= 0.25 if any(g in text[:160] for g in GENERIC) else 0
+    return max(0.02, min(0.9, p))
+
+
+def client_reacts(proposal: dict, job: dict) -> None:
+    rng = random.Random(f"{job['job_id']}|{proposal['cover_letter']}")
+    if rng.random() >= reply_probability(proposal["cover_letter"], job):
+        proposal["status"] = "ignored"
+        return
+    intent = rng.choices(list(REPLIES), weights=[0.4, 0.35, 0.25])[0]
+    proposal["status"] = "interview" if intent == "interview_request" else "replied"
+    text = REPLIES[intent].format(skill=(job.get("skills") or ["this"])[0], title=job["title"][:60],
+                                  counter=round(proposal["bid_amount"] * 0.8))
+    state["messages"].append({"message_id": f"msg-{uuid.uuid4().hex[:8]}", "client_id": job.get("client_id"),
+                              "job_id": job["job_id"], "sender": "client", "text": text,
+                              "sent_at": time.strftime("%Y-%m-%dT%H:%M:%SZ")})
+
+
+class ClientMessageIn(BaseModel):
+    client_id: str
+    job_id: str | None = None
+    text: str
+
+
+@app.post("/dev/client_message")
+def dev_client_message(m: ClientMessageIn):
+    """Demo/testing only: make a client say something (e.g. a scam attempt or an injected instruction)."""
+    msg = {"message_id": f"msg-{uuid.uuid4().hex[:8]}", **m.model_dump(), "sender": "client",
+           "sent_at": time.strftime("%Y-%m-%dT%H:%M:%SZ")}
+    state["messages"].append(msg)
+    return msg
 
 
 class MessageIn(BaseModel):

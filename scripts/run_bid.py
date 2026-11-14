@@ -2,7 +2,7 @@
 
   python scripts/run_bid.py job-00012              # new run (thread id = job id)
   python scripts/run_bid.py job-00012 --resume     # continue a paused/crashed thread
-  python scripts/run_bid.py --graph                # save the graph diagram to docs/images/bid_graph.mmd
+  python scripts/run_bid.py --graph                # save both graph diagrams to docs/images/*.mmd
 
 Needs GigSim running on :8001. Checkpoints are saved in data/processed/checkpoints.sqlite,
 so you can close the terminal while it waits for approval and resume later.
@@ -57,11 +57,14 @@ def ask() -> dict:
 
 
 async def main():
-    if "--graph" in sys.argv:
-        out = Path("docs/images/bid_graph.mmd")
-        out.parent.mkdir(parents=True, exist_ok=True)
-        out.write_text(build_bid_graph().get_graph().draw_mermaid(), encoding="utf-8")
-        return print(f"saved {out}")
+    if "--graph" in sys.argv:          # both graphs rendered from code (C1)
+        from agent.graphs.conversation_graph import build_conversation_graph
+        for name, g in (("bid_graph", build_bid_graph()), ("conversation_graph", build_conversation_graph())):
+            out = Path(f"docs/images/{name}.mmd")
+            out.parent.mkdir(parents=True, exist_ok=True)
+            out.write_text(g.get_graph().draw_mermaid(), encoding="utf-8")
+            print(f"saved {out}")
+        return
     job_id = sys.argv[1]
     DB.parent.mkdir(parents=True, exist_ok=True)
     print(f"LLM profile: {cfg()['profile']}")

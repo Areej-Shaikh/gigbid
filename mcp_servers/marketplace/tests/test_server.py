@@ -40,7 +40,7 @@ async def test_tools_have_schemas_and_annotations():
     async with create_connected_server_and_client_session(server.mcp._mcp_server) as s:
         tools = {t.name: t for t in (await s.list_tools()).tools}
         assert set(tools) == {"search_jobs", "get_job", "get_client_history", "get_connects_balance",
-                              "get_price_stats", "list_messages", "create_proposal_draft",
+                              "get_price_stats", "list_messages", "list_proposals", "create_proposal_draft",
                               "submit_proposal", "send_message"}
         assert tools["search_jobs"].annotations.readOnlyHint is True
         assert tools["submit_proposal"].annotations.destructiveHint is True

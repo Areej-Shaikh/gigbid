@@ -154,6 +154,20 @@ class MessageList(BaseModel):
     messages: list[Message]
 
 
+class ProposalStatus(BaseModel):
+    proposal_id: str
+    job_id: str
+    client_id: str | None = None
+    status: str = Field(description="submitted | ignored | replied | interview | hired")
+    bid_amount: float
+    cover_letter: str
+    connects_spent: int = 0
+
+
+class ProposalList(BaseModel):
+    proposals: list[ProposalStatus]
+
+
 class ProposalDraft(BaseModel):
     draft_id: str
     job_id: str
@@ -230,6 +244,15 @@ async def list_messages(client_id: Annotated[str | None, Field(max_length=50)] =
     """List conversation messages, optionally only for one client."""
     msgs = await market().list_messages(client_id)
     return MessageList(messages=[Message(**{k: m.get(k) for k in Message.model_fields if k in m}) for m in msgs])
+
+
+@mcp.tool(annotations=READ)
+@guarded
+async def list_proposals() -> ProposalList:
+    """List submitted proposals and their status (submitted, ignored, replied, interview, hired)."""
+    props = await market().list_proposals()
+    return ProposalList(proposals=[ProposalStatus(**{k: p.get(k) for k in ProposalStatus.model_fields if k in p})
+                                   for p in props])
 
 
 # ---------------------------------------------------------------- WRITE tools

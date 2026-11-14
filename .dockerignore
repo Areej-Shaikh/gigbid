@@ -17,6 +17,9 @@ apps/web/playwright-report/
 data/raw/
 data/processed/checkpoints.sqlite*
 data/processed/runs.json
+data/processed/conversations.json
+data/processed/memory.sqlite*
+data/processed/workspace.json
 logs/
 evals/results/
 .git/

@@ -94,3 +94,23 @@ class ApprovalDecision(BaseModel):
     cover_letter: str | None = None
     screening_answers: list[str] | None = None
     reason: str | None = None
+
+
+# ---------------- conversation graph (Client Liaison) ----------------
+class MessageIntent(BaseModel):
+    intent: Literal["question", "negotiation", "interview_request", "scam_signal", "other"]
+    summary: str = Field("", description="One sentence: what the client wants")
+    reasons: list[str] = Field(default_factory=list)
+
+
+class ReplyDraft(BaseModel):
+    """What the Client Liaison LLM returns."""
+    text: str
+
+
+class MessageApproval(BaseModel):
+    """What the human sends back from the Messages screen to resume the conversation graph."""
+    action: Literal["approve", "edit", "reject"]
+    text: str | None = None          # edited reply
+    slot: str | None = None          # interview slot the user picked (ISO start)
+    reason: str | None = None

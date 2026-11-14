@@ -30,6 +30,7 @@ nodes:
   writer: strong
   critic: strong
   liaison: strong
+  liaison_classify: small     # intent classification is cheap and frequent
 llm_timeout_s: 60
 temperature: 0.2
 
@@ -115,8 +116,43 @@ tool_allowlist:
   preview: [create_proposal_draft, submit_proposal]   # dry_run only, enforced in code
   submit: [create_proposal_draft, submit_proposal]
   scout: [search_jobs]
-  api: [search_jobs, get_job, list_messages, get_connects_balance, list_skills]   # read-only, for the web UI
+  api: [search_jobs, get_job, list_messages, list_proposals, get_connects_balance, list_skills]   # read-only, for the web UI
+  outcomes: [list_proposals, get_job]                    # outcome memory sync (read-only)
+  liaison: [list_messages, get_job, free_slots]          # conversation graph: read + calendar, no writes
+  liaison_preview: [send_message]                        # dry_run only, enforced in code
+  liaison_send: [send_message, create_hold]              # only after human approval
 
 mcp_servers:
   marketplace: {transport: stdio, command: python, args: ["-m", "mcp_servers.marketplace.server"], env: {FASTMCP_LOG_LEVEL: WARNING}}
   portfolio: {transport: stdio, command: python, args: ["-m", "mcp_servers.portfolio.server"], env: {FASTMCP_LOG_LEVEL: WARNING}}
+  workspace: {transport: stdio, command: python, args: ["-m", "mcp_servers.workspace.server"], env: {FASTMCP_LOG_LEVEL: WARNING}}
+
+# Long-term memory (R7). Nothing enters memory directly: candidates are collected, and only the
+# promotion rules below move them into the style / outcome stores (agent/memory/promotion_rules.py).
+memory:
+  style:
+    promote_after_jobs: 2     # an edit pattern becomes a style rule once seen in edits on 2 different jobs
+    max_removed_words: 3      # only small word-level deletions count as "avoid this word" (not rewrites)
+    min_similarity: 0.6       # ...and only when most of the letter was kept (a full rewrite bans nothing)
+    shorter_ratio: 0.8        # an edit that cuts the letter below 80% of its length counts as "shorter"
+  outcome:
+    min_samples: 3            # category stats are promoted once 3 outcomes are known for that category
+    positive: [replied, interview, hired]
+  # job category = first group whose keywords appear in the job title or skills
+  categories:
+    ai_ml: [machine learning, artificial intelligence, " ai ", llm, chatbot, nlp, "natural language", openai, gpt, langchain, rag, tensorflow, pytorch, deep learning, computer vision]
+    data: [data analysis, data analytics, sql, tableau, power bi, excel, dashboard, etl, data visualization, statistics, pandas]
+    web: [react, next.js, node, javascript, typescript, web application, website, frontend, front-end, backend, full stack, full-stack, django, flask, fastapi, wordpress, shopify]
+    mobile: [ios, android, flutter, react native, mobile app]
+
+# Conversation graph (Client Liaison)
+liaison:
+  slots_offered: 3
+  slot_minutes: 30
+  slot_days_ahead: 5
+  intents:                    # rule fallback (and safety net) for intent classification, checked in order
+    # scam_signal = off-platform asks, payment/identity requests, OR text that tries to instruct the assistant
+    - {intent: scam_signal, pattern: "(?i)whats ?app|telegram|skype|wechat|(talk|chat|continue|move|contact)\\w* (us |me )?outside|outside (of )?(the )?(platform|upwork|site)|bank (account|details)|crypto|gift card|western union|send (me )?your (id|passport|cnic)|pay (you )?(outside|directly)|(your|personal|private) (e-?mail|phone|number|contact)|\\bignore\\b.{0,30}\\b(instructions|rules|prompt)|\\b(assistant|system)\\s*:|forget (your|all|previous) (rules|instructions)"}
+    - {intent: interview_request, pattern: "(?i)\\bcall\\b|interview|meet(ing)?\\b|schedule|available (this|next|on|for)|zoom|google meet|chat live"}
+    - {intent: negotiation, pattern: "(?i)\\brate\\b|price|budget|discount|lower|cheaper|\\$\\s?\\d|per hour|fixed price"}
+    - {intent: question, pattern: "\\?"}
