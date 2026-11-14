@@ -1,0 +1,15 @@
+{
+ "search_jobs": "Search the marketplace for open jobs by keywords. Use for 'find/look for/are there jobs about X'. Put the topic words in query; use limit for 'first N results' and offset to skip results (next page). Not for one known job id (use get_job).",
+ "get_job": "Get ONE job post by its id (e.g. job-00044, dev-0007): description, budget, skills, screening questions. Use whenever the user names a job id.",
+ "get_client_history": "Get a client's track record by client id (cl-..., rc-...): payment verified, total spent, hires, rating. Use to judge whether a client is trustworthy before bidding.",
+ "get_connects_balance": "Get how many Connects (paid bidding credits) the freelancer has left. No arguments. Use for 'how many Connects', 'can I afford to bid'.",
+ "get_price_stats": "Market price statistics for ONE skill (p25 / median / p75, hourly and fixed). Use for 'what do clients pay for X', 'fair rate for X'. Put only the skill name in skill.",
+ "list_messages": "List client messages. Pass client_id to see one client's thread ('did cl-009 write to me?'); omit it to list all messages.",
+ "list_proposals": "List every proposal the freelancer has sent, with its status (submitted, ignored, replied, interview, hired). No arguments.",
+ "create_proposal_draft": "Save a proposal DRAFT for a job (nothing is sent, no Connects spent). Needs job_id, cover_letter (exact text), bid_amount (number) and idempotency_key. Use for 'save/create a draft'.",
+ "submit_proposal": "Submit a saved draft (draft_id) to the client. SPENDS CONNECTS. dry_run=true only previews what would be sent; set dry_run=false only when the user explicitly approved sending. Needs idempotency_key.",
+ "send_message": "Send a message to a client (client_id, exact text, idempotency_key, optional job_id). dry_run=true previews without sending; set dry_run=false only when the user approved sending.",
+ "search_evidence": "Search the freelancer's OWN portfolio for proof of a skill or requirement (case studies, repos, reviews, past proposals, CV). Put the skill/requirement words in requirement. Optional filters: types (case_study, repo, review, proposal, cv), outcomes (won, replied, ignored), since (YYYY-MM-DD), k (how many). Not for marketplace jobs.",
+ "get_case_study": "Get the full text of ONE portfolio evidence item by its evidence_id (e.g. ai_ml_engineer-case-03).",
+ "list_skills": "List the freelancer's skills with how many evidence items prove each, plus headline and hourly rate. No arguments."
+}

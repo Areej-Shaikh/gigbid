@@ -1,0 +1,409 @@
+[
+ {
+  "id": "tool-01",
+  "task": "Find freelance jobs about building RAG chatbots.",
+  "tool": "search_jobs",
+  "args": {
+   "query": "RAG chatbot"
+  },
+  "fuzzy": [
+   "query"
+  ]
+ },
+ {
+  "id": "tool-02",
+  "task": "Are there any Power BI dashboard jobs posted?",
+  "tool": "search_jobs",
+  "args": {
+   "query": "Power BI dashboard"
+  },
+  "fuzzy": [
+   "query"
+  ]
+ },
+ {
+  "id": "tool-03",
+  "task": "Look for Django web development work, just the first 5 results.",
+  "tool": "search_jobs",
+  "args": {
+   "query": "Django",
+   "limit": 5
+  },
+  "fuzzy": [
+   "query"
+  ]
+ },
+ {
+  "id": "tool-04",
+  "task": "Show me the next page of results for 'data pipeline' jobs, skipping the first 20.",
+  "tool": "search_jobs",
+  "args": {
+   "query": "data pipeline",
+   "offset": 20
+  },
+  "fuzzy": [
+   "query"
+  ]
+ },
+ {
+  "id": "tool-05",
+  "task": "I want to see open machine learning jobs.",
+  "tool": "search_jobs",
+  "args": {
+   "query": "machine learning"
+  },
+  "fuzzy": [
+   "query"
+  ]
+ },
+ {
+  "id": "tool-06",
+  "task": "Open the full post for job job-00044.",
+  "tool": "get_job",
+  "args": {
+   "job_id": "job-00044"
+  },
+  "fuzzy": []
+ },
+ {
+  "id": "tool-07",
+  "task": "What are the screening questions on job-01532?",
+  "tool": "get_job",
+  "args": {
+   "job_id": "job-01532"
+  },
+  "fuzzy": []
+ },
+ {
+  "id": "tool-08",
+  "task": "What budget did the client set for job dev-0007?",
+  "tool": "get_job",
+  "args": {
+   "job_id": "dev-0007"
+  },
+  "fuzzy": []
+ },
+ {
+  "id": "tool-09",
+  "task": "Is the client cl-004 trustworthy? Check their payment verification and past hires.",
+  "tool": "get_client_history",
+  "args": {
+   "client_id": "cl-004"
+  },
+  "fuzzy": []
+ },
+ {
+  "id": "tool-10",
+  "task": "How much has client rc-00002 spent on the platform so far?",
+  "tool": "get_client_history",
+  "args": {
+   "client_id": "rc-00002"
+  },
+  "fuzzy": []
+ },
+ {
+  "id": "tool-11",
+  "task": "Before I bid, check the rating of client cl-001.",
+  "tool": "get_client_history",
+  "args": {
+   "client_id": "cl-001"
+  },
+  "fuzzy": []
+ },
+ {
+  "id": "tool-12",
+  "task": "How many Connects do I have left?",
+  "tool": "get_connects_balance",
+  "args": {},
+  "fuzzy": []
+ },
+ {
+  "id": "tool-13",
+  "task": "Can I afford to bid this week? Check my Connects.",
+  "tool": "get_connects_balance",
+  "args": {},
+  "fuzzy": []
+ },
+ {
+  "id": "tool-14",
+  "task": "What do clients usually pay per hour for React work?",
+  "tool": "get_price_stats",
+  "args": {
+   "skill": "React"
+  },
+  "fuzzy": []
+ },
+ {
+  "id": "tool-15",
+  "task": "Give me the market median rate for LangChain.",
+  "tool": "get_price_stats",
+  "args": {
+   "skill": "LangChain"
+  },
+  "fuzzy": []
+ },
+ {
+  "id": "tool-16",
+  "task": "What's a fair fixed price range for Tableau projects?",
+  "tool": "get_price_stats",
+  "args": {
+   "skill": "Tableau"
+  },
+  "fuzzy": []
+ },
+ {
+  "id": "tool-17",
+  "task": "Did client cl-009 write to me?",
+  "tool": "list_messages",
+  "args": {
+   "client_id": "cl-009"
+  },
+  "fuzzy": []
+ },
+ {
+  "id": "tool-18",
+  "task": "Show all my client messages.",
+  "tool": "list_messages",
+  "args": {},
+  "fuzzy": []
+ },
+ {
+  "id": "tool-19",
+  "task": "Any new replies from rc-00014?",
+  "tool": "list_messages",
+  "args": {
+   "client_id": "rc-00014"
+  },
+  "fuzzy": []
+ },
+ {
+  "id": "tool-20",
+  "task": "Which of my submitted proposals got a reply or an interview?",
+  "tool": "list_proposals",
+  "args": {},
+  "fuzzy": []
+ },
+ {
+  "id": "tool-21",
+  "task": "List the status of every proposal I've sent.",
+  "tool": "list_proposals",
+  "args": {},
+  "fuzzy": []
+ },
+ {
+  "id": "tool-22",
+  "task": "Find proof in my portfolio that I have built a RAG system with citations.",
+  "tool": "search_evidence",
+  "args": {
+   "requirement": "RAG system with citations"
+  },
+  "fuzzy": [
+   "requirement"
+  ]
+ },
+ {
+  "id": "tool-23",
+  "task": "Do I have any evidence of churn prediction work? Only case studies.",
+  "tool": "search_evidence",
+  "args": {
+   "requirement": "churn prediction",
+   "types": [
+    "case_study"
+   ]
+  },
+  "fuzzy": [
+   "requirement"
+  ]
+ },
+ {
+  "id": "tool-24",
+  "task": "Find my past proposals that won or got a reply for dashboard jobs.",
+  "tool": "search_evidence",
+  "args": {
+   "requirement": "dashboard",
+   "types": [
+    "proposal"
+   ],
+   "outcomes": [
+    "won",
+    "replied"
+   ]
+  },
+  "fuzzy": [
+   "requirement"
+  ]
+ },
+ {
+  "id": "tool-25",
+  "task": "What client reviews mention FastAPI?",
+  "tool": "search_evidence",
+  "args": {
+   "requirement": "FastAPI",
+   "types": [
+    "review"
+   ]
+  },
+  "fuzzy": [
+   "requirement"
+  ]
+ },
+ {
+  "id": "tool-26",
+  "task": "Find my strongest 3 pieces of evidence for LangGraph multi-agent systems.",
+  "tool": "search_evidence",
+  "args": {
+   "requirement": "LangGraph multi-agent",
+   "k": 3
+  },
+  "fuzzy": [
+   "requirement"
+  ]
+ },
+ {
+  "id": "tool-27",
+  "task": "Find evidence of Airflow work since 2025-01-01.",
+  "tool": "search_evidence",
+  "args": {
+   "requirement": "Airflow",
+   "since": "2025-01-01"
+  },
+  "fuzzy": [
+   "requirement"
+  ]
+ },
+ {
+  "id": "tool-28",
+  "task": "Open the full text of case study ai_ml_engineer-case-03.",
+  "tool": "get_case_study",
+  "args": {
+   "evidence_id": "ai_ml_engineer-case-03"
+  },
+  "fuzzy": []
+ },
+ {
+  "id": "tool-29",
+  "task": "I need the complete write-up for data_analyst-case-07.",
+  "tool": "get_case_study",
+  "args": {
+   "evidence_id": "data_analyst-case-07"
+  },
+  "fuzzy": []
+ },
+ {
+  "id": "tool-30",
+  "task": "Show the full details of evidence fullstack_developer-case-12.",
+  "tool": "get_case_study",
+  "args": {
+   "evidence_id": "fullstack_developer-case-12"
+  },
+  "fuzzy": []
+ },
+ {
+  "id": "tool-31",
+  "task": "Which skills can I actually prove with portfolio evidence?",
+  "tool": "list_skills",
+  "args": {},
+  "fuzzy": []
+ },
+ {
+  "id": "tool-32",
+  "task": "What is my headline and hourly rate on file?",
+  "tool": "list_skills",
+  "args": {},
+  "fuzzy": []
+ },
+ {
+  "id": "tool-33",
+  "task": "Save a draft proposal for job-00002 with the cover letter 'I build LLM proofs of concept.' at $45/hr, idempotency key k-001. Don't submit.",
+  "tool": "create_proposal_draft",
+  "args": {
+   "job_id": "job-00002",
+   "cover_letter": "I build LLM proofs of concept.",
+   "bid_amount": 45,
+   "idempotency_key": "k-001"
+  },
+  "fuzzy": []
+ },
+ {
+  "id": "tool-34",
+  "task": "Create a draft for job dev-0003 bidding 300 with letter 'Fixed-price dashboard in two weeks.' (key k-002).",
+  "tool": "create_proposal_draft",
+  "args": {
+   "job_id": "dev-0003",
+   "cover_letter": "Fixed-price dashboard in two weeks.",
+   "bid_amount": 300,
+   "idempotency_key": "k-002"
+  },
+  "fuzzy": []
+ },
+ {
+  "id": "tool-35",
+  "task": "Preview what would be sent for draft d-17 without actually sending it (key s-17).",
+  "tool": "submit_proposal",
+  "args": {
+   "draft_id": "d-17",
+   "idempotency_key": "s-17",
+   "dry_run": true
+  },
+  "fuzzy": []
+ },
+ {
+  "id": "tool-36",
+  "task": "The user approved draft d-09; submit it for real now with key s-09.",
+  "tool": "submit_proposal",
+  "args": {
+   "draft_id": "d-09",
+   "idempotency_key": "s-09",
+   "dry_run": false
+  },
+  "fuzzy": []
+ },
+ {
+  "id": "tool-37",
+  "task": "Dry-run the submission of draft d-21, key s-21.",
+  "tool": "submit_proposal",
+  "args": {
+   "draft_id": "d-21",
+   "idempotency_key": "s-21",
+   "dry_run": true
+  },
+  "fuzzy": []
+ },
+ {
+  "id": "tool-38",
+  "task": "Preview a reply to client cl-001 saying 'Tuesday 10am works.' (key m-1), don't send it.",
+  "tool": "send_message",
+  "args": {
+   "client_id": "cl-001",
+   "text": "Tuesday 10am works.",
+   "idempotency_key": "m-1",
+   "dry_run": true
+  },
+  "fuzzy": []
+ },
+ {
+  "id": "tool-39",
+  "task": "The user approved it: send 'Thanks, I can start Monday.' to client cl-003 about job job-003, key m-2.",
+  "tool": "send_message",
+  "args": {
+   "client_id": "cl-003",
+   "text": "Thanks, I can start Monday.",
+   "idempotency_key": "m-2",
+   "job_id": "job-003",
+   "dry_run": false
+  },
+  "fuzzy": []
+ },
+ {
+  "id": "tool-40",
+  "task": "Show exactly what would be sent if I message rc-00044 'Happy to help with the chatbot.' (key m-3), without sending.",
+  "tool": "send_message",
+  "args": {
+   "client_id": "rc-00044",
+   "text": "Happy to help with the chatbot.",
+   "idempotency_key": "m-3",
+   "dry_run": true
+  },
+  "fuzzy": []
+ }
+]
