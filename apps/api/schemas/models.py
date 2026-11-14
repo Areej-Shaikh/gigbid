@@ -182,3 +182,22 @@ class SyncResult(BaseModel):
     proposals: int
     outcomes_recorded: int
     categories_promoted: list[str]
+
+
+# ---------------- checkpoint history / replay (C6) ----------------
+class Checkpoint(BaseModel):
+    checkpoint_id: str
+    step: int
+    after: list[str]                      # node(s) that produced this checkpoint
+    next: list[str]                       # node(s) that would run if replayed from here
+    status: str | None = None
+    created_at: str | None = None
+
+
+class CheckpointHistory(BaseModel):
+    job_id: str
+    checkpoints: list[Checkpoint]         # newest first
+
+
+class ReplayIn(BaseModel):
+    checkpoint_id: str

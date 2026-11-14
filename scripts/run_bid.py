@@ -17,14 +17,13 @@ from dotenv import load_dotenv
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))  # project root, so "agent" imports work
 load_dotenv()
 
-from langgraph.checkpoint.sqlite.aio import AsyncSqliteSaver  # noqa: E402
+from agent.persistence import backend, open_persistence  # noqa: E402
 from langgraph.types import Command  # noqa: E402
 
 from agent.config import cfg  # noqa: E402
 from agent.graphs.bid_graph import build_bid_graph  # noqa: E402
 from agent.mcp_client import open_toolbox  # noqa: E402
 
-DB = Path("data/processed/checkpoints.sqlite")
 
 
 def show(payload: dict) -> None:
@@ -66,10 +65,9 @@ async def main():
             print(f"saved {out}")
         return
     job_id = sys.argv[1]
-    DB.parent.mkdir(parents=True, exist_ok=True)
-    print(f"LLM profile: {cfg()['profile']}")
-    async with AsyncSqliteSaver.from_conn_string(str(DB)) as saver, open_toolbox() as tb:
-        graph = build_bid_graph(saver)
+    print(f"LLM profile: {cfg()['profile']} | persistence: {backend()}")
+    async with open_persistence() as (saver, store), open_toolbox() as tb:
+        graph = build_bid_graph(saver, store)
         conf = {"configurable": {"toolbox": tb, "thread_id": job_id}, "recursion_limit": cfg()["budgets"]["max_steps"]}
         state = await graph.aget_state(conf)
         if "--resume" in sys.argv or state.next:

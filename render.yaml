@@ -28,3 +28,15 @@ services:
         sync: false
       - key: GROQ_API_KEY
         sync: false
+      - key: DATABASE_URL          # Postgres checkpointer + memory store
+        fromDatabase:
+          name: gigbid-db
+          property: connectionString
+
+# Postgres for checkpoints (pending approvals survive restarts and redeploys) and long-term memory.
+# Check Render's current free-database limits (free databases have expired after a fixed period before).
+databases:
+  - name: gigbid-db
+    plan: free
+    databaseName: gigbid
+    user: gigbid

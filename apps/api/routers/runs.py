@@ -2,7 +2,8 @@ from fastapi import APIRouter, HTTPException, Request
 from sse_starlette.sse import EventSourceResponse
 
 from apps.api.auth.security import User
-from apps.api.schemas.models import ResumeIn, RunList, RunState, RunSummary, Started
+from apps.api.schemas.models import (Checkpoint, CheckpointHistory, ReplayIn, ResumeIn, RunList, RunState,
+                                     RunSummary, Started)
 
 router = APIRouter(prefix="/runs", tags=["runs"])
 
@@ -47,3 +48,29 @@ async def resume_run(job_id: str, body: ResumeIn, request: Request, user: str = 
 async def run_events(job_id: str, request: Request, user: str = User):
     """Server-Sent Events: start, node (one per finished node), interrupt, error, done."""
     return EventSourceResponse(request.app.state.runs.subscribe(job_id))
+
+
+@router.get("/{job_id}/history", response_model=CheckpointHistory)
+async def run_history(job_id: str, request: Request, user: str = User):
+    """Every checkpoint of this job's thread (newest first): what ran, and what would run next on replay."""
+    m = request.app.state.runs
+    snaps = [s async for s in m.graph.aget_state_history(m.conf(job_id))]          # newest first
+    out = [Checkpoint(checkpoint_id=s.config["configurable"]["checkpoint_id"], step=(s.metadata or {}).get("step", -1),
+                      after=list(snaps[i + 1].next) if i + 1 < len(snaps) else ["__start__"],   # older one's "next" ran
+                      next=list(s.next), status=(s.values or {}).get("status"), created_at=s.created_at)
+           for i, s in enumerate(snaps)]
+    if not out:
+        raise HTTPException(404, "this job has not been analysed yet")
+    return CheckpointHistory(job_id=job_id, checkpoints=out)
+
+
+@router.post("/{job_id}/replay", response_model=Started)
+async def replay_run(job_id: str, body: ReplayIn, request: Request, user: str = User):
+    """Re-run the job from any earlier checkpoint (e.g. re-draft after changing a prompt). Safe: it still stops
+    at human approval, and submit keeps the same idempotency key, so nothing is sent or charged twice."""
+    m = request.app.state.runs
+    if not any([s.config["configurable"]["checkpoint_id"] == body.checkpoint_id
+                async for s in m.graph.aget_state_history(m.conf(job_id))]):
+        raise HTTPException(404, "no such checkpoint for this job")
+    started = m.start(job_id, user=user, replay_from=body.checkpoint_id)
+    return Started(job_id=job_id, started=started, message="replaying" if started else "already running")

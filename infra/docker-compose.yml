@@ -5,9 +5,25 @@
 # Then open http://localhost:8000 and sign in with a login from APP_USERS in .env.
 #
 # Secrets (GROQ_API_KEY, APP_SECRET, APP_USERS, MARKETPLACE_MCP_TOKENS) come from ../.env,
-# never from the image. Postgres, Redis and the worker are added in later steps.
+# never from the image. Redis and the worker are added in a later step.
 
 services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: gigbid
+      POSTGRES_DB: gigbid
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-gigbid-local}   # local only; not published outside the compose network
+    volumes:
+      - gigbid-pg:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U gigbid -d gigbid"]
+      interval: 30s
+      start_period: 20s
+      start_interval: 2s
+      timeout: 3s
+      retries: 5
+
   gigsim:
     build:
       context: ..
@@ -32,12 +48,17 @@ services:
       # deployed retriever: BM25 had the best end-to-end bid F1 (evals/results/graph_rules_bm25_table.md)
       # and needs no model downloads; override with RAG_VARIANT=v2_hybrid to use hybrid retrieval
       RAG_VARIANT: ${DEPLOY_RAG_VARIANT:-bm25}
+      # checkpoints (pending approvals) + long-term memory live in Postgres (C6)
+      DATABASE_URL: postgresql://gigbid:${POSTGRES_PASSWORD:-gigbid-local}@postgres:5432/gigbid
     ports: ["8000:8000"]
     volumes:
-      - gigbid-state:/app/data/processed    # checkpoints survive container restarts (pending approvals)
+      - gigbid-state:/app/data/processed    # small UI indexes + mock calendar
     depends_on:
       gigsim:
+        condition: service_healthy
+      postgres:
         condition: service_healthy
 
 volumes:
   gigbid-state:
+  gigbid-pg:

@@ -19,28 +19,24 @@ from fastapi import FastAPI, Request  # noqa: E402
 from fastapi.middleware.cors import CORSMiddleware  # noqa: E402
 from fastapi.responses import FileResponse  # noqa: E402
 from fastapi.staticfiles import StaticFiles  # noqa: E402
-from langgraph.checkpoint.sqlite.aio import AsyncSqliteSaver  # noqa: E402
 
 from agent.config import cfg  # noqa: E402
 from agent.graphs.bid_graph import build_bid_graph  # noqa: E402
 from agent.graphs.conversation_graph import build_conversation_graph  # noqa: E402
 from agent.mcp_client import open_toolbox  # noqa: E402
-from agent.memory.store import open_store  # noqa: E402
+from agent.persistence import backend, open_persistence  # noqa: E402
 from apps.api.routers import analytics, auth, conversations, jobs, memory, runs  # noqa: E402
 from apps.api.schemas.models import Health  # noqa: E402
 from apps.api.streaming import ConversationManager, RunIndex, RunManager  # noqa: E402
 
-DB = Path("data/processed/checkpoints.sqlite")
-MEMORY_DB = Path("data/processed/memory.sqlite")          # long-term memory (style + outcome), kept apart
 WEB_DIST = Path("apps/web/dist")
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    DB.parent.mkdir(parents=True, exist_ok=True)
-    async with AsyncSqliteSaver.from_conn_string(str(DB)) as saver, open_store(MEMORY_DB) as store, \
-            open_toolbox() as tb:
-        app.state.toolbox, app.state.store = tb, store
+    print(f"persistence: {backend()} (checkpoints + memory)", flush=True)
+    async with open_persistence() as (saver, store), open_toolbox() as tb:
+        app.state.toolbox, app.state.store, app.state.checkpointer = tb, store, saver
         app.state.runs = RunManager(build_bid_graph(saver, store), tb, RunIndex())
         app.state.convs = ConversationManager(build_conversation_graph(saver, store), tb,
                                               RunIndex(Path("data/processed/conversations.json")))

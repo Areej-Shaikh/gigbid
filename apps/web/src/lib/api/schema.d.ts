@@ -110,6 +110,47 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/runs/{job_id}/history": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Run History
+         * @description Every checkpoint of this job's thread (newest first): what ran, and what would run next on replay.
+         */
+        get: operations["run_history_api_runs__job_id__history_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/runs/{job_id}/replay": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Replay Run
+         * @description Re-run the job from any earlier checkpoint (e.g. re-draft after changing a prompt). Safe: it still stops
+         *     at human approval, and submit keeps the same idempotency key, so nothing is sent or charged twice.
+         */
+        post: operations["replay_run_api_runs__job_id__replay_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/analytics": {
         parameters: {
             query?: never;
@@ -354,6 +395,28 @@ export interface components {
             /** Top Skip Reasons */
             top_skip_reasons: string[];
         };
+        /** Checkpoint */
+        Checkpoint: {
+            /** Checkpoint Id */
+            checkpoint_id: string;
+            /** Step */
+            step: number;
+            /** After */
+            after: string[];
+            /** Next */
+            next: string[];
+            /** Status */
+            status?: string | null;
+            /** Created At */
+            created_at?: string | null;
+        };
+        /** CheckpointHistory */
+        CheckpointHistory: {
+            /** Job Id */
+            job_id: string;
+            /** Checkpoints */
+            checkpoints: components["schemas"]["Checkpoint"][];
+        };
         /** ConversationList */
         ConversationList: {
             /** Conversations */
@@ -551,6 +614,11 @@ export interface components {
             slot?: string | null;
             /** Reason */
             reason?: string | null;
+        };
+        /** ReplayIn */
+        ReplayIn: {
+            /** Checkpoint Id */
+            checkpoint_id: string;
         };
         /** ResumeIn */
         ResumeIn: {
@@ -904,6 +972,72 @@ export interface operations {
                 };
                 content: {
                     "application/json": unknown;
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    run_history_api_runs__job_id__history_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                job_id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["CheckpointHistory"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    replay_run_api_runs__job_id__replay_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                job_id: string;
+            };
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["ReplayIn"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Started"];
                 };
             };
             /** @description Validation Error */

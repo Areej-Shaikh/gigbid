@@ -58,15 +58,18 @@ class RunManager:
         for q in self.listeners.get(job_id, []):
             q.put_nowait(e)
 
-    def start(self, job_id: str, resume: dict | None = None, user: str | None = None, restart: bool = False) -> bool:
-        """restart=True starts a NEW pass on a finished thread (conversation graph: the client wrote again)."""
+    def start(self, job_id: str, resume: dict | None = None, user: str | None = None, restart: bool = False,
+              replay_from: str | None = None) -> bool:
+        """restart=True starts a NEW pass on a finished thread (conversation graph: the client wrote again).
+        replay_from=<checkpoint_id> re-runs the thread from that checkpoint (a fork; history is kept)."""
         if self.running(job_id):
             return False
         if user:
             self.users[job_id] = user          # style / outcome memory is per user
         self.events[job_id] = []
-        inp = Command(resume=resume) if resume else {self.input_key: job_id}
-        task = asyncio.create_task(self._run(job_id, inp, fresh=resume is None and not restart))
+        inp = Command(resume=resume) if resume else (None if replay_from else {self.input_key: job_id})
+        task = asyncio.create_task(self._run(job_id, inp, fresh=resume is None and not restart and not replay_from,
+                                             checkpoint_id=replay_from))
         task.add_done_callback(lambda t, k=job_id: self._crashed(k, t))
         self.tasks[job_id] = task
         return True
@@ -82,16 +85,19 @@ class RunManager:
         for q in self.listeners.get(job_id, []):
             q.put_nowait(None)
 
-    async def _run(self, job_id: str, inp, fresh: bool) -> None:
+    async def _run(self, job_id: str, inp, fresh: bool, checkpoint_id: str | None = None) -> None:
         t0 = time.time()
         existing = await self.graph.aget_state(self.conf(job_id))
         if fresh and existing.values and existing.next:   # paused or crashed mid-run: continue where it stopped
             inp = None
         elif fresh and existing.values and self.input_key == "job_id":
             inp = None                                     # a finished bid analysis is not redone
-        self._emit(job_id, "start", {"job_id": job_id})
+        run_conf = self.conf(job_id)
+        if checkpoint_id:                                  # replay: continue from an earlier checkpoint
+            run_conf["configurable"]["checkpoint_id"] = checkpoint_id
+        self._emit(job_id, "start", {"job_id": job_id, "replay_from": checkpoint_id})
         try:
-            async for chunk in self.graph.astream(inp, self.conf(job_id), stream_mode="updates"):
+            async for chunk in self.graph.astream(inp, run_conf, stream_mode="updates"):
                 for node, update in chunk.items():
                     if node == "__interrupt__":
                         self._emit(job_id, "interrupt", {"node": "approval"})
