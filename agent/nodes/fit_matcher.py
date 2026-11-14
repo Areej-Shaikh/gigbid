@@ -21,7 +21,9 @@ async def fit_matcher(state, config: RunnableConfig):
         hits = res["results"]
         top = hits[0]["score"] if hits else 0.0
         lexical = any(req.lower() in (" ".join(h["skills"]) + " " + h["snippet"]).lower() for h in hits)
-        covered = bool(hits) and (lexical or top >= fc["min_evidence_score"])
+        thr = fc["min_evidence_score"]
+        thr = thr.get(res.get("retriever"), thr.get("default", 0.5)) if isinstance(thr, dict) else thr
+        covered = bool(hits) and (lexical or top >= thr)
         matrix.append(RequirementEvidence(requirement=req, evidence_ids=[h["evidence_id"] for h in hits],
                                           best_score=top, covered=covered))
         for h in hits:

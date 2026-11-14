@@ -50,8 +50,19 @@ decision:
   scam_flags: [unpaid_work, off_platform_contact, payment_or_identity_request, zero_budget]
 
 fit:
-  min_evidence_score: 2.0     # BM25 score that counts as "covered" (retriever-specific)
+  # score that counts as "covered" depends on the retriever (scores are on different scales)
+  min_evidence_score: {bm25: 2.0, v0_naive: 0.55, v1_decompose: 0.55, v2_hybrid: 0.017, v3_rerank: 0.3,
+                       v4_outcome: 0.3, v8_corrective: 0.3, default: 0.5}
   evidence_per_requirement: 3
+
+rag:
+  # open models, run on CPU (downloaded once by fastembed)
+  embedding_model: BAAI/bge-small-en-v1.5
+  reranker_model: Xenova/ms-marco-MiniLM-L-6-v2
+  chunk_chars: 500
+  candidates: 30              # items passed to the reranker
+  outcome_weight: 0.15        # V4: boost for evidence used in won / replied proposals
+  corrective_min: 0.1         # V8: reranker probability below this = weak evidence -> re-query, then refuse
 
 risk:                         # weights add up to a 0..1 risk score
   high: 0.6
@@ -96,7 +107,7 @@ tool_allowlist:
   analyst: []
   risk: [get_client_history]
   fit: [search_evidence, list_skills]
-  pricing: [get_price_stats, get_connects_balance]
+  pricing: [get_price_stats, get_connects_balance, list_skills]
   writer: [search_evidence, get_case_study]
   verifier: []
   critic: []

@@ -1,0 +1,35 @@
+{
+ "tag": "embedder=BAAI/bge-small-en-v1.5; reranker=Xenova/ms-marco-MiniLM-L-6-v2",
+ "results": {
+  "full": {
+   "recall@5": 0.46,
+   "mrr": 0.627,
+   "ndcg@10": 0.567
+  },
+  "minus_decompose": {
+   "recall@5": 0.447,
+   "mrr": 0.623,
+   "ndcg@10": 0.561
+  },
+  "minus_hybrid": {
+   "recall@5": 0.478,
+   "mrr": 0.643,
+   "ndcg@10": 0.586
+  },
+  "minus_rerank": {
+   "recall@5": 0.29,
+   "mrr": 0.433,
+   "ndcg@10": 0.392
+  },
+  "minus_outcome": {
+   "recall@5": 0.677,
+   "mrr": 0.816,
+   "ndcg@10": 0.721
+  },
+  "v0_baseline": {
+   "recall@5": 0.678,
+   "mrr": 0.8,
+   "ndcg@10": 0.715
+  }
+ }
+}

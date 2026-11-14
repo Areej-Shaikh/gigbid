@@ -1,0 +1,43 @@
+# Run everything locally:   docker compose -f infra/docker-compose.yml up --build
+# Docker Compose v5 builds with Bake, which blocks reading Dockerfiles outside this folder. If the build
+# says "additional privileges requested", set BUILDX_BAKE_ENTITLEMENTS_FS=0 first
+#   (PowerShell: $env:BUILDX_BAKE_ENTITLEMENTS_FS="0"   bash: export BUILDX_BAKE_ENTITLEMENTS_FS=0)
+# Then open http://localhost:8000 and sign in with a login from APP_USERS in .env.
+#
+# Secrets (GROQ_API_KEY, APP_SECRET, APP_USERS, MARKETPLACE_MCP_TOKENS) come from ../.env,
+# never from the image. Postgres, Redis and the worker are added in later steps.
+
+services:
+  gigsim:
+    build:
+      context: ..
+      dockerfile: infra/docker/gigsim.Dockerfile
+    ports: ["8001:8001"]
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8001/docs', timeout=2)"]
+      interval: 30s          # each check starts a Python process: keep it rare once healthy
+      start_period: 30s
+      start_interval: 2s     # check often only while starting, so the API starts quickly
+      timeout: 3s
+      retries: 5
+
+  api:
+    build:
+      context: ..
+      dockerfile: infra/docker/api.Dockerfile
+    env_file: ../.env
+    environment:
+      GIGSIM_URL: http://gigsim:8001
+      START_GIGSIM: "0"
+      # deployed retriever: BM25 had the best end-to-end bid F1 (evals/results/graph_rules_bm25_table.md)
+      # and needs no model downloads; override with RAG_VARIANT=v2_hybrid to use hybrid retrieval
+      RAG_VARIANT: ${DEPLOY_RAG_VARIANT:-bm25}
+    ports: ["8000:8000"]
+    volumes:
+      - gigbid-state:/app/data/processed    # checkpoints survive container restarts (pending approvals)
+    depends_on:
+      gigsim:
+        condition: service_healthy
+
+volumes:
+  gigbid-state:

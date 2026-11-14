@@ -1,0 +1,30 @@
+# Render Blueprint: one free web service running GigBid (API + web UI) with GigSim inside it.
+# Deploy: Render dashboard -> New -> Blueprint -> pick this GitHub repo -> fill in the secrets.
+# Secrets marked "sync: false" are typed into the dashboard and never stored in the repo.
+services:
+  - type: web
+    name: gigbid
+    runtime: docker
+    plan: free
+    dockerfilePath: ./infra/docker/api.Dockerfile
+    dockerContext: .
+    healthCheckPath: /api/health
+    envVars:
+      - key: START_GIGSIM          # free plan = one container, so GigSim runs inside it
+        value: "1"
+      - key: MARKETPLACE_MODE
+        value: gigsim
+      - key: LLM_PROFILE           # the deployed link must work on the open profile
+        value: open
+      - key: RAG_VARIANT           # best end-to-end bid F1, no model downloads (fits 512 MB)
+        value: bm25
+      - key: PORTFOLIO_PERSONA
+        value: ai_ml_engineer
+      - key: MARKETPLACE_RATE_LIMIT
+        value: "50"
+      - key: APP_SECRET            # signs login tokens; Render generates a random value
+        generateValue: true
+      - key: APP_USERS             # e.g. demo:demo123,reviewer:<strong password>
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false

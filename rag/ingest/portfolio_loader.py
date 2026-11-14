@@ -59,7 +59,7 @@ def load_portfolio(persona_id: str, root: Path = PERSONAS_DIR) -> list[dict[str,
     for p in json.loads((base / "proposals.json").read_text(encoding="utf-8")):
         add(evidence_id=p["id"], type="proposal", title=f"Past proposal: {p['job_title']}", text=p["text"],
             skills=p["job_skills"], date=p["date"], client_industry=p["client_industry"], outcome=p["outcome"],
-            source=str(base / "proposals.json"))
+            cited=p.get("cited_evidence", []), source=str(base / "proposals.json"))
     return items
 
 

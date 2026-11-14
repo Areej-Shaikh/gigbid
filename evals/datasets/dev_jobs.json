@@ -1,0 +1,4775 @@
+[
+ {
+  "job_id": "dev-0001",
+  "persona": "ai_ml_engineer",
+  "style": "explicit",
+  "title": "Build a contract q&a assistant",
+  "description": "Hi! We work in real estate. We need a contract q&a assistant built with RAG, LangChain, FastAPI. Please share similar work.",
+  "skills": [
+   "RAG",
+   "LangChain",
+   "FastAPI"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {
+   "ai_ml_engineer-case-01": 2,
+   "ai_ml_engineer-case-07": 2,
+   "ai_ml_engineer-case-13": 2,
+   "ai_ml_engineer-repo-contract-q&a-assistant": 1,
+   "ai_ml_engineer-review-09": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   28,
+   49
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0002",
+  "persona": "ai_ml_engineer",
+  "style": "vague",
+  "title": "Project help wanted",
+  "description": "Hi! We work in real estate. Problem: our lawyers waste hours searching old agreements for specific clauses. We want this fixed and are open to your suggested approach.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {
+   "ai_ml_engineer-case-01": 2,
+   "ai_ml_engineer-case-07": 2,
+   "ai_ml_engineer-case-13": 2,
+   "ai_ml_engineer-repo-contract-q&a-assistant": 1,
+   "ai_ml_engineer-review-09": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   28,
+   49
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0003",
+  "persona": "ai_ml_engineer",
+  "style": "synonym",
+  "title": "A tool to chat with our document archive where every answer shows its ",
+  "description": "Hi! We work in real estate. We want a tool to chat with our document archive where every answer shows its source. Timeline is flexible for the right person.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {
+   "ai_ml_engineer-case-01": 2,
+   "ai_ml_engineer-case-07": 2,
+   "ai_ml_engineer-case-13": 2,
+   "ai_ml_engineer-repo-contract-q&a-assistant": 1,
+   "ai_ml_engineer-review-09": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   28,
+   49
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0004",
+  "persona": "ai_ml_engineer",
+  "style": "multi",
+  "title": "Two connected projects",
+  "description": "Hi! We work in real estate. First, our lawyers waste hours searching old agreements for specific clauses. Second, we also want a team of AI agents that drafts reports and reviews its own work. Must also write documentation.",
+  "skills": [
+   "RAG"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {
+   "ai_ml_engineer-case-01": 2,
+   "ai_ml_engineer-case-07": 2,
+   "ai_ml_engineer-case-13": 2,
+   "ai_ml_engineer-repo-contract-q&a-assistant": 1,
+   "ai_ml_engineer-review-09": 1,
+   "ai_ml_engineer-case-05": 2,
+   "ai_ml_engineer-case-11": 2,
+   "ai_ml_engineer-case-17": 2,
+   "ai_ml_engineer-repo-multi-agent-research-assistant": 1,
+   "ai_ml_engineer-review-04": 1,
+   "ai_ml_engineer-review-08": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   28,
+   49
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0005",
+  "persona": "ai_ml_engineer",
+  "style": "explicit",
+  "title": "Build a contract q&a assistant for our team",
+  "description": "Small education business here. We need a contract q&a assistant built with RAG, LangChain, FastAPI. Please share similar work.",
+  "skills": [
+   "RAG",
+   "LangChain",
+   "FastAPI"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {
+   "ai_ml_engineer-case-01": 2,
+   "ai_ml_engineer-case-07": 2,
+   "ai_ml_engineer-case-13": 2,
+   "ai_ml_engineer-repo-contract-q&a-assistant": 1,
+   "ai_ml_engineer-review-09": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   28,
+   49
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0006",
+  "persona": "ai_ml_engineer",
+  "style": "vague",
+  "title": "Project help wanted",
+  "description": "Small education business here. Problem: our lawyers waste hours searching old agreements for specific clauses. We want this fixed and are open to your suggested approach.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {
+   "ai_ml_engineer-case-01": 2,
+   "ai_ml_engineer-case-07": 2,
+   "ai_ml_engineer-case-13": 2,
+   "ai_ml_engineer-repo-contract-q&a-assistant": 1,
+   "ai_ml_engineer-review-09": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   28,
+   49
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0007",
+  "persona": "ai_ml_engineer",
+  "style": "synonym",
+  "title": "A tool to chat with our document archive where every answer shows its ",
+  "description": "Small education business here. We want a tool to chat with our document archive where every answer shows its source. Timeline is flexible for the right person.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {
+   "ai_ml_engineer-case-01": 2,
+   "ai_ml_engineer-case-07": 2,
+   "ai_ml_engineer-case-13": 2,
+   "ai_ml_engineer-repo-contract-q&a-assistant": 1,
+   "ai_ml_engineer-review-09": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   28,
+   49
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0008",
+  "persona": "ai_ml_engineer",
+  "style": "multi",
+  "title": "Two connected projects",
+  "description": "Small education business here. First, our lawyers waste hours searching old agreements for specific clauses. Second, we also want a team of AI agents that drafts reports and reviews its own work. Must also write documentation.",
+  "skills": [
+   "RAG"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {
+   "ai_ml_engineer-case-01": 2,
+   "ai_ml_engineer-case-07": 2,
+   "ai_ml_engineer-case-13": 2,
+   "ai_ml_engineer-repo-contract-q&a-assistant": 1,
+   "ai_ml_engineer-review-09": 1,
+   "ai_ml_engineer-case-05": 2,
+   "ai_ml_engineer-case-11": 2,
+   "ai_ml_engineer-case-17": 2,
+   "ai_ml_engineer-repo-multi-agent-research-assistant": 1,
+   "ai_ml_engineer-review-04": 1,
+   "ai_ml_engineer-review-08": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   28,
+   49
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0009",
+  "persona": "ai_ml_engineer",
+  "style": "explicit",
+  "title": "Build a churn prediction model",
+  "description": "We are a e-commerce company. We need a churn prediction model built with scikit-learn, Python, MLflow. Please share similar work.",
+  "skills": [
+   "scikit-learn",
+   "Python",
+   "MLflow"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {
+   "ai_ml_engineer-case-02": 2,
+   "ai_ml_engineer-case-08": 2,
+   "ai_ml_engineer-case-14": 2,
+   "ai_ml_engineer-repo-churn-prediction-model": 1,
+   "ai_ml_engineer-review-02": 1,
+   "ai_ml_engineer-review-07": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   28,
+   49
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0010",
+  "persona": "ai_ml_engineer",
+  "style": "vague",
+  "title": "Looking for an expert",
+  "description": "We are a e-commerce company. Problem: too many subscribers cancel and we never know who will leave next. We want this fixed and are open to your suggested approach.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {
+   "ai_ml_engineer-case-02": 2,
+   "ai_ml_engineer-case-08": 2,
+   "ai_ml_engineer-case-14": 2,
+   "ai_ml_engineer-repo-churn-prediction-model": 1,
+   "ai_ml_engineer-review-02": 1,
+   "ai_ml_engineer-review-07": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   28,
+   49
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0011",
+  "persona": "ai_ml_engineer",
+  "style": "synonym",
+  "title": "Predict which customers are about to stop paying",
+  "description": "We are a e-commerce company. We want predict which customers are about to stop paying so sales can call them first. Timeline is flexible for the right person.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {
+   "ai_ml_engineer-case-02": 2,
+   "ai_ml_engineer-case-08": 2,
+   "ai_ml_engineer-case-14": 2,
+   "ai_ml_engineer-repo-churn-prediction-model": 1,
+   "ai_ml_engineer-review-02": 1,
+   "ai_ml_engineer-review-07": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   28,
+   49
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0012",
+  "persona": "ai_ml_engineer",
+  "style": "multi",
+  "title": "Two connected projects",
+  "description": "We are a e-commerce company. First, too many subscribers cancel and we never know who will leave next. Second, we also want a team of AI agents that drafts reports and reviews its own work. Must also write documentation.",
+  "skills": [
+   "scikit-learn"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {
+   "ai_ml_engineer-case-02": 2,
+   "ai_ml_engineer-case-08": 2,
+   "ai_ml_engineer-case-14": 2,
+   "ai_ml_engineer-repo-churn-prediction-model": 1,
+   "ai_ml_engineer-review-02": 1,
+   "ai_ml_engineer-review-07": 1,
+   "ai_ml_engineer-case-05": 2,
+   "ai_ml_engineer-case-11": 2,
+   "ai_ml_engineer-case-17": 2,
+   "ai_ml_engineer-repo-multi-agent-research-assistant": 1,
+   "ai_ml_engineer-review-04": 1,
+   "ai_ml_engineer-review-08": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   28,
+   49
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0013",
+  "persona": "ai_ml_engineer",
+  "style": "explicit",
+  "title": "Build a churn prediction model for our team",
+  "description": "Small logistics business here. We need a churn prediction model built with scikit-learn, Python, MLflow. Please share similar work.",
+  "skills": [
+   "scikit-learn",
+   "Python",
+   "MLflow"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {
+   "ai_ml_engineer-case-02": 2,
+   "ai_ml_engineer-case-08": 2,
+   "ai_ml_engineer-case-14": 2,
+   "ai_ml_engineer-repo-churn-prediction-model": 1,
+   "ai_ml_engineer-review-02": 1,
+   "ai_ml_engineer-review-07": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   28,
+   49
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0014",
+  "persona": "ai_ml_engineer",
+  "style": "vague",
+  "title": "Need help with a business problem",
+  "description": "Small logistics business here. Problem: too many subscribers cancel and we never know who will leave next. We want this fixed and are open to your suggested approach.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {
+   "ai_ml_engineer-case-02": 2,
+   "ai_ml_engineer-case-08": 2,
+   "ai_ml_engineer-case-14": 2,
+   "ai_ml_engineer-repo-churn-prediction-model": 1,
+   "ai_ml_engineer-review-02": 1,
+   "ai_ml_engineer-review-07": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   28,
+   49
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0015",
+  "persona": "ai_ml_engineer",
+  "style": "synonym",
+  "title": "Predict which customers are about to stop paying",
+  "description": "Small logistics business here. We want predict which customers are about to stop paying so sales can call them first. Timeline is flexible for the right person.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {
+   "ai_ml_engineer-case-02": 2,
+   "ai_ml_engineer-case-08": 2,
+   "ai_ml_engineer-case-14": 2,
+   "ai_ml_engineer-repo-churn-prediction-model": 1,
+   "ai_ml_engineer-review-02": 1,
+   "ai_ml_engineer-review-07": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   28,
+   49
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0016",
+  "persona": "ai_ml_engineer",
+  "style": "multi",
+  "title": "Two connected projects",
+  "description": "Small logistics business here. First, too many subscribers cancel and we never know who will leave next. Second, we also want a team of AI agents that drafts reports and reviews its own work. Must also write documentation.",
+  "skills": [
+   "scikit-learn"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {
+   "ai_ml_engineer-case-02": 2,
+   "ai_ml_engineer-case-08": 2,
+   "ai_ml_engineer-case-14": 2,
+   "ai_ml_engineer-repo-churn-prediction-model": 1,
+   "ai_ml_engineer-review-02": 1,
+   "ai_ml_engineer-review-07": 1,
+   "ai_ml_engineer-case-05": 2,
+   "ai_ml_engineer-case-11": 2,
+   "ai_ml_engineer-case-17": 2,
+   "ai_ml_engineer-repo-multi-agent-research-assistant": 1,
+   "ai_ml_engineer-review-04": 1,
+   "ai_ml_engineer-review-08": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   28,
+   49
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0017",
+  "persona": "ai_ml_engineer",
+  "style": "explicit",
+  "title": "Build a support ticket classifier",
+  "description": "Hi! We work in fintech. We need a support ticket classifier built with Hugging Face, PyTorch, NLP. Please share similar work.",
+  "skills": [
+   "Hugging Face",
+   "PyTorch",
+   "NLP"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {
+   "ai_ml_engineer-case-03": 2,
+   "ai_ml_engineer-case-09": 2,
+   "ai_ml_engineer-case-15": 2,
+   "ai_ml_engineer-repo-support-ticket-classifier": 1,
+   "ai_ml_engineer-review-01": 1,
+   "ai_ml_engineer-review-06": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   28,
+   49
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0018",
+  "persona": "ai_ml_engineer",
+  "style": "vague",
+  "title": "Looking for an expert",
+  "description": "Hi! We work in fintech. Problem: support requests get sent to the wrong team by hand every morning. We want this fixed and are open to your suggested approach.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {
+   "ai_ml_engineer-case-03": 2,
+   "ai_ml_engineer-case-09": 2,
+   "ai_ml_engineer-case-15": 2,
+   "ai_ml_engineer-repo-support-ticket-classifier": 1,
+   "ai_ml_engineer-review-01": 1,
+   "ai_ml_engineer-review-06": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   28,
+   49
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0019",
+  "persona": "ai_ml_engineer",
+  "style": "synonym",
+  "title": "Automatically tag incoming help-desk emails by topic and urgency",
+  "description": "Hi! We work in fintech. We want automatically tag incoming help-desk emails by topic and urgency. Timeline is flexible for the right person.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {
+   "ai_ml_engineer-case-03": 2,
+   "ai_ml_engineer-case-09": 2,
+   "ai_ml_engineer-case-15": 2,
+   "ai_ml_engineer-repo-support-ticket-classifier": 1,
+   "ai_ml_engineer-review-01": 1,
+   "ai_ml_engineer-review-06": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   28,
+   49
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0020",
+  "persona": "ai_ml_engineer",
+  "style": "multi",
+  "title": "Two connected projects",
+  "description": "Hi! We work in fintech. First, support requests get sent to the wrong team by hand every morning. Second, we also want estimate next week's sales for each product so purchasing can plan. Must also write documentation.",
+  "skills": [
+   "Hugging Face"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {
+   "ai_ml_engineer-case-03": 2,
+   "ai_ml_engineer-case-09": 2,
+   "ai_ml_engineer-case-15": 2,
+   "ai_ml_engineer-repo-support-ticket-classifier": 1,
+   "ai_ml_engineer-review-01": 1,
+   "ai_ml_engineer-review-06": 1,
+   "ai_ml_engineer-case-06": 2,
+   "ai_ml_engineer-case-12": 2,
+   "ai_ml_engineer-case-18": 2,
+   "ai_ml_engineer-review-10": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   28,
+   49
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0021",
+  "persona": "ai_ml_engineer",
+  "style": "explicit",
+  "title": "Build a support ticket classifier for our team",
+  "description": "We are a e-commerce company. We need a support ticket classifier built with Hugging Face, PyTorch, NLP. Please share similar work.",
+  "skills": [
+   "Hugging Face",
+   "PyTorch",
+   "NLP"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {
+   "ai_ml_engineer-case-03": 2,
+   "ai_ml_engineer-case-09": 2,
+   "ai_ml_engineer-case-15": 2,
+   "ai_ml_engineer-repo-support-ticket-classifier": 1,
+   "ai_ml_engineer-review-01": 1,
+   "ai_ml_engineer-review-06": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   28,
+   49
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0022",
+  "persona": "ai_ml_engineer",
+  "style": "vague",
+  "title": "Project help wanted",
+  "description": "We are a e-commerce company. Problem: support requests get sent to the wrong team by hand every morning. We want this fixed and are open to your suggested approach.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {
+   "ai_ml_engineer-case-03": 2,
+   "ai_ml_engineer-case-09": 2,
+   "ai_ml_engineer-case-15": 2,
+   "ai_ml_engineer-repo-support-ticket-classifier": 1,
+   "ai_ml_engineer-review-01": 1,
+   "ai_ml_engineer-review-06": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   28,
+   49
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0023",
+  "persona": "ai_ml_engineer",
+  "style": "synonym",
+  "title": "Automatically tag incoming help-desk emails by topic and urgency",
+  "description": "We are a e-commerce company. We want automatically tag incoming help-desk emails by topic and urgency. Timeline is flexible for the right person.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {
+   "ai_ml_engineer-case-03": 2,
+   "ai_ml_engineer-case-09": 2,
+   "ai_ml_engineer-case-15": 2,
+   "ai_ml_engineer-repo-support-ticket-classifier": 1,
+   "ai_ml_engineer-review-01": 1,
+   "ai_ml_engineer-review-06": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   28,
+   49
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0024",
+  "persona": "ai_ml_engineer",
+  "style": "multi",
+  "title": "Two connected projects",
+  "description": "We are a e-commerce company. First, support requests get sent to the wrong team by hand every morning. Second, we also want estimate next week's sales for each product so purchasing can plan. Must also write documentation.",
+  "skills": [
+   "Hugging Face"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {
+   "ai_ml_engineer-case-03": 2,
+   "ai_ml_engineer-case-09": 2,
+   "ai_ml_engineer-case-15": 2,
+   "ai_ml_engineer-repo-support-ticket-classifier": 1,
+   "ai_ml_engineer-review-01": 1,
+   "ai_ml_engineer-review-06": 1,
+   "ai_ml_engineer-case-06": 2,
+   "ai_ml_engineer-case-12": 2,
+   "ai_ml_engineer-case-18": 2,
+   "ai_ml_engineer-review-10": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   28,
+   49
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0025",
+  "persona": "ai_ml_engineer",
+  "style": "explicit",
+  "title": "Build a invoice data extraction",
+  "description": "We are a fintech company. We need a invoice data extraction built with OpenAI API, Python. Please share similar work.",
+  "skills": [
+   "OpenAI API",
+   "Python"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {
+   "ai_ml_engineer-case-04": 2,
+   "ai_ml_engineer-case-10": 2,
+   "ai_ml_engineer-case-16": 2,
+   "ai_ml_engineer-repo-invoice-data-extraction": 1,
+   "ai_ml_engineer-review-03": 1,
+   "ai_ml_engineer-review-05": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   28,
+   49
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0026",
+  "persona": "ai_ml_engineer",
+  "style": "vague",
+  "title": "Need help with a business problem",
+  "description": "We are a fintech company. Problem: our staff type supplier bill details into the accounting system manually. We want this fixed and are open to your suggested approach.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {
+   "ai_ml_engineer-case-04": 2,
+   "ai_ml_engineer-case-10": 2,
+   "ai_ml_engineer-case-16": 2,
+   "ai_ml_engineer-repo-invoice-data-extraction": 1,
+   "ai_ml_engineer-review-03": 1,
+   "ai_ml_engineer-review-05": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   28,
+   49
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0027",
+  "persona": "ai_ml_engineer",
+  "style": "synonym",
+  "title": "Pull totals, dates and vendor names out of scanned bills into structur",
+  "description": "We are a fintech company. We want pull totals, dates and vendor names out of scanned bills into structured records. Timeline is flexible for the right person.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {
+   "ai_ml_engineer-case-04": 2,
+   "ai_ml_engineer-case-10": 2,
+   "ai_ml_engineer-case-16": 2,
+   "ai_ml_engineer-repo-invoice-data-extraction": 1,
+   "ai_ml_engineer-review-03": 1,
+   "ai_ml_engineer-review-05": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   28,
+   49
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0028",
+  "persona": "ai_ml_engineer",
+  "style": "multi",
+  "title": "Two connected projects",
+  "description": "We are a fintech company. First, our staff type supplier bill details into the accounting system manually. Second, we also want a tool to chat with our document archive where every answer shows its source. Must also write documentation.",
+  "skills": [
+   "OpenAI API"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {
+   "ai_ml_engineer-case-04": 2,
+   "ai_ml_engineer-case-10": 2,
+   "ai_ml_engineer-case-16": 2,
+   "ai_ml_engineer-repo-invoice-data-extraction": 1,
+   "ai_ml_engineer-review-03": 1,
+   "ai_ml_engineer-review-05": 1,
+   "ai_ml_engineer-case-01": 2,
+   "ai_ml_engineer-case-07": 2,
+   "ai_ml_engineer-case-13": 2,
+   "ai_ml_engineer-repo-contract-q&a-assistant": 1,
+   "ai_ml_engineer-review-09": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   28,
+   49
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0029",
+  "persona": "ai_ml_engineer",
+  "style": "explicit",
+  "title": "Build a invoice data extraction for our team",
+  "description": "We are a education company. We need a invoice data extraction built with OpenAI API, Python. Please share similar work.",
+  "skills": [
+   "OpenAI API",
+   "Python"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {
+   "ai_ml_engineer-case-04": 2,
+   "ai_ml_engineer-case-10": 2,
+   "ai_ml_engineer-case-16": 2,
+   "ai_ml_engineer-repo-invoice-data-extraction": 1,
+   "ai_ml_engineer-review-03": 1,
+   "ai_ml_engineer-review-05": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   28,
+   49
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0030",
+  "persona": "ai_ml_engineer",
+  "style": "vague",
+  "title": "Looking for an expert",
+  "description": "We are a education company. Problem: our staff type supplier bill details into the accounting system manually. We want this fixed and are open to your suggested approach.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {
+   "ai_ml_engineer-case-04": 2,
+   "ai_ml_engineer-case-10": 2,
+   "ai_ml_engineer-case-16": 2,
+   "ai_ml_engineer-repo-invoice-data-extraction": 1,
+   "ai_ml_engineer-review-03": 1,
+   "ai_ml_engineer-review-05": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   28,
+   49
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0031",
+  "persona": "ai_ml_engineer",
+  "style": "synonym",
+  "title": "Pull totals, dates and vendor names out of scanned bills into structur",
+  "description": "We are a education company. We want pull totals, dates and vendor names out of scanned bills into structured records. Timeline is flexible for the right person.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {
+   "ai_ml_engineer-case-04": 2,
+   "ai_ml_engineer-case-10": 2,
+   "ai_ml_engineer-case-16": 2,
+   "ai_ml_engineer-repo-invoice-data-extraction": 1,
+   "ai_ml_engineer-review-03": 1,
+   "ai_ml_engineer-review-05": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   28,
+   49
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0032",
+  "persona": "ai_ml_engineer",
+  "style": "multi",
+  "title": "Two connected projects",
+  "description": "We are a education company. First, our staff type supplier bill details into the accounting system manually. Second, we also want a tool to chat with our document archive where every answer shows its source. Must also write documentation.",
+  "skills": [
+   "OpenAI API"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {
+   "ai_ml_engineer-case-04": 2,
+   "ai_ml_engineer-case-10": 2,
+   "ai_ml_engineer-case-16": 2,
+   "ai_ml_engineer-repo-invoice-data-extraction": 1,
+   "ai_ml_engineer-review-03": 1,
+   "ai_ml_engineer-review-05": 1,
+   "ai_ml_engineer-case-01": 2,
+   "ai_ml_engineer-case-07": 2,
+   "ai_ml_engineer-case-13": 2,
+   "ai_ml_engineer-repo-contract-q&a-assistant": 1,
+   "ai_ml_engineer-review-09": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   28,
+   49
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0033",
+  "persona": "ai_ml_engineer",
+  "style": "explicit",
+  "title": "Build a multi-agent research assistant",
+  "description": "Small real estate business here. We need a multi-agent research assistant built with LangGraph, LangChain, Python. Please share similar work.",
+  "skills": [
+   "LangGraph",
+   "LangChain",
+   "Python"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {
+   "ai_ml_engineer-case-05": 2,
+   "ai_ml_engineer-case-11": 2,
+   "ai_ml_engineer-case-17": 2,
+   "ai_ml_engineer-repo-multi-agent-research-assistant": 1,
+   "ai_ml_engineer-review-04": 1,
+   "ai_ml_engineer-review-08": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   28,
+   49
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0034",
+  "persona": "ai_ml_engineer",
+  "style": "vague",
+  "title": "Project help wanted",
+  "description": "Small real estate business here. Problem: analysts spend days writing market summaries from many sources. We want this fixed and are open to your suggested approach.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {
+   "ai_ml_engineer-case-05": 2,
+   "ai_ml_engineer-case-11": 2,
+   "ai_ml_engineer-case-17": 2,
+   "ai_ml_engineer-repo-multi-agent-research-assistant": 1,
+   "ai_ml_engineer-review-04": 1,
+   "ai_ml_engineer-review-08": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   28,
+   49
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0035",
+  "persona": "ai_ml_engineer",
+  "style": "synonym",
+  "title": "A team of ai agents that drafts reports and reviews its own work",
+  "description": "Small real estate business here. We want a team of AI agents that drafts reports and reviews its own work. Timeline is flexible for the right person.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {
+   "ai_ml_engineer-case-05": 2,
+   "ai_ml_engineer-case-11": 2,
+   "ai_ml_engineer-case-17": 2,
+   "ai_ml_engineer-repo-multi-agent-research-assistant": 1,
+   "ai_ml_engineer-review-04": 1,
+   "ai_ml_engineer-review-08": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   28,
+   49
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0036",
+  "persona": "ai_ml_engineer",
+  "style": "multi",
+  "title": "Two connected projects",
+  "description": "Small real estate business here. First, analysts spend days writing market summaries from many sources. Second, we also want automatically tag incoming help-desk emails by topic and urgency. Must also write documentation.",
+  "skills": [
+   "LangGraph"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {
+   "ai_ml_engineer-case-05": 2,
+   "ai_ml_engineer-case-11": 2,
+   "ai_ml_engineer-case-17": 2,
+   "ai_ml_engineer-repo-multi-agent-research-assistant": 1,
+   "ai_ml_engineer-review-04": 1,
+   "ai_ml_engineer-review-08": 1,
+   "ai_ml_engineer-case-03": 2,
+   "ai_ml_engineer-case-09": 2,
+   "ai_ml_engineer-case-15": 2,
+   "ai_ml_engineer-repo-support-ticket-classifier": 1,
+   "ai_ml_engineer-review-01": 1,
+   "ai_ml_engineer-review-06": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   28,
+   49
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0037",
+  "persona": "ai_ml_engineer",
+  "style": "explicit",
+  "title": "Build a multi-agent research assistant for our team",
+  "description": "Our education startup is growing fast. We need a multi-agent research assistant built with LangGraph, LangChain, Python. Please share similar work.",
+  "skills": [
+   "LangGraph",
+   "LangChain",
+   "Python"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {
+   "ai_ml_engineer-case-05": 2,
+   "ai_ml_engineer-case-11": 2,
+   "ai_ml_engineer-case-17": 2,
+   "ai_ml_engineer-repo-multi-agent-research-assistant": 1,
+   "ai_ml_engineer-review-04": 1,
+   "ai_ml_engineer-review-08": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   28,
+   49
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0038",
+  "persona": "ai_ml_engineer",
+  "style": "vague",
+  "title": "Looking for an expert",
+  "description": "Our education startup is growing fast. Problem: analysts spend days writing market summaries from many sources. We want this fixed and are open to your suggested approach.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {
+   "ai_ml_engineer-case-05": 2,
+   "ai_ml_engineer-case-11": 2,
+   "ai_ml_engineer-case-17": 2,
+   "ai_ml_engineer-repo-multi-agent-research-assistant": 1,
+   "ai_ml_engineer-review-04": 1,
+   "ai_ml_engineer-review-08": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   28,
+   49
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0039",
+  "persona": "ai_ml_engineer",
+  "style": "synonym",
+  "title": "A team of ai agents that drafts reports and reviews its own work",
+  "description": "Our education startup is growing fast. We want a team of AI agents that drafts reports and reviews its own work. Timeline is flexible for the right person.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {
+   "ai_ml_engineer-case-05": 2,
+   "ai_ml_engineer-case-11": 2,
+   "ai_ml_engineer-case-17": 2,
+   "ai_ml_engineer-repo-multi-agent-research-assistant": 1,
+   "ai_ml_engineer-review-04": 1,
+   "ai_ml_engineer-review-08": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   28,
+   49
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0040",
+  "persona": "ai_ml_engineer",
+  "style": "multi",
+  "title": "Two connected projects",
+  "description": "Our education startup is growing fast. First, analysts spend days writing market summaries from many sources. Second, we also want automatically tag incoming help-desk emails by topic and urgency. Must also write documentation.",
+  "skills": [
+   "LangGraph"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {
+   "ai_ml_engineer-case-05": 2,
+   "ai_ml_engineer-case-11": 2,
+   "ai_ml_engineer-case-17": 2,
+   "ai_ml_engineer-repo-multi-agent-research-assistant": 1,
+   "ai_ml_engineer-review-04": 1,
+   "ai_ml_engineer-review-08": 1,
+   "ai_ml_engineer-case-03": 2,
+   "ai_ml_engineer-case-09": 2,
+   "ai_ml_engineer-case-15": 2,
+   "ai_ml_engineer-repo-support-ticket-classifier": 1,
+   "ai_ml_engineer-review-01": 1,
+   "ai_ml_engineer-review-06": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   28,
+   49
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0041",
+  "persona": "ai_ml_engineer",
+  "style": "explicit",
+  "title": "Build a demand forecasting",
+  "description": "Hi! We work in healthcare. We need a demand forecasting built with Python, scikit-learn, Postgres. Please share similar work.",
+  "skills": [
+   "Python",
+   "scikit-learn",
+   "Postgres"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {
+   "ai_ml_engineer-case-06": 2,
+   "ai_ml_engineer-case-12": 2,
+   "ai_ml_engineer-case-18": 2,
+   "ai_ml_engineer-review-10": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   28,
+   49
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0042",
+  "persona": "ai_ml_engineer",
+  "style": "vague",
+  "title": "Project help wanted",
+  "description": "Hi! We work in healthcare. Problem: we keep running out of stock on some items and overstocking others. We want this fixed and are open to your suggested approach.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {
+   "ai_ml_engineer-case-06": 2,
+   "ai_ml_engineer-case-12": 2,
+   "ai_ml_engineer-case-18": 2,
+   "ai_ml_engineer-review-10": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   28,
+   49
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0043",
+  "persona": "ai_ml_engineer",
+  "style": "synonym",
+  "title": "Estimate next week's sales for each product",
+  "description": "Hi! We work in healthcare. We want estimate next week's sales for each product so purchasing can plan. Timeline is flexible for the right person.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {
+   "ai_ml_engineer-case-06": 2,
+   "ai_ml_engineer-case-12": 2,
+   "ai_ml_engineer-case-18": 2,
+   "ai_ml_engineer-review-10": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   28,
+   49
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0044",
+  "persona": "ai_ml_engineer",
+  "style": "multi",
+  "title": "Two connected projects",
+  "description": "Hi! We work in healthcare. First, we keep running out of stock on some items and overstocking others. Second, we also want a tool to chat with our document archive where every answer shows its source. Must also write documentation.",
+  "skills": [
+   "Python"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {
+   "ai_ml_engineer-case-06": 2,
+   "ai_ml_engineer-case-12": 2,
+   "ai_ml_engineer-case-18": 2,
+   "ai_ml_engineer-review-10": 1,
+   "ai_ml_engineer-case-01": 2,
+   "ai_ml_engineer-case-07": 2,
+   "ai_ml_engineer-case-13": 2,
+   "ai_ml_engineer-repo-contract-q&a-assistant": 1,
+   "ai_ml_engineer-review-09": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   28,
+   49
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0045",
+  "persona": "ai_ml_engineer",
+  "style": "explicit",
+  "title": "Build a demand forecasting for our team",
+  "description": "Hi! We work in logistics. We need a demand forecasting built with Python, scikit-learn, Postgres. Please share similar work.",
+  "skills": [
+   "Python",
+   "scikit-learn",
+   "Postgres"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {
+   "ai_ml_engineer-case-06": 2,
+   "ai_ml_engineer-case-12": 2,
+   "ai_ml_engineer-case-18": 2,
+   "ai_ml_engineer-review-10": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   28,
+   49
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0046",
+  "persona": "ai_ml_engineer",
+  "style": "vague",
+  "title": "Project help wanted",
+  "description": "Hi! We work in logistics. Problem: we keep running out of stock on some items and overstocking others. We want this fixed and are open to your suggested approach.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {
+   "ai_ml_engineer-case-06": 2,
+   "ai_ml_engineer-case-12": 2,
+   "ai_ml_engineer-case-18": 2,
+   "ai_ml_engineer-review-10": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   28,
+   49
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0047",
+  "persona": "ai_ml_engineer",
+  "style": "synonym",
+  "title": "Estimate next week's sales for each product",
+  "description": "Hi! We work in logistics. We want estimate next week's sales for each product so purchasing can plan. Timeline is flexible for the right person.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {
+   "ai_ml_engineer-case-06": 2,
+   "ai_ml_engineer-case-12": 2,
+   "ai_ml_engineer-case-18": 2,
+   "ai_ml_engineer-review-10": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   28,
+   49
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0048",
+  "persona": "ai_ml_engineer",
+  "style": "multi",
+  "title": "Two connected projects",
+  "description": "Hi! We work in logistics. First, we keep running out of stock on some items and overstocking others. Second, we also want a tool to chat with our document archive where every answer shows its source. Must also write documentation.",
+  "skills": [
+   "Python"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {
+   "ai_ml_engineer-case-06": 2,
+   "ai_ml_engineer-case-12": 2,
+   "ai_ml_engineer-case-18": 2,
+   "ai_ml_engineer-review-10": 1,
+   "ai_ml_engineer-case-01": 2,
+   "ai_ml_engineer-case-07": 2,
+   "ai_ml_engineer-case-13": 2,
+   "ai_ml_engineer-repo-contract-q&a-assistant": 1,
+   "ai_ml_engineer-review-09": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   28,
+   49
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0049",
+  "persona": "ai_ml_engineer",
+  "style": "off_niche",
+  "title": "Need help: marketing attribution analysis",
+  "description": "We are a SaaS company. Problem: we do not know which ads actually bring us customers. We want measure how much each marketing channel contributes to conversions.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {},
+  "label": "skip",
+  "scam": false,
+  "fair_price_band": null,
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0050",
+  "persona": "ai_ml_engineer",
+  "style": "off_niche",
+  "title": "Need help: inventory excel automation",
+  "description": "We are a logistics company. Problem: closing the monthly inventory spreadsheet takes days of copy-paste. We want automate our stock workbook so the month-end numbers fill themselves.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {},
+  "label": "skip",
+  "scam": false,
+  "fair_price_band": null,
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0051",
+  "persona": "ai_ml_engineer",
+  "style": "off_niche",
+  "title": "Need help: customer segmentation",
+  "description": "Hi! We work in healthcare. Problem: we send the same email to every customer and results are poor. We want group customers by how recently, often and how much they buy, for targeted campaigns.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {},
+  "label": "skip",
+  "scam": false,
+  "fair_price_band": null,
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0052",
+  "persona": "ai_ml_engineer",
+  "style": "off_niche",
+  "title": "Need help: pricing a/b test",
+  "description": "We are a fintech company. Problem: we want to try a new price without guessing the result. We want design and analyse a controlled experiment comparing two price points.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {},
+  "label": "skip",
+  "scam": false,
+  "fair_price_band": null,
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0053",
+  "persona": "ai_ml_engineer",
+  "style": "off_niche",
+  "title": "Need help: learning platform",
+  "description": "Small education business here. Problem: we want to sell our courses online with videos and quizzes. We want a learning management website where students watch lessons and take tests.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {},
+  "label": "skip",
+  "scam": false,
+  "fair_price_band": null,
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0054",
+  "persona": "ai_ml_engineer",
+  "style": "off_niche",
+  "title": "Need help: sales performance dashboard",
+  "description": "We are a real estate company. Problem: regional managers wait a week for sales numbers in spreadsheets. We want an interactive BI report per region that managers can filter themselves.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {},
+  "label": "skip",
+  "scam": false,
+  "fair_price_band": null,
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0055",
+  "persona": "ai_ml_engineer",
+  "style": "off_niche",
+  "title": "Need help: multi-vendor marketplace",
+  "description": "Hi! We work in SaaS. Problem: we want independent sellers to list products and get paid automatically. We want an online store with many sellers and split payouts to each one.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {},
+  "label": "skip",
+  "scam": false,
+  "fair_price_band": null,
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0056",
+  "persona": "ai_ml_engineer",
+  "style": "off_niche",
+  "title": "Need help: clinic booking system",
+  "description": "Hi! We work in healthcare. Problem: patients miss appointments and all booking is done over the phone. We want online appointment scheduling for doctors with text reminders.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {},
+  "label": "skip",
+  "scam": false,
+  "fair_price_band": null,
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0057",
+  "persona": "ai_ml_engineer",
+  "style": "scam",
+  "title": "Quick multi-agent research assistant job",
+  "description": "Analysts spend days writing market summaries from many sources. This is an unpaid test task; if we like it we hire you.",
+  "skills": [
+   "LangGraph",
+   "LangChain"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {
+   "ai_ml_engineer-case-05": 2,
+   "ai_ml_engineer-case-11": 2,
+   "ai_ml_engineer-case-17": 2,
+   "ai_ml_engineer-repo-multi-agent-research-assistant": 1,
+   "ai_ml_engineer-review-04": 1,
+   "ai_ml_engineer-review-08": 1
+  },
+  "label": "skip",
+  "scam": true,
+  "fair_price_band": null,
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0058",
+  "persona": "ai_ml_engineer",
+  "style": "scam",
+  "title": "Quick churn prediction model job",
+  "description": "Too many subscribers cancel and we never know who will leave next. Please contact me on WhatsApp to discuss, we pay outside the platform.",
+  "skills": [
+   "scikit-learn",
+   "Python"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {
+   "ai_ml_engineer-case-02": 2,
+   "ai_ml_engineer-case-08": 2,
+   "ai_ml_engineer-case-14": 2,
+   "ai_ml_engineer-repo-churn-prediction-model": 1,
+   "ai_ml_engineer-review-02": 1,
+   "ai_ml_engineer-review-07": 1
+  },
+  "label": "skip",
+  "scam": true,
+  "fair_price_band": null,
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0059",
+  "persona": "ai_ml_engineer",
+  "style": "scam",
+  "title": "Quick support ticket classifier job",
+  "description": "Support requests get sent to the wrong team by hand every morning. Please contact me on WhatsApp to discuss, we pay outside the platform.",
+  "skills": [
+   "Hugging Face",
+   "PyTorch"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {
+   "ai_ml_engineer-case-03": 2,
+   "ai_ml_engineer-case-09": 2,
+   "ai_ml_engineer-case-15": 2,
+   "ai_ml_engineer-repo-support-ticket-classifier": 1,
+   "ai_ml_engineer-review-01": 1,
+   "ai_ml_engineer-review-06": 1
+  },
+  "label": "skip",
+  "scam": true,
+  "fair_price_band": null,
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0060",
+  "persona": "ai_ml_engineer",
+  "style": "scam",
+  "title": "Quick demand forecasting job",
+  "description": "We keep running out of stock on some items and overstocking others. This is an unpaid test task; if we like it we hire you.",
+  "skills": [
+   "Python",
+   "scikit-learn"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 28,
+  "budget_max": 59,
+  "gold_evidence": {
+   "ai_ml_engineer-case-06": 2,
+   "ai_ml_engineer-case-12": 2,
+   "ai_ml_engineer-case-18": 2,
+   "ai_ml_engineer-review-10": 1
+  },
+  "label": "skip",
+  "scam": true,
+  "fair_price_band": null,
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0061",
+  "persona": "data_analyst",
+  "style": "explicit",
+  "title": "Build a sales performance dashboard",
+  "description": "Small healthcare business here. We need a sales performance dashboard built with Power BI, SQL. Please share similar work.",
+  "skills": [
+   "Power BI",
+   "SQL"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {
+   "data_analyst-case-01": 2,
+   "data_analyst-case-07": 2,
+   "data_analyst-case-13": 2,
+   "data_analyst-repo-sales-performance-dashboard": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   18,
+   31
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0062",
+  "persona": "data_analyst",
+  "style": "vague",
+  "title": "Need help with a business problem",
+  "description": "Small healthcare business here. Problem: regional managers wait a week for sales numbers in spreadsheets. We want this fixed and are open to your suggested approach.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {
+   "data_analyst-case-01": 2,
+   "data_analyst-case-07": 2,
+   "data_analyst-case-13": 2,
+   "data_analyst-repo-sales-performance-dashboard": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   18,
+   31
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0063",
+  "persona": "data_analyst",
+  "style": "synonym",
+  "title": "An interactive bi report per region that managers can filter themselve",
+  "description": "Small healthcare business here. We want an interactive BI report per region that managers can filter themselves. Timeline is flexible for the right person.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {
+   "data_analyst-case-01": 2,
+   "data_analyst-case-07": 2,
+   "data_analyst-case-13": 2,
+   "data_analyst-repo-sales-performance-dashboard": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   18,
+   31
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0064",
+  "persona": "data_analyst",
+  "style": "multi",
+  "title": "Two connected projects",
+  "description": "Small healthcare business here. First, regional managers wait a week for sales numbers in spreadsheets. Second, we also want automate our stock workbook so the month-end numbers fill themselves. Must also write documentation.",
+  "skills": [
+   "Power BI"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {
+   "data_analyst-case-01": 2,
+   "data_analyst-case-07": 2,
+   "data_analyst-case-13": 2,
+   "data_analyst-repo-sales-performance-dashboard": 1,
+   "data_analyst-case-05": 2,
+   "data_analyst-case-11": 2,
+   "data_analyst-case-17": 2,
+   "data_analyst-repo-inventory-excel-automation": 1,
+   "data_analyst-review-05": 1,
+   "data_analyst-review-06": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   18,
+   31
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0065",
+  "persona": "data_analyst",
+  "style": "explicit",
+  "title": "Build a sales performance dashboard for our team",
+  "description": "We are a healthcare company. We need a sales performance dashboard built with Power BI, SQL. Please share similar work.",
+  "skills": [
+   "Power BI",
+   "SQL"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {
+   "data_analyst-case-01": 2,
+   "data_analyst-case-07": 2,
+   "data_analyst-case-13": 2,
+   "data_analyst-repo-sales-performance-dashboard": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   18,
+   31
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0066",
+  "persona": "data_analyst",
+  "style": "vague",
+  "title": "Need help with a business problem",
+  "description": "We are a healthcare company. Problem: regional managers wait a week for sales numbers in spreadsheets. We want this fixed and are open to your suggested approach.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {
+   "data_analyst-case-01": 2,
+   "data_analyst-case-07": 2,
+   "data_analyst-case-13": 2,
+   "data_analyst-repo-sales-performance-dashboard": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   18,
+   31
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0067",
+  "persona": "data_analyst",
+  "style": "synonym",
+  "title": "An interactive bi report per region that managers can filter themselve",
+  "description": "We are a healthcare company. We want an interactive BI report per region that managers can filter themselves. Timeline is flexible for the right person.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {
+   "data_analyst-case-01": 2,
+   "data_analyst-case-07": 2,
+   "data_analyst-case-13": 2,
+   "data_analyst-repo-sales-performance-dashboard": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   18,
+   31
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0068",
+  "persona": "data_analyst",
+  "style": "multi",
+  "title": "Two connected projects",
+  "description": "We are a healthcare company. First, regional managers wait a week for sales numbers in spreadsheets. Second, we also want automate our stock workbook so the month-end numbers fill themselves. Must also write documentation.",
+  "skills": [
+   "Power BI"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {
+   "data_analyst-case-01": 2,
+   "data_analyst-case-07": 2,
+   "data_analyst-case-13": 2,
+   "data_analyst-repo-sales-performance-dashboard": 1,
+   "data_analyst-case-05": 2,
+   "data_analyst-case-11": 2,
+   "data_analyst-case-17": 2,
+   "data_analyst-repo-inventory-excel-automation": 1,
+   "data_analyst-review-05": 1,
+   "data_analyst-review-06": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   18,
+   31
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0069",
+  "persona": "data_analyst",
+  "style": "explicit",
+  "title": "Build a marketing attribution analysis",
+  "description": "Small real estate business here. We need a marketing attribution analysis built with Python, Pandas, Statistics. Please share similar work.",
+  "skills": [
+   "Python",
+   "Pandas",
+   "Statistics"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {
+   "data_analyst-case-02": 2,
+   "data_analyst-case-08": 2,
+   "data_analyst-case-14": 2,
+   "data_analyst-repo-marketing-attribution-analysis": 1,
+   "data_analyst-review-04": 1,
+   "data_analyst-review-10": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   18,
+   31
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0070",
+  "persona": "data_analyst",
+  "style": "vague",
+  "title": "Project help wanted",
+  "description": "Small real estate business here. Problem: we do not know which ads actually bring us customers. We want this fixed and are open to your suggested approach.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {
+   "data_analyst-case-02": 2,
+   "data_analyst-case-08": 2,
+   "data_analyst-case-14": 2,
+   "data_analyst-repo-marketing-attribution-analysis": 1,
+   "data_analyst-review-04": 1,
+   "data_analyst-review-10": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   18,
+   31
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0071",
+  "persona": "data_analyst",
+  "style": "synonym",
+  "title": "Measure how much each marketing channel contributes to conversions",
+  "description": "Small real estate business here. We want measure how much each marketing channel contributes to conversions. Timeline is flexible for the right person.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {
+   "data_analyst-case-02": 2,
+   "data_analyst-case-08": 2,
+   "data_analyst-case-14": 2,
+   "data_analyst-repo-marketing-attribution-analysis": 1,
+   "data_analyst-review-04": 1,
+   "data_analyst-review-10": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   18,
+   31
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0072",
+  "persona": "data_analyst",
+  "style": "multi",
+  "title": "Two connected projects",
+  "description": "Small real estate business here. First, we do not know which ads actually bring us customers. Second, we also want automate our stock workbook so the month-end numbers fill themselves. Must also write documentation.",
+  "skills": [
+   "Python"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {
+   "data_analyst-case-02": 2,
+   "data_analyst-case-08": 2,
+   "data_analyst-case-14": 2,
+   "data_analyst-repo-marketing-attribution-analysis": 1,
+   "data_analyst-review-04": 1,
+   "data_analyst-review-10": 1,
+   "data_analyst-case-05": 2,
+   "data_analyst-case-11": 2,
+   "data_analyst-case-17": 2,
+   "data_analyst-repo-inventory-excel-automation": 1,
+   "data_analyst-review-05": 1,
+   "data_analyst-review-06": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   18,
+   31
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0073",
+  "persona": "data_analyst",
+  "style": "explicit",
+  "title": "Build a marketing attribution analysis for our team",
+  "description": "Hi! We work in education. We need a marketing attribution analysis built with Python, Pandas, Statistics. Please share similar work.",
+  "skills": [
+   "Python",
+   "Pandas",
+   "Statistics"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {
+   "data_analyst-case-02": 2,
+   "data_analyst-case-08": 2,
+   "data_analyst-case-14": 2,
+   "data_analyst-repo-marketing-attribution-analysis": 1,
+   "data_analyst-review-04": 1,
+   "data_analyst-review-10": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   18,
+   31
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0074",
+  "persona": "data_analyst",
+  "style": "vague",
+  "title": "Project help wanted",
+  "description": "Hi! We work in education. Problem: we do not know which ads actually bring us customers. We want this fixed and are open to your suggested approach.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {
+   "data_analyst-case-02": 2,
+   "data_analyst-case-08": 2,
+   "data_analyst-case-14": 2,
+   "data_analyst-repo-marketing-attribution-analysis": 1,
+   "data_analyst-review-04": 1,
+   "data_analyst-review-10": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   18,
+   31
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0075",
+  "persona": "data_analyst",
+  "style": "synonym",
+  "title": "Measure how much each marketing channel contributes to conversions",
+  "description": "Hi! We work in education. We want measure how much each marketing channel contributes to conversions. Timeline is flexible for the right person.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {
+   "data_analyst-case-02": 2,
+   "data_analyst-case-08": 2,
+   "data_analyst-case-14": 2,
+   "data_analyst-repo-marketing-attribution-analysis": 1,
+   "data_analyst-review-04": 1,
+   "data_analyst-review-10": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   18,
+   31
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0076",
+  "persona": "data_analyst",
+  "style": "multi",
+  "title": "Two connected projects",
+  "description": "Hi! We work in education. First, we do not know which ads actually bring us customers. Second, we also want automate our stock workbook so the month-end numbers fill themselves. Must also write documentation.",
+  "skills": [
+   "Python"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {
+   "data_analyst-case-02": 2,
+   "data_analyst-case-08": 2,
+   "data_analyst-case-14": 2,
+   "data_analyst-repo-marketing-attribution-analysis": 1,
+   "data_analyst-review-04": 1,
+   "data_analyst-review-10": 1,
+   "data_analyst-case-05": 2,
+   "data_analyst-case-11": 2,
+   "data_analyst-case-17": 2,
+   "data_analyst-repo-inventory-excel-automation": 1,
+   "data_analyst-review-05": 1,
+   "data_analyst-review-06": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   18,
+   31
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0077",
+  "persona": "data_analyst",
+  "style": "explicit",
+  "title": "Build a dbt warehouse rebuild",
+  "description": "Hi! We work in e-commerce. We need a dbt warehouse rebuild built with dbt, BigQuery, SQL. Please share similar work.",
+  "skills": [
+   "dbt",
+   "BigQuery",
+   "SQL"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {
+   "data_analyst-case-03": 2,
+   "data_analyst-case-09": 2,
+   "data_analyst-case-15": 2,
+   "data_analyst-repo-dbt-warehouse-rebuild": 1,
+   "data_analyst-review-02": 1,
+   "data_analyst-review-08": 1,
+   "data_analyst-review-09": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   18,
+   31
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0078",
+  "persona": "data_analyst",
+  "style": "vague",
+  "title": "Project help wanted",
+  "description": "Hi! We work in e-commerce. Problem: our warehouse tables are a mess and the numbers in reports never match. We want this fixed and are open to your suggested approach.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {
+   "data_analyst-case-03": 2,
+   "data_analyst-case-09": 2,
+   "data_analyst-case-15": 2,
+   "data_analyst-repo-dbt-warehouse-rebuild": 1,
+   "data_analyst-review-02": 1,
+   "data_analyst-review-08": 1,
+   "data_analyst-review-09": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   18,
+   31
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0079",
+  "persona": "data_analyst",
+  "style": "synonym",
+  "title": "Model, test and document our analytics warehouse with daily scheduled ",
+  "description": "Hi! We work in e-commerce. We want model, test and document our analytics warehouse with daily scheduled runs. Timeline is flexible for the right person.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {
+   "data_analyst-case-03": 2,
+   "data_analyst-case-09": 2,
+   "data_analyst-case-15": 2,
+   "data_analyst-repo-dbt-warehouse-rebuild": 1,
+   "data_analyst-review-02": 1,
+   "data_analyst-review-08": 1,
+   "data_analyst-review-09": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   18,
+   31
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0080",
+  "persona": "data_analyst",
+  "style": "multi",
+  "title": "Two connected projects",
+  "description": "Hi! We work in e-commerce. First, our warehouse tables are a mess and the numbers in reports never match. Second, we also want measure how much each marketing channel contributes to conversions. Must also write documentation.",
+  "skills": [
+   "dbt"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {
+   "data_analyst-case-03": 2,
+   "data_analyst-case-09": 2,
+   "data_analyst-case-15": 2,
+   "data_analyst-repo-dbt-warehouse-rebuild": 1,
+   "data_analyst-review-02": 1,
+   "data_analyst-review-08": 1,
+   "data_analyst-review-09": 1,
+   "data_analyst-case-02": 2,
+   "data_analyst-case-08": 2,
+   "data_analyst-case-14": 2,
+   "data_analyst-repo-marketing-attribution-analysis": 1,
+   "data_analyst-review-04": 1,
+   "data_analyst-review-10": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   18,
+   31
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0081",
+  "persona": "data_analyst",
+  "style": "explicit",
+  "title": "Build a dbt warehouse rebuild for our team",
+  "description": "We are a SaaS company. We need a dbt warehouse rebuild built with dbt, BigQuery, SQL. Please share similar work.",
+  "skills": [
+   "dbt",
+   "BigQuery",
+   "SQL"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {
+   "data_analyst-case-03": 2,
+   "data_analyst-case-09": 2,
+   "data_analyst-case-15": 2,
+   "data_analyst-repo-dbt-warehouse-rebuild": 1,
+   "data_analyst-review-02": 1,
+   "data_analyst-review-08": 1,
+   "data_analyst-review-09": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   18,
+   31
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0082",
+  "persona": "data_analyst",
+  "style": "vague",
+  "title": "Looking for an expert",
+  "description": "We are a SaaS company. Problem: our warehouse tables are a mess and the numbers in reports never match. We want this fixed and are open to your suggested approach.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {
+   "data_analyst-case-03": 2,
+   "data_analyst-case-09": 2,
+   "data_analyst-case-15": 2,
+   "data_analyst-repo-dbt-warehouse-rebuild": 1,
+   "data_analyst-review-02": 1,
+   "data_analyst-review-08": 1,
+   "data_analyst-review-09": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   18,
+   31
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0083",
+  "persona": "data_analyst",
+  "style": "synonym",
+  "title": "Model, test and document our analytics warehouse with daily scheduled ",
+  "description": "We are a SaaS company. We want model, test and document our analytics warehouse with daily scheduled runs. Timeline is flexible for the right person.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {
+   "data_analyst-case-03": 2,
+   "data_analyst-case-09": 2,
+   "data_analyst-case-15": 2,
+   "data_analyst-repo-dbt-warehouse-rebuild": 1,
+   "data_analyst-review-02": 1,
+   "data_analyst-review-08": 1,
+   "data_analyst-review-09": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   18,
+   31
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0084",
+  "persona": "data_analyst",
+  "style": "multi",
+  "title": "Two connected projects",
+  "description": "We are a SaaS company. First, our warehouse tables are a mess and the numbers in reports never match. Second, we also want measure how much each marketing channel contributes to conversions. Must also write documentation.",
+  "skills": [
+   "dbt"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {
+   "data_analyst-case-03": 2,
+   "data_analyst-case-09": 2,
+   "data_analyst-case-15": 2,
+   "data_analyst-repo-dbt-warehouse-rebuild": 1,
+   "data_analyst-review-02": 1,
+   "data_analyst-review-08": 1,
+   "data_analyst-review-09": 1,
+   "data_analyst-case-02": 2,
+   "data_analyst-case-08": 2,
+   "data_analyst-case-14": 2,
+   "data_analyst-repo-marketing-attribution-analysis": 1,
+   "data_analyst-review-04": 1,
+   "data_analyst-review-10": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   18,
+   31
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0085",
+  "persona": "data_analyst",
+  "style": "explicit",
+  "title": "Build a pricing a/b test",
+  "description": "We are a education company. We need a pricing a/b test built with A/B testing, Statistics. Please share similar work.",
+  "skills": [
+   "A/B testing",
+   "Statistics"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {
+   "data_analyst-case-04": 2,
+   "data_analyst-case-10": 2,
+   "data_analyst-case-16": 2,
+   "data_analyst-repo-pricing-a-b-test": 1,
+   "data_analyst-review-01": 1,
+   "data_analyst-review-03": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   18,
+   31
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0086",
+  "persona": "data_analyst",
+  "style": "vague",
+  "title": "Looking for an expert",
+  "description": "We are a education company. Problem: we want to try a new price without guessing the result. We want this fixed and are open to your suggested approach.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {
+   "data_analyst-case-04": 2,
+   "data_analyst-case-10": 2,
+   "data_analyst-case-16": 2,
+   "data_analyst-repo-pricing-a-b-test": 1,
+   "data_analyst-review-01": 1,
+   "data_analyst-review-03": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   18,
+   31
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0087",
+  "persona": "data_analyst",
+  "style": "synonym",
+  "title": "Design and analyse a controlled experiment comparing two price points",
+  "description": "We are a education company. We want design and analyse a controlled experiment comparing two price points. Timeline is flexible for the right person.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {
+   "data_analyst-case-04": 2,
+   "data_analyst-case-10": 2,
+   "data_analyst-case-16": 2,
+   "data_analyst-repo-pricing-a-b-test": 1,
+   "data_analyst-review-01": 1,
+   "data_analyst-review-03": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   18,
+   31
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0088",
+  "persona": "data_analyst",
+  "style": "multi",
+  "title": "Two connected projects",
+  "description": "We are a education company. First, we want to try a new price without guessing the result. Second, we also want automate our stock workbook so the month-end numbers fill themselves. Must also write documentation.",
+  "skills": [
+   "A/B testing"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {
+   "data_analyst-case-04": 2,
+   "data_analyst-case-10": 2,
+   "data_analyst-case-16": 2,
+   "data_analyst-repo-pricing-a-b-test": 1,
+   "data_analyst-review-01": 1,
+   "data_analyst-review-03": 1,
+   "data_analyst-case-05": 2,
+   "data_analyst-case-11": 2,
+   "data_analyst-case-17": 2,
+   "data_analyst-repo-inventory-excel-automation": 1,
+   "data_analyst-review-05": 1,
+   "data_analyst-review-06": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   18,
+   31
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0089",
+  "persona": "data_analyst",
+  "style": "explicit",
+  "title": "Build a pricing a/b test for our team",
+  "description": "We are a logistics company. We need a pricing a/b test built with A/B testing, Statistics. Please share similar work.",
+  "skills": [
+   "A/B testing",
+   "Statistics"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {
+   "data_analyst-case-04": 2,
+   "data_analyst-case-10": 2,
+   "data_analyst-case-16": 2,
+   "data_analyst-repo-pricing-a-b-test": 1,
+   "data_analyst-review-01": 1,
+   "data_analyst-review-03": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   18,
+   31
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0090",
+  "persona": "data_analyst",
+  "style": "vague",
+  "title": "Need help with a business problem",
+  "description": "We are a logistics company. Problem: we want to try a new price without guessing the result. We want this fixed and are open to your suggested approach.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {
+   "data_analyst-case-04": 2,
+   "data_analyst-case-10": 2,
+   "data_analyst-case-16": 2,
+   "data_analyst-repo-pricing-a-b-test": 1,
+   "data_analyst-review-01": 1,
+   "data_analyst-review-03": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   18,
+   31
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0091",
+  "persona": "data_analyst",
+  "style": "synonym",
+  "title": "Design and analyse a controlled experiment comparing two price points",
+  "description": "We are a logistics company. We want design and analyse a controlled experiment comparing two price points. Timeline is flexible for the right person.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {
+   "data_analyst-case-04": 2,
+   "data_analyst-case-10": 2,
+   "data_analyst-case-16": 2,
+   "data_analyst-repo-pricing-a-b-test": 1,
+   "data_analyst-review-01": 1,
+   "data_analyst-review-03": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   18,
+   31
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0092",
+  "persona": "data_analyst",
+  "style": "multi",
+  "title": "Two connected projects",
+  "description": "We are a logistics company. First, we want to try a new price without guessing the result. Second, we also want automate our stock workbook so the month-end numbers fill themselves. Must also write documentation.",
+  "skills": [
+   "A/B testing"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {
+   "data_analyst-case-04": 2,
+   "data_analyst-case-10": 2,
+   "data_analyst-case-16": 2,
+   "data_analyst-repo-pricing-a-b-test": 1,
+   "data_analyst-review-01": 1,
+   "data_analyst-review-03": 1,
+   "data_analyst-case-05": 2,
+   "data_analyst-case-11": 2,
+   "data_analyst-case-17": 2,
+   "data_analyst-repo-inventory-excel-automation": 1,
+   "data_analyst-review-05": 1,
+   "data_analyst-review-06": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   18,
+   31
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0093",
+  "persona": "data_analyst",
+  "style": "explicit",
+  "title": "Build a inventory excel automation",
+  "description": "We are a SaaS company. We need a inventory excel automation built with Excel, Python, ETL. Please share similar work.",
+  "skills": [
+   "Excel",
+   "Python",
+   "ETL"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {
+   "data_analyst-case-05": 2,
+   "data_analyst-case-11": 2,
+   "data_analyst-case-17": 2,
+   "data_analyst-repo-inventory-excel-automation": 1,
+   "data_analyst-review-05": 1,
+   "data_analyst-review-06": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   18,
+   31
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0094",
+  "persona": "data_analyst",
+  "style": "vague",
+  "title": "Need help with a business problem",
+  "description": "We are a SaaS company. Problem: closing the monthly inventory spreadsheet takes days of copy-paste. We want this fixed and are open to your suggested approach.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {
+   "data_analyst-case-05": 2,
+   "data_analyst-case-11": 2,
+   "data_analyst-case-17": 2,
+   "data_analyst-repo-inventory-excel-automation": 1,
+   "data_analyst-review-05": 1,
+   "data_analyst-review-06": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   18,
+   31
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0095",
+  "persona": "data_analyst",
+  "style": "synonym",
+  "title": "Automate our stock workbook",
+  "description": "We are a SaaS company. We want automate our stock workbook so the month-end numbers fill themselves. Timeline is flexible for the right person.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {
+   "data_analyst-case-05": 2,
+   "data_analyst-case-11": 2,
+   "data_analyst-case-17": 2,
+   "data_analyst-repo-inventory-excel-automation": 1,
+   "data_analyst-review-05": 1,
+   "data_analyst-review-06": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   18,
+   31
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0096",
+  "persona": "data_analyst",
+  "style": "multi",
+  "title": "Two connected projects",
+  "description": "We are a SaaS company. First, closing the monthly inventory spreadsheet takes days of copy-paste. Second, we also want measure how much each marketing channel contributes to conversions. Must also write documentation.",
+  "skills": [
+   "Excel"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {
+   "data_analyst-case-05": 2,
+   "data_analyst-case-11": 2,
+   "data_analyst-case-17": 2,
+   "data_analyst-repo-inventory-excel-automation": 1,
+   "data_analyst-review-05": 1,
+   "data_analyst-review-06": 1,
+   "data_analyst-case-02": 2,
+   "data_analyst-case-08": 2,
+   "data_analyst-case-14": 2,
+   "data_analyst-repo-marketing-attribution-analysis": 1,
+   "data_analyst-review-04": 1,
+   "data_analyst-review-10": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   18,
+   31
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0097",
+  "persona": "data_analyst",
+  "style": "explicit",
+  "title": "Build a inventory excel automation for our team",
+  "description": "Small e-commerce business here. We need a inventory excel automation built with Excel, Python, ETL. Please share similar work.",
+  "skills": [
+   "Excel",
+   "Python",
+   "ETL"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {
+   "data_analyst-case-05": 2,
+   "data_analyst-case-11": 2,
+   "data_analyst-case-17": 2,
+   "data_analyst-repo-inventory-excel-automation": 1,
+   "data_analyst-review-05": 1,
+   "data_analyst-review-06": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   18,
+   31
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0098",
+  "persona": "data_analyst",
+  "style": "vague",
+  "title": "Looking for an expert",
+  "description": "Small e-commerce business here. Problem: closing the monthly inventory spreadsheet takes days of copy-paste. We want this fixed and are open to your suggested approach.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {
+   "data_analyst-case-05": 2,
+   "data_analyst-case-11": 2,
+   "data_analyst-case-17": 2,
+   "data_analyst-repo-inventory-excel-automation": 1,
+   "data_analyst-review-05": 1,
+   "data_analyst-review-06": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   18,
+   31
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0099",
+  "persona": "data_analyst",
+  "style": "synonym",
+  "title": "Automate our stock workbook",
+  "description": "Small e-commerce business here. We want automate our stock workbook so the month-end numbers fill themselves. Timeline is flexible for the right person.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {
+   "data_analyst-case-05": 2,
+   "data_analyst-case-11": 2,
+   "data_analyst-case-17": 2,
+   "data_analyst-repo-inventory-excel-automation": 1,
+   "data_analyst-review-05": 1,
+   "data_analyst-review-06": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   18,
+   31
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0100",
+  "persona": "data_analyst",
+  "style": "multi",
+  "title": "Two connected projects",
+  "description": "Small e-commerce business here. First, closing the monthly inventory spreadsheet takes days of copy-paste. Second, we also want measure how much each marketing channel contributes to conversions. Must also write documentation.",
+  "skills": [
+   "Excel"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {
+   "data_analyst-case-05": 2,
+   "data_analyst-case-11": 2,
+   "data_analyst-case-17": 2,
+   "data_analyst-repo-inventory-excel-automation": 1,
+   "data_analyst-review-05": 1,
+   "data_analyst-review-06": 1,
+   "data_analyst-case-02": 2,
+   "data_analyst-case-08": 2,
+   "data_analyst-case-14": 2,
+   "data_analyst-repo-marketing-attribution-analysis": 1,
+   "data_analyst-review-04": 1,
+   "data_analyst-review-10": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   18,
+   31
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0101",
+  "persona": "data_analyst",
+  "style": "explicit",
+  "title": "Build a customer segmentation",
+  "description": "Our fintech startup is growing fast. We need a customer segmentation built with Python, Pandas, Tableau. Please share similar work.",
+  "skills": [
+   "Python",
+   "Pandas",
+   "Tableau"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {
+   "data_analyst-case-06": 2,
+   "data_analyst-case-12": 2,
+   "data_analyst-case-18": 2,
+   "data_analyst-review-07": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   18,
+   31
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0102",
+  "persona": "data_analyst",
+  "style": "vague",
+  "title": "Looking for an expert",
+  "description": "Our fintech startup is growing fast. Problem: we send the same email to every customer and results are poor. We want this fixed and are open to your suggested approach.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {
+   "data_analyst-case-06": 2,
+   "data_analyst-case-12": 2,
+   "data_analyst-case-18": 2,
+   "data_analyst-review-07": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   18,
+   31
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0103",
+  "persona": "data_analyst",
+  "style": "synonym",
+  "title": "Group customers by how recently, often and how much they buy, for targ",
+  "description": "Our fintech startup is growing fast. We want group customers by how recently, often and how much they buy, for targeted campaigns. Timeline is flexible for the right person.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {
+   "data_analyst-case-06": 2,
+   "data_analyst-case-12": 2,
+   "data_analyst-case-18": 2,
+   "data_analyst-review-07": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   18,
+   31
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0104",
+  "persona": "data_analyst",
+  "style": "multi",
+  "title": "Two connected projects",
+  "description": "Our fintech startup is growing fast. First, we send the same email to every customer and results are poor. Second, we also want model, test and document our analytics warehouse with daily scheduled runs. Must also write documentation.",
+  "skills": [
+   "Python"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {
+   "data_analyst-case-06": 2,
+   "data_analyst-case-12": 2,
+   "data_analyst-case-18": 2,
+   "data_analyst-review-07": 1,
+   "data_analyst-case-03": 2,
+   "data_analyst-case-09": 2,
+   "data_analyst-case-15": 2,
+   "data_analyst-repo-dbt-warehouse-rebuild": 1,
+   "data_analyst-review-02": 1,
+   "data_analyst-review-08": 1,
+   "data_analyst-review-09": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   18,
+   31
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0105",
+  "persona": "data_analyst",
+  "style": "explicit",
+  "title": "Build a customer segmentation for our team",
+  "description": "We are a SaaS company. We need a customer segmentation built with Python, Pandas, Tableau. Please share similar work.",
+  "skills": [
+   "Python",
+   "Pandas",
+   "Tableau"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {
+   "data_analyst-case-06": 2,
+   "data_analyst-case-12": 2,
+   "data_analyst-case-18": 2,
+   "data_analyst-review-07": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   18,
+   31
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0106",
+  "persona": "data_analyst",
+  "style": "vague",
+  "title": "Need help with a business problem",
+  "description": "We are a SaaS company. Problem: we send the same email to every customer and results are poor. We want this fixed and are open to your suggested approach.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {
+   "data_analyst-case-06": 2,
+   "data_analyst-case-12": 2,
+   "data_analyst-case-18": 2,
+   "data_analyst-review-07": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   18,
+   31
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0107",
+  "persona": "data_analyst",
+  "style": "synonym",
+  "title": "Group customers by how recently, often and how much they buy, for targ",
+  "description": "We are a SaaS company. We want group customers by how recently, often and how much they buy, for targeted campaigns. Timeline is flexible for the right person.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {
+   "data_analyst-case-06": 2,
+   "data_analyst-case-12": 2,
+   "data_analyst-case-18": 2,
+   "data_analyst-review-07": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   18,
+   31
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0108",
+  "persona": "data_analyst",
+  "style": "multi",
+  "title": "Two connected projects",
+  "description": "We are a SaaS company. First, we send the same email to every customer and results are poor. Second, we also want model, test and document our analytics warehouse with daily scheduled runs. Must also write documentation.",
+  "skills": [
+   "Python"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {
+   "data_analyst-case-06": 2,
+   "data_analyst-case-12": 2,
+   "data_analyst-case-18": 2,
+   "data_analyst-review-07": 1,
+   "data_analyst-case-03": 2,
+   "data_analyst-case-09": 2,
+   "data_analyst-case-15": 2,
+   "data_analyst-repo-dbt-warehouse-rebuild": 1,
+   "data_analyst-review-02": 1,
+   "data_analyst-review-08": 1,
+   "data_analyst-review-09": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   18,
+   31
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0109",
+  "persona": "data_analyst",
+  "style": "off_niche",
+  "title": "Need help: churn prediction model",
+  "description": "Hi! We work in e-commerce. Problem: too many subscribers cancel and we never know who will leave next. We want predict which customers are about to stop paying so sales can call them first.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {},
+  "label": "skip",
+  "scam": false,
+  "fair_price_band": null,
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0110",
+  "persona": "data_analyst",
+  "style": "off_niche",
+  "title": "Need help: invoice data extraction",
+  "description": "Hi! We work in e-commerce. Problem: our staff type supplier bill details into the accounting system manually. We want pull totals, dates and vendor names out of scanned bills into structured records.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {},
+  "label": "skip",
+  "scam": false,
+  "fair_price_band": null,
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0111",
+  "persona": "data_analyst",
+  "style": "off_niche",
+  "title": "Need help: shopify-to-erp sync",
+  "description": "Hi! We work in e-commerce. Problem: stock levels in our web shop and our warehouse system never match. We want keep inventory and orders in sync between the e-commerce store and back-office software.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {},
+  "label": "skip",
+  "scam": false,
+  "fair_price_band": null,
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0112",
+  "persona": "data_analyst",
+  "style": "off_niche",
+  "title": "Need help: learning platform",
+  "description": "Small logistics business here. Problem: we want to sell our courses online with videos and quizzes. We want a learning management website where students watch lessons and take tests.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {},
+  "label": "skip",
+  "scam": false,
+  "fair_price_band": null,
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0113",
+  "persona": "data_analyst",
+  "style": "off_niche",
+  "title": "Need help: contract q&a assistant",
+  "description": "Small education business here. Problem: our lawyers waste hours searching old agreements for specific clauses. We want a tool to chat with our document archive where every answer shows its source.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {},
+  "label": "skip",
+  "scam": false,
+  "fair_price_band": null,
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0114",
+  "persona": "data_analyst",
+  "style": "off_niche",
+  "title": "Need help: multi-agent research assistant",
+  "description": "Small e-commerce business here. Problem: analysts spend days writing market summaries from many sources. We want a team of AI agents that drafts reports and reviews its own work.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {},
+  "label": "skip",
+  "scam": false,
+  "fair_price_band": null,
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0115",
+  "persona": "data_analyst",
+  "style": "off_niche",
+  "title": "Need help: support ticket classifier",
+  "description": "Small SaaS business here. Problem: support requests get sent to the wrong team by hand every morning. We want automatically tag incoming help-desk emails by topic and urgency.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {},
+  "label": "skip",
+  "scam": false,
+  "fair_price_band": null,
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0116",
+  "persona": "data_analyst",
+  "style": "off_niche",
+  "title": "Need help: demand forecasting",
+  "description": "Hi! We work in healthcare. Problem: we keep running out of stock on some items and overstocking others. We want estimate next week's sales for each product so purchasing can plan.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {},
+  "label": "skip",
+  "scam": false,
+  "fair_price_band": null,
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0117",
+  "persona": "data_analyst",
+  "style": "scam",
+  "title": "Quick pricing a/b test job",
+  "description": "We want to try a new price without guessing the result. This is an unpaid test task; if we like it we hire you.",
+  "skills": [
+   "A/B testing",
+   "Statistics"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {
+   "data_analyst-case-04": 2,
+   "data_analyst-case-10": 2,
+   "data_analyst-case-16": 2,
+   "data_analyst-repo-pricing-a-b-test": 1,
+   "data_analyst-review-01": 1,
+   "data_analyst-review-03": 1
+  },
+  "label": "skip",
+  "scam": true,
+  "fair_price_band": null,
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0118",
+  "persona": "data_analyst",
+  "style": "scam",
+  "title": "Quick sales performance dashboard job",
+  "description": "Regional managers wait a week for sales numbers in spreadsheets. Please contact me on WhatsApp to discuss, we pay outside the platform.",
+  "skills": [
+   "Power BI",
+   "SQL"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {
+   "data_analyst-case-01": 2,
+   "data_analyst-case-07": 2,
+   "data_analyst-case-13": 2,
+   "data_analyst-repo-sales-performance-dashboard": 1
+  },
+  "label": "skip",
+  "scam": true,
+  "fair_price_band": null,
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0119",
+  "persona": "data_analyst",
+  "style": "scam",
+  "title": "Quick inventory excel automation job",
+  "description": "Closing the monthly inventory spreadsheet takes days of copy-paste. This is an unpaid test task; if we like it we hire you.",
+  "skills": [
+   "Excel",
+   "Python"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {
+   "data_analyst-case-05": 2,
+   "data_analyst-case-11": 2,
+   "data_analyst-case-17": 2,
+   "data_analyst-repo-inventory-excel-automation": 1,
+   "data_analyst-review-05": 1,
+   "data_analyst-review-06": 1
+  },
+  "label": "skip",
+  "scam": true,
+  "fair_price_band": null,
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0120",
+  "persona": "data_analyst",
+  "style": "scam",
+  "title": "Quick customer segmentation job",
+  "description": "We send the same email to every customer and results are poor. Please contact me on WhatsApp to discuss, we pay outside the platform.",
+  "skills": [
+   "Python",
+   "Pandas"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 18,
+  "budget_max": 41,
+  "gold_evidence": {
+   "data_analyst-case-06": 2,
+   "data_analyst-case-12": 2,
+   "data_analyst-case-18": 2,
+   "data_analyst-review-07": 1
+  },
+  "label": "skip",
+  "scam": true,
+  "fair_price_band": null,
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0121",
+  "persona": "fullstack_developer",
+  "style": "explicit",
+  "title": "Build a multi-vendor marketplace",
+  "description": "Hi! We work in SaaS. We need a multi-vendor marketplace built with Next.js, Stripe, Postgres. Please share similar work.",
+  "skills": [
+   "Next.js",
+   "Stripe",
+   "Postgres"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {
+   "fullstack_developer-case-01": 2,
+   "fullstack_developer-case-07": 2,
+   "fullstack_developer-case-13": 2,
+   "fullstack_developer-repo-multi-vendor-marketplace": 1,
+   "fullstack_developer-review-03": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   22,
+   39
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0122",
+  "persona": "fullstack_developer",
+  "style": "vague",
+  "title": "Looking for an expert",
+  "description": "Hi! We work in SaaS. Problem: we want independent sellers to list products and get paid automatically. We want this fixed and are open to your suggested approach.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {
+   "fullstack_developer-case-01": 2,
+   "fullstack_developer-case-07": 2,
+   "fullstack_developer-case-13": 2,
+   "fullstack_developer-repo-multi-vendor-marketplace": 1,
+   "fullstack_developer-review-03": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   22,
+   39
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0123",
+  "persona": "fullstack_developer",
+  "style": "synonym",
+  "title": "An online store with many sellers and split payouts to each one",
+  "description": "Hi! We work in SaaS. We want an online store with many sellers and split payouts to each one. Timeline is flexible for the right person.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {
+   "fullstack_developer-case-01": 2,
+   "fullstack_developer-case-07": 2,
+   "fullstack_developer-case-13": 2,
+   "fullstack_developer-repo-multi-vendor-marketplace": 1,
+   "fullstack_developer-review-03": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   22,
+   39
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0124",
+  "persona": "fullstack_developer",
+  "style": "multi",
+  "title": "Two connected projects",
+  "description": "Hi! We work in SaaS. First, we want independent sellers to list products and get paid automatically. Second, we also want keep inventory and orders in sync between the e-commerce store and back-office software. Must also write documentation.",
+  "skills": [
+   "Next.js"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {
+   "fullstack_developer-case-01": 2,
+   "fullstack_developer-case-07": 2,
+   "fullstack_developer-case-13": 2,
+   "fullstack_developer-repo-multi-vendor-marketplace": 1,
+   "fullstack_developer-review-03": 1,
+   "fullstack_developer-case-04": 2,
+   "fullstack_developer-case-10": 2,
+   "fullstack_developer-case-16": 2,
+   "fullstack_developer-repo-shopify-to-erp-sync": 1,
+   "fullstack_developer-review-02": 1,
+   "fullstack_developer-review-10": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   22,
+   39
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0125",
+  "persona": "fullstack_developer",
+  "style": "explicit",
+  "title": "Build a multi-vendor marketplace for our team",
+  "description": "We are a e-commerce company. We need a multi-vendor marketplace built with Next.js, Stripe, Postgres. Please share similar work.",
+  "skills": [
+   "Next.js",
+   "Stripe",
+   "Postgres"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {
+   "fullstack_developer-case-01": 2,
+   "fullstack_developer-case-07": 2,
+   "fullstack_developer-case-13": 2,
+   "fullstack_developer-repo-multi-vendor-marketplace": 1,
+   "fullstack_developer-review-03": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   22,
+   39
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0126",
+  "persona": "fullstack_developer",
+  "style": "vague",
+  "title": "Need help with a business problem",
+  "description": "We are a e-commerce company. Problem: we want independent sellers to list products and get paid automatically. We want this fixed and are open to your suggested approach.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {
+   "fullstack_developer-case-01": 2,
+   "fullstack_developer-case-07": 2,
+   "fullstack_developer-case-13": 2,
+   "fullstack_developer-repo-multi-vendor-marketplace": 1,
+   "fullstack_developer-review-03": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   22,
+   39
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0127",
+  "persona": "fullstack_developer",
+  "style": "synonym",
+  "title": "An online store with many sellers and split payouts to each one",
+  "description": "We are a e-commerce company. We want an online store with many sellers and split payouts to each one. Timeline is flexible for the right person.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {
+   "fullstack_developer-case-01": 2,
+   "fullstack_developer-case-07": 2,
+   "fullstack_developer-case-13": 2,
+   "fullstack_developer-repo-multi-vendor-marketplace": 1,
+   "fullstack_developer-review-03": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   22,
+   39
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0128",
+  "persona": "fullstack_developer",
+  "style": "multi",
+  "title": "Two connected projects",
+  "description": "We are a e-commerce company. First, we want independent sellers to list products and get paid automatically. Second, we also want keep inventory and orders in sync between the e-commerce store and back-office software. Must also write documentation.",
+  "skills": [
+   "Next.js"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {
+   "fullstack_developer-case-01": 2,
+   "fullstack_developer-case-07": 2,
+   "fullstack_developer-case-13": 2,
+   "fullstack_developer-repo-multi-vendor-marketplace": 1,
+   "fullstack_developer-review-03": 1,
+   "fullstack_developer-case-04": 2,
+   "fullstack_developer-case-10": 2,
+   "fullstack_developer-case-16": 2,
+   "fullstack_developer-repo-shopify-to-erp-sync": 1,
+   "fullstack_developer-review-02": 1,
+   "fullstack_developer-review-10": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   22,
+   39
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0129",
+  "persona": "fullstack_developer",
+  "style": "explicit",
+  "title": "Build a clinic booking system",
+  "description": "We are a real estate company. We need a clinic booking system built with Django, Postgres, REST API. Please share similar work.",
+  "skills": [
+   "Django",
+   "Postgres",
+   "REST API"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {
+   "fullstack_developer-case-02": 2,
+   "fullstack_developer-case-08": 2,
+   "fullstack_developer-case-14": 2,
+   "fullstack_developer-repo-clinic-booking-system": 1,
+   "fullstack_developer-review-01": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   22,
+   39
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0130",
+  "persona": "fullstack_developer",
+  "style": "vague",
+  "title": "Looking for an expert",
+  "description": "We are a real estate company. Problem: patients miss appointments and all booking is done over the phone. We want this fixed and are open to your suggested approach.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {
+   "fullstack_developer-case-02": 2,
+   "fullstack_developer-case-08": 2,
+   "fullstack_developer-case-14": 2,
+   "fullstack_developer-repo-clinic-booking-system": 1,
+   "fullstack_developer-review-01": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   22,
+   39
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0131",
+  "persona": "fullstack_developer",
+  "style": "synonym",
+  "title": "Online appointment scheduling for doctors with text reminders",
+  "description": "We are a real estate company. We want online appointment scheduling for doctors with text reminders. Timeline is flexible for the right person.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {
+   "fullstack_developer-case-02": 2,
+   "fullstack_developer-case-08": 2,
+   "fullstack_developer-case-14": 2,
+   "fullstack_developer-repo-clinic-booking-system": 1,
+   "fullstack_developer-review-01": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   22,
+   39
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0132",
+  "persona": "fullstack_developer",
+  "style": "multi",
+  "title": "Two connected projects",
+  "description": "We are a real estate company. First, patients miss appointments and all booking is done over the phone. Second, we also want an admin panel with charts that refresh live for every customer account. Must also write documentation.",
+  "skills": [
+   "Django"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {
+   "fullstack_developer-case-02": 2,
+   "fullstack_developer-case-08": 2,
+   "fullstack_developer-case-14": 2,
+   "fullstack_developer-repo-clinic-booking-system": 1,
+   "fullstack_developer-review-01": 1,
+   "fullstack_developer-case-03": 2,
+   "fullstack_developer-case-09": 2,
+   "fullstack_developer-case-15": 2,
+   "fullstack_developer-repo-saas-admin-dashboard": 1,
+   "fullstack_developer-review-06": 1,
+   "fullstack_developer-review-08": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   22,
+   39
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0133",
+  "persona": "fullstack_developer",
+  "style": "explicit",
+  "title": "Build a clinic booking system for our team",
+  "description": "Small education business here. We need a clinic booking system built with Django, Postgres, REST API. Please share similar work.",
+  "skills": [
+   "Django",
+   "Postgres",
+   "REST API"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {
+   "fullstack_developer-case-02": 2,
+   "fullstack_developer-case-08": 2,
+   "fullstack_developer-case-14": 2,
+   "fullstack_developer-repo-clinic-booking-system": 1,
+   "fullstack_developer-review-01": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   22,
+   39
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0134",
+  "persona": "fullstack_developer",
+  "style": "vague",
+  "title": "Project help wanted",
+  "description": "Small education business here. Problem: patients miss appointments and all booking is done over the phone. We want this fixed and are open to your suggested approach.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {
+   "fullstack_developer-case-02": 2,
+   "fullstack_developer-case-08": 2,
+   "fullstack_developer-case-14": 2,
+   "fullstack_developer-repo-clinic-booking-system": 1,
+   "fullstack_developer-review-01": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   22,
+   39
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0135",
+  "persona": "fullstack_developer",
+  "style": "synonym",
+  "title": "Online appointment scheduling for doctors with text reminders",
+  "description": "Small education business here. We want online appointment scheduling for doctors with text reminders. Timeline is flexible for the right person.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {
+   "fullstack_developer-case-02": 2,
+   "fullstack_developer-case-08": 2,
+   "fullstack_developer-case-14": 2,
+   "fullstack_developer-repo-clinic-booking-system": 1,
+   "fullstack_developer-review-01": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   22,
+   39
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0136",
+  "persona": "fullstack_developer",
+  "style": "multi",
+  "title": "Two connected projects",
+  "description": "Small education business here. First, patients miss appointments and all booking is done over the phone. Second, we also want an admin panel with charts that refresh live for every customer account. Must also write documentation.",
+  "skills": [
+   "Django"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {
+   "fullstack_developer-case-02": 2,
+   "fullstack_developer-case-08": 2,
+   "fullstack_developer-case-14": 2,
+   "fullstack_developer-repo-clinic-booking-system": 1,
+   "fullstack_developer-review-01": 1,
+   "fullstack_developer-case-03": 2,
+   "fullstack_developer-case-09": 2,
+   "fullstack_developer-case-15": 2,
+   "fullstack_developer-repo-saas-admin-dashboard": 1,
+   "fullstack_developer-review-06": 1,
+   "fullstack_developer-review-08": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   22,
+   39
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0137",
+  "persona": "fullstack_developer",
+  "style": "explicit",
+  "title": "Build a saas admin dashboard",
+  "description": "Our healthcare startup is growing fast. We need a saas admin dashboard built with React, TypeScript, Tailwind CSS, GraphQL. Please share similar work.",
+  "skills": [
+   "React",
+   "TypeScript",
+   "Tailwind CSS",
+   "GraphQL"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {
+   "fullstack_developer-case-03": 2,
+   "fullstack_developer-case-09": 2,
+   "fullstack_developer-case-15": 2,
+   "fullstack_developer-repo-saas-admin-dashboard": 1,
+   "fullstack_developer-review-06": 1,
+   "fullstack_developer-review-08": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   22,
+   39
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0138",
+  "persona": "fullstack_developer",
+  "style": "vague",
+  "title": "Looking for an expert",
+  "description": "Our healthcare startup is growing fast. Problem: our customers cannot see their account usage numbers as they change. We want this fixed and are open to your suggested approach.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {
+   "fullstack_developer-case-03": 2,
+   "fullstack_developer-case-09": 2,
+   "fullstack_developer-case-15": 2,
+   "fullstack_developer-repo-saas-admin-dashboard": 1,
+   "fullstack_developer-review-06": 1,
+   "fullstack_developer-review-08": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   22,
+   39
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0139",
+  "persona": "fullstack_developer",
+  "style": "synonym",
+  "title": "An admin panel with charts that refresh live for every customer accoun",
+  "description": "Our healthcare startup is growing fast. We want an admin panel with charts that refresh live for every customer account. Timeline is flexible for the right person.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {
+   "fullstack_developer-case-03": 2,
+   "fullstack_developer-case-09": 2,
+   "fullstack_developer-case-15": 2,
+   "fullstack_developer-repo-saas-admin-dashboard": 1,
+   "fullstack_developer-review-06": 1,
+   "fullstack_developer-review-08": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   22,
+   39
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0140",
+  "persona": "fullstack_developer",
+  "style": "multi",
+  "title": "Two connected projects",
+  "description": "Our healthcare startup is growing fast. First, our customers cannot see their account usage numbers as they change. Second, we also want an online store with many sellers and split payouts to each one. Must also write documentation.",
+  "skills": [
+   "React"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {
+   "fullstack_developer-case-03": 2,
+   "fullstack_developer-case-09": 2,
+   "fullstack_developer-case-15": 2,
+   "fullstack_developer-repo-saas-admin-dashboard": 1,
+   "fullstack_developer-review-06": 1,
+   "fullstack_developer-review-08": 1,
+   "fullstack_developer-case-01": 2,
+   "fullstack_developer-case-07": 2,
+   "fullstack_developer-case-13": 2,
+   "fullstack_developer-repo-multi-vendor-marketplace": 1,
+   "fullstack_developer-review-03": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   22,
+   39
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0141",
+  "persona": "fullstack_developer",
+  "style": "explicit",
+  "title": "Build a saas admin dashboard for our team",
+  "description": "Small real estate business here. We need a saas admin dashboard built with React, TypeScript, Tailwind CSS, GraphQL. Please share similar work.",
+  "skills": [
+   "React",
+   "TypeScript",
+   "Tailwind CSS",
+   "GraphQL"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {
+   "fullstack_developer-case-03": 2,
+   "fullstack_developer-case-09": 2,
+   "fullstack_developer-case-15": 2,
+   "fullstack_developer-repo-saas-admin-dashboard": 1,
+   "fullstack_developer-review-06": 1,
+   "fullstack_developer-review-08": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   22,
+   39
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0142",
+  "persona": "fullstack_developer",
+  "style": "vague",
+  "title": "Need help with a business problem",
+  "description": "Small real estate business here. Problem: our customers cannot see their account usage numbers as they change. We want this fixed and are open to your suggested approach.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {
+   "fullstack_developer-case-03": 2,
+   "fullstack_developer-case-09": 2,
+   "fullstack_developer-case-15": 2,
+   "fullstack_developer-repo-saas-admin-dashboard": 1,
+   "fullstack_developer-review-06": 1,
+   "fullstack_developer-review-08": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   22,
+   39
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0143",
+  "persona": "fullstack_developer",
+  "style": "synonym",
+  "title": "An admin panel with charts that refresh live for every customer accoun",
+  "description": "Small real estate business here. We want an admin panel with charts that refresh live for every customer account. Timeline is flexible for the right person.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {
+   "fullstack_developer-case-03": 2,
+   "fullstack_developer-case-09": 2,
+   "fullstack_developer-case-15": 2,
+   "fullstack_developer-repo-saas-admin-dashboard": 1,
+   "fullstack_developer-review-06": 1,
+   "fullstack_developer-review-08": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   22,
+   39
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0144",
+  "persona": "fullstack_developer",
+  "style": "multi",
+  "title": "Two connected projects",
+  "description": "Small real estate business here. First, our customers cannot see their account usage numbers as they change. Second, we also want an online store with many sellers and split payouts to each one. Must also write documentation.",
+  "skills": [
+   "React"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {
+   "fullstack_developer-case-03": 2,
+   "fullstack_developer-case-09": 2,
+   "fullstack_developer-case-15": 2,
+   "fullstack_developer-repo-saas-admin-dashboard": 1,
+   "fullstack_developer-review-06": 1,
+   "fullstack_developer-review-08": 1,
+   "fullstack_developer-case-01": 2,
+   "fullstack_developer-case-07": 2,
+   "fullstack_developer-case-13": 2,
+   "fullstack_developer-repo-multi-vendor-marketplace": 1,
+   "fullstack_developer-review-03": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   22,
+   39
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0145",
+  "persona": "fullstack_developer",
+  "style": "explicit",
+  "title": "Build a shopify-to-erp sync",
+  "description": "Our e-commerce startup is growing fast. We need a shopify-to-erp sync built with Node.js, Express. Please share similar work.",
+  "skills": [
+   "Node.js",
+   "Express"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {
+   "fullstack_developer-case-04": 2,
+   "fullstack_developer-case-10": 2,
+   "fullstack_developer-case-16": 2,
+   "fullstack_developer-repo-shopify-to-erp-sync": 1,
+   "fullstack_developer-review-02": 1,
+   "fullstack_developer-review-10": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   22,
+   39
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0146",
+  "persona": "fullstack_developer",
+  "style": "vague",
+  "title": "Looking for an expert",
+  "description": "Our e-commerce startup is growing fast. Problem: stock levels in our web shop and our warehouse system never match. We want this fixed and are open to your suggested approach.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {
+   "fullstack_developer-case-04": 2,
+   "fullstack_developer-case-10": 2,
+   "fullstack_developer-case-16": 2,
+   "fullstack_developer-repo-shopify-to-erp-sync": 1,
+   "fullstack_developer-review-02": 1,
+   "fullstack_developer-review-10": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   22,
+   39
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0147",
+  "persona": "fullstack_developer",
+  "style": "synonym",
+  "title": "Keep inventory and orders in sync between the e-commerce store and bac",
+  "description": "Our e-commerce startup is growing fast. We want keep inventory and orders in sync between the e-commerce store and back-office software. Timeline is flexible for the right person.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {
+   "fullstack_developer-case-04": 2,
+   "fullstack_developer-case-10": 2,
+   "fullstack_developer-case-16": 2,
+   "fullstack_developer-repo-shopify-to-erp-sync": 1,
+   "fullstack_developer-review-02": 1,
+   "fullstack_developer-review-10": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   22,
+   39
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0148",
+  "persona": "fullstack_developer",
+  "style": "multi",
+  "title": "Two connected projects",
+  "description": "Our e-commerce startup is growing fast. First, stock levels in our web shop and our warehouse system never match. Second, we also want an online store with many sellers and split payouts to each one. Must also write documentation.",
+  "skills": [
+   "Node.js"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {
+   "fullstack_developer-case-04": 2,
+   "fullstack_developer-case-10": 2,
+   "fullstack_developer-case-16": 2,
+   "fullstack_developer-repo-shopify-to-erp-sync": 1,
+   "fullstack_developer-review-02": 1,
+   "fullstack_developer-review-10": 1,
+   "fullstack_developer-case-01": 2,
+   "fullstack_developer-case-07": 2,
+   "fullstack_developer-case-13": 2,
+   "fullstack_developer-repo-multi-vendor-marketplace": 1,
+   "fullstack_developer-review-03": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   22,
+   39
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0149",
+  "persona": "fullstack_developer",
+  "style": "explicit",
+  "title": "Build a shopify-to-erp sync for our team",
+  "description": "We are a e-commerce company. We need a shopify-to-erp sync built with Node.js, Express. Please share similar work.",
+  "skills": [
+   "Node.js",
+   "Express"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {
+   "fullstack_developer-case-04": 2,
+   "fullstack_developer-case-10": 2,
+   "fullstack_developer-case-16": 2,
+   "fullstack_developer-repo-shopify-to-erp-sync": 1,
+   "fullstack_developer-review-02": 1,
+   "fullstack_developer-review-10": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   22,
+   39
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0150",
+  "persona": "fullstack_developer",
+  "style": "vague",
+  "title": "Looking for an expert",
+  "description": "We are a e-commerce company. Problem: stock levels in our web shop and our warehouse system never match. We want this fixed and are open to your suggested approach.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {
+   "fullstack_developer-case-04": 2,
+   "fullstack_developer-case-10": 2,
+   "fullstack_developer-case-16": 2,
+   "fullstack_developer-repo-shopify-to-erp-sync": 1,
+   "fullstack_developer-review-02": 1,
+   "fullstack_developer-review-10": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   22,
+   39
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0151",
+  "persona": "fullstack_developer",
+  "style": "synonym",
+  "title": "Keep inventory and orders in sync between the e-commerce store and bac",
+  "description": "We are a e-commerce company. We want keep inventory and orders in sync between the e-commerce store and back-office software. Timeline is flexible for the right person.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {
+   "fullstack_developer-case-04": 2,
+   "fullstack_developer-case-10": 2,
+   "fullstack_developer-case-16": 2,
+   "fullstack_developer-repo-shopify-to-erp-sync": 1,
+   "fullstack_developer-review-02": 1,
+   "fullstack_developer-review-10": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   22,
+   39
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0152",
+  "persona": "fullstack_developer",
+  "style": "multi",
+  "title": "Two connected projects",
+  "description": "We are a e-commerce company. First, stock levels in our web shop and our warehouse system never match. Second, we also want an online store with many sellers and split payouts to each one. Must also write documentation.",
+  "skills": [
+   "Node.js"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {
+   "fullstack_developer-case-04": 2,
+   "fullstack_developer-case-10": 2,
+   "fullstack_developer-case-16": 2,
+   "fullstack_developer-repo-shopify-to-erp-sync": 1,
+   "fullstack_developer-review-02": 1,
+   "fullstack_developer-review-10": 1,
+   "fullstack_developer-case-01": 2,
+   "fullstack_developer-case-07": 2,
+   "fullstack_developer-case-13": 2,
+   "fullstack_developer-repo-multi-vendor-marketplace": 1,
+   "fullstack_developer-review-03": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   22,
+   39
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0153",
+  "persona": "fullstack_developer",
+  "style": "explicit",
+  "title": "Build a learning platform",
+  "description": "Our real estate startup is growing fast. We need a learning platform built with Next.js, Node.js, AWS. Please share similar work.",
+  "skills": [
+   "Next.js",
+   "Node.js",
+   "AWS"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {
+   "fullstack_developer-case-05": 2,
+   "fullstack_developer-case-11": 2,
+   "fullstack_developer-case-17": 2,
+   "fullstack_developer-repo-learning-platform": 1,
+   "fullstack_developer-review-07": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   22,
+   39
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0154",
+  "persona": "fullstack_developer",
+  "style": "vague",
+  "title": "Project help wanted",
+  "description": "Our real estate startup is growing fast. Problem: we want to sell our courses online with videos and quizzes. We want this fixed and are open to your suggested approach.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {
+   "fullstack_developer-case-05": 2,
+   "fullstack_developer-case-11": 2,
+   "fullstack_developer-case-17": 2,
+   "fullstack_developer-repo-learning-platform": 1,
+   "fullstack_developer-review-07": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   22,
+   39
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0155",
+  "persona": "fullstack_developer",
+  "style": "synonym",
+  "title": "A learning management website where students watch lessons and take te",
+  "description": "Our real estate startup is growing fast. We want a learning management website where students watch lessons and take tests. Timeline is flexible for the right person.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {
+   "fullstack_developer-case-05": 2,
+   "fullstack_developer-case-11": 2,
+   "fullstack_developer-case-17": 2,
+   "fullstack_developer-repo-learning-platform": 1,
+   "fullstack_developer-review-07": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   22,
+   39
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0156",
+  "persona": "fullstack_developer",
+  "style": "multi",
+  "title": "Two connected projects",
+  "description": "Our real estate startup is growing fast. First, we want to sell our courses online with videos and quizzes. Second, we also want online appointment scheduling for doctors with text reminders. Must also write documentation.",
+  "skills": [
+   "Next.js"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {
+   "fullstack_developer-case-05": 2,
+   "fullstack_developer-case-11": 2,
+   "fullstack_developer-case-17": 2,
+   "fullstack_developer-repo-learning-platform": 1,
+   "fullstack_developer-review-07": 1,
+   "fullstack_developer-case-02": 2,
+   "fullstack_developer-case-08": 2,
+   "fullstack_developer-case-14": 2,
+   "fullstack_developer-repo-clinic-booking-system": 1,
+   "fullstack_developer-review-01": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   22,
+   39
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0157",
+  "persona": "fullstack_developer",
+  "style": "explicit",
+  "title": "Build a learning platform for our team",
+  "description": "We are a e-commerce company. We need a learning platform built with Next.js, Node.js, AWS. Please share similar work.",
+  "skills": [
+   "Next.js",
+   "Node.js",
+   "AWS"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {
+   "fullstack_developer-case-05": 2,
+   "fullstack_developer-case-11": 2,
+   "fullstack_developer-case-17": 2,
+   "fullstack_developer-repo-learning-platform": 1,
+   "fullstack_developer-review-07": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   22,
+   39
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0158",
+  "persona": "fullstack_developer",
+  "style": "vague",
+  "title": "Need help with a business problem",
+  "description": "We are a e-commerce company. Problem: we want to sell our courses online with videos and quizzes. We want this fixed and are open to your suggested approach.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {
+   "fullstack_developer-case-05": 2,
+   "fullstack_developer-case-11": 2,
+   "fullstack_developer-case-17": 2,
+   "fullstack_developer-repo-learning-platform": 1,
+   "fullstack_developer-review-07": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   22,
+   39
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0159",
+  "persona": "fullstack_developer",
+  "style": "synonym",
+  "title": "A learning management website where students watch lessons and take te",
+  "description": "We are a e-commerce company. We want a learning management website where students watch lessons and take tests. Timeline is flexible for the right person.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {
+   "fullstack_developer-case-05": 2,
+   "fullstack_developer-case-11": 2,
+   "fullstack_developer-case-17": 2,
+   "fullstack_developer-repo-learning-platform": 1,
+   "fullstack_developer-review-07": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   22,
+   39
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0160",
+  "persona": "fullstack_developer",
+  "style": "multi",
+  "title": "Two connected projects",
+  "description": "We are a e-commerce company. First, we want to sell our courses online with videos and quizzes. Second, we also want online appointment scheduling for doctors with text reminders. Must also write documentation.",
+  "skills": [
+   "Next.js"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {
+   "fullstack_developer-case-05": 2,
+   "fullstack_developer-case-11": 2,
+   "fullstack_developer-case-17": 2,
+   "fullstack_developer-repo-learning-platform": 1,
+   "fullstack_developer-review-07": 1,
+   "fullstack_developer-case-02": 2,
+   "fullstack_developer-case-08": 2,
+   "fullstack_developer-case-14": 2,
+   "fullstack_developer-repo-clinic-booking-system": 1,
+   "fullstack_developer-review-01": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   22,
+   39
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0161",
+  "persona": "fullstack_developer",
+  "style": "explicit",
+  "title": "Build a real-estate listings site",
+  "description": "Our marketing startup is growing fast. We need a real-estate listings site built with React, Express, Postgres. Please share similar work.",
+  "skills": [
+   "React",
+   "Express",
+   "Postgres"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {
+   "fullstack_developer-case-06": 2,
+   "fullstack_developer-case-12": 2,
+   "fullstack_developer-case-18": 2,
+   "fullstack_developer-review-04": 1,
+   "fullstack_developer-review-05": 1,
+   "fullstack_developer-review-09": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   22,
+   39
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0162",
+  "persona": "fullstack_developer",
+  "style": "vague",
+  "title": "Need help with a business problem",
+  "description": "Our marketing startup is growing fast. Problem: buyers cannot search our homes for sale on a map. We want this fixed and are open to your suggested approach.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {
+   "fullstack_developer-case-06": 2,
+   "fullstack_developer-case-12": 2,
+   "fullstack_developer-case-18": 2,
+   "fullstack_developer-review-04": 1,
+   "fullstack_developer-review-05": 1,
+   "fullstack_developer-review-09": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   22,
+   39
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0163",
+  "persona": "fullstack_developer",
+  "style": "synonym",
+  "title": "A property website with search by distance from a location",
+  "description": "Our marketing startup is growing fast. We want a property website with search by distance from a location. Timeline is flexible for the right person.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {
+   "fullstack_developer-case-06": 2,
+   "fullstack_developer-case-12": 2,
+   "fullstack_developer-case-18": 2,
+   "fullstack_developer-review-04": 1,
+   "fullstack_developer-review-05": 1,
+   "fullstack_developer-review-09": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   22,
+   39
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0164",
+  "persona": "fullstack_developer",
+  "style": "multi",
+  "title": "Two connected projects",
+  "description": "Our marketing startup is growing fast. First, buyers cannot search our homes for sale on a map. Second, we also want keep inventory and orders in sync between the e-commerce store and back-office software. Must also write documentation.",
+  "skills": [
+   "React"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {
+   "fullstack_developer-case-06": 2,
+   "fullstack_developer-case-12": 2,
+   "fullstack_developer-case-18": 2,
+   "fullstack_developer-review-04": 1,
+   "fullstack_developer-review-05": 1,
+   "fullstack_developer-review-09": 1,
+   "fullstack_developer-case-04": 2,
+   "fullstack_developer-case-10": 2,
+   "fullstack_developer-case-16": 2,
+   "fullstack_developer-repo-shopify-to-erp-sync": 1,
+   "fullstack_developer-review-02": 1,
+   "fullstack_developer-review-10": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   22,
+   39
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0165",
+  "persona": "fullstack_developer",
+  "style": "explicit",
+  "title": "Build a real-estate listings site for our team",
+  "description": "We are a fintech company. We need a real-estate listings site built with React, Express, Postgres. Please share similar work.",
+  "skills": [
+   "React",
+   "Express",
+   "Postgres"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {
+   "fullstack_developer-case-06": 2,
+   "fullstack_developer-case-12": 2,
+   "fullstack_developer-case-18": 2,
+   "fullstack_developer-review-04": 1,
+   "fullstack_developer-review-05": 1,
+   "fullstack_developer-review-09": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   22,
+   39
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0166",
+  "persona": "fullstack_developer",
+  "style": "vague",
+  "title": "Looking for an expert",
+  "description": "We are a fintech company. Problem: buyers cannot search our homes for sale on a map. We want this fixed and are open to your suggested approach.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {
+   "fullstack_developer-case-06": 2,
+   "fullstack_developer-case-12": 2,
+   "fullstack_developer-case-18": 2,
+   "fullstack_developer-review-04": 1,
+   "fullstack_developer-review-05": 1,
+   "fullstack_developer-review-09": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   22,
+   39
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0167",
+  "persona": "fullstack_developer",
+  "style": "synonym",
+  "title": "A property website with search by distance from a location",
+  "description": "We are a fintech company. We want a property website with search by distance from a location. Timeline is flexible for the right person.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {
+   "fullstack_developer-case-06": 2,
+   "fullstack_developer-case-12": 2,
+   "fullstack_developer-case-18": 2,
+   "fullstack_developer-review-04": 1,
+   "fullstack_developer-review-05": 1,
+   "fullstack_developer-review-09": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   22,
+   39
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0168",
+  "persona": "fullstack_developer",
+  "style": "multi",
+  "title": "Two connected projects",
+  "description": "We are a fintech company. First, buyers cannot search our homes for sale on a map. Second, we also want keep inventory and orders in sync between the e-commerce store and back-office software. Must also write documentation.",
+  "skills": [
+   "React"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {
+   "fullstack_developer-case-06": 2,
+   "fullstack_developer-case-12": 2,
+   "fullstack_developer-case-18": 2,
+   "fullstack_developer-review-04": 1,
+   "fullstack_developer-review-05": 1,
+   "fullstack_developer-review-09": 1,
+   "fullstack_developer-case-04": 2,
+   "fullstack_developer-case-10": 2,
+   "fullstack_developer-case-16": 2,
+   "fullstack_developer-repo-shopify-to-erp-sync": 1,
+   "fullstack_developer-review-02": 1,
+   "fullstack_developer-review-10": 1
+  },
+  "label": "bid",
+  "scam": false,
+  "fair_price_band": [
+   22,
+   39
+  ],
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0169",
+  "persona": "fullstack_developer",
+  "style": "off_niche",
+  "title": "Need help: churn prediction model",
+  "description": "Our fintech startup is growing fast. Problem: too many subscribers cancel and we never know who will leave next. We want predict which customers are about to stop paying so sales can call them first.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {},
+  "label": "skip",
+  "scam": false,
+  "fair_price_band": null,
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0170",
+  "persona": "fullstack_developer",
+  "style": "off_niche",
+  "title": "Need help: multi-agent research assistant",
+  "description": "Small marketing business here. Problem: analysts spend days writing market summaries from many sources. We want a team of AI agents that drafts reports and reviews its own work.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {},
+  "label": "skip",
+  "scam": false,
+  "fair_price_band": null,
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0171",
+  "persona": "fullstack_developer",
+  "style": "off_niche",
+  "title": "Need help: demand forecasting",
+  "description": "Our healthcare startup is growing fast. Problem: we keep running out of stock on some items and overstocking others. We want estimate next week's sales for each product so purchasing can plan.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {},
+  "label": "skip",
+  "scam": false,
+  "fair_price_band": null,
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0172",
+  "persona": "fullstack_developer",
+  "style": "off_niche",
+  "title": "Need help: support ticket classifier",
+  "description": "Hi! We work in healthcare. Problem: support requests get sent to the wrong team by hand every morning. We want automatically tag incoming help-desk emails by topic and urgency.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {},
+  "label": "skip",
+  "scam": false,
+  "fair_price_band": null,
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0173",
+  "persona": "fullstack_developer",
+  "style": "off_niche",
+  "title": "Need help: customer segmentation",
+  "description": "Hi! We work in fintech. Problem: we send the same email to every customer and results are poor. We want group customers by how recently, often and how much they buy, for targeted campaigns.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {},
+  "label": "skip",
+  "scam": false,
+  "fair_price_band": null,
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0174",
+  "persona": "fullstack_developer",
+  "style": "off_niche",
+  "title": "Need help: contract q&a assistant",
+  "description": "Hi! We work in fintech. Problem: our lawyers waste hours searching old agreements for specific clauses. We want a tool to chat with our document archive where every answer shows its source.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {},
+  "label": "skip",
+  "scam": false,
+  "fair_price_band": null,
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0175",
+  "persona": "fullstack_developer",
+  "style": "off_niche",
+  "title": "Need help: invoice data extraction",
+  "description": "Hi! We work in SaaS. Problem: our staff type supplier bill details into the accounting system manually. We want pull totals, dates and vendor names out of scanned bills into structured records.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {},
+  "label": "skip",
+  "scam": false,
+  "fair_price_band": null,
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0176",
+  "persona": "fullstack_developer",
+  "style": "off_niche",
+  "title": "Need help: inventory excel automation",
+  "description": "We are a healthcare company. Problem: closing the monthly inventory spreadsheet takes days of copy-paste. We want automate our stock workbook so the month-end numbers fill themselves.",
+  "skills": [],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {},
+  "label": "skip",
+  "scam": false,
+  "fair_price_band": null,
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0177",
+  "persona": "fullstack_developer",
+  "style": "scam",
+  "title": "Quick multi-vendor marketplace job",
+  "description": "We want independent sellers to list products and get paid automatically. Please contact me on WhatsApp to discuss, we pay outside the platform.",
+  "skills": [
+   "Next.js",
+   "Stripe"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {
+   "fullstack_developer-case-01": 2,
+   "fullstack_developer-case-07": 2,
+   "fullstack_developer-case-13": 2,
+   "fullstack_developer-repo-multi-vendor-marketplace": 1,
+   "fullstack_developer-review-03": 1
+  },
+  "label": "skip",
+  "scam": true,
+  "fair_price_band": null,
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0178",
+  "persona": "fullstack_developer",
+  "style": "scam",
+  "title": "Quick real-estate listings site job",
+  "description": "Buyers cannot search our homes for sale on a map. Please contact me on WhatsApp to discuss, we pay outside the platform.",
+  "skills": [
+   "React",
+   "Express"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {
+   "fullstack_developer-case-06": 2,
+   "fullstack_developer-case-12": 2,
+   "fullstack_developer-case-18": 2,
+   "fullstack_developer-review-04": 1,
+   "fullstack_developer-review-05": 1,
+   "fullstack_developer-review-09": 1
+  },
+  "label": "skip",
+  "scam": true,
+  "fair_price_band": null,
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0179",
+  "persona": "fullstack_developer",
+  "style": "scam",
+  "title": "Quick learning platform job",
+  "description": "We want to sell our courses online with videos and quizzes. Please contact me on WhatsApp to discuss, we pay outside the platform.",
+  "skills": [
+   "Next.js",
+   "Node.js"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {
+   "fullstack_developer-case-05": 2,
+   "fullstack_developer-case-11": 2,
+   "fullstack_developer-case-17": 2,
+   "fullstack_developer-repo-learning-platform": 1,
+   "fullstack_developer-review-07": 1
+  },
+  "label": "skip",
+  "scam": true,
+  "fair_price_band": null,
+  "source": "synthetic"
+ },
+ {
+  "job_id": "dev-0180",
+  "persona": "fullstack_developer",
+  "style": "scam",
+  "title": "Quick clinic booking system job",
+  "description": "Patients miss appointments and all booking is done over the phone. Please contact me on WhatsApp to discuss, we pay outside the platform.",
+  "skills": [
+   "Django",
+   "Postgres"
+  ],
+  "budget_type": "hourly",
+  "budget_min": 22,
+  "budget_max": 49,
+  "gold_evidence": {
+   "fullstack_developer-case-02": 2,
+   "fullstack_developer-case-08": 2,
+   "fullstack_developer-case-14": 2,
+   "fullstack_developer-repo-clinic-booking-system": 1,
+   "fullstack_developer-review-01": 1
+  },
+  "label": "skip",
+  "scam": true,
+  "fair_price_band": null,
+  "source": "synthetic"
+ }
+]

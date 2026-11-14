@@ -6,6 +6,7 @@ Do NOT use `uvicorn --reload` on Windows: reload mode uses an event loop that ca
 the MCP server subprocesses.
 """
 import asyncio
+import os
 import sys
 from contextlib import asynccontextmanager
 from pathlib import Path
@@ -71,4 +72,4 @@ if __name__ == "__main__":
     import uvicorn
     if sys.platform == "win32":
         asyncio.set_event_loop_policy(asyncio.WindowsProactorEventLoopPolicy())
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=int(os.getenv("PORT", "8000")))   # hosts set PORT

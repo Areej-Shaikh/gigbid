@@ -19,9 +19,17 @@ async def pricing(state, config: RunnableConfig):
             market.append(s[btype][pos]); used.append(skill)
     rationale = []
     floor = c["user"]["min_hourly_rate"] if btype == "hourly" else c["user"]["min_fixed_budget"]
-    if market:
+    own_rate = (await tb.call("pricing", "list_skills")).get("hourly_rate")   # the freelancer's own rate
+    if market and btype == "hourly" and own_rate:
+        amount = (statistics.median(market) + own_rate) / 2
+        rationale.append(f"average of market {pos} for {', '.join(used)} (${statistics.median(market):,.0f}/hr) "
+                         f"and your rate (${own_rate:,.0f}/hr)")
+    elif market:
         amount = statistics.median(market)
         rationale.append(f"market {pos} for {', '.join(used)}: ${amount:,.0f}{'/hr' if btype == 'hourly' else ''}")
+    elif btype == "hourly" and own_rate:
+        amount = own_rate
+        rationale.append(f"no market data for these skills; started from your rate ${own_rate:,.0f}/hr")
     else:
         amount = job.get("budget_max") or floor
         rationale.append("no market data for these skills; started from the client's budget")

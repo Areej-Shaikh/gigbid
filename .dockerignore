@@ -1,0 +1,22 @@
+# secrets never go into an image: pass them as environment variables
+.env
+.env.*
+!.env.example
+
+# local environments and build output
+.venv/
+**/__pycache__/
+**/*.pyc
+.pytest_cache/
+apps/web/node_modules/
+apps/web/dist/
+apps/web/test-results/
+apps/web/playwright-report/
+
+# large or local-only data (GigSim reads data/processed/*.json, which stays)
+data/raw/
+data/processed/checkpoints.sqlite*
+data/processed/runs.json
+logs/
+evals/results/
+.git/

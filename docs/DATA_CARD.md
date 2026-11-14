@@ -43,6 +43,8 @@ Raw CSVs are **not committed** (size and license). To reproduce: download them f
 | Client reviews | 10 per persona | Linked to case studies |
 | Past proposals | 150 per persona | Labelled won / replied / ignored by a hidden rule: citing specific evidence and skill fit raise the chance; generic openings lower it |
 
+| Dev evaluation set (`evals/datasets/dev_jobs.json`) | 180 jobs (60 per persona) | Built by `scripts/make_dev_set.py` (seed 11) from client-language descriptions of each persona project. Styles: explicit, vague (pain only), synonym (different words), multi (two needs), off-niche (should skip, no gold evidence), scam (should skip). Gold labels: relevant evidence ids graded 2 (case study) / 1 (repo, review), bid/skip, scam, fair price band (persona rate x0.8 to x1.4). Smaller than the ~200 per persona suggested; the hidden test set never enters the repo. |
+
 Synthetic jobs carry a hidden `labels` field (`scam`, `prompt_injection`, `duplicate_of:<id>`). **GigSim hides `labels`, `source` and `dataset` from the API**, so agents cannot see the answers; only evaluation scripts read them.
 
 ## 4. Real client records
