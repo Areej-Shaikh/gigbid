@@ -1,0 +1,102 @@
+[
+ {
+  "id": "ai_ml_engineer-review-01",
+  "project": "Support ticket classifier",
+  "case_id": "ai_ml_engineer-case-03",
+  "client_industry": "fintech",
+  "rating": 5,
+  "text": "Great work, the results speak for themselves.",
+  "date": "2023-03-13",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-review-02",
+  "project": "Churn prediction model",
+  "case_id": "ai_ml_engineer-case-02",
+  "client_industry": "healthcare",
+  "rating": 5,
+  "text": "Clear explanations, solid code, will hire again.",
+  "date": "2024-06-03",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-review-03",
+  "project": "Invoice data extraction",
+  "case_id": "ai_ml_engineer-case-10",
+  "client_industry": "fintech",
+  "rating": 4,
+  "text": "Excellent communication and delivered ahead of schedule.",
+  "date": "2024-11-27",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-review-04",
+  "project": "Multi-agent research assistant",
+  "case_id": "ai_ml_engineer-case-11",
+  "client_industry": "marketing",
+  "rating": 4,
+  "text": "Excellent communication and delivered ahead of schedule.",
+  "date": "2024-08-22",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-review-05",
+  "project": "Invoice data extraction",
+  "case_id": "ai_ml_engineer-case-16",
+  "client_industry": "e-commerce",
+  "rating": 5,
+  "text": "Understood our business problem quickly.",
+  "date": "2024-11-15",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-review-06",
+  "project": "Support ticket classifier",
+  "case_id": "ai_ml_engineer-case-15",
+  "client_industry": "healthcare",
+  "rating": 5,
+  "text": "Clear explanations, solid code, will hire again.",
+  "date": "2025-02-14",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-review-07",
+  "project": "Churn prediction model",
+  "case_id": "ai_ml_engineer-case-08",
+  "client_industry": "logistics",
+  "rating": 4,
+  "text": "Great work, the results speak for themselves.",
+  "date": "2023-04-16",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-review-08",
+  "project": "Multi-agent research assistant",
+  "case_id": "ai_ml_engineer-case-05",
+  "client_industry": "healthcare",
+  "rating": 4,
+  "text": "Excellent communication and delivered ahead of schedule.",
+  "date": "2024-08-19",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-review-09",
+  "project": "Contract Q&A assistant",
+  "case_id": "ai_ml_engineer-case-07",
+  "client_industry": "e-commerce",
+  "rating": 5,
+  "text": "Great work, the results speak for themselves.",
+  "date": "2024-07-07",
+  "source": "synthetic"
+ },
+ {
+  "id": "ai_ml_engineer-review-10",
+  "project": "Demand forecasting",
+  "case_id": "ai_ml_engineer-case-06",
+  "client_industry": "marketing",
+  "rating": 4,
+  "text": "Understood our business problem quickly.",
+  "date": "2024-07-24",
+  "source": "synthetic"
+ }
+]

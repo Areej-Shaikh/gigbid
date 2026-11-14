@@ -16,3 +16,5 @@ node_modules/
 apps/web/dist/
 apps/web/test-results/
 apps/web/playwright-report/
+packages/*/dist/
+packages/*/build/

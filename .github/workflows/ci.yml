@@ -49,6 +49,17 @@ jobs:
       - run: npm ci && npx tsc -b
         working-directory: apps/web
 
+  portfolio-package:
+    name: published Portfolio MCP package (build, install in a clean env, test)
+    runs-on: ubuntu-latest
+    defaults: { run: { working-directory: packages/portfolio-mcp } }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+      - run: pip install build twine && python -m build && twine check dist/*
+      - run: pip install "$(ls dist/*.whl)[test]" && cd /tmp && pytest -q $GITHUB_WORKSPACE/packages/portfolio-mcp/tests
+
   python-tests:
     name: unit + integration + MCP + contract tests (with Postgres)
     runs-on: ubuntu-latest

@@ -1,0 +1,36 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "gigbid-portfolio-mcp"
+version = "0.1.0"
+description = "Read-only MCP server that lets an AI assistant search a freelancer's portfolio and cite real evidence"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{ name = "Areej Shaikh" }]
+keywords = ["mcp", "model-context-protocol", "freelance", "portfolio", "rag", "claude"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+  "mcp>=1.20,<2",
+  "pydantic>=2.7,<3",
+  "rank-bm25>=0.2.2,<0.3",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8", "anyio>=4"]
+
+[project.scripts]
+gigbid-portfolio-mcp = "gigbid_portfolio_mcp.server:main"
+
+[project.urls]
+Homepage = "https://github.com/Areej-Shaikh/gigbid"
+Source = "https://github.com/Areej-Shaikh/gigbid/tree/main/packages/portfolio-mcp"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/gigbid_portfolio_mcp"]

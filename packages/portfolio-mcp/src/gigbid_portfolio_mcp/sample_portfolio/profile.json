@@ -1,0 +1,25 @@
+{
+ "persona_id": "ai_ml_engineer",
+ "name": "Sara Malik (synthetic)",
+ "headline": "AI/ML Engineer: LLM apps, RAG, classical ML",
+ "hourly_rate": 35,
+ "minimum_project_budget": 300,
+ "skills": [
+  "Python",
+  "PyTorch",
+  "scikit-learn",
+  "LangChain",
+  "LangGraph",
+  "RAG",
+  "FastAPI",
+  "Docker",
+  "Postgres",
+  "pgvector",
+  "Hugging Face",
+  "OpenAI API",
+  "NLP",
+  "MLflow",
+  "Celery"
+ ],
+ "source": "synthetic"
+}
