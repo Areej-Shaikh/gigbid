@@ -14,8 +14,8 @@
 | unsupported_claims_per_proposal_after | 0 |
 | critic_approved_rate | 0.857 |
 | avg_tokens_per_job | 0 |
-| p50_s | 0.53 |
-| p95_s | 1.12 |
+| p50_s | 0.55 |
+| p95_s | 1.06 |
 | llm_fallbacks | 96 |
 | usd_per_job_analysed | 0 |
 | usd_per_proposal | 0 |

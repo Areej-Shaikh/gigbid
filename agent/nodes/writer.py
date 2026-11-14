@@ -4,6 +4,7 @@ import re
 
 from langchain_core.runnables import RunnableConfig
 
+from agent.experiments import assign_arm
 from agent.handoffs import DraftText
 from agent.llm import structured
 from agent.memory.promotion_rules import apply_style, outcome_hint, style_rules
@@ -20,7 +21,9 @@ def _a(word: str) -> str:
     return "an" if word[:1].lower() in "aeiou" else "a"
 
 
-def _rules(job, spec, cases, price, answers_ev) -> DraftText:
+def _rules(job, spec, cases, price, answers_ev, arm: str = "evidence_first") -> DraftText:
+    if arm == "plan_first":
+        return _rules_plan_first(job, spec, cases, price, answers_ev)
     skills = (job.get("skills") or [job["title"]])[:2]
     lines = [f"Your project needs {' and '.join(skills)}, which is the core of my recent work."]
     for c in cases[:3]:
@@ -35,6 +38,29 @@ def _rules(job, spec, cases, price, answers_ev) -> DraftText:
     unit = "/hr" if price["budget_type"] == "hourly" else " fixed"
     lines.append(f"My proposed rate is ${price['amount']:,.0f}{unit}.")
     lines.append("If this sounds useful, I am happy to discuss the details in a quick chat here.")
+    return DraftText(cover_letter=" ".join(lines), screening_answers=_rule_answers(job, answers_ev))
+
+
+def _rules_plan_first(job, spec, cases, price, answers_ev) -> DraftText:
+    """X2 arm B: problem, then a concrete delivery plan, then the single strongest proof, then the rate."""
+    skills = (job.get("skills") or [job["title"]])[:2]
+    items = (spec.get("deliverables") or spec.get("requirements") or [job["title"]])[:3]
+    lines = [f"Your project needs {' and '.join(skills)}, and here is how I would deliver it."]
+    lines.append(f"On day one I would review the scope for \"{items[0][:80]}\" and send a short written plan with milestones.")
+    if len(items) > 1:
+        lines.append(f"The first milestone would be a working version of \"{items[1][:80]}\" that you can try early.")
+    lines.append("After each milestone you get a short update and a demo, and at the end a handover call with documentation.")
+    if cases:
+        c = cases[0]
+        lines.append(f"I have done this before: for {_a(c['client_industry'])} {c['client_industry']} client I built a "
+                     f"{c['project'].lower()}: {_result(c['text'])} [{c['evidence_id']}].")
+    unit = "/hr" if price["budget_type"] == "hourly" else " fixed"
+    lines.append(f"My proposed rate is ${price['amount']:,.0f}{unit}.")
+    lines.append("If the plan looks right, I am happy to adjust it with you in a quick chat here.")
+    return DraftText(cover_letter=" ".join(lines), screening_answers=_rule_answers(job, answers_ev))
+
+
+def _rule_answers(job, answers_ev) -> list[str]:
     answers = []
     for q, ev in zip(job.get("screening_questions", []), answers_ev):
         if ev:
@@ -42,7 +68,7 @@ def _rules(job, spec, cases, price, answers_ev) -> DraftText:
                            f"{_result(ev['text'])} [{ev['evidence_id']}].")
         else:
             answers.append("I have not done exactly this before, so I would start with a short spike and share findings.")
-    return DraftText(cover_letter=" ".join(lines), screening_answers=answers)
+    return answers
 
 
 async def writer(state, config: RunnableConfig):
@@ -94,10 +120,12 @@ async def writer(state, config: RunnableConfig):
          f"evidence that won: {', '.join(outcome['winning_evidence']) or 'none yet'}. Prefer that evidence if it fits.")
         if outcome else "",
     ])
-    draft, info = await structured("writer", DraftText, prompt("writer"), user,
-                                   lambda: _rules(job, spec, cases, price, answers_ev))
+    arm = assign_arm(job.get("job_id", ""))               # X2: proposal strategy for this job (stable per job)
+    system = prompt("writer") + "\n\n" + prompt(f"writer_strategy_{arm}")
+    draft, info = await structured("writer", DraftText, system, user,
+                                   lambda: _rules(job, spec, cases, price, answers_ev, arm))
     if info["fallback_used"] and rules:      # no LLM to instruct: apply style memory deterministically
         draft = DraftText(cover_letter=apply_style(draft.cover_letter, rules), screening_answers=draft.screening_answers)
     return {"draft": draft.model_dump(), "evidence": {k: {**v, "snippet": v["text"][:400]} for k, v in pool.items()},
             "tokens": info["tokens"],
-            "trace": [trace("writer", revision=state.get("revisions", 0), cited=list(pool), **info)]}
+            "trace": [trace("writer", revision=state.get("revisions", 0), cited=list(pool), strategy=arm, **info)]}
