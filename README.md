@@ -102,8 +102,9 @@ Better retrieval recall did **not** give better decisions: hybrid retrieval find
 evidence for off-niche jobs, so it bids on more jobs that should be skipped. The reply-rate gap is not
 statistically significant (p = 0.34), so BM25 ships because it is cheaper and simpler with equal outcomes.
 
-**With LLMs** (Groq, 30 jobs, `evals/results/graph_llm_table.md`): bid F1 0.929, 0.67 unsupported claims per
-proposal before the Claim Verifier and **0 after**, p50 34 s per job, about 8k tokens per job.
+**With LLMs** (Groq, 30 jobs, `evals/results/graph_llm_table.md`; all 30 are bid-labelled, so only recall is
+meaningful): bid recall 0.867, **0.67 unsupported claims per proposal before the Claim Verifier and 0 after**,
+p50 34 s per job, about 8k tokens per job (21 of the LLM calls fell back to rules because of rate limits).
 
 **Prompt injection:** 42 attacks (24 hidden in job posts, 18 in client messages) run against the real graphs
 with defences off and on. Results and method: [docs/SECURITY.md](docs/SECURITY.md).
