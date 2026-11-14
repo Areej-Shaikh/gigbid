@@ -22,6 +22,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 from langgraph.checkpoint.memory import InMemorySaver  # noqa: E402
+from langgraph.types import Command  # noqa: E402
 from mcp.shared.memory import create_connected_server_and_client_session  # noqa: E402
 
 import gigsim.app as gigsim  # noqa: E402
@@ -40,6 +41,7 @@ RISKY = {"client_id": "dev-risky", "payment_verified": False, "total_spent": 0, 
 def setup(jobs):
     gigsim.ERROR_RATE = 0
     gigsim.RATE_LIMIT = 10_000
+    gigsim.state.update(connects=10**6, proposals={}, idempotency={}, messages=[])   # outcome run: never run out
     gigsim.JOBS = {j["job_id"]: {**j, "client_id": "dev-risky" if j["scam"] else "dev-good", "connects_cost": 8,
                                  "screening_questions": [], "posted_at": "", "country": ""} for j in jobs}
     gigsim.CLIENTS = {"dev-good": GOOD, "dev-risky": RISKY}
@@ -53,7 +55,18 @@ def f1(tp, fp, fn):
     return p, r, (2 * p * r / (p + r) if p + r else 0.0)
 
 
-async def run(jobs, label: str, graph_builder=build_bid_graph) -> list[dict]:
+async def outcome_of(graph, out, conf, job_id: str) -> str | None:
+    """SIMULATION ONLY: approve the draft as a user would, submit to the in-process GigSim, and read how the
+    simulated client reacted (ignored / replied / interview). Never used outside this evaluation."""
+    if "__interrupt__" not in out:
+        return None
+    done = await graph.ainvoke(Command(resume={"action": "approve"}), conf)
+    if done.get("status") != "submitted":
+        return "not_submitted"
+    return next((p["status"] for p in gigsim.state["proposals"].values() if p["job_id"] == job_id), None)
+
+
+async def run(jobs, label: str, graph_builder=build_bid_graph, outcomes: bool = True) -> list[dict]:
     rows = []
     async with AsyncExitStack() as stack:
         m = await stack.enter_async_context(create_connected_server_and_client_session(market.mcp._mcp_server))
@@ -63,10 +76,11 @@ async def run(jobs, label: str, graph_builder=build_bid_graph) -> list[dict]:
         for n, j in enumerate(jobs):
             os.environ["PORTFOLIO_PERSONA"] = j["persona"]
             t = time.perf_counter()
-            out = await graph.ainvoke({"job_id": j["job_id"]},
-                                      {"configurable": {"toolbox": tb, "thread_id": f"{label}-{j['job_id']}"},
-                                       "recursion_limit": cfg()["budgets"]["max_steps"]})
-            secs = time.perf_counter() - t
+            conf = {"configurable": {"toolbox": tb, "thread_id": f"{label}-{j['job_id']}"},
+                    "recursion_limit": cfg()["budgets"]["max_steps"]}
+            out = await graph.ainvoke({"job_id": j["job_id"]}, conf)
+            secs = time.perf_counter() - t                 # latency = analysis + draft, not the simulated approval
+            outcome = await outcome_of(graph, out, conf, j["job_id"]) if outcomes else None
             action = (out.get("decision") or {}).get("action", "error")
             v = out.get("verification") or {}
             price = (out.get("price") or {}).get("amount")
@@ -81,7 +95,7 @@ async def run(jobs, label: str, graph_builder=build_bid_graph) -> list[dict]:
                 "unsupported_after": v.get("unsupported_after"), "critic_ok": (out.get("critique") or {}).get("approved"),
                 "revisions": out.get("revisions", 0), "tokens": out.get("tokens", 0), "seconds": round(secs, 2),
                 "fallbacks": sum(1 for t in out.get("trace", []) if t.get("fallback_used")),
-                "status": out.get("status"),
+                "status": out.get("status"), "outcome": outcome,
             })
             print(f"[{n + 1}/{len(jobs)}] {j['job_id']} {j['style']:9s} label={j['label']:4s} -> {action:5s} "
                   f"fit={rows[-1]['fit']} unsupported={rows[-1]['unsupported_before']} {secs:.1f}s", flush=True)
@@ -109,21 +123,50 @@ def summary(rows):
         "avg_tokens_per_job": round(statistics.mean(r["tokens"] for r in rows), 1),
         "p50_s": round(statistics.median(secs), 2), "p95_s": round(statistics.quantiles(secs, n=20)[18], 2) if len(secs) > 1 else secs[0],
         "llm_fallbacks": sum(r["fallbacks"] for r in rows),
+        **outcome_summary(rows),
     }
+
+
+def outcome_summary(rows):
+    """GigSim simulated outcome (B4): of the proposals submitted, how many got a reply / an interview."""
+    sub = [r for r in rows if r.get("outcome") in ("ignored", "replied", "interview", "hired")]
+    if not sub:
+        return {"proposals_submitted": 0, "reply_rate": None, "interview_rate": None}
+    replied = [r for r in sub if r["outcome"] != "ignored"]
+    return {"proposals_submitted": len(sub), "reply_rate": round(len(replied) / len(sub), 3),
+            "interview_rate": round(sum(r["outcome"] == "interview" for r in sub) / len(sub), 3),
+            "wasted_bids_on_skip_jobs": sum(r["label"] == "skip" for r in sub)}
+
+
+def stratified(jobs: list[dict], per_persona: int) -> list[dict]:
+    """Take `per_persona` jobs per persona, round-robin over job styles, so a small run still has
+    explicit, vague, synonym, multi, off-niche AND scam jobs (the first N would all be easy bids)."""
+    out = []
+    for p in sorted({j["persona"] for j in jobs}):
+        by_style: dict[str, list] = {}
+        for j in (x for x in jobs if x["persona"] == p):
+            by_style.setdefault(j["style"], []).append(j)
+        picked, i = [], 0
+        while len(picked) < per_persona and any(i < len(v) for v in by_style.values()):
+            picked += [v[i] for v in by_style.values() if i < len(v)][: per_persona - len(picked)]
+            i += 1
+        out += picked
+    return out
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--per-persona", type=int, default=0, help="limit jobs per persona (0 = all)")
     ap.add_argument("--name", default="graph")
+    ap.add_argument("--no-outcomes", action="store_true", help="skip the simulated approve + client reaction step")
     a = ap.parse_args()
     jobs = json.loads(DEV.read_text(encoding="utf-8"))
     if a.per_persona:
-        jobs = [j for p in sorted({x["persona"] for x in jobs}) for j in [x for x in jobs if x["persona"] == p][: a.per_persona]]
+        jobs = stratified(jobs, a.per_persona)
     setup(jobs)
     c = cfg()
     tag = f"LLM profile={c['profile']}; RAG_VARIANT={os.getenv('RAG_VARIANT', 'bm25')}"
-    rows = asyncio.run(run(jobs, a.name))
+    rows = asyncio.run(run(jobs, a.name, outcomes=not a.no_outcomes))
     s = summary(rows)
     out = Path("evals/results")
     out.mkdir(parents=True, exist_ok=True)

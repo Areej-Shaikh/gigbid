@@ -1,0 +1,108 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  PYTHON_VERSION: "3.12"
+  NODE_VERSION: "22"
+
+jobs:
+  repo-rules:
+    name: repo rules (secrets, gigsim, prompts)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - name: No .env file committed
+        run: |
+          if git ls-files | grep -E '(^|/)\.env$'; then echo "::error::.env is committed"; exit 1; fi
+      - name: No secrets in the repo (API keys, tokens, private keys)
+        run: |
+          if git grep -nE 'gsk_[A-Za-z0-9]{20,}|sk-[A-Za-z0-9]{32,}|ghp_[A-Za-z0-9]{30,}|-----BEGIN [A-Z ]*PRIVATE KEY-----' -- . ':!*.lock' ':!*package-lock.json'; then
+            echo "::error::possible secret committed"; exit 1; fi
+      - name: Nothing under gigsim/ changed in this pull request
+        if: github.event_name == 'pull_request'
+        run: |
+          if git diff --name-only origin/${{ github.base_ref }}...HEAD -- gigsim/ | grep .; then
+            echo "::error::gigsim/ is the simulator and must not change in a PR"; exit 1; fi
+      - name: Every prompt lives in agent/prompts/ (LLM calls load prompt("<node>"))
+        run: |
+          if grep -rn --include=*.py -E 'SystemMessage\(\s*["'"'"']' agent apps rag; then
+            echo "::error::inline system prompt found; move it to agent/prompts/<node>.md"; exit 1; fi
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "${{ env.PYTHON_VERSION }}" }
+      - run: pip install ruff==0.17.5 && ruff check .
+      - uses: actions/setup-node@v4
+        with: { node-version: "${{ env.NODE_VERSION }}", cache: npm, cache-dependency-path: apps/web/package-lock.json }
+      - run: npm ci && npx tsc -b
+        working-directory: apps/web
+
+  python-tests:
+    name: unit + integration + MCP + contract tests (with Postgres)
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env: { POSTGRES_USER: gigbid, POSTGRES_PASSWORD: gigbid, POSTGRES_DB: gigbid }
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U gigbid" --health-interval 5s --health-timeout 3s --health-retries 10
+    env:
+      LLM_PROFILE: fake
+      TEST_DATABASE_URL: postgresql://gigbid:gigbid@localhost:5432/gigbid
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "${{ env.PYTHON_VERSION }}", cache: pip }
+      - name: Install (requirements.txt is frozen on Windows; drop Windows-only packages)
+        run: grep -viE '^pywin32==' requirements.txt > /tmp/req.txt && pip install -r /tmp/req.txt
+      - run: python -m pytest -q
+
+  e2e:
+    name: Playwright UI tests
+    runs-on: ubuntu-latest
+    env:
+      LLM_PROFILE: fake
+      RAG_VARIANT: bm25
+      APP_USERS: demo:demo123
+      APP_SECRET: ci-only-secret
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "${{ env.PYTHON_VERSION }}", cache: pip }
+      - run: grep -viE '^pywin32==' requirements.txt > /tmp/req.txt && pip install -r /tmp/req.txt
+      - uses: actions/setup-node@v4
+        with: { node-version: "${{ env.NODE_VERSION }}", cache: npm, cache-dependency-path: apps/web/package-lock.json }
+      - name: Build the web app
+        working-directory: apps/web
+        run: npm ci && npm run build && npx playwright install --with-deps chromium
+      - name: Start GigSim and the API
+        run: |
+          python -m uvicorn gigsim.app:app --port 8001 > gigsim.log 2>&1 &
+          python -m apps.api.main > api.log 2>&1 &
+          for i in $(seq 1 60); do curl -sf http://127.0.0.1:8000/api/health && break; sleep 2; done
+      - name: Playwright
+        working-directory: apps/web
+        run: npx playwright test
+      - name: Upload Playwright report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: |
+            apps/web/playwright-report
+            api.log
+            gigsim.log
+          retention-days: 14

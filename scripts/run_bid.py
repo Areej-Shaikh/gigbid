@@ -17,13 +17,12 @@ from dotenv import load_dotenv
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))  # project root, so "agent" imports work
 load_dotenv()
 
-from agent.persistence import backend, open_persistence  # noqa: E402
 from langgraph.types import Command  # noqa: E402
 
 from agent.config import cfg  # noqa: E402
 from agent.graphs.bid_graph import build_bid_graph  # noqa: E402
 from agent.mcp_client import open_toolbox  # noqa: E402
-
+from agent.persistence import backend, open_persistence  # noqa: E402
 
 
 def show(payload: dict) -> None:
@@ -31,7 +30,7 @@ def show(payload: dict) -> None:
     print("\n" + "=" * 70)
     print(f"APPROVAL NEEDED: {j['title']}  ({j['job_id']})")
     print(f"Risk: {payload['risk']['level']} {payload['risk']['flags']}")
-    print(f"Fit matrix: " + ", ".join(f"{r['requirement']}={'OK' if r['covered'] else 'GAP'}" for r in payload["fit_matrix"]))
+    print("Fit matrix: " + ", ".join(f"{r['requirement']}={'OK' if r['covered'] else 'GAP'}" for r in payload["fit_matrix"]))
     print(f"Price: ${p['amount']} ({p['budget_type']}) | " + " | ".join(p["rationale"]))
     print(f"Dry run: {payload['dry_run']['connects_cost']} Connects, balance after {payload['dry_run']['connects_balance_after']}")
     v = payload.get("verification") or {}

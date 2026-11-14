@@ -1,0 +1,5 @@
+{
+  "_comment": "CI fails if a smoke-eval metric crosses these (E2). Set ~3-5 points below the committed baseline so noise does not fail CI but a real regression does. Baseline: evals/results/smoke_results.json",
+  "min": {"bid_f1": 0.88, "scam_recall": 0.95, "scam_precision": 0.9, "price_in_fair_band": 0.9, "reply_rate": 0.5},
+  "max": {"unsupported_claims_per_proposal_after": 0.0, "wasted_bids_on_skip_jobs": 2, "p95_s": 5.0}
+}

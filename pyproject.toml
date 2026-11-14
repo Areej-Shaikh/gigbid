@@ -1,0 +1,45 @@
+[project]
+name = "gigbid"
+version = "0.1.0"
+description = "Multi-agent freelancer copilot: LangGraph agents, MCP servers, advanced RAG, human approval"
+requires-python = ">=3.11"
+# Direct dependencies, pinned. requirements.txt is the full frozen environment (used by Docker and CI).
+dependencies = [
+  "fastapi==0.162.4",
+  "uvicorn==0.54.0",
+  "sse-starlette==3.7.0",
+  "httpx==0.28.1",
+  "pydantic==2.14.3",
+  "python-dotenv==1.2.4",
+  "PyYAML==6.0.3",
+  "mcp[cli]==1.30.0",
+  "langgraph==1.2.20",
+  "langgraph-checkpoint-sqlite==3.1.3",
+  "langgraph-checkpoint-postgres==3.2.1",
+  "psycopg[binary,pool]==3.3.9",
+  "langchain-core==1.7.7",
+  "langchain-openai==1.7.4",
+  "langchain-mcp-adapters==0.3.2",
+  "rank-bm25==0.2.2",
+  "fastembed==0.9.1",
+  "numpy==2.5.4",
+  "pandas==3.1.1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==9.2.0", "anyio==4.16.0", "ruff==0.17.5"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests", "mcp_servers"]
+
+[tool.ruff]
+line-length = 160
+target-version = "py311"
+extend-exclude = ["gigsim", "apps/web", "data", ".venv"]   # gigsim/ = simulator, kept as-is
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]       # pycodestyle, pyflakes (real bugs), warnings, sorted imports
+ignore = [
+  "E702",   # `a; b` on one line: used deliberately for short paired statements
+  "E731",   # small lambdas assigned to names in evaluation code
+]

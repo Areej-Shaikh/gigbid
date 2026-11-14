@@ -3,8 +3,16 @@ import pytest
 from langgraph.store.memory import InMemoryStore
 
 from agent.config import cfg
-from agent.memory.promotion_rules import (apply_style, edit_candidates, job_category, outcome_hint, record_edit,
-                                          record_outcome, style_rules, style_violations)
+from agent.memory.promotion_rules import (
+    apply_style,
+    edit_candidates,
+    job_category,
+    outcome_hint,
+    record_edit,
+    record_outcome,
+    style_rules,
+    style_violations,
+)
 from agent.memory.store import STYLE, STYLE_CANDIDATES, delete_memory, list_memory, ns
 
 pytestmark = pytest.mark.anyio

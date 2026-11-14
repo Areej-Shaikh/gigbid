@@ -1,0 +1,300 @@
+{
+ "prompts": [],
+ "resource_templates": [],
+ "tools": {
+  "create_email_draft": {
+   "annotations": {
+    "destructiveHint": false,
+    "idempotentHint": true,
+    "openWorldHint": false,
+    "readOnlyHint": false
+   },
+   "description": "Save an email DRAFT (never sent). Same idempotency_key returns the same draft.",
+   "input": {
+    "properties": {
+     "body": {
+      "maxLength": 5000,
+      "minLength": 1,
+      "title": "Body",
+      "type": "string"
+     },
+     "idempotency_key": {
+      "maxLength": 100,
+      "minLength": 8,
+      "title": "Idempotency Key",
+      "type": "string"
+     },
+     "subject": {
+      "maxLength": 200,
+      "minLength": 1,
+      "title": "Subject",
+      "type": "string"
+     },
+     "to": {
+      "maxLength": 200,
+      "minLength": 3,
+      "title": "To",
+      "type": "string"
+     }
+    },
+    "required": [
+     "to",
+     "subject",
+     "body",
+     "idempotency_key"
+    ],
+    "title": "create_email_draftArguments",
+    "type": "object"
+   },
+   "output": {
+    "properties": {
+     "body": {
+      "title": "Body",
+      "type": "string"
+     },
+     "draft_id": {
+      "title": "Draft Id",
+      "type": "string"
+     },
+     "status": {
+      "default": "draft",
+      "title": "Status",
+      "type": "string"
+     },
+     "subject": {
+      "title": "Subject",
+      "type": "string"
+     },
+     "to": {
+      "title": "To",
+      "type": "string"
+     }
+    },
+    "required": [
+     "draft_id",
+     "to",
+     "subject",
+     "body"
+    ],
+    "title": "EmailDraft",
+    "type": "object"
+   }
+  },
+  "create_hold": {
+   "annotations": {
+    "destructiveHint": false,
+    "idempotentHint": true,
+    "openWorldHint": false,
+    "readOnlyHint": false
+   },
+   "description": "Put a TENTATIVE interview hold on the calendar. Same idempotency_key returns the same hold.",
+   "input": {
+    "properties": {
+     "duration_min": {
+      "default": 30,
+      "maximum": 120,
+      "minimum": 15,
+      "title": "Duration Min",
+      "type": "integer"
+     },
+     "idempotency_key": {
+      "maxLength": 100,
+      "minLength": 8,
+      "title": "Idempotency Key",
+      "type": "string"
+     },
+     "start": {
+      "description": "ISO start time from free_slots",
+      "title": "Start",
+      "type": "string"
+     },
+     "title": {
+      "maxLength": 200,
+      "minLength": 3,
+      "title": "Title",
+      "type": "string"
+     }
+    },
+    "required": [
+     "start",
+     "title",
+     "idempotency_key"
+    ],
+    "title": "create_holdArguments",
+    "type": "object"
+   },
+   "output": {
+    "properties": {
+     "end": {
+      "title": "End",
+      "type": "string"
+     },
+     "hold_id": {
+      "title": "Hold Id",
+      "type": "string"
+     },
+     "start": {
+      "title": "Start",
+      "type": "string"
+     },
+     "status": {
+      "default": "tentative",
+      "title": "Status",
+      "type": "string"
+     },
+     "title": {
+      "title": "Title",
+      "type": "string"
+     }
+    },
+    "required": [
+     "hold_id",
+     "start",
+     "end",
+     "title"
+    ],
+    "title": "Hold",
+    "type": "object"
+   }
+  },
+  "free_slots": {
+   "annotations": {
+    "destructiveHint": false,
+    "idempotentHint": true,
+    "openWorldHint": false,
+    "readOnlyHint": true
+   },
+   "description": "Free calendar slots on weekdays within working hours, skipping existing holds.",
+   "input": {
+    "properties": {
+     "days_ahead": {
+      "default": 5,
+      "description": "How many days to look ahead, starting tomorrow",
+      "maximum": 14,
+      "minimum": 1,
+      "title": "Days Ahead",
+      "type": "integer"
+     },
+     "duration_min": {
+      "default": 30,
+      "maximum": 120,
+      "minimum": 15,
+      "title": "Duration Min",
+      "type": "integer"
+     },
+     "limit": {
+      "default": 3,
+      "maximum": 10,
+      "minimum": 1,
+      "title": "Limit",
+      "type": "integer"
+     }
+    },
+    "title": "free_slotsArguments",
+    "type": "object"
+   },
+   "output": {
+    "$defs": {
+     "Slot": {
+      "properties": {
+       "end": {
+        "title": "End",
+        "type": "string"
+       },
+       "start": {
+        "description": "ISO 8601 local time, e.g. 2026-11-17T10:00",
+        "title": "Start",
+        "type": "string"
+       }
+      },
+      "required": [
+       "start",
+       "end"
+      ],
+      "title": "Slot",
+      "type": "object"
+     }
+    },
+    "properties": {
+     "slots": {
+      "items": {
+       "$ref": "#/$defs/Slot"
+      },
+      "title": "Slots",
+      "type": "array"
+     }
+    },
+    "required": [
+     "slots"
+    ],
+    "title": "SlotList",
+    "type": "object"
+   }
+  },
+  "list_holds": {
+   "annotations": {
+    "destructiveHint": false,
+    "idempotentHint": true,
+    "openWorldHint": false,
+    "readOnlyHint": true
+   },
+   "description": "All tentative holds on the calendar.",
+   "input": {
+    "properties": {},
+    "title": "list_holdsArguments",
+    "type": "object"
+   },
+   "output": {
+    "$defs": {
+     "Hold": {
+      "properties": {
+       "end": {
+        "title": "End",
+        "type": "string"
+       },
+       "hold_id": {
+        "title": "Hold Id",
+        "type": "string"
+       },
+       "start": {
+        "title": "Start",
+        "type": "string"
+       },
+       "status": {
+        "default": "tentative",
+        "title": "Status",
+        "type": "string"
+       },
+       "title": {
+        "title": "Title",
+        "type": "string"
+       }
+      },
+      "required": [
+       "hold_id",
+       "start",
+       "end",
+       "title"
+      ],
+      "title": "Hold",
+      "type": "object"
+     }
+    },
+    "properties": {
+     "holds": {
+      "items": {
+       "$ref": "#/$defs/Hold"
+      },
+      "title": "Holds",
+      "type": "array"
+     }
+    },
+    "required": [
+     "holds"
+    ],
+    "title": "HoldList",
+    "type": "object"
+   }
+  }
+ }
+}

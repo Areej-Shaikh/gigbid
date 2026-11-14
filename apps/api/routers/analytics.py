@@ -4,7 +4,6 @@ from collections import Counter
 from fastapi import APIRouter, Request
 
 from agent.config import cfg
-from agent.mcp_client import ToolCallError
 from apps.api.auth.security import User
 from apps.api.schemas.models import Analytics, Message, MessageList, Settings
 

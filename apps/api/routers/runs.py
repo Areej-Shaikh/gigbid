@@ -2,8 +2,7 @@ from fastapi import APIRouter, HTTPException, Request
 from sse_starlette.sse import EventSourceResponse
 
 from apps.api.auth.security import User
-from apps.api.schemas.models import (Checkpoint, CheckpointHistory, ReplayIn, ResumeIn, RunList, RunState,
-                                     RunSummary, Started)
+from apps.api.schemas.models import Checkpoint, CheckpointHistory, ReplayIn, ResumeIn, RunList, RunState, RunSummary, Started
 
 router = APIRouter(prefix="/runs", tags=["runs"])
 

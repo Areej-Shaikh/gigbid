@@ -58,7 +58,7 @@ async def verifier(state, config=None):
         res, info = await structured("verifier", _LLMChecks, prompt("verifier"), user, lambda: _LLMChecks(checks=lexical))
         if len(res.checks) == len(lexical):
             # never let the LLM "rescue" a claim with no / unknown citation
-            checks = [l if l.note.startswith(("no citation", "unknown", "number")) else r for l, r in zip(lexical, res.checks)]
+            checks = [lx if lx.note.startswith(("no citation", "unknown", "number")) else r for lx, r in zip(lexical, res.checks)]
     bad = {c.claim for c in checks if c.status == "unsupported"}
     cleaned = {"cover_letter": _clean(draft["cover_letter"], bad),
                "screening_answers": [_clean(a, bad) or "I would rather discuss this on a short call." for a in draft.get("screening_answers", [])]}

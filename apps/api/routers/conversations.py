@@ -3,8 +3,7 @@ from fastapi import APIRouter, HTTPException, Request
 from sse_starlette.sse import EventSourceResponse
 
 from apps.api.auth.security import User
-from apps.api.schemas.models import (ConversationList, ConversationState, ConversationSummary, Message,
-                                     MessageResumeIn, Started)
+from apps.api.schemas.models import ConversationList, ConversationState, ConversationSummary, Message, MessageResumeIn, Started
 
 router = APIRouter(prefix="/conversations", tags=["conversations"])
 KEEP = ("client_id", "job_id", "job", "incoming", "intent", "slots", "draft", "compliance", "preview",
