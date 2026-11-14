@@ -15,7 +15,7 @@ from mcp.types import ToolAnnotations
 from pydantic import BaseModel, Field
 
 from agent.tracing import setup_tracing, traced_tool
-from rag.ingest.portfolio_loader import load_portfolio, load_profile
+from rag.ingest.portfolio_loader import load_portfolio, load_profile, portfolio_version
 from rag.retriever import build_retriever
 
 mcp = FastMCP("gigbid-portfolio")
@@ -26,11 +26,12 @@ _state: dict = {}
 
 
 def store() -> dict:
-    """Load the persona once (lazy), so tests can switch persona via env."""
+    """Load the persona lazily; reload when the persona changes or any portfolio file is added or edited."""
     persona = os.getenv("PORTFOLIO_PERSONA", "ai_ml_engineer")
-    if _state.get("persona") != persona:
+    version = portfolio_version(persona)                 # re-index when the user adds or edits work (B1)
+    if _state.get("persona") != persona or _state.get("version") != version:
         items = load_portfolio(persona)
-        _state.update(persona=persona, items=items, by_id={i["evidence_id"]: i for i in items},
+        _state.update(persona=persona, version=version, items=items, by_id={i["evidence_id"]: i for i in items},
                       retriever=build_retriever(items), profile=load_profile(persona))
     return _state
 

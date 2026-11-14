@@ -52,9 +52,15 @@ official Google APIs changes only this server; agents see the same MCP tools. Au
 Writes are split from reads: `liaison` (read + calendar slots) never sends; only `liaison_send` and `submit`
 can write, and the graph reaches them only after `interrupt()` returns "approve".
 
-## Third-party servers
 
-| Server | Why we trust it |
-|---|---|
-| Upwork official MCP (`https://mcp.upwork.com/mcp`) | _TODO: one line_ |
-| GitHub MCP | _TODO: one line_ |
+## Third-party servers (not written by us)
+
+| Server | Used for | Read / Write | Auth | Trust rationale |
+|---|---|---|---|---|
+| **Upwork MCP** (`https://mcp.upwork.com/mcp`) | Live mode behind the marketplace port (`adapters/upwork_live.py`) | Read; writes create **drafts only** | OAuth 2.1 (PKCE, dynamic client registration) via the MCP SDK; tokens encrypted per user (`apps/api/auth/token_store.py`) | Official server run by the platform itself, the only sanctioned way to automate Upwork; every write is a draft the user must confirm on Upwork, after approving it in GigBid |
+| **GitHub MCP** (`ghcr.io/github/github-mcp-server`, stdio) | Repo ingestion into the portfolio (`rag/ingest/github_loader.py`) | Read only (`GITHUB_READ_ONLY=1`) | Fine-grained personal access token, read-only Contents | Official GitHub server, pinned container, read-only mode and a read-only token, so a compromised prompt cannot push code or open issues |
+
+Upwork tool names are mapped in `config.yaml → upwork_live.tools` from the real server's tool list
+(`python scripts/connect_upwork.py --user <you> --list-tools`); they are not guessed. Until mapped, live mode
+fails with a clear error and the UI shows degraded mode. The adapter is tested against a fake server with
+Upwork-style tool shapes (`tests/unit/test_upwork_live.py`), because the real server needs an approved account.

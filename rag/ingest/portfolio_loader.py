@@ -1,7 +1,9 @@
 """Load one persona's portfolio into a flat list of evidence items (with metadata on every item).
 
 Types: cv, case_study, repo, review, proposal.
-TODO (Part B1): PDF CVs, GitHub repos via the GitHub MCP server, chunking, incremental re-index.
+B1: a PDF CV (cv.pdf) is split into one item per section (rag/ingest/cv_loader.py); repos can be pulled from
+GitHub through the official GitHub MCP server (rag/ingest/github_loader.py) into repos/<name>/; the Portfolio
+server re-indexes when any file in the folder changes (portfolio_version()).
 """
 import json
 import re
@@ -37,8 +39,13 @@ def load_portfolio(persona_id: str, root: Path = PERSONAS_DIR) -> list[dict[str,
         kw["persona"] = persona_id
         items.append(kw)
 
-    cv = (base / "cv.md").read_text(encoding="utf-8")
-    add(evidence_id=f"{persona_id}-cv", type="cv", title="CV", text=cv, source=str(base / "cv.md"))
+    if (base / "cv.pdf").exists():                       # uploaded PDF CV: one evidence item per section
+        from rag.ingest.cv_loader import cv_items
+        for it in cv_items(base / "cv.pdf", persona_id):
+            add(**{k: v for k, v in it.items() if k not in ("skills", "date", "client_industry", "outcome", "project")})
+    elif (base / "cv.md").exists():
+        cv = (base / "cv.md").read_text(encoding="utf-8")
+        add(evidence_id=f"{persona_id}-cv", type="cv", title="CV", text=cv, source=str(base / "cv.md"))
 
     for f in sorted((base / "case_studies").glob("*.md")):
         meta, body = _front_matter(f.read_text(encoding="utf-8"))
@@ -61,6 +68,13 @@ def load_portfolio(persona_id: str, root: Path = PERSONAS_DIR) -> list[dict[str,
             skills=p["job_skills"], date=p["date"], client_industry=p["client_industry"], outcome=p["outcome"],
             cited=p.get("cited_evidence", []), source=str(base / "proposals.json"))
     return items
+
+
+def portfolio_version(persona_id: str, root: Path = PERSONAS_DIR) -> tuple[int, float]:
+    """(file count, newest modification time) of the persona folder: changes when the user adds or edits work,
+    so the Portfolio server knows to re-index (incremental re-indexing for a small corpus = rebuild on change)."""
+    files = [f for f in (root / persona_id).rglob("*") if f.is_file()]
+    return len(files), max((f.stat().st_mtime for f in files), default=0.0)
 
 
 def load_profile(persona_id: str, root: Path = PERSONAS_DIR) -> dict:
