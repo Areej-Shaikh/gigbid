@@ -35,13 +35,18 @@ class ToolBox:
             raise PermissionError(f"agent '{agent}' may not call '{tool}' (allowed: {allowed})")
         if tool not in self.server_of:
             raise ToolCallError(f"tool '{tool}' not available (is its MCP server running?)")
-        try:
-            res = await asyncio.wait_for(self.sessions[self.server_of[tool]].call_tool(tool, args), self.timeout_s)
-        except asyncio.TimeoutError:
-            raise ToolCallError(f"marketplace_unavailable: {tool} timed out after {self.timeout_s}s")
-        if res.isError:
-            raise ToolCallError(res.content[0].text if res.content else f"{tool} failed")
-        return res.structuredContent or {}
+        for attempt in range(4):
+            try:
+                res = await asyncio.wait_for(self.sessions[self.server_of[tool]].call_tool(tool, args), self.timeout_s)
+            except asyncio.TimeoutError:
+                raise ToolCallError(f"marketplace_unavailable: {tool} timed out after {self.timeout_s}s")
+            if not res.isError:
+                return res.structuredContent or {}
+            text = res.content[0].text if res.content else f"{tool} failed"
+            if "rate_limited" not in text or attempt == 3:
+                raise ToolCallError(text)
+            await asyncio.sleep(3 * 2 ** attempt)   # polite: back off and retry when rate-limited
+        raise ToolCallError(f"{tool} failed")
 
 
 @asynccontextmanager

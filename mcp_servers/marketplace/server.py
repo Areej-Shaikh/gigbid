@@ -31,7 +31,7 @@ current_user = contextvars.ContextVar("current_user", default="local")
 current_trace = contextvars.ContextVar("current_trace", default=None)
 
 AUDIT_LOG = Path(os.getenv("AUDIT_LOG", "logs/audit.jsonl"))
-RATE_LIMIT_PER_MIN = int(os.getenv("MARKETPLACE_RATE_LIMIT", "20"))  # stays under GigSim's 30/min
+RATE_LIMIT_PER_MIN = int(os.getenv("MARKETPLACE_RATE_LIMIT", "50"))  # stays under GigSim's 60/min
 _calls: dict[str, list[float]] = {}
 _drafts: dict[str, dict] = {}            # draft_id -> draft (TODO: move to Postgres)
 _draft_keys: dict[str, str] = {}         # idempotency key -> draft_id

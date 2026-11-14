@@ -104,6 +104,7 @@ tool_allowlist:
   preview: [create_proposal_draft, submit_proposal]   # dry_run only, enforced in code
   submit: [create_proposal_draft, submit_proposal]
   scout: [search_jobs]
+  api: [search_jobs, get_job, list_messages, get_connects_balance, list_skills]   # read-only, for the web UI
 
 mcp_servers:
   marketplace: {transport: stdio, command: python, args: ["-m", "mcp_servers.marketplace.server"], env: {FASTMCP_LOG_LEVEL: WARNING}}

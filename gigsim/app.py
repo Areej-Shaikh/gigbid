@@ -35,8 +35,8 @@ state = {
 JOBS = {j["job_id"]: j for j in SEED["jobs"]}
 CLIENTS = {c["client_id"]: c for c in SEED["clients"]}
 
-# ---- simple rate limit (30 requests per minute) + occasional errors ----
-RATE_LIMIT = 30
+# ---- simple rate limit (60 requests per minute) + occasional errors ----
+RATE_LIMIT = 60
 calls: list[float] = []
 ERROR_RATE = 0.05  # 5% random 503s, so you test retries
 

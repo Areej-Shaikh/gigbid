@@ -13,3 +13,6 @@ __pycache__/
 logs/
 data/processed/
 node_modules/
+apps/web/dist/
+apps/web/test-results/
+apps/web/playwright-report/
