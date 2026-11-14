@@ -161,6 +161,151 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/conversations": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** List Conversations */
+        get: operations["list_conversations_api_conversations_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/conversations/{client_id}/run": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Run Liaison
+         * @description Ask the Client Liaison to read new messages and draft a reply (paused for approval).
+         */
+        post: operations["run_liaison_api_conversations__client_id__run_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/conversations/{client_id}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Get Conversation */
+        get: operations["get_conversation_api_conversations__client_id__get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/conversations/{client_id}/resume": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** Resume Liaison */
+        post: operations["resume_liaison_api_conversations__client_id__resume_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/conversations/{client_id}/events": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Conversation Events
+         * @description Server-Sent Events: start, node, interrupt, error, done.
+         */
+        get: operations["conversation_events_api_conversations__client_id__events_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/memory": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** View Memory */
+        get: operations["view_memory_api_memory_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/memory/{kind}/{key}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post?: never;
+        /** Forget */
+        delete: operations["forget_api_memory__kind___key__delete"];
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/memory/sync-outcomes": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Sync
+         * @description Read proposal outcomes from the marketplace and apply the outcome promotion rule.
+         */
+        post: operations["sync_api_memory_sync_outcomes_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/health": {
         parameters: {
             query?: never;
@@ -208,6 +353,51 @@ export interface components {
             top_reject_reasons: string[];
             /** Top Skip Reasons */
             top_skip_reasons: string[];
+        };
+        /** ConversationList */
+        ConversationList: {
+            /** Conversations */
+            conversations: components["schemas"]["ConversationSummary"][];
+        };
+        /** ConversationState */
+        ConversationState: {
+            /** Client Id */
+            client_id: string;
+            /** Status */
+            status: string;
+            /** Running */
+            running: boolean;
+            /** Next */
+            next: string[];
+            /** Interrupt */
+            interrupt?: {
+                [key: string]: unknown;
+            } | null;
+            /** Messages */
+            messages: components["schemas"]["Message"][];
+            /** Values */
+            values: {
+                [key: string]: unknown;
+            };
+        };
+        /** ConversationSummary */
+        ConversationSummary: {
+            /** Client Id */
+            client_id: string;
+            /** Job Id */
+            job_id?: string | null;
+            /** Last Text */
+            last_text: string;
+            /** Last Sender */
+            last_sender: string;
+            /** Last At */
+            last_at: string;
+            /** Unanswered */
+            unanswered: number;
+            /** Status */
+            status?: string | null;
+            /** Intent */
+            intent?: string | null;
         };
         /** HTTPValidationError */
         HTTPValidationError: {
@@ -282,6 +472,52 @@ export interface components {
             /** Username */
             username: string;
         };
+        /** MemoryItem */
+        MemoryItem: {
+            /** Key */
+            key: string;
+            /** Rule */
+            rule?: string | null;
+            /** Kind */
+            kind?: string | null;
+            /**
+             * Jobs
+             * @default []
+             */
+            jobs: string[];
+            /** Count */
+            count?: number | null;
+            /** Promoted By */
+            promoted_by?: string | null;
+            /** Category */
+            category?: string | null;
+            /** Samples */
+            samples?: number | null;
+            /** Positive */
+            positive?: number | null;
+            /** Reply Rate */
+            reply_rate?: number | null;
+            /**
+             * Winning Evidence
+             * @default []
+             */
+            winning_evidence: string[];
+            /** Updated At */
+            updated_at: string;
+        };
+        /** MemoryView */
+        MemoryView: {
+            /** Style */
+            style: components["schemas"]["MemoryItem"][];
+            /** Outcome */
+            outcome: components["schemas"]["MemoryItem"][];
+            /** Style Candidates */
+            style_candidates: components["schemas"]["MemoryItem"][];
+            /** Promotion Rules */
+            promotion_rules: {
+                [key: string]: unknown;
+            };
+        };
         /** Message */
         Message: {
             /** Message Id */
@@ -301,6 +537,20 @@ export interface components {
         MessageList: {
             /** Messages */
             messages: components["schemas"]["Message"][];
+        };
+        /** MessageResumeIn */
+        MessageResumeIn: {
+            /**
+             * Action
+             * @enum {string}
+             */
+            action: "approve" | "edit" | "reject";
+            /** Text */
+            text?: string | null;
+            /** Slot */
+            slot?: string | null;
+            /** Reason */
+            reason?: string | null;
         };
         /** ResumeIn */
         ResumeIn: {
@@ -412,6 +662,15 @@ export interface components {
             started: boolean;
             /** Message */
             message: string;
+        };
+        /** SyncResult */
+        SyncResult: {
+            /** Proposals */
+            proposals: number;
+            /** Outcomes Recorded */
+            outcomes_recorded: number;
+            /** Categories Promoted */
+            categories_promoted: string[];
         };
         /** ValidationError */
         ValidationError: {
@@ -732,6 +991,253 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["Settings"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    list_conversations_api_conversations_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ConversationList"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    run_liaison_api_conversations__client_id__run_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                client_id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Started"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    get_conversation_api_conversations__client_id__get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                client_id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ConversationState"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    resume_liaison_api_conversations__client_id__resume_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                client_id: string;
+            };
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["MessageResumeIn"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Started"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    conversation_events_api_conversations__client_id__events_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                client_id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": unknown;
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    view_memory_api_memory_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["MemoryView"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    forget_api_memory__kind___key__delete: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                kind: string;
+                key: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["MemoryView"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    sync_api_memory_sync_outcomes_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["SyncResult"];
                 };
             };
             /** @description Validation Error */

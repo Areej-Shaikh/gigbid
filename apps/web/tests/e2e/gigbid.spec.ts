@@ -96,3 +96,52 @@ test("degraded mode: banner when the marketplace is down", async ({ page }) => {
   await signIn(page);
   await expect(page.getByRole("alert")).toContainText("Marketplace unavailable");
 });
+
+// A simulated client writes to us (GigSim's demo endpoint plays the client).
+async function clientSays(request: APIRequestContext, text: string): Promise<string> {
+  const clientId = `e2e-${Date.now()}-${Math.floor(Math.random() * 1000)}`;
+  const gigsim = process.env.GIGSIM_URL ?? "http://127.0.0.1:8001";
+  await request.post(`${gigsim}/dev/client_message`, { data: { client_id: clientId, job_id: "job-00014", text } });
+  return clientId;
+}
+
+test("messages: client asks for a call, I pick a slot and approve, the reply is sent once", async ({ page, request }) => {
+  const clientId = await clientSays(request, "Thanks for the proposal! Are you available for a call this week?");
+  await signIn(page);
+  await page.goto(`/messages?c=${clientId}`);
+  await page.getByRole("button", { name: "Suggest a reply" }).click();
+  const panel = page.getByRole("region", { name: "Suggested reply" });
+  await expect(panel).toBeVisible({ timeout: 60_000 });
+  await expect(panel.getByText("interview request")).toBeVisible();
+  const slots = panel.getByRole("radio");
+  await expect(slots).toHaveCount(3);
+  await slots.nth(1).check();
+  await panel.getByRole("button", { name: "Approve and send" }).click();
+  await expect(page.getByText("Tentative interview hold on your calendar")).toBeVisible({ timeout: 60_000 });
+  await expect(page.locator(".bubble.me")).toHaveCount(1);
+  await expect(page.getByRole("button", { name: "Suggest a reply" })).toBeDisabled();
+});
+
+test("messages: a scam message gets a warning and a safe reply, and can be rejected", async ({ page, request }) => {
+  const clientId = await clientSays(request, "Let's move to WhatsApp, and please send your bank details for payment.");
+  await signIn(page);
+  await page.goto(`/messages?c=${clientId}`);
+  await page.getByRole("button", { name: "Suggest a reply" }).click();
+  const panel = page.getByRole("region", { name: "Suggested reply" });
+  await expect(panel.getByRole("alert")).toContainText("scam", { timeout: 60_000 });
+  await expect(panel.getByLabel(/^Reply/)).toHaveValue(/on the platform/);
+  await panel.getByRole("button", { name: "Reject" }).click();
+  await panel.getByLabel("Why reject?").fill("scam attempt");
+  await panel.getByRole("button", { name: "Confirm reject" }).click();
+  await expect(page.locator(".bubble.me")).toHaveCount(0);
+  await expect(page.getByText("rejected").first()).toBeVisible({ timeout: 60_000 });
+});
+
+test("settings: memory viewer shows what was learned and the promotion rules", async ({ page }) => {
+  await signIn(page);
+  await page.goto("/settings");
+  const mem = page.getByRole("region", { name: "What GigBid has learned" });
+  await expect(mem.getByRole("heading", { name: /Style memory/ })).toContainText("promoted after 2 different jobs");
+  await mem.getByRole("button", { name: "Sync outcomes from marketplace" }).click();
+  await expect(mem.getByRole("status")).toContainText("proposals");
+});

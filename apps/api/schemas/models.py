@@ -120,3 +120,65 @@ class Settings(BaseModel):
     user: dict[str, Any]
     decision: dict[str, Any]
     budgets: dict[str, Any]
+
+
+# ---------------- conversations (Client Liaison) ----------------
+class ConversationSummary(BaseModel):
+    client_id: str
+    job_id: str | None = None
+    last_text: str
+    last_sender: str
+    last_at: str
+    unanswered: int                       # client messages after our last reply
+    status: str | None = None             # conversation graph status (awaiting_approval, sent, ...)
+    intent: str | None = None
+
+
+class ConversationList(BaseModel):
+    conversations: list[ConversationSummary]
+
+
+class ConversationState(BaseModel):
+    client_id: str
+    status: str
+    running: bool
+    next: list[str]
+    interrupt: dict[str, Any] | None = None
+    messages: list[Message]
+    values: dict[str, Any]
+
+
+class MessageResumeIn(BaseModel):
+    action: Literal["approve", "edit", "reject"]
+    text: str | None = None
+    slot: str | None = None
+    reason: str | None = None
+
+
+# ---------------- long-term memory ----------------
+class MemoryItem(BaseModel):
+    key: str
+    rule: str | None = None               # style memory
+    kind: str | None = None
+    jobs: list[str] = []
+    count: int | None = None
+    promoted_by: str | None = None
+    category: str | None = None           # outcome memory
+    samples: int | None = None
+    positive: int | None = None
+    reply_rate: float | None = None
+    winning_evidence: list[str] = []
+    updated_at: str
+
+
+class MemoryView(BaseModel):
+    style: list[MemoryItem]
+    outcome: list[MemoryItem]
+    style_candidates: list[MemoryItem]
+    promotion_rules: dict[str, Any]       # the thresholds, so the user can see WHY something was learned
+
+
+class SyncResult(BaseModel):
+    proposals: int
+    outcomes_recorded: int
+    categories_promoted: list[str]

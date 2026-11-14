@@ -18,7 +18,7 @@ def list_runs(request: Request, user: str = User):
 
 @router.post("/{job_id}", response_model=Started)
 async def start_run(job_id: str, request: Request, user: str = User):
-    started = request.app.state.runs.start(job_id)
+    started = request.app.state.runs.start(job_id, user=user)
     return Started(job_id=job_id, started=started, message="started" if started else "already running")
 
 
@@ -39,7 +39,7 @@ async def resume_run(job_id: str, body: ResumeIn, request: Request, user: str = 
     s = await m.graph.aget_state(m.conf(job_id))
     if not (s.tasks and s.tasks[0].interrupts):
         raise HTTPException(409, "this run is not waiting for approval")
-    started = m.start(job_id, resume=body.model_dump(exclude_none=True))
+    started = m.start(job_id, resume=body.model_dump(exclude_none=True), user=user)
     return Started(job_id=job_id, started=started, message=body.action)
 
 

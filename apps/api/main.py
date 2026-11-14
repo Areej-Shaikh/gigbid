@@ -23,28 +23,34 @@ from langgraph.checkpoint.sqlite.aio import AsyncSqliteSaver  # noqa: E402
 
 from agent.config import cfg  # noqa: E402
 from agent.graphs.bid_graph import build_bid_graph  # noqa: E402
+from agent.graphs.conversation_graph import build_conversation_graph  # noqa: E402
 from agent.mcp_client import open_toolbox  # noqa: E402
-from apps.api.routers import analytics, auth, jobs, runs  # noqa: E402
+from agent.memory.store import open_store  # noqa: E402
+from apps.api.routers import analytics, auth, conversations, jobs, memory, runs  # noqa: E402
 from apps.api.schemas.models import Health  # noqa: E402
-from apps.api.streaming import RunIndex, RunManager  # noqa: E402
+from apps.api.streaming import ConversationManager, RunIndex, RunManager  # noqa: E402
 
 DB = Path("data/processed/checkpoints.sqlite")
+MEMORY_DB = Path("data/processed/memory.sqlite")          # long-term memory (style + outcome), kept apart
 WEB_DIST = Path("apps/web/dist")
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     DB.parent.mkdir(parents=True, exist_ok=True)
-    async with AsyncSqliteSaver.from_conn_string(str(DB)) as saver, open_toolbox() as tb:
-        app.state.toolbox = tb
-        app.state.runs = RunManager(build_bid_graph(saver), tb, RunIndex())
+    async with AsyncSqliteSaver.from_conn_string(str(DB)) as saver, open_store(MEMORY_DB) as store, \
+            open_toolbox() as tb:
+        app.state.toolbox, app.state.store = tb, store
+        app.state.runs = RunManager(build_bid_graph(saver, store), tb, RunIndex())
+        app.state.convs = ConversationManager(build_conversation_graph(saver, store), tb,
+                                              RunIndex(Path("data/processed/conversations.json")))
         yield
 
 
 app = FastAPI(title="GigBid API", version="0.1.0", lifespan=lifespan)
 app.add_middleware(CORSMiddleware, allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
                    allow_methods=["*"], allow_headers=["*"])
-for r in (auth.router, jobs.router, runs.router, analytics.router):
+for r in (auth.router, jobs.router, runs.router, analytics.router, conversations.router, memory.router):
     app.include_router(r, prefix="/api")
 
 

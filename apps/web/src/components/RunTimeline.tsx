@@ -7,6 +7,10 @@ const NAMES: Record<string, string> = {
   intake: "Load job + client", analyst: "Job Analyst", risk: "Risk Assessor", fit: "Fit Matcher", decide: "Bid / skip decision",
   pricing: "Pricing Strategist", writer: "Proposal Writer", verifier: "Claim verification", critic: "Critic",
   compliance: "Compliance Guard", preview: "Dry-run preview", human_approval: "Your approval", submit: "Submit to marketplace",
+  // conversation graph (Client Liaison)
+  read_messages: "Read client messages", classify: "Classify intent", slots: "Find calendar slots",
+  draft_reply: "Client Liaison draft", compliance_msg: "Compliance Guard", preview_msg: "Dry-run preview",
+  approve_msg: "Your approval", send_msg: "Send to client",
 };
 
 function detail(t?: TraceItem): string {
@@ -17,7 +21,9 @@ function detail(t?: TraceItem): string {
 }
 
 // Live node-by-node progress from the API's Server-Sent Events stream.
-export function RunTimeline({ jobId, active, onDone }: { jobId: string; active: number; onDone: () => void }) {
+export function RunTimeline({ jobId, active, onDone, eventsPath }: {
+  jobId: string; active: number; onDone: () => void; eventsPath?: string;
+}) {
   const [events, setEvents] = useState<Ev[]>([]);
   const [live, setLive] = useState(false);
   const done = useRef(onDone);
@@ -27,13 +33,14 @@ export function RunTimeline({ jobId, active, onDone }: { jobId: string; active: 
     if (!active) return;
     setEvents([]);
     setLive(true);
-    const es = new EventSource(`/api/runs/${jobId}/events?token=${encodeURIComponent(auth.get() ?? "")}`);
+    const path = eventsPath ?? `/api/runs/${jobId}/events`;
+    const es = new EventSource(`${path}?token=${encodeURIComponent(auth.get() ?? "")}`);
     const push = (event: string) => (m: MessageEvent) => setEvents((e) => [...e, { event, data: JSON.parse(m.data) }]);
     ["start", "node", "interrupt", "error"].forEach((n) => es.addEventListener(n, push(n)));
     es.addEventListener("done", (m) => { push("done")(m as MessageEvent); setLive(false); es.close(); done.current(); });
     es.onerror = () => { setLive(false); es.close(); done.current(); };
     return () => es.close();
-  }, [jobId, active]);
+  }, [jobId, active, eventsPath]);
 
   if (!active && !events.length) return null;
   return (
