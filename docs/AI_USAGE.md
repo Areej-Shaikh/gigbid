@@ -6,13 +6,13 @@
 
 | Tool | Used for |
 |---|---|
-| Claude (claude.ai chat) ✎ | Planning: breaking the assignment into steps, step-by-step instructions for each milestone |
+| Claude (claude.ai chat) | Planning: breaking the assignment into steps, step-by-step instructions for each milestone |
 | Claude Code (VS Code extension) | Writing and editing code, tests, Docker/CI/Render config, running evaluations and tests, debugging, drafting documentation |
 | GigBid's own LLMs (Groq open-weight models) | Inside the product: job analysis, proposal writing, claim verification, critique, client replies |
 
 ## How the work was split
 
-**I decided and controlled:** ✎
+**I decided and controlled:**
 - The architecture and scope: which assignment items to build, in which order, and which to cut.
 - Every commit and push. The assistant was told not to commit; when it once committed on its own, I had it undone.
 - Running the system, checking results and screenshots, and the deployment on Render (account, secrets, logins).
@@ -43,7 +43,7 @@
 | Presented an F1 from a 30-job LLM sample that contained only bid-labelled jobs | Checked the sample composition; the README now reports only recall for that run |
 | Committed code without being asked | I asked for the commit to be reverted; no further auto-commits |
 
-## What I learned ✎
+## What I learned
 
 - AI-generated code needs measurable checks: the most convincing failures (perfect-looking results) came from silent fallbacks.
 - Better component metrics (retrieval recall) do not guarantee better system outcomes (bid decisions).
