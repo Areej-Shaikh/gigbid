@@ -20,6 +20,7 @@ from agent.memory.promotion_rules import apply_style, record_edit, style_rules
 from agent.memory.store import current_store, user_of
 from agent.nodes.common import budget_exceeded, prompt, sentences, thread_id, toolbox, trace
 from agent.nodes.compliance import check
+from agent.security import on
 
 SAFE_SCAM_REPLY = ("Thanks for reaching out. To keep things safe for both of us, I keep all communication, "
                    "files and payments here on the platform, as its terms require. I'm happy to continue the "
@@ -27,6 +28,8 @@ SAFE_SCAM_REPLY = ("Thanks for reaching out. To keep things safe for both of us,
 
 
 def fence_message(text: str) -> str:
+    if not on("fence_untrusted"):                 # evaluation only: defence layer switched off
+        return text
     text = text.replace("<client_message>", "").replace("</client_message>", "")
     return f"<client_message>\n{text}\n</client_message>"
 
@@ -65,6 +68,8 @@ def route_after_read(state) -> str:
 # ---------------------------------------------------------------- classify
 def _rule_intent(text: str) -> MessageIntent:
     for r in cfg()["liaison"]["intents"]:
+        if r.get("defence") and not on(r["defence"]):
+            continue
         if re.search(r["pattern"], text):
             return MessageIntent(intent=r["intent"], summary=text[:120], reasons=[f"rule: {r['intent']}"])
     return MessageIntent(intent="other", summary=text[:120], reasons=["no rule matched"])
@@ -133,7 +138,7 @@ async def draft_reply(state, config: RunnableConfig):
         return {"status": "needs_attention", "errors": ["token budget exceeded"], "trace": [trace("draft_reply", stopped="budget")]}
     store, user = current_store(), user_of(config)
     rules = await style_rules(store, user)
-    if state["intent"]["intent"] == "scam_signal":       # fixed safe reply, no LLM to manipulate
+    if state["intent"]["intent"] == "scam_signal" and on("scam_template"):   # fixed safe reply, no LLM to manipulate
         return {"draft": {"text": SAFE_SCAM_REPLY},
                 "trace": [trace("draft_reply", intent="scam_signal", model="template")]}
     floor, unit = _floor(state.get("job") or {})
@@ -156,6 +161,9 @@ async def draft_reply(state, config: RunnableConfig):
 # ---------------------------------------------------------------- check + preview
 async def compliance_msg(state, config=None):
     c = cfg()["compliance"]
+    if not on("output_guard"):                    # evaluation only: defence layer switched off
+        return {"compliance": {"passed": True, "blocked": False, "violations": []},
+                "trace": [trace("compliance_msg", skipped="output_guard off")]}
     text, violations = check(state["draft"]["text"], c["rules"])
     floor, _ = _floor(state.get("job") or {})
     kept = []

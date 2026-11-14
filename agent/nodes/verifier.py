@@ -7,6 +7,7 @@ from pydantic import BaseModel
 from agent.handoffs import ClaimCheck, VerificationReport
 from agent.llm import structured
 from agent.nodes.common import CITE, prompt, sentences, trace
+from agent.security import on
 
 # a sentence is an experience CLAIM if "I/we" is followed by past-tense work or "experience/years"
 CLAIM = re.compile(r"\b(i|i've|i have|we)\b[^\"]*\b(built|developed|created|delivered|designed|worked|"
@@ -46,6 +47,9 @@ def _clean(text: str, bad: set[str]) -> str:
 
 async def verifier(state, config=None):
     draft, pool = state["draft"], state.get("evidence") or {}
+    if not on("claim_verifier"):                  # evaluation only: defence layer switched off
+        return {"verification": VerificationReport(checks=[], unsupported_before=0, unsupported_after=0, removed=[]).model_dump(),
+                "trace": [trace("verifier", skipped="claim_verifier off")]}
     parts = [draft["cover_letter"]] + draft.get("screening_answers", [])
     claims = [s for p in parts for s in sentences(p)
               if CITE.search(s) or CLAIM.search(re.sub(r'"[^"]*"', "", s))]   # ignore quoted job text

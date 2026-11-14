@@ -5,6 +5,7 @@ import re
 from agent.config import cfg
 from agent.handoffs import ComplianceVerdict
 from agent.nodes.common import sentences, trace
+from agent.security import on
 
 
 def check(text: str, rules: list[dict]) -> tuple[str, list[str]]:
@@ -21,6 +22,10 @@ def check(text: str, rules: list[dict]) -> tuple[str, list[str]]:
 async def compliance(state, config=None):
     c = cfg()["compliance"]
     draft = state["draft"]
+    if not on("output_guard"):                    # evaluation only: defence layer switched off
+        return {"compliance": ComplianceVerdict(passed=True, blocked=False, violations=[], cover_letter=draft["cover_letter"],
+                                                screening_answers=draft.get("screening_answers", [])).model_dump(),
+                "trace": [trace("compliance", skipped="output_guard off")]}
     letter, v = check(draft["cover_letter"], c["rules"])
     answers = []
     for a in draft.get("screening_answers", []):

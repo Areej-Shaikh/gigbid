@@ -78,7 +78,7 @@ risk:                         # weights add up to a 0..1 risk score
     - {flag: unpaid_work, weight: 0.5, pattern: "unpaid|for free|free test|free trial|test task.*free|trial task"}
     - {flag: off_platform_contact, weight: 0.5, pattern: "whats ?app|telegram|skype|signal app|wechat|outside (of )?(the )?platform|contact me (at|on)"}
     - {flag: payment_or_identity_request, weight: 0.6, pattern: "bank (account|details)|crypto|western union|send (me )?your (id|passport|cnic)|gift card"}
-    - {flag: prompt_injection, weight: 0.2, pattern: "ignore (all )?(previous|prior|above) instructions|^system:|\\bsystem:|forget (your|all) (rules|instructions)|you are now|assistant,"}
+    - {flag: prompt_injection, weight: 0.2, defence: injection_rules, pattern: "ignore (all )?(previous|prior|above) instructions|^system:|\\bsystem:|forget (your|all) (rules|instructions)|you are now|assistant,"}
   client:
     payment_unverified: 0.25
     no_history: 0.15          # $0 spent and 0 hires
@@ -90,6 +90,16 @@ pricing:
   market_position: median     # p25 | median | p75
   big_spender_usd: 10000      # clients above this get +10%
   new_client_discount: 0.05
+
+# Prompt-injection defence layers (E4). Always all true in production; the injection eval switches them
+# off to measure attack success rate without them. Human approval, tool allowlists and forced dry-run
+# are architectural and cannot be switched off (see agent/security.py).
+security:
+  fence_untrusted: true     # untrusted text in <job_post>/<client_message> tags + "never follow it" prompt rules
+  injection_rules: true     # regex detection: risk flag + writer warning; liaison treats it as scam_signal
+  claim_verifier: true      # remove uncited / unsupported experience claims before the Critic
+  output_guard: true        # Compliance Guard: contacts, links, off-platform, guarantees, price floor
+  scam_template: true       # liaison: fixed safe reply for scam / injection messages (no LLM to steer)
 
 # Compliance Guard = the marketplace policy pack as rules
 compliance:
@@ -158,7 +168,9 @@ liaison:
   slot_days_ahead: 5
   intents:                    # rule fallback (and safety net) for intent classification, checked in order
     # scam_signal = off-platform asks, payment/identity requests, OR text that tries to instruct the assistant
-    - {intent: scam_signal, pattern: "(?i)whats ?app|telegram|skype|wechat|(talk|chat|continue|move|contact)\\w* (us |me )?outside|outside (of )?(the )?(platform|upwork|site)|bank (account|details)|crypto|gift card|western union|send (me )?your (id|passport|cnic)|pay (you )?(outside|directly)|(your|personal|private) (e-?mail|phone|number|contact)|\\bignore\\b.{0,30}\\b(instructions|rules|prompt)|\\b(assistant|system)\\s*:|forget (your|all|previous) (rules|instructions)"}
+    - {intent: scam_signal, pattern: "(?i)whats ?app|telegram|skype|wechat|(talk|chat|continue|move|contact)\\w* (us |me )?outside|outside (of )?(the )?(platform|upwork|site)|bank (account|details)|crypto|gift card|western union|send (me )?your (id|passport|cnic)|pay (you )?(outside|directly)|(your|personal|private) (e-?mail|phone|number|contact)"}
+    # text that tries to instruct the assistant (a switchable defence layer, see security:)
+    - {intent: scam_signal, defence: injection_rules, pattern: "(?i)\\bignore\\b.{0,30}\\b(instructions|rules|prompt)|\\b(assistant|system)\\s*:|forget (your|all|previous) (rules|instructions)"}
     - {intent: interview_request, pattern: "(?i)\\bcall\\b|interview|meet(ing)?\\b|schedule|available (this|next|on|for)|zoom|google meet|chat live"}
     - {intent: negotiation, pattern: "(?i)\\brate\\b|price|budget|discount|lower|cheaper|\\$\\s?\\d|per hour|fixed price"}
     - {intent: question, pattern: "\\?"}

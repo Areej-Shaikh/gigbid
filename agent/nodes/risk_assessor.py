@@ -5,6 +5,7 @@ import re
 from agent.config import cfg
 from agent.handoffs import RiskReport
 from agent.nodes.common import trace
+from agent.security import on
 
 
 async def risk_assessor(state, config=None):
@@ -12,6 +13,8 @@ async def risk_assessor(state, config=None):
     text = f"{job.get('title', '')}\n{job.get('description', '')}".lower()
     score, flags, reasons = 0.0, [], []
     for rule in rc["rules"]:
+        if rule.get("defence") and not on(rule["defence"]):
+            continue
         m = re.search(rule["pattern"], text, re.I | re.M)
         if m:
             score += rule["weight"]
