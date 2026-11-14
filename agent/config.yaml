@@ -31,6 +31,7 @@ nodes:
   critic: strong
   liaison: strong
   liaison_classify: small     # intent classification is cheap and frequent
+  judge: strong               # evaluation only: proposal-quality judge (B4)
 # USD per 1M tokens, used for cost per node / per job / per proposal (R8, E5). Local models cost 0.
 # VERIFY against the provider's pricing page before reporting numbers (prices change): https://groq.com/pricing
 llm_pricing:
@@ -112,6 +113,18 @@ compliance:
     - {id: guarantee, action: remove, pattern: "(?i)\\bguarantee[ds]?\\b|100% (success|results|satisfaction)|risk[- ]free"}
   block_if_removed_more_than: 3   # too many violations -> block, needs human attention
 
+# Signature extension X2: proposal strategies as an A/B test (docs/EXTENSION.md).
+# Each job gets one arm from a stable hash of its id; the arm's instructions are in agent/prompts/writer_strategy_<arm>.md.
+experiment:
+  name: proposal_strategy
+  # Result on 142 paired GigSim jobs: evidence_first 61.3% vs plan_first 54.2% reply rate, McNemar p = 0.24
+  # (evals/results/ab_test_table.md). Not significant, so by the decision rule the control (first arm) ships;
+  # set enabled: true to keep splitting traffic and collect more evidence.
+  enabled: false
+  arms: [evidence_first, plan_first]
+  split: 0.5                  # share of jobs assigned to the second arm
+  force_arm: null             # set to an arm name to stop the experiment and use one strategy for every job
+
 critic:
   min_words: 90
   max_words: 260
@@ -137,6 +150,41 @@ tool_allowlist:
   liaison: [list_messages, get_job, free_slots]          # conversation graph: read + calendar, no writes
   liaison_preview: [send_message]                        # dry_run only, enforced in code
   liaison_send: [send_message, create_hold]              # only after human approval
+
+# Worker (E1): saved searches run on a schedule; new jobs are analysed up to the approval interrupt.
+scout:
+  interval_hours: 2             # GigSim; live Upwork uses upwork_live.scout_interval_hours (6)
+  max_new_jobs_per_round: 10    # polite to the marketplace and within the LLM budget
+  saved_searches:
+    - {user: demo, query: "LLM", limit: 20}
+    - {user: demo, query: "machine learning", limit: 20}
+    - {user: demo, query: "chatbot", limit: 20}
+
+# Live mode (A4): the official Upwork MCP server behind the same marketplace port (MARKETPLACE_MODE=upwork).
+# Connect once per user (OAuth 2.1, tokens stored encrypted):  python scripts/connect_upwork.py --user <you>
+upwork_live:
+  url: https://mcp.upwork.com/mcp
+  redirect_uri: http://localhost:8765/callback
+  scout_interval_hours: 6       # conservative: a person refreshing a saved search a few times a day (RUNBOOK.md)
+  max_results: 20
+  # Port method -> Upwork MCP tool name. Left empty on purpose: fill in from the real server's tool list
+  # (python scripts/connect_upwork.py --user <you> --list-tools). An unmapped method fails with a clear error.
+  tools:
+    search_jobs: null
+    get_job: null
+    get_client: null
+    get_connects_balance: null
+    list_messages: null
+    list_proposals: null
+    create_proposal_draft: null   # Upwork creates a DRAFT; the user confirms it on Upwork
+    create_message_draft: null
+
+# Third-party MCP server (A5): the official GitHub MCP server, read-only, for repo ingestion (rag/ingest/github_loader.py)
+github_mcp:
+  command: docker
+  args: ["run", "-i", "--rm", "-e", "GITHUB_PERSONAL_ACCESS_TOKEN", "-e", "GITHUB_READ_ONLY=1", "ghcr.io/github/github-mcp-server"]
+  tools: {get_file_contents: get_file_contents}
+  max_code_files: 5
 
 mcp_servers:
   marketplace: {transport: stdio, command: python, args: ["-m", "mcp_servers.marketplace.server"], env: {FASTMCP_LOG_LEVEL: WARNING}}

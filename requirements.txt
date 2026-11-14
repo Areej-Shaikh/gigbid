@@ -119,3 +119,7 @@ win32_setctime==1.2.1
 wrapt==2.5.2
 xxhash==4.1.0
 zstandard==0.25.0
+langgraph-supervisor==0.0.31
+arq==0.28.0
+redis==5.3.1
+pypdf==7.1.0
