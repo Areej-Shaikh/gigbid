@@ -7,6 +7,9 @@ It is built from LangGraph agents that reach the marketplace, the freelancer's p
 only through MCP servers with least-privilege tool allowlists. A FastAPI + React app streams each agent
 run live and handles approvals.
 
+**Live demo: https://gigbid-wtvi.onrender.com** (reviewer login in the submission; free plan, so the first
+request after idle takes about a minute to wake the server).
+
 > AI-4016 R&D assignment. Marketplace = **GigSim**, a local mock built from real Kaggle job and price data
 > (see [docs/DATA_CARD.md](docs/DATA_CARD.md)). No real proposals are ever submitted.
 
