@@ -1,0 +1,1253 @@
+{
+ "tag": "model=openai/gpt-oss-20b, temperature 0; PARTIAL (daily token limit): 28 of 40 tasks completed under all three sets",
+ "rows": [
+  {
+   "set": "fine",
+   "id": "tool-01",
+   "tool": "search_jobs",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "search_jobs",
+   "args": {
+    "query": "RAG chatbot"
+   },
+   "tokens": 1337,
+   "input_tokens": 1219
+  },
+  {
+   "set": "coarse",
+   "id": "tool-01",
+   "tool": "search_jobs",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "marketplace_read.search_jobs",
+   "args": {
+    "limit": 10,
+    "offset": 0,
+    "query": "RAG chatbots"
+   },
+   "tokens": 1057,
+   "input_tokens": 519
+  },
+  {
+   "set": "rewritten",
+   "id": "tool-01",
+   "tool": "search_jobs",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "search_jobs",
+   "args": {
+    "limit": 20,
+    "offset": 0,
+    "query": "RAG chatbot"
+   },
+   "tokens": 1591,
+   "input_tokens": 1474
+  },
+  {
+   "set": "fine",
+   "id": "tool-02",
+   "tool": "search_jobs",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "search_jobs",
+   "args": {
+    "query": "Power BI dashboard"
+   },
+   "tokens": 1305,
+   "input_tokens": 1218
+  },
+  {
+   "set": "coarse",
+   "id": "tool-02",
+   "tool": "search_jobs",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "marketplace_read.search_jobs",
+   "args": {
+    "limit": 10,
+    "offset": 0,
+    "query": "Power BI dashboard"
+   },
+   "tokens": 672,
+   "input_tokens": 518
+  },
+  {
+   "set": "rewritten",
+   "id": "tool-02",
+   "tool": "search_jobs",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "search_jobs",
+   "args": {
+    "query": "Power BI dashboard"
+   },
+   "tokens": 1559,
+   "input_tokens": 1473
+  },
+  {
+   "set": "fine",
+   "id": "tool-03",
+   "tool": "search_jobs",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "search_jobs",
+   "args": {
+    "limit": 5,
+    "query": "Django"
+   },
+   "tokens": 1352,
+   "input_tokens": 1223
+  },
+  {
+   "set": "coarse",
+   "id": "tool-03",
+   "tool": "search_jobs",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "marketplace_read.search_jobs",
+   "args": {
+    "limit": 5,
+    "offset": 0,
+    "query": "Django web development"
+   },
+   "tokens": 648,
+   "input_tokens": 523
+  },
+  {
+   "set": "rewritten",
+   "id": "tool-03",
+   "tool": "search_jobs",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "search_jobs",
+   "args": {
+    "limit": 5,
+    "query": "Django web development"
+   },
+   "tokens": 1544,
+   "input_tokens": 1478
+  },
+  {
+   "set": "fine",
+   "id": "tool-04",
+   "tool": "search_jobs",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "search_jobs",
+   "args": {
+    "limit": 20,
+    "offset": 20,
+    "query": "data pipeline"
+   },
+   "tokens": 1369,
+   "input_tokens": 1229
+  },
+  {
+   "set": "coarse",
+   "id": "tool-04",
+   "tool": "search_jobs",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "marketplace_read.search_jobs",
+   "args": {
+    "limit": 10,
+    "offset": 20,
+    "query": "data pipeline"
+   },
+   "tokens": 728,
+   "input_tokens": 529
+  },
+  {
+   "set": "rewritten",
+   "id": "tool-04",
+   "tool": "search_jobs",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "search_jobs",
+   "args": {
+    "limit": 20,
+    "offset": 20,
+    "query": "data pipeline"
+   },
+   "tokens": 1586,
+   "input_tokens": 1484
+  },
+  {
+   "set": "fine",
+   "id": "tool-05",
+   "tool": "search_jobs",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "search_jobs",
+   "args": {
+    "query": "machine learning"
+   },
+   "tokens": 1295,
+   "input_tokens": 1218
+  },
+  {
+   "set": "coarse",
+   "id": "tool-05",
+   "tool": "search_jobs",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "marketplace_read.search_jobs",
+   "args": {
+    "limit": 10,
+    "offset": 0,
+    "query": "machine learning"
+   },
+   "tokens": 773,
+   "input_tokens": 518
+  },
+  {
+   "set": "rewritten",
+   "id": "tool-05",
+   "tool": "search_jobs",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "search_jobs",
+   "args": {
+    "query": "machine learning"
+   },
+   "tokens": 1554,
+   "input_tokens": 1473
+  },
+  {
+   "set": "fine",
+   "id": "tool-06",
+   "tool": "get_job",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "get_job",
+   "args": {
+    "job_id": "job-00044"
+   },
+   "tokens": 1280,
+   "input_tokens": 1220
+  },
+  {
+   "set": "coarse",
+   "id": "tool-06",
+   "tool": "get_job",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "marketplace_read.get_job",
+   "args": {
+    "job_id": "job-00044"
+   },
+   "tokens": 611,
+   "input_tokens": 520
+  },
+  {
+   "set": "rewritten",
+   "id": "tool-06",
+   "tool": "get_job",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "get_job",
+   "args": {
+    "job_id": "job-00044"
+   },
+   "tokens": 1536,
+   "input_tokens": 1475
+  },
+  {
+   "set": "fine",
+   "id": "tool-07",
+   "tool": "get_job",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "get_job",
+   "args": {
+    "job_id": "job-01532"
+   },
+   "tokens": 1304,
+   "input_tokens": 1220
+  },
+  {
+   "set": "coarse",
+   "id": "tool-07",
+   "tool": "get_job",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "marketplace_read.get_job",
+   "args": {
+    "job_id": "job-01532"
+   },
+   "tokens": 669,
+   "input_tokens": 520
+  },
+  {
+   "set": "rewritten",
+   "id": "tool-07",
+   "tool": "get_job",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "get_job",
+   "args": {
+    "job_id": "job-01532"
+   },
+   "tokens": 1538,
+   "input_tokens": 1475
+  },
+  {
+   "set": "fine",
+   "id": "tool-08",
+   "tool": "get_job",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "get_job",
+   "args": {
+    "job_id": "dev-0007"
+   },
+   "tokens": 1287,
+   "input_tokens": 1222
+  },
+  {
+   "set": "coarse",
+   "id": "tool-08",
+   "tool": "get_job",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "marketplace_read.get_job",
+   "args": {
+    "job_id": "dev-0007"
+   },
+   "tokens": 604,
+   "input_tokens": 522
+  },
+  {
+   "set": "rewritten",
+   "id": "tool-08",
+   "tool": "get_job",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "get_job",
+   "args": {
+    "job_id": "dev-0007"
+   },
+   "tokens": 1542,
+   "input_tokens": 1477
+  },
+  {
+   "set": "fine",
+   "id": "tool-09",
+   "tool": "get_client_history",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "get_client_history",
+   "args": {
+    "client_id": "cl-004"
+   },
+   "tokens": 1316,
+   "input_tokens": 1225
+  },
+  {
+   "set": "coarse",
+   "id": "tool-09",
+   "tool": "get_client_history",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "marketplace_read.get_client_history",
+   "args": {
+    "client_id": "cl-004"
+   },
+   "tokens": 656,
+   "input_tokens": 525
+  },
+  {
+   "set": "rewritten",
+   "id": "tool-09",
+   "tool": "get_client_history",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "get_client_history",
+   "args": {
+    "client_id": "cl-004"
+   },
+   "tokens": 1611,
+   "input_tokens": 1480
+  },
+  {
+   "set": "fine",
+   "id": "tool-10",
+   "tool": "get_client_history",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "get_client_history",
+   "args": {
+    "client_id": "rc-00002"
+   },
+   "tokens": 1348,
+   "input_tokens": 1224
+  },
+  {
+   "set": "coarse",
+   "id": "tool-10",
+   "tool": "get_client_history",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "marketplace_read.get_client_history",
+   "args": {
+    "client_id": "rc-00002"
+   },
+   "tokens": 618,
+   "input_tokens": 524
+  },
+  {
+   "set": "rewritten",
+   "id": "tool-10",
+   "tool": "get_client_history",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "get_client_history",
+   "args": {
+    "client_id": "rc-00002"
+   },
+   "tokens": 1544,
+   "input_tokens": 1479
+  },
+  {
+   "set": "fine",
+   "id": "tool-11",
+   "tool": "get_client_history",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "get_client_history",
+   "args": {
+    "client_id": "cl-001"
+   },
+   "tokens": 1278,
+   "input_tokens": 1222
+  },
+  {
+   "set": "coarse",
+   "id": "tool-11",
+   "tool": "get_client_history",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "marketplace_read.get_client_history",
+   "args": {
+    "client_id": "cl-001"
+   },
+   "tokens": 610,
+   "input_tokens": 522
+  },
+  {
+   "set": "rewritten",
+   "id": "tool-11",
+   "tool": "get_client_history",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "get_client_history",
+   "args": {
+    "client_id": "cl-001"
+   },
+   "tokens": 1531,
+   "input_tokens": 1477
+  },
+  {
+   "set": "fine",
+   "id": "tool-12",
+   "tool": "get_connects_balance",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "get_connects_balance",
+   "args": {
+    "": ""
+   },
+   "tokens": 1279,
+   "input_tokens": 1218
+  },
+  {
+   "set": "coarse",
+   "id": "tool-12",
+   "tool": "get_connects_balance",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "marketplace_read.get_connects_balance",
+   "args": {},
+   "tokens": 594,
+   "input_tokens": 518
+  },
+  {
+   "set": "rewritten",
+   "id": "tool-12",
+   "tool": "get_connects_balance",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "get_connects_balance",
+   "args": {
+    "": ""
+   },
+   "tokens": 1521,
+   "input_tokens": 1473
+  },
+  {
+   "set": "fine",
+   "id": "tool-13",
+   "tool": "get_connects_balance",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "get_connects_balance",
+   "args": {
+    "": ""
+   },
+   "tokens": 1291,
+   "input_tokens": 1222
+  },
+  {
+   "set": "coarse",
+   "id": "tool-13",
+   "tool": "get_connects_balance",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "marketplace_read.get_connects_balance",
+   "args": {},
+   "tokens": 607,
+   "input_tokens": 522
+  },
+  {
+   "set": "rewritten",
+   "id": "tool-13",
+   "tool": "get_connects_balance",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "get_connects_balance",
+   "args": {},
+   "tokens": 1539,
+   "input_tokens": 1477
+  },
+  {
+   "set": "fine",
+   "id": "tool-14",
+   "tool": "get_price_stats",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "get_price_stats",
+   "args": {
+    "skill": "React"
+   },
+   "tokens": 1311,
+   "input_tokens": 1220
+  },
+  {
+   "set": "coarse",
+   "id": "tool-14",
+   "tool": "get_price_stats",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "marketplace_read.get_price_stats",
+   "args": {
+    "skill": "React"
+   },
+   "tokens": 683,
+   "input_tokens": 520
+  },
+  {
+   "set": "rewritten",
+   "id": "tool-14",
+   "tool": "get_price_stats",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "get_price_stats",
+   "args": {
+    "skill": "React"
+   },
+   "tokens": 1552,
+   "input_tokens": 1475
+  },
+  {
+   "set": "fine",
+   "id": "tool-15",
+   "tool": "get_price_stats",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "get_price_stats",
+   "args": {
+    "skill": "LangChain"
+   },
+   "tokens": 1300,
+   "input_tokens": 1219
+  },
+  {
+   "set": "coarse",
+   "id": "tool-15",
+   "tool": "get_price_stats",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "marketplace_read.get_price_stats",
+   "args": {
+    "skill": "LangChain"
+   },
+   "tokens": 642,
+   "input_tokens": 519
+  },
+  {
+   "set": "rewritten",
+   "id": "tool-15",
+   "tool": "get_price_stats",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "get_price_stats",
+   "args": {
+    "skill": "LangChain"
+   },
+   "tokens": 1559,
+   "input_tokens": 1474
+  },
+  {
+   "set": "fine",
+   "id": "tool-16",
+   "tool": "get_price_stats",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "get_price_stats",
+   "args": {
+    "skill": "Tableau"
+   },
+   "tokens": 1359,
+   "input_tokens": 1219
+  },
+  {
+   "set": "coarse",
+   "id": "tool-16",
+   "tool": "get_price_stats",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "marketplace_read.get_price_stats",
+   "args": {
+    "skill": "Tableau"
+   },
+   "tokens": 634,
+   "input_tokens": 519
+  },
+  {
+   "set": "rewritten",
+   "id": "tool-16",
+   "tool": "get_price_stats",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "get_price_stats",
+   "args": {
+    "skill": "Tableau"
+   },
+   "tokens": 1544,
+   "input_tokens": 1474
+  },
+  {
+   "set": "fine",
+   "id": "tool-17",
+   "tool": "list_messages",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "list_messages",
+   "args": {
+    "client_id": "cl-009"
+   },
+   "tokens": 1316,
+   "input_tokens": 1218
+  },
+  {
+   "set": "coarse",
+   "id": "tool-17",
+   "tool": "list_messages",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "marketplace_read.list_messages",
+   "args": {
+    "client_id": "cl-009"
+   },
+   "tokens": 636,
+   "input_tokens": 518
+  },
+  {
+   "set": "rewritten",
+   "id": "tool-17",
+   "tool": "list_messages",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "list_messages",
+   "args": {
+    "client_id": "cl-009"
+   },
+   "tokens": 1546,
+   "input_tokens": 1473
+  },
+  {
+   "set": "fine",
+   "id": "tool-18",
+   "tool": "list_messages",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "list_messages",
+   "args": {
+    "client_id": null
+   },
+   "tokens": 1293,
+   "input_tokens": 1215
+  },
+  {
+   "set": "coarse",
+   "id": "tool-18",
+   "tool": "list_messages",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "marketplace_read.list_messages",
+   "args": {
+    "client_id": "client_id"
+   },
+   "tokens": 1017,
+   "input_tokens": 515
+  },
+  {
+   "set": "rewritten",
+   "id": "tool-18",
+   "tool": "list_messages",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "list_messages",
+   "args": {
+    "client_id": null
+   },
+   "tokens": 1541,
+   "input_tokens": 1470
+  },
+  {
+   "set": "fine",
+   "id": "tool-19",
+   "tool": "list_messages",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "list_messages",
+   "args": {
+    "client_id": "rc-00014"
+   },
+   "tokens": 1314,
+   "input_tokens": 1218
+  },
+  {
+   "set": "coarse",
+   "id": "tool-19",
+   "tool": "list_messages",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "marketplace_read.list_messages",
+   "args": {
+    "client_id": "rc-00014"
+   },
+   "tokens": 619,
+   "input_tokens": 518
+  },
+  {
+   "set": "rewritten",
+   "id": "tool-19",
+   "tool": "list_messages",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "list_messages",
+   "args": {
+    "client_id": "rc-00014"
+   },
+   "tokens": 1550,
+   "input_tokens": 1473
+  },
+  {
+   "set": "fine",
+   "id": "tool-20",
+   "tool": "list_proposals",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "list_proposals",
+   "args": {
+    "": ""
+   },
+   "tokens": 1295,
+   "input_tokens": 1221
+  },
+  {
+   "set": "coarse",
+   "id": "tool-20",
+   "tool": "list_proposals",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "marketplace_read.list_proposals",
+   "args": {},
+   "tokens": 676,
+   "input_tokens": 521
+  },
+  {
+   "set": "rewritten",
+   "id": "tool-20",
+   "tool": "list_proposals",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "list_proposals",
+   "args": {
+    "": ""
+   },
+   "tokens": 1551,
+   "input_tokens": 1476
+  },
+  {
+   "set": "fine",
+   "id": "tool-21",
+   "tool": "list_proposals",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "list_proposals",
+   "args": {
+    "": ""
+   },
+   "tokens": 1274,
+   "input_tokens": 1218
+  },
+  {
+   "set": "coarse",
+   "id": "tool-21",
+   "tool": "list_proposals",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "marketplace_read.list_proposals",
+   "args": {},
+   "tokens": 618,
+   "input_tokens": 518
+  },
+  {
+   "set": "rewritten",
+   "id": "tool-21",
+   "tool": "list_proposals",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "list_proposals",
+   "args": {
+    "": ""
+   },
+   "tokens": 1528,
+   "input_tokens": 1473
+  },
+  {
+   "set": "fine",
+   "id": "tool-22",
+   "tool": "search_evidence",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "search_evidence",
+   "args": {
+    "requirement": "RAG system with citations"
+   },
+   "tokens": 1361,
+   "input_tokens": 1225
+  },
+  {
+   "set": "coarse",
+   "id": "tool-22",
+   "tool": "search_evidence",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "portfolio_read.search_evidence",
+   "args": {
+    "k": 5,
+    "outcomes": [
+     "citation"
+    ],
+    "requirement": "RAG system with citations",
+    "since": null,
+    "types": [
+     "project"
+    ]
+   },
+   "tokens": 821,
+   "input_tokens": 525
+  },
+  {
+   "set": "rewritten",
+   "id": "tool-22",
+   "tool": "search_evidence",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "search_evidence",
+   "args": {
+    "requirement": "RAG system with citations"
+   },
+   "tokens": 1577,
+   "input_tokens": 1480
+  },
+  {
+   "set": "fine",
+   "id": "tool-23",
+   "tool": "search_evidence",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "search_evidence",
+   "args": {
+    "requirement": "churn prediction",
+    "types": [
+     "case_study"
+    ]
+   },
+   "tokens": 1361,
+   "input_tokens": 1223
+  },
+  {
+   "set": "coarse",
+   "id": "tool-23",
+   "tool": "search_evidence",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": false,
+   "picked": "portfolio_read.search_evidence",
+   "args": {
+    "k": 10,
+    "outcomes": null,
+    "requirement": "churn prediction",
+    "since": null,
+    "types": [
+     "case study"
+    ]
+   },
+   "tokens": 726,
+   "input_tokens": 523
+  },
+  {
+   "set": "rewritten",
+   "id": "tool-23",
+   "tool": "search_evidence",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "search_evidence",
+   "args": {
+    "requirement": "churn prediction",
+    "types": [
+     "case_study"
+    ]
+   },
+   "tokens": 1612,
+   "input_tokens": 1478
+  },
+  {
+   "set": "fine",
+   "id": "tool-24",
+   "tool": "search_evidence",
+   "valid": true,
+   "tool_ok": false,
+   "args_ok": false,
+   "picked": "list_proposals",
+   "args": {
+    "": ""
+   },
+   "tokens": 1340,
+   "input_tokens": 1223
+  },
+  {
+   "set": "coarse",
+   "id": "tool-24",
+   "tool": "search_evidence",
+   "valid": true,
+   "tool_ok": false,
+   "args_ok": false,
+   "picked": "marketplace_read.list_proposals",
+   "args": {},
+   "tokens": 709,
+   "input_tokens": 523
+  },
+  {
+   "set": "rewritten",
+   "id": "tool-24",
+   "tool": "search_evidence",
+   "valid": true,
+   "tool_ok": false,
+   "args_ok": false,
+   "picked": "list_proposals",
+   "args": {
+    "": ""
+   },
+   "tokens": 1598,
+   "input_tokens": 1478
+  },
+  {
+   "set": "fine",
+   "id": "tool-25",
+   "tool": "search_evidence",
+   "valid": true,
+   "tool_ok": false,
+   "args_ok": false,
+   "picked": "get_client_history",
+   "args": {
+    "client_id": "unknown"
+   },
+   "tokens": 2010,
+   "input_tokens": 1216
+  },
+  {
+   "set": "coarse",
+   "id": "tool-25",
+   "tool": "search_evidence",
+   "valid": true,
+   "tool_ok": false,
+   "args_ok": false,
+   "picked": "marketplace_read.search_jobs",
+   "args": {
+    "limit": 10,
+    "offset": 0,
+    "query": "FastAPI"
+   },
+   "tokens": 1233,
+   "input_tokens": 516
+  },
+  {
+   "set": "rewritten",
+   "id": "tool-25",
+   "tool": "search_evidence",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "search_evidence",
+   "args": {
+    "k": 20,
+    "requirement": "FastAPI",
+    "types": [
+     "review"
+    ]
+   },
+   "tokens": 1610,
+   "input_tokens": 1471
+  },
+  {
+   "set": "fine",
+   "id": "tool-26",
+   "tool": "search_evidence",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "search_evidence",
+   "args": {
+    "k": 3,
+    "requirement": "LangGraph multi-agent systems"
+   },
+   "tokens": 1361,
+   "input_tokens": 1224
+  },
+  {
+   "set": "coarse",
+   "id": "tool-26",
+   "tool": "search_evidence",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "portfolio_read.search_evidence",
+   "args": {
+    "k": 3,
+    "outcomes": [],
+    "requirement": "LangGraph multi-agent systems",
+    "since": null,
+    "types": []
+   },
+   "tokens": 814,
+   "input_tokens": 524
+  },
+  {
+   "set": "rewritten",
+   "id": "tool-26",
+   "tool": "search_evidence",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "search_evidence",
+   "args": {
+    "k": 3,
+    "requirement": "LangGraph multi-agent systems"
+   },
+   "tokens": 1618,
+   "input_tokens": 1479
+  },
+  {
+   "set": "fine",
+   "id": "tool-27",
+   "tool": "search_evidence",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "search_evidence",
+   "args": {
+    "requirement": "Airflow work",
+    "since": "2025-01-01"
+   },
+   "tokens": 1332,
+   "input_tokens": 1224
+  },
+  {
+   "set": "rewritten",
+   "id": "tool-27",
+   "tool": "search_evidence",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "search_evidence",
+   "args": {
+    "requirement": "Airflow",
+    "since": "2025-01-01"
+   },
+   "tokens": 1591,
+   "input_tokens": 1479
+  },
+  {
+   "set": "fine",
+   "id": "tool-28",
+   "tool": "get_case_study",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "get_case_study",
+   "args": {
+    "evidence_id": "ai_ml_engineer-case-03"
+   },
+   "tokens": 1363,
+   "input_tokens": 1224
+  },
+  {
+   "set": "coarse",
+   "id": "tool-28",
+   "tool": "get_case_study",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "portfolio_read.get_case_study",
+   "args": {
+    "evidence_id": "ai_ml_engineer-case-03"
+   },
+   "tokens": 674,
+   "input_tokens": 524
+  },
+  {
+   "set": "coarse",
+   "id": "tool-27",
+   "tool": "search_evidence",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "portfolio_read.search_evidence",
+   "args": {
+    "k": 10,
+    "outcomes": [],
+    "requirement": "Airflow",
+    "since": "2025-01-01",
+    "types": []
+   },
+   "tokens": 1016,
+   "input_tokens": 524
+  },
+  {
+   "set": "rewritten",
+   "id": "tool-28",
+   "tool": "get_case_study",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "get_case_study",
+   "args": {
+    "evidence_id": "ai_ml_engineer-case-03"
+   },
+   "tokens": 1577,
+   "input_tokens": 1479
+  },
+  {
+   "set": "fine",
+   "id": "tool-29",
+   "tool": "get_case_study",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "get_case_study",
+   "args": {
+    "evidence_id": "data_analyst-case-07"
+   },
+   "tokens": 1373,
+   "input_tokens": 1224
+  },
+  {
+   "set": "coarse",
+   "id": "tool-29",
+   "tool": "get_case_study",
+   "valid": true,
+   "tool_ok": true,
+   "args_ok": true,
+   "picked": "portfolio_read.get_case_study",
+   "args": {
+    "evidence_id": "data_analyst-case-07"
+   },
+   "tokens": 678,
+   "input_tokens": 524
+  }
+ ]
+}
