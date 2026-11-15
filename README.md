@@ -115,6 +115,8 @@ Better retrieval recall did **not** give better decisions: hybrid retrieval find
 evidence for off-niche jobs, so it bids on more jobs that should be skipped. The reply-rate gap is not
 statistically significant (p = 0.34), so BM25 ships because it is cheaper and simpler with equal outcomes.
 
+**Blind human panel** (3 classmates, 15 pairs, `evals/results/pairwise_panel_table.md`): V2 drafts got 23 votes, BM25 14, ties 8; majority per pair 7 vs 6 (not significant, p = 1.0; Fleiss' κ = 0.56). Slightly better-reading proposals did not outweigh twice the wasted bids.
+
 **With LLMs** (Groq, 30 jobs, `evals/results/graph_llm_table.md`; all 30 are bid-labelled, so only recall is
 meaningful): bid recall 0.867, **0.67 unsupported claims per proposal before the Claim Verifier and 0 after**,
 p50 34 s per job, about 8k tokens per job (21 of the LLM calls fell back to rules because of rate limits).

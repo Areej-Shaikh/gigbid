@@ -156,7 +156,7 @@ guarantee"). **Who was right:** reviewing the judge's reasons for the five large
 the defensible one each time: the judge rewards topical relevance and the presence of citations, and does not notice
 template-like structure or an obeyed instruction. **Consequence:** the judge score is *not* used to choose designs; decisions in this report rest on
 unsupported-claim counts, decision F1 and reply rate. Labelling also exposed a bug in the injection success checker
-(§8, failure 10). A blind pairwise human panel (BM25 vs V2 drafts for the same 15 jobs, randomised A/B order, hidden key) was prepared (`evals/runners/pairwise_panel.py`) but **not run**: no ratings were collected in time.
+(§8, failure 10). **Blind pairwise human panel** (`R/pairwise_panel_table.md`): three classmates compared BM25 and V2 drafts for the same 15 jobs, shown as A/B in random order with the key hidden (`evals/runners/pairwise_panel.py`). Individual votes: V2 23, BM25 14, tie 8; majority per pair: V2 7, BM25 6, tie 2 (sign test p = 1.0); agreement between raters Fleiss' κ = 0.56 (moderate). Humans leaned slightly towards V2's proposals but not significantly, and on the off-niche job in the set (marketing attribution) all three preferred BM25's draft. Together with §4's decision results: V2's evidence may read slightly better, but it costs twice the wasted bids, so the shipping decision stands.
 
 **What ships.** **BM25** (`docs/adr/0003`). It has the best end-to-end bid F1, half the wasted bids, a reply rate at
 least as good, no model download (fits the free host's 512 MB), and an 11 ms p95. V2 stays selectable for
