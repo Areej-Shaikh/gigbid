@@ -1,6 +1,7 @@
 """R&D question C: is the multi-agent design worth it?
 
-  python -m evals.runners.architecture_eval --model openai/gpt-oss-20b            # 50 stratified dev jobs
+  python -m evals.runners.architecture_eval --models openai/gpt-oss-20b            # 50 stratified dev jobs
+  python -m evals.runners.architecture_eval --models openai/gpt-oss-120b,openai/gpt-oss-20b,qwen/qwen3.8-27b
   python -m evals.runners.architecture_eval --resume                               # continue after a quota stop
 
 Compares, on the SAME jobs with the SAME model for every LLM call:
@@ -150,21 +151,31 @@ def build_agents(model: ChatOpenAI, tools: list) -> dict:
 
 
 # ---------------------------------------------------------------- runner
-async def run(jobs: list[dict], model_name: str, done: list[dict], save) -> tuple[list[dict], str | None]:
+async def run(jobs: list[dict], model_names: list[str], done: list[dict], save) -> tuple[list[dict], str | None]:
+    """Job n uses model_names[n % k] for EVERY LLM call of all three architectures (a fair, paired comparison per
+    job); spreading jobs over several models multiplies throughput under per-model daily quotas. A model that hits
+    its daily limit is skipped for the rest of the run; the run stops when all are exhausted (resume later)."""
     p = cfg()["profiles"][cfg()["profile"]]
-    for size in ("small", "strong", "fallback"):          # the graph uses the same single model as the baselines
-        p["models"][size] = model_name
-    model = ChatOpenAI(model=model_name, base_url=p["base_url"], api_key=os.getenv(p["api_key_env"]),
-                       temperature=cfg()["temperature"], timeout=120, max_retries=6)
     rows, finished = list(done), {(r["arch"], r["job_id"]) for r in done}
+    exhausted: dict[str, str] = {}
     async with AsyncExitStack() as stack:
         m = await stack.enter_async_context(create_connected_server_and_client_session(market.mcp._mcp_server))
         ps = await stack.enter_async_context(create_connected_server_and_client_session(portfolio.mcp._mcp_server))
         tb = await ToolBox({"marketplace": m, "portfolio": ps}).init()
         tools = await load_mcp_tools(m) + await load_mcp_tools(ps)
-        agents = build_agents(model, tools)
+        agents_by_model = {name: build_agents(ChatOpenAI(model=name, base_url=p["base_url"], api_key=os.getenv(p["api_key_env"]),
+                                                         temperature=cfg()["temperature"], timeout=120, max_retries=6), tools)
+                           for name in model_names}
         graph = build_bid_graph(InMemorySaver())
         for n, j in enumerate(jobs):
+            model_name = model_names[n % len(model_names)]
+            if model_name in exhausted:
+                if len(exhausted) == len(model_names):
+                    return rows, next(iter(exhausted.values()))
+                continue
+            for size in ("small", "strong", "fallback"):      # the graph uses the same single model as the baselines
+                p["models"][size] = model_name
+            agents = agents_by_model[model_name]
             os.environ["PORTFOLIO_PERSONA"] = j["persona"]
             for arch in ARCHS:
                 if (arch, j["job_id"]) in finished:
@@ -172,13 +183,14 @@ async def run(jobs: list[dict], model_name: str, done: list[dict], save) -> tupl
                 t0 = time.perf_counter()
                 try:
                     r = await (run_graph(graph, tb, j["job_id"]) if arch == "graph" else run_agent(agents[arch], j["job_id"]))
-                except DailyLimit as e:
-                    return rows, str(e)
                 except Exception as e:  # noqa: BLE001 - one failed run must not stop the comparison
-                    if _daily(e):
-                        return rows, str(e)[:300]
+                    if isinstance(e, DailyLimit) or _daily(e):
+                        exhausted[model_name] = str(e)[:300]
+                        print(f"  {model_name}: daily limit reached, skipping it for now", flush=True)
+                        break
                     r = {"action": "error", "letter": "", "price": None, "tokens": 0, "caught_by_guard": 0,
                          "unsupported_removed": 0, "valid": False, "error": f"{type(e).__name__}: {str(e)[:300]}"}
+                r["model"] = model_name
                 job = gigsim.JOBS[j["job_id"]]
                 scored = score_letter(r["letter"], r["price"], job, j["persona"])
                 reaction = client_reaction(r["letter"], r["price"], j["job_id"]) if r["action"] == "bid" and r["letter"] else None
@@ -191,7 +203,7 @@ async def run(jobs: list[dict], model_name: str, done: list[dict], save) -> tupl
                       f"{r['action']:5s} unsupported={scored['unsupported']} viol={scored['violations_in_letter']} "
                       f"tok={r['tokens']} {rows[-1]['seconds']}s{'' if r['valid'] else '  [INVALID ' + str(r.get('error', 'fallback'))[:80] + ']'}",
                       flush=True)
-    return rows, None
+    return rows, (next(iter(exhausted.values())) if exhausted else None)   # some jobs left for an exhausted model
 
 
 # ---------------------------------------------------------------- tables
@@ -228,7 +240,7 @@ def tables(rows: list[dict], tag: str) -> str:
     keys = list(next((v for v in s.values() if v), {}).keys())
     md = [f"### R&D question C: one ReAct agent vs prebuilt supervisor vs hand-built graph ({tag})", "",
           f"Paired comparison on the {len(paired)} jobs where all three architectures produced a valid run "
-          f"({len(jobs_all)} jobs attempted). Same model for every LLM call.", "",
+          f"({len(jobs_all)} jobs attempted). Within each job all three architectures use the same model.", "",
           "| Metric | (a) ReAct agent | (b) Supervisor | (c) GigBid graph |", "|---|---|---|---|"]
     md += [f"| {k} | {s['react'].get(k)} | {s['supervisor'].get(k)} | {s['graph'].get(k)} |" for k in keys]
     md += ["", "**Decision accuracy by job type**", "", "| Job type | n | (a) ReAct | (b) Supervisor | (c) Graph |", "|---|---|---|---|---|"]
@@ -245,7 +257,8 @@ def tables(rows: list[dict], tag: str) -> str:
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--model", default="openai/gpt-oss-20b")
+    ap.add_argument("--models", default="openai/gpt-oss-20b",
+                    help="comma-separated; job n uses models[n % k] for all three architectures")
     ap.add_argument("--jobs", type=int, default=50)
     ap.add_argument("--resume", action="store_true")
     ap.add_argument("--name", default="architecture")
@@ -259,10 +272,12 @@ def main():
     res_file = OUT / f"{a.name}_results.json"
     done = json.loads(res_file.read_text(encoding="utf-8"))["rows"] if a.resume and res_file.exists() else []
     done = [r for r in done if r["valid"]]
-    tag = f"model={a.model} via {cfg()['profile']} profile; {len(jobs)} stratified dev jobs; RAG_VARIANT={os.getenv('RAG_VARIANT', 'bm25')}"
+    models = [m.strip() for m in a.models.split(",") if m.strip()]
+    tag = (f"models={', '.join(models)} (one per job, same for all three architectures) via {cfg()['profile']} profile; "
+           f"{len(jobs)} stratified dev jobs; RAG_VARIANT={os.getenv('RAG_VARIANT', 'bm25')}")
     OUT.mkdir(parents=True, exist_ok=True)
     save = lambda rows: res_file.write_text(json.dumps({"tag": tag + " (in progress)", "rows": rows}, indent=1), encoding="utf-8")  # noqa: E731
-    rows, stopped = asyncio.run(run(jobs, a.model, done, save))
+    rows, stopped = asyncio.run(run(jobs, models, done, save))
     if stopped:
         print(f"STOPPED: daily token limit ({stopped[:160]}). Re-run with --resume later.")
         tag += "; PARTIAL (daily token limit)"
