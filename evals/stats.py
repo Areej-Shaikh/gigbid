@@ -73,3 +73,25 @@ def cohen_kappa(a: list[int], b: list[int], labels: list[int] | None = None, wei
     po = sum(w(i, j) * obs[i][j] for i in range(k) for j in range(k))
     pe = sum(w(i, j) * ra[i] * rb[j] for i in range(k) for j in range(k))
     return 1.0 if pe == 0 else 1 - po / pe
+
+
+def fleiss_kappa(ratings: list[list[str]]) -> float:
+    """Agreement among a fixed number of raters per item (rows = items, values = category labels)."""
+    rows = [r for r in ratings if r]
+    if not rows:
+        return float("nan")
+    n = len(rows[0])
+    if n < 2 or any(len(r) != n for r in rows):
+        raise ValueError("every item needs the same number (>= 2) of ratings")
+    cats = sorted({c for r in rows for c in r})
+    counts = [[r.count(c) for c in cats] for r in rows]
+    p_i = [(sum(x * x for x in row) - n) / (n * (n - 1)) for row in counts]
+    p_bar = sum(p_i) / len(rows)
+    p_j = [sum(row[j] for row in counts) / (len(rows) * n) for j in range(len(cats))]
+    p_e = sum(p * p for p in p_j)
+    return 1.0 if p_e == 1 else (p_bar - p_e) / (1 - p_e)
+
+
+def sign_test(wins: int, losses: int) -> float:
+    """Two-sided exact sign test (ties dropped): is one system preferred more often than chance?"""
+    return mcnemar_exact(wins, losses)
