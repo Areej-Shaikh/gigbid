@@ -7,7 +7,7 @@ from mcp.shared.memory import create_connected_server_and_client_session
 
 from agent.mcp_client import ToolBox
 from agent.profile import current_persona, get_profile, personas, save_profile
-from apps.api.routers.runs import _rule_paragraph
+from apps.api.routers.proposals import _rule_paragraph
 from mcp_servers.portfolio import server as portfolio
 
 

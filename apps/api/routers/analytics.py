@@ -6,7 +6,7 @@ from fastapi import APIRouter, Request
 from agent.config import cfg
 from agent.profile import current_persona, get_profile
 from apps.api.auth.security import User
-from apps.api.schemas.models import Analytics, Message, MessageList, Settings
+from apps.api.schemas.models import Analytics, Settings
 
 router = APIRouter(tags=["analytics"])
 
@@ -28,12 +28,6 @@ def analytics(request: Request, user: str = User):
         top_reject_reasons=[r for r, _ in Counter(r["reject_reason"] for r in rows if r.get("reject_reason")).most_common(5)],
         top_skip_reasons=[r for r, _ in Counter(x.split(":")[0] for r in rows if r.get("action") == "skip"
                                                 for x in r.get("skip_reasons") or []).most_common(5)])
-
-
-@router.get("/messages", response_model=MessageList)
-async def messages(request: Request, user: str = User):
-    res = await request.app.state.toolbox.call("api", "list_messages")
-    return MessageList(messages=[Message(**m) for m in res["messages"]])
 
 
 @router.get("/settings", response_model=Settings)

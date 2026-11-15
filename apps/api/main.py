@@ -26,7 +26,18 @@ from agent.graphs.conversation_graph import build_conversation_graph  # noqa: E4
 from agent.mcp_client import ToolCallError, open_toolbox  # noqa: E402
 from agent.persistence import backend, open_persistence  # noqa: E402
 from agent.tracing import current_trace_id, endpoint, setup_tracing  # noqa: E402
-from apps.api.routers import analytics, auth, conversations, jobs, memory, profile, runs  # noqa: E402
+from apps.api.routers import (  # noqa: E402
+    analytics,
+    approvals,
+    auth,
+    conversations,
+    jobs,
+    memory,
+    messages,
+    profile,
+    proposals,
+    runs,
+)
 from apps.api.schemas.models import Health  # noqa: E402
 from apps.api.streaming import ConversationManager, RunIndex, RunManager  # noqa: E402
 
@@ -74,7 +85,8 @@ async def trace_header(request: Request, call_next):
 if TRACING:
     from opentelemetry.instrumentation.fastapi import FastAPIInstrumentor
     FastAPIInstrumentor.instrument_app(app, excluded_urls="api/health,assets")
-for r in (auth.router, jobs.router, runs.router, analytics.router, conversations.router, memory.router, profile.router):
+for r in (auth.router, jobs.router, runs.router, approvals.router, proposals.router, messages.router, analytics.router,
+          conversations.router, memory.router, profile.router):
     app.include_router(r, prefix="/api")
 
 
