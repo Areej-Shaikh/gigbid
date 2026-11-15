@@ -1,7 +1,8 @@
 # GigBid: R&D Report
 
 **AI-4016 R&D Assignment, an engineering design review.** Live demo: https://gigbid-wtvi.onrender.com ·
-Code: https://github.com/Areej-Shaikh/gigbid · Every number below cites a file in `evals/results/` (abbreviated
+Code: https://github.com/Areej-Shaikh/gigbid · Portfolio MCP on PyPI: https://pypi.org/project/gigbid-portfolio-mcp/ ·
+Write-up: https://medium.com/@areejshaikh611/my-best-retriever-made-my-ai-agent-worse-at-its-job-b53bc5639d10 · Every number below cites a file in `evals/results/` (abbreviated
 `R/`), a test, or a document in the repo.
 
 ---
@@ -155,7 +156,7 @@ guarantee"). **Who was right:** reviewing the judge's reasons for the five large
 the defensible one each time: the judge rewards topical relevance and the presence of citations, and does not notice
 template-like structure or an obeyed instruction. **Consequence:** the judge score is *not* used to choose designs; decisions in this report rest on
 unsupported-claim counts, decision F1 and reply rate. Labelling also exposed a bug in the injection success checker
-(§8, failure 10). A blind pairwise human panel was not run (no classmates available in the time frame).
+(§8, failure 10). A blind pairwise human panel (BM25 vs V2 drafts for the same 15 jobs, randomised A/B order, hidden key) was prepared (`evals/runners/pairwise_panel.py`) but **not run**: no ratings were collected in time.
 
 **What ships.** **BM25** (`docs/adr/0003`). It has the best end-to-end bid F1, half the wasted bids, a reply rate at
 least as good, no model download (fits the free host's 512 MB), and an 11 ms p95. V2 stays selectable for

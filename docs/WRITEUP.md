@@ -1,3 +1,5 @@
+> Published on Medium: https://medium.com/@areejshaikh611/my-best-retriever-made-my-ai-agent-worse-at-its-job-b53bc5639d10
+
 # My best retriever made my AI agent worse at its job
 
 *What building a multi-agent freelance copilot taught me about measuring the right thing.*

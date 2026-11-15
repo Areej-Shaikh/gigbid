@@ -9,8 +9,10 @@ It is built from LangGraph agents that reach the marketplace, the freelancer's p
 only through MCP servers with least-privilege tool allowlists. A FastAPI + React app streams each agent
 run live and handles approvals.
 
-**Live demo: https://gigbid-wtvi.onrender.com** (reviewer login in the submission; free plan, so the first
-request after idle takes about a minute to wake the server).
+- **Live demo:** https://gigbid-wtvi.onrender.com (reviewer login in the submission; free plan, so the first request
+  after idle takes about a minute to wake the server)
+- **Write-up:** [My best retriever made my AI agent worse at its job](https://medium.com/@areejshaikh611/my-best-retriever-made-my-ai-agent-worse-at-its-job-b53bc5639d10) (Medium)
+- **Portfolio MCP server on PyPI:** [gigbid-portfolio-mcp](https://pypi.org/project/gigbid-portfolio-mcp/)
 
 > AI-4016 R&D assignment. Marketplace = **GigSim**, a local mock built from real Kaggle job and price data
 > (see [docs/DATA_CARD.md](docs/DATA_CARD.md)). No real proposals are ever submitted.
@@ -55,7 +57,7 @@ Both agent graphs, rendered from the compiled LangGraph objects (dotted edges ar
 Details: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) · design decisions: [docs/adr/](docs/adr/) ·
 MCP tools and trust boundaries: [docs/TOOLS.md](docs/TOOLS.md) · security and injection results: [docs/SECURITY.md](docs/SECURITY.md) ·
 operations and budgets: [docs/RUNBOOK.md](docs/RUNBOOK.md) · R&D report: [docs/REPORT.md](docs/REPORT.md) ·
-write-up: [docs/WRITEUP.md](docs/WRITEUP.md)
+write-up: [*My best retriever made my AI agent worse at its job*](https://medium.com/@areejshaikh611/my-best-retriever-made-my-ai-agent-worse-at-its-job-b53bc5639d10) (Medium; source in [docs/WRITEUP.md](docs/WRITEUP.md))
 
 ## Quick start
 
@@ -146,6 +148,8 @@ tokens, USD cost) and every MCP server process into the audit log. Locally: `doc
 http://localhost:6006 (Phoenix). Public trace links need a hosted backend (for example Langfuse Cloud); switching to one is a configuration change only (`OTEL_EXPORTER_OTLP_*`, `TRACE_URL_TEMPLATE`), and was not done for this submission..
 
 ## Use the Portfolio MCP server on its own
+
+Published on PyPI: **https://pypi.org/project/gigbid-portfolio-mcp/**
 
 ```bash
 pip install gigbid-portfolio-mcp      # or: uvx gigbid-portfolio-mcp
