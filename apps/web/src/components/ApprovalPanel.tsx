@@ -14,7 +14,19 @@ interface Payload {
   dry_run?: { connects_cost: number; connects_balance_after: number; would_send?: Record<string, unknown> };
 }
 
-// Proposal studio: every claim shows its evidence on hover; approve, edit or reject with a reason.
+// Split a letter into "paragraphs" the user can regenerate one at a time: real paragraphs if the letter has them,
+// otherwise groups of two sentences.
+export function paragraphs(letter: string): string[] {
+  const real = letter.split(/\n\s*\n/).map((s) => s.trim()).filter(Boolean);
+  if (real.length > 1) return real;
+  const sents = letter.match(/[^.!?]+[.!?]+(\s+|$)/g)?.map((s) => s.trim()) ?? [letter];
+  const out: string[] = [];
+  for (let i = 0; i < sents.length; i += 2) out.push(sents.slice(i, i + 2).join(" "));
+  return out;
+}
+
+// Proposal studio: every claim shows its evidence on hover; approve, edit or reject with a reason;
+// regenerate one paragraph from the same evidence (accepted through Edit, so Compliance re-checks it).
 export function ApprovalPanel({ jobId, payload, questions, onSent }: { jobId: string; payload: Payload; questions: string[]; onSent: () => void }) {
   const [text, setText] = useState(payload.draft.cover_letter);
   const [editing, setEditing] = useState(false);
@@ -23,6 +35,27 @@ export function ApprovalPanel({ jobId, payload, questions, onSent }: { jobId: st
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const v = payload.verification;
+  const parts = paragraphs(payload.draft.cover_letter);
+  const [regen, setRegen] = useState<{ index: number; text: string; model: string; removed: string[] } | null>(null);
+  const [regenBusy, setRegenBusy] = useState<number | null>(null);
+
+  async function regenerate(index: number) {
+    setRegenBusy(index); setError(null);
+    const { data, error } = await api.POST("/api/runs/{job_id}/regenerate", {
+      params: { path: { job_id: jobId } }, body: { paragraph: parts[index] },
+    });
+    setRegenBusy(null);
+    if (error || !data) return setError(errorText(error));
+    setRegen({ index, text: data.paragraph, model: data.model, removed: data.removed_by_compliance ?? [] });
+  }
+
+  function useSuggestion() {
+    if (!regen) return;
+    const next = parts.map((p, i) => (i === regen.index ? regen.text : p));
+    const sep = payload.draft.cover_letter.includes("\n\n") ? "\n\n" : " ";
+    setText(next.join(sep));
+    setRegen(null); setEditing(true);
+  }
 
   async function send(action: "approve" | "edit" | "reject") {
     setBusy(true); setError(null);
@@ -49,7 +82,27 @@ export function ApprovalPanel({ jobId, payload, questions, onSent }: { jobId: st
           <textarea id="letter" value={text} onChange={(e) => setText(e.target.value)} rows={12} />
         </>
       ) : (
-        <EvidenceText text={payload.draft.cover_letter} evidence={payload.evidence} />
+        <div className="letter">
+          {parts.map((part, i) => (
+            <div key={i} className="para">
+              <EvidenceText text={part} evidence={payload.evidence} />
+              <button type="button" className="btn regen" disabled={busy || regenBusy !== null} onClick={() => regenerate(i)}
+                      aria-label={`Regenerate paragraph ${i + 1}`} title="Regenerate this paragraph from the same evidence">
+                {regenBusy === i ? "…" : "↻"}
+              </button>
+              {regen?.index === i && (
+                <div className="suggestion" aria-label="Regenerated paragraph">
+                  <div className="muted small">Suggested rewrite ({regen.model}){regen.removed.length ? `, ${regen.removed.length} sentence(s) removed by Compliance` : ""}:</div>
+                  <EvidenceText text={regen.text} evidence={payload.evidence} />
+                  <div className="row gap">
+                    <button type="button" className="btn primary" onClick={useSuggestion}>Use this</button>
+                    <button type="button" className="btn" onClick={() => setRegen(null)}>Discard</button>
+                  </div>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
       )}
 
       {payload.draft.screening_answers.map((a, i) => (

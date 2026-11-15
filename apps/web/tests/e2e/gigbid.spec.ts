@@ -37,17 +37,32 @@ async function signIn(page: Page) {
   await page.getByLabel("Username").fill(USER);
   await page.getByLabel("Password").fill(PASS);
   await page.getByRole("button", { name: "Sign in" }).click();
-  await expect(page.getByRole("heading", { name: "Job inbox" })).toBeVisible();
+  // first sign-in goes through onboarding; later ones go straight to the inbox
+  const inbox = page.getByRole("heading", { name: "Job inbox" });
+  const setup = page.getByRole("heading", { name: "Set up GigBid" });
+  await expect(inbox.or(setup)).toBeVisible();
+  if (await setup.isVisible()) await page.getByRole("button", { name: "Save and go to my inbox" }).click();
+  await expect(inbox).toBeVisible();
 }
 
-test("onboarding: sign in, see the inbox, wrong password is refused", async ({ page }) => {
+test("onboarding: wrong password refused, set persona, rate and searches, Settings reflects them", async ({ page }) => {
   await page.goto("/");
   await expect(page).toHaveURL(/\/login/);
   await page.getByLabel("Password").fill("wrong");
   await page.getByRole("button", { name: "Sign in" }).click();
   await expect(page.getByRole("alert")).toContainText("wrong username or password");
   await signIn(page);
+  await page.goto("/onboarding");
+  await expect(page.getByRole("heading", { name: "Set up GigBid" })).toBeVisible();
+  await page.getByRole("radio", { name: "AI / ML engineer" }).check();
+  await expect(page.getByText("GigSim connected")).toBeVisible();
+  await page.getByLabel("Minimum hourly rate (USD)").fill("27");
+  await page.getByLabel("Saved searches (comma separated)").fill("LLM, chatbot");
+  await page.getByRole("button", { name: "Save and go to my inbox" }).click();
+  await expect(page.getByRole("heading", { name: "Job inbox" })).toBeVisible();
   await expect(page.locator(".job").first()).toBeVisible();
+  await page.goto("/settings");
+  await expect(page.getByText("$27")).toBeVisible();
 });
 
 test("approve a proposal: evidence on hover, dry run shown, submitted", async ({ page, request }) => {
@@ -144,4 +159,19 @@ test("settings: memory viewer shows what was learned and the promotion rules", a
   await expect(mem.getByRole("heading", { name: /Style memory/ })).toContainText("promoted after 2 different jobs");
   await mem.getByRole("button", { name: "Sync outcomes from marketplace" }).click();
   await expect(mem.getByRole("status")).toContainText("proposals");
+});
+
+test("regenerate one paragraph: suggestion from the same evidence, accepted through Edit and re-checked", async ({ page, request }) => {
+  const id = await jobAwaitingApproval(request);
+  await signIn(page);
+  await page.goto(`/jobs/${id}`);
+  const studio = page.getByLabel("Proposal studio");
+  await expect(studio).toBeVisible();
+  await studio.getByRole("button", { name: "Regenerate paragraph 1" }).click();
+  const suggestion = studio.getByLabel("Regenerated paragraph");
+  await expect(suggestion).toBeVisible();
+  await suggestion.getByRole("button", { name: "Use this" }).click();
+  await expect(studio.getByLabel(/Cover letter/)).toBeVisible();
+  await studio.getByRole("button", { name: /Save edit/ }).click();
+  await expect(studio.getByRole("button", { name: /Approve/ })).toBeVisible({ timeout: 60_000 });
 });

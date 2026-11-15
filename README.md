@@ -24,6 +24,7 @@ request after idle takes about a minute to wake the server).
 | **Bid** (one thread per job) | Intake → **Job Analyst ∥ Risk Assessor ∥ Fit Matcher** (parallel) → decide → Pricing Strategist → Proposal Writer → Claim Verifier → Critic (≤2 revisions) → Compliance Guard → dry-run preview | Approve / edit / reject before `submit_proposal` |
 | **Conversation** (one thread per client) | Read messages → classify intent → (interview: find calendar slots) → Client Liaison draft → Compliance → dry-run preview | Approve / edit / reject before `send_message` (+ calendar hold) |
 
+- **Onboarding and control.** First sign-in walks through persona, marketplace connection, portfolio upload (PDF CV or Markdown case study), rates and weekly Connects budget. In the Proposal studio any paragraph can be regenerated from the same evidence and is re-checked before approval.
 - **Evidence-backed writing.** Every experience claim in a proposal must cite an `[evidence_id]` from the portfolio. The Claim Verifier removes unsupported claims before the Critic sees the draft.
 - **Long-term memory.** Edits the freelancer makes become *style rules* (only after an explicit promotion rule fires), and proposal outcomes become per-category *outcome memory*.
 - **Durable runs.** Pending approvals survive a crash: LangGraph checkpoints in Postgres, idempotency keys on every write, so a resumed run never submits twice. Tested by killing the API mid-run.
