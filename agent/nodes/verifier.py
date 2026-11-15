@@ -1,48 +1,22 @@
 """Claim verification (B3): split the draft into claims, check each against the cited evidence,
-remove unsupported claims BEFORE the Critic sees the draft."""
-import re
+remove unsupported claims BEFORE the Critic sees the draft. Splitting and the grounding check live in rag/verify.py;
+this node adds an LLM grader that may refine (never rescue) the lexical verdicts."""
 
 from pydantic import BaseModel
 
 from agent.handoffs import ClaimCheck, VerificationReport
 from agent.llm import structured
-from agent.nodes.common import CITE, prompt, sentences, trace
+from agent.nodes.common import prompt, trace
 from agent.security import on
+from rag.verify import CITE, CLAIM, split_claims
+from rag.verify import check_claim as _lexical
+from rag.verify import remove_claims as _clean
 
-# a sentence is an experience CLAIM if "I/we" is followed by past-tense work or "experience/years"
-CLAIM = re.compile(r"\b(i|i've|i have|we)\b[^\"]*\b(built|developed|created|delivered|designed|worked|"
-                   r"experience|years|improved|reduced|increased|led|shipped|deployed|automated|raised)\b", re.I)
-STOP = set("the a an and or for with from that this into over your our was were have has had are is to of in on at by "
-           "which who what when where while about than then them they their there these those using used".split())
-
-
-def _content(s: str) -> set[str]:
-    return {w for w in re.findall(r"[a-z0-9+#]+", s.lower()) if len(w) > 3 and w not in STOP}
-
-
-def _lexical(claim: str, ids: list[str], pool: dict) -> ClaimCheck:
-    if not ids:
-        return ClaimCheck(claim=claim, status="unsupported", note="no citation")
-    missing = [i for i in ids if i not in pool]
-    if missing:
-        return ClaimCheck(claim=claim, evidence_ids=ids, status="unsupported", note=f"unknown evidence {missing}")
-    ev = " ".join(pool[i].get("text") or pool[i].get("snippet", "") for i in ids).lower()
-    bare = CITE.sub("", claim)
-    nums = re.findall(r"\d+(?:\.\d+)?", bare)
-    if any(n not in ev for n in nums):
-        return ClaimCheck(claim=claim, evidence_ids=ids, status="unsupported", note="number not in evidence")
-    words = _content(bare)
-    overlap = len([w for w in words if w in ev]) / max(len(words), 1)
-    status = "supported" if overlap >= 0.5 else "partial" if overlap >= 0.3 else "unsupported"
-    return ClaimCheck(claim=claim, evidence_ids=ids, status=status, note=f"overlap {overlap:.2f}")
+__all__ = ["verifier", "CLAIM", "_lexical"]
 
 
 class _LLMChecks(BaseModel):
     checks: list[ClaimCheck]
-
-
-def _clean(text: str, bad: set[str]) -> str:
-    return " ".join(s for s in sentences(text) if s not in bad)
 
 
 async def verifier(state, config=None):
@@ -51,8 +25,7 @@ async def verifier(state, config=None):
         return {"verification": VerificationReport(checks=[], unsupported_before=0, unsupported_after=0, removed=[]).model_dump(),
                 "trace": [trace("verifier", skipped="claim_verifier off")]}
     parts = [draft["cover_letter"]] + draft.get("screening_answers", [])
-    claims = [s for p in parts for s in sentences(p)
-              if CITE.search(s) or CLAIM.search(re.sub(r'"[^"]*"', "", s))]   # ignore quoted job text
+    claims = [s for p in parts for s in split_claims(p)]   # quoted job text is ignored
     lexical = [_lexical(c, CITE.findall(c), pool) for c in claims]
     checks, info = lexical, {"model": "rules", "tokens": 0}
     if claims:
