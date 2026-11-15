@@ -1,0 +1,85 @@
+{
+ "systems": [
+  "bm25",
+  "v2_hybrid"
+ ],
+ "seed": 4016,
+ "instructions": "For each job, read the post, then both proposals. Which proposal would you, as the client, rather reply to? Write A, B or tie in your column. Judge specificity to the job, believable proof, clarity and a clear next step. Do not guess which system wrote which.",
+ "pairs": {
+  "P01": {
+   "A": "v2_hybrid",
+   "B": "bm25",
+   "job_id": "dev-0067"
+  },
+  "P02": {
+   "A": "v2_hybrid",
+   "B": "bm25",
+   "job_id": "dev-0121"
+  },
+  "P03": {
+   "A": "v2_hybrid",
+   "B": "bm25",
+   "job_id": "dev-0125"
+  },
+  "P04": {
+   "A": "bm25",
+   "B": "v2_hybrid",
+   "job_id": "dev-0068"
+  },
+  "P05": {
+   "A": "bm25",
+   "B": "v2_hybrid",
+   "job_id": "dev-0013"
+  },
+  "P06": {
+   "A": "bm25",
+   "B": "v2_hybrid",
+   "job_id": "dev-0009"
+  },
+  "P07": {
+   "A": "v2_hybrid",
+   "B": "bm25",
+   "job_id": "dev-0131"
+  },
+  "P08": {
+   "A": "bm25",
+   "B": "v2_hybrid",
+   "job_id": "dev-0064"
+  },
+  "P09": {
+   "A": "v2_hybrid",
+   "B": "bm25",
+   "job_id": "dev-0132"
+  },
+  "P10": {
+   "A": "v2_hybrid",
+   "B": "bm25",
+   "job_id": "dev-0003"
+  },
+  "P11": {
+   "A": "v2_hybrid",
+   "B": "bm25",
+   "job_id": "dev-0122"
+  },
+  "P12": {
+   "A": "v2_hybrid",
+   "B": "bm25",
+   "job_id": "dev-0063"
+  },
+  "P13": {
+   "A": "bm25",
+   "B": "v2_hybrid",
+   "job_id": "dev-0124"
+  },
+  "P14": {
+   "A": "bm25",
+   "B": "v2_hybrid",
+   "job_id": "dev-0073"
+  },
+  "P15": {
+   "A": "bm25",
+   "B": "v2_hybrid",
+   "job_id": "dev-0072"
+  }
+ }
+}

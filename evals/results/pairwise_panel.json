@@ -1,0 +1,16 @@
+{
+ "raters": 3,
+ "pairs": 15,
+ "votes": {
+  "bm25": 14,
+  "v2_hybrid": 23,
+  "tie": 8
+ },
+ "majority_wins": {
+  "bm25": 6,
+  "v2_hybrid": 7,
+  "tie": 2
+ },
+ "sign_test_p": 1.0,
+ "fleiss_kappa": 0.563
+}
