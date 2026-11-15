@@ -5,18 +5,29 @@ import { ReplyPanel, type ReplyPayload } from "../components/ReplyPanel";
 import { RunTimeline } from "../components/RunTimeline";
 import { Badge, Empty, ErrorBox, Loading, label, statusTone } from "../components/ui";
 
+// The marketplace can be briefly busy (rate limits): retry quietly for up to ~4 minutes instead of failing.
+const RETRY_MS = 8000;
+const MAX_TRIES = 30;
+
 export function Messages() {
   const [params, setParams] = useSearchParams();
   const [list, setList] = useState<S["ConversationSummary"][] | null>(null);
   const [error, setError] = useState<string | null>(null);
   const selected = params.get("c");
 
-  const load = useCallback(() => {
-    api.GET("/api/conversations").then(({ data, error }) => (error ? setError(errorText(error)) : setList(data!.conversations)));
+  const load = useCallback((attempt = 0) => {
+    api.GET("/api/conversations").then(({ data, error }) => {
+      if (error) {                                   // marketplace busy: say so and retry
+        setError(errorText(error));
+        if (attempt < MAX_TRIES) setTimeout(() => load(attempt + 1), RETRY_MS);
+        return;
+      }
+      setError(null); setList(data!.conversations);
+    });
   }, []);
-  useEffect(load, [load]);
+  useEffect(() => { load(0); }, [load]);
 
-  if (error) return <ErrorBox>{error}</ErrorBox>;
+  if (error && !list) return <ErrorBox>{error} (retrying automatically…)</ErrorBox>;
   if (!list) return <Loading what="Loading messages" />;
   return (
     <>
@@ -36,7 +47,7 @@ export function Messages() {
             </button>
           ))}
         </nav>
-        {selected ? <Thread key={selected} clientId={selected} onChange={load} /> : list.length > 0 && <Empty>Pick a conversation.</Empty>}
+        {selected ? <Thread key={selected} clientId={selected} onChange={() => load(0)} /> : list.length > 0 && <Empty>Pick a conversation.</Empty>}
       </div>
     </>
   );
@@ -47,11 +58,18 @@ function Thread({ clientId, onChange }: { clientId: string; onChange: () => void
   const [error, setError] = useState<string | null>(null);
   const [active, setActive] = useState(0);
 
-  const load = useCallback(() => {
+  const load = useCallback((attempt = 0) => {
     api.GET("/api/conversations/{client_id}", { params: { path: { client_id: clientId } } })
-      .then(({ data, error }) => (error ? setError(errorText(error)) : setC(data!)));
+      .then(({ data, error }) => {
+        if (error) {                                 // marketplace busy: say so and retry
+          setError(errorText(error));
+          if (attempt < MAX_TRIES) setTimeout(() => load(attempt + 1), RETRY_MS);
+          return;
+        }
+        setError(null); setC(data!);
+      });
   }, [clientId]);
-  useEffect(load, [load]);
+  useEffect(() => { load(0); }, [load]);
 
   async function suggest() {
     setError(null);
@@ -59,15 +77,16 @@ function Thread({ clientId, onChange }: { clientId: string; onChange: () => void
     if (error) return setError(errorText(error));
     setActive((n) => n + 1);
   }
-  const refresh = () => { load(); onChange(); };
+  const refresh = () => { load(0); onChange(); };
 
-  if (error) return <ErrorBox>{error}</ErrorBox>;
+  if (error && !c) return <ErrorBox>{error} (retrying automatically…)</ErrorBox>;
   if (!c) return <Loading what="Loading conversation" />;
   const lastMine = c.messages.map((m) => m.sender).lastIndexOf("freelancer");
   const unanswered = c.messages.slice(lastMine + 1).some((m) => m.sender === "client");
   const v = c.values as { sent?: { hold?: { start: string } | null }; errors?: string[] };
   return (
     <section className="stack">
+      {error && <ErrorBox>{error}</ErrorBox>}
       <div className="card">
         <div className="row between wrap gap">
           <h3>{c.client_id}</h3>

@@ -17,13 +17,13 @@ load_dotenv()
 
 from fastapi import FastAPI, Request  # noqa: E402
 from fastapi.middleware.cors import CORSMiddleware  # noqa: E402
-from fastapi.responses import FileResponse  # noqa: E402
+from fastapi.responses import FileResponse, JSONResponse  # noqa: E402
 from fastapi.staticfiles import StaticFiles  # noqa: E402
 
 from agent.config import cfg  # noqa: E402
 from agent.graphs.bid_graph import build_bid_graph  # noqa: E402
 from agent.graphs.conversation_graph import build_conversation_graph  # noqa: E402
-from agent.mcp_client import open_toolbox  # noqa: E402
+from agent.mcp_client import ToolCallError, open_toolbox  # noqa: E402
 from agent.persistence import backend, open_persistence  # noqa: E402
 from agent.tracing import current_trace_id, endpoint, setup_tracing  # noqa: E402
 from apps.api.routers import analytics, auth, conversations, jobs, memory, profile, runs  # noqa: E402
@@ -48,6 +48,16 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(title="GigBid API", version="0.1.0", lifespan=lifespan)
+
+
+@app.exception_handler(ToolCallError)
+async def marketplace_busy(request: Request, exc: ToolCallError):
+    """A marketplace tool that is rate-limited or down is a temporary condition (503), not a server bug (500):
+    the UI says so and retries (A6 degraded mode)."""
+    busy = "rate_limited" in str(exc)
+    return JSONResponse(status_code=503, headers={"Retry-After": "10"},
+                        content={"detail": "Marketplace busy (rate limit), retrying shortly" if busy
+                                 else "Marketplace unavailable, retrying shortly"})
 app.add_middleware(CORSMiddleware, allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
                    allow_methods=["*"], allow_headers=["*"], expose_headers=["x-trace-id"])
 

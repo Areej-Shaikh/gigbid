@@ -34,12 +34,19 @@ const withAuth: Middleware = {
     request.headers.set("traceparent", traceparent());   // the trace id starts here, in the browser (E3)
     return request;
   },
-  onResponse({ response }) {
-    if (response.status === 401 && !location.pathname.startsWith("/login")) {
+  async onResponse({ request, response }) {
+    // 503 = marketplace busy (rate limit) or briefly down: retry reads with a growing delay. Writes are never
+    // retried here (the server side already uses idempotency keys and the user can press the button again).
+    let r = response;
+    for (let i = 0; i < 6 && r.status === 503 && request.method === "GET"; i++) {
+      await new Promise((res) => setTimeout(res, 3000 * (i + 1)));
+      r = await fetch(request.url, { method: "GET", headers: request.headers });
+    }
+    if (r.status === 401 && !location.pathname.startsWith("/login")) {
       auth.set(null);
       location.href = "/login";
     }
-    return response;
+    return r;
   },
 };
 

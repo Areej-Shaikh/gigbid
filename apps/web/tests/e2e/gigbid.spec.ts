@@ -9,12 +9,23 @@ async function token(request: APIRequestContext) {
   return (await r.json()).token as string;
 }
 
+// GET that waits out a busy marketplace (503 while the per-user rate limit window resets), like the UI does.
+async function getJson(request: APIRequestContext, url: string, headers: Record<string, string>) {
+  for (let i = 0; i < 30; i++) {
+    const r = await request.get(url, { headers });
+    if (r.ok()) return r.json();
+    if (r.status() !== 503) throw new Error(`GET ${url}: ${r.status()}`);
+    await new Promise((res) => setTimeout(res, 5000));
+  }
+  throw new Error(`GET ${url}: marketplace stayed busy`);
+}
+
 // Find a job that the agents decide to BID on, analyse it, and return its id (paused at approval).
 async function jobAwaitingApproval(request: APIRequestContext): Promise<string> {
   const t = await token(request);
   const headers = { Authorization: `Bearer ${t}` };
   for (const q of ["python", "", "data", "web"]) {
-    const jobs = (await (await request.get(`/api/jobs?q=${q}&limit=40`, { headers })).json()).jobs as { job_id: string; action?: string }[];
+    const jobs = (await getJson(request, `/api/jobs?q=${q}&limit=40`, headers)).jobs as { job_id: string; action?: string }[];
     for (const j of jobs) {
       if (used.has(j.job_id) || j.action) continue;
       used.add(j.job_id);
