@@ -33,7 +33,7 @@ export function Settings() {
             <dt>Max revisions</dt><dd>{String(s.budgets.max_revisions)}</dd>
             <dt>Token budget / job</dt><dd>{String(s.budgets.max_tokens_per_thread)}</dd>
           </dl>
-          <p className="muted small">Edit these in agent/config.yaml (UI editing comes later).</p>
+          <p className="muted small"><a href="/onboarding">Edit persona, rates, budget and saved searches</a>. Thresholds and budgets live in agent/config.yaml.</p>
         </section>
         <section className="card">
           <h3>Models ({s.llm_profile} profile)</h3>

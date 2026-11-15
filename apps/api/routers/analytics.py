@@ -4,6 +4,7 @@ from collections import Counter
 from fastapi import APIRouter, Request
 
 from agent.config import cfg
+from agent.profile import current_persona, get_profile
 from apps.api.auth.security import User
 from apps.api.schemas.models import Analytics, Message, MessageList, Settings
 
@@ -38,9 +39,15 @@ async def messages(request: Request, user: str = User):
 @router.get("/settings", response_model=Settings)
 async def settings(request: Request, user: str = User):
     c = cfg()
-    skills = await request.app.state.toolbox.call("api", "list_skills")
+    prof = await get_profile(request.app.state.store, user)
+    token = current_persona.set(prof["persona"])          # the user's chosen portfolio, not the server default
+    try:
+        skills = await request.app.state.toolbox.call("api", "list_skills")
+    finally:
+        current_persona.reset(token)
     p = c["profiles"][c["profile"]]
+    mine = {k: prof[k] for k in ("min_hourly_rate", "min_fixed_budget", "weekly_connects_budget", "saved_searches")}
     return Settings(username=user, persona=skills["persona"], headline=skills["headline"],
                     hourly_rate=skills["hourly_rate"], skills=[s["skill"] for s in skills["skills"]],
                     llm_profile=c["profile"], models={n: p.get("models", {}).get(size, "rules") for n, size in c["nodes"].items()},
-                    user=c["user"], decision=c["decision"], budgets=c["budgets"])
+                    user={**c["user"], **mine}, decision=c["decision"], budgets=c["budgets"])

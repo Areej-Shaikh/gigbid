@@ -16,6 +16,7 @@ from typing import Any
 from langgraph.types import Command
 
 from agent.config import cfg
+from agent.profile import current_persona, get_profile
 from agent.tracing import current_trace_id, span, trace_url
 
 INDEX = Path("data/processed/runs.json")
@@ -101,6 +102,8 @@ class RunManager:
 
     async def _run(self, key: str, user: str, inp, fresh: bool, checkpoint_id: str | None = None) -> None:
         t0, sk = time.time(), scoped(key, user)
+        profile = await get_profile(getattr(self.graph, "store", None), user)
+        current_persona.set(profile["persona"])           # this run searches the user's chosen portfolio
         existing = await self.graph.aget_state(self.conf(key, user))
         if fresh and existing.values and existing.next:   # paused or crashed mid-run: continue where it stopped
             inp = None

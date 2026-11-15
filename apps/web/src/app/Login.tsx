@@ -16,7 +16,8 @@ export function Login() {
     setBusy(false);
     if (error || !data) return setError(errorText(error));
     auth.set(data.token);
-    nav("/");
+    const profile = await api.GET("/api/profile");          // first sign-in: onboarding, afterwards: the inbox
+    nav(profile.data && !profile.data.onboarded ? "/onboarding" : "/");
   }
 
   return (

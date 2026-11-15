@@ -11,6 +11,7 @@ from contextlib import AsyncExitStack, asynccontextmanager
 from mcp import ClientSession
 
 from agent.config import cfg
+from agent.profile import current_persona
 from agent.tracing import inject_meta, span
 
 
@@ -39,8 +40,11 @@ class ToolBox:
         server = self.server_of[tool]
         with span(f"mcp.call.{tool}", **{"mcp.server": server, "mcp.tool": tool, "gigbid.agent": agent}) as sp:
             for attempt in range(4):
-                try:          # the trace context travels to the MCP server in the request _meta (E3)
-                    res = await asyncio.wait_for(self.sessions[server].call_tool(tool, args, meta=inject_meta() or None),
+                meta = inject_meta()     # the trace context travels to the MCP server in the request _meta (E3)
+                if persona := current_persona.get():
+                    meta["gigbid_persona"] = persona     # whose portfolio to search (the user's onboarding choice)
+                try:
+                    res = await asyncio.wait_for(self.sessions[server].call_tool(tool, args, meta=meta or None),
                                                  self.timeout_s)
                 except asyncio.TimeoutError:
                     sp.set_attribute("gigbid.error", "timeout")

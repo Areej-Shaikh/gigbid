@@ -151,6 +151,28 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/runs/{job_id}/regenerate": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Regenerate Paragraph
+         * @description Proposal studio: rewrite ONE paragraph of the draft waiting for approval, from the same evidence. The result is
+         *     checked like a fresh draft (unsupported claims dropped, Compliance rules applied) and returned as a suggestion; the
+         *     user accepts it through the normal Edit path, which re-runs Compliance and feeds style memory.
+         */
+        post: operations["regenerate_paragraph_api_runs__job_id__regenerate_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/analytics": {
         parameters: {
             query?: never;
@@ -347,6 +369,45 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/profile": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Get My Profile */
+        get: operations["get_my_profile_api_profile_get"];
+        /** Update My Profile */
+        put: operations["update_my_profile_api_profile_put"];
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/profile/portfolio": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Upload Portfolio
+         * @description Add work to the user's portfolio: a PDF CV (split into sections) or a Markdown case study. The Portfolio server
+         *     re-indexes on its next call, so the evidence is available to the agents immediately.
+         */
+        post: operations["upload_portfolio_api_profile_portfolio_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/health": {
         parameters: {
             query?: never;
@@ -394,6 +455,11 @@ export interface components {
             top_reject_reasons: string[];
             /** Top Skip Reasons */
             top_skip_reasons: string[];
+        };
+        /** Body_upload_portfolio_api_profile_portfolio_post */
+        Body_upload_portfolio_api_profile_portfolio_post: {
+            /** File */
+            file: string;
         };
         /** Checkpoint */
         Checkpoint: {
@@ -615,6 +681,72 @@ export interface components {
             /** Reason */
             reason?: string | null;
         };
+        /** PortfolioUpload */
+        PortfolioUpload: {
+            /** Persona */
+            persona: string;
+            /** Kind */
+            kind: string;
+            /** Evidence Ids */
+            evidence_ids: string[];
+        };
+        /** ProfileIn */
+        ProfileIn: {
+            /** Persona */
+            persona?: string | null;
+            /** Min Hourly Rate */
+            min_hourly_rate?: number | null;
+            /** Min Fixed Budget */
+            min_fixed_budget?: number | null;
+            /** Weekly Connects Budget */
+            weekly_connects_budget?: number | null;
+            /** Saved Searches */
+            saved_searches?: string[] | null;
+            /** Onboarded */
+            onboarded?: boolean | null;
+        };
+        /** ProfileOut */
+        ProfileOut: {
+            /** Username */
+            username: string;
+            /** Persona */
+            persona: string;
+            /** Personas */
+            personas: string[];
+            /** Min Hourly Rate */
+            min_hourly_rate: number;
+            /** Min Fixed Budget */
+            min_fixed_budget: number;
+            /** Weekly Connects Budget */
+            weekly_connects_budget: number;
+            /** Saved Searches */
+            saved_searches: string[];
+            /** Marketplace */
+            marketplace: string;
+            /** Upwork Connected */
+            upwork_connected: boolean;
+            /** Onboarded */
+            onboarded: boolean;
+        };
+        /** RegenerateIn */
+        RegenerateIn: {
+            /** Paragraph */
+            paragraph: string;
+            /** Instruction */
+            instruction?: string | null;
+        };
+        /** RegenerateOut */
+        RegenerateOut: {
+            /** Paragraph */
+            paragraph: string;
+            /** Model */
+            model: string;
+            /**
+             * Removed By Compliance
+             * @default []
+             */
+            removed_by_compliance: string[];
+        };
         /** ReplayIn */
         ReplayIn: {
             /** Checkpoint Id */
@@ -657,6 +789,10 @@ export interface components {
             values: {
                 [key: string]: unknown;
             };
+            /** Trace Id */
+            trace_id?: string | null;
+            /** Trace Url */
+            trace_url?: string | null;
         };
         /** RunSummary */
         RunSummary: {
@@ -688,6 +824,8 @@ export interface components {
             duration_s?: number | null;
             /** Reject Reason */
             reject_reason?: string | null;
+            /** Trace Url */
+            trace_url?: string | null;
             /** Updated */
             updated: string;
         };
@@ -1051,6 +1189,41 @@ export interface operations {
             };
         };
     };
+    regenerate_paragraph_api_runs__job_id__regenerate_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                job_id: string;
+            };
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["RegenerateIn"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["RegenerateOut"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
     analytics_api_analytics_get: {
         parameters: {
             query?: never;
@@ -1372,6 +1545,101 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["SyncResult"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    get_my_profile_api_profile_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ProfileOut"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    update_my_profile_api_profile_put: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["ProfileIn"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ProfileOut"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    upload_portfolio_api_profile_portfolio_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "multipart/form-data": components["schemas"]["Body_upload_portfolio_api_profile_portfolio_post"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["PortfolioUpload"];
                 };
             };
             /** @description Validation Error */

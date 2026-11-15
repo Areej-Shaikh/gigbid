@@ -14,7 +14,7 @@ from mcp.server.fastmcp.exceptions import ToolError
 from mcp.types import ToolAnnotations
 from pydantic import BaseModel, Field
 
-from agent.tracing import setup_tracing, traced_tool
+from agent.tracing import mcp_request_meta, setup_tracing, traced_tool
 from rag.ingest.portfolio_loader import load_portfolio, load_profile, portfolio_version
 from rag.retriever import build_retriever
 
@@ -22,18 +22,22 @@ mcp = FastMCP("gigbid-portfolio")
 READ = ToolAnnotations(readOnlyHint=True, destructiveHint=False, idempotentHint=True, openWorldHint=False)
 EvidenceType = Literal["cv", "case_study", "repo", "review", "proposal"]
 
-_state: dict = {}
+_cache: dict[str, dict] = {}
 
 
 def store() -> dict:
-    """Load the persona lazily; reload when the persona changes or any portfolio file is added or edited."""
-    persona = os.getenv("PORTFOLIO_PERSONA", "ai_ml_engineer")
-    version = portfolio_version(persona)                 # re-index when the user adds or edits work (B1)
-    if _state.get("persona") != persona or _state.get("version") != version:
+    """The current persona's index. Persona = the caller's onboarding choice (MCP request _meta "gigbid_persona"),
+    else PORTFOLIO_PERSONA. One cached index per persona, rebuilt when any of its files is added or edited (B1)."""
+    persona = mcp_request_meta().get("gigbid_persona") or os.getenv("PORTFOLIO_PERSONA", "ai_ml_engineer")
+    if "/" in persona or "\\" in persona or persona.startswith("."):
+        raise ToolError("invalid persona")
+    version = portfolio_version(persona)
+    s = _cache.get(persona)
+    if s is None or s["version"] != version:
         items = load_portfolio(persona)
-        _state.update(persona=persona, version=version, items=items, by_id={i["evidence_id"]: i for i in items},
-                      retriever=build_retriever(items), profile=load_profile(persona))
-    return _state
+        s = _cache[persona] = dict(persona=persona, version=version, items=items, by_id={i["evidence_id"]: i for i in items},
+                                   retriever=build_retriever(items), profile=load_profile(persona))
+    return s
 
 
 # ---------------------------------------------------------------- models

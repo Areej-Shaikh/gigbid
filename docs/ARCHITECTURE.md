@@ -16,6 +16,7 @@
 | Web | `apps/web/` | React + Vite; API client generated from FastAPI's OpenAPI schema |
 | Tracing | `agent/tracing.py` | OpenTelemetry → any OTLP backend (Phoenix in compose); PII masked on export |
 | Security | `agent/security.py` | Prompt-injection defence layers (switchable only for the evaluation) |
+| Onboarding profile | `agent/profile.py`, `apps/api/routers/profile.py` | Per-user persona, rates, weekly Connects budget, saved searches (LangGraph store). The persona travels to the Portfolio server in the MCP request `_meta`; Pricing uses the user's floor and budget |
 
 ## Bid graph
 

@@ -5,7 +5,9 @@ from langchain_core.runnables import RunnableConfig
 
 from agent.config import cfg
 from agent.handoffs import PriceQuote
+from agent.memory.store import current_store, user_of
 from agent.nodes.common import toolbox, trace
+from agent.profile import get_profile
 
 
 async def pricing(state, config: RunnableConfig):
@@ -18,7 +20,8 @@ async def pricing(state, config: RunnableConfig):
         if s.get("found") and s.get(btype):
             market.append(s[btype][pos]); used.append(skill)
     rationale = []
-    floor = c["user"]["min_hourly_rate"] if btype == "hourly" else c["user"]["min_fixed_budget"]
+    prof = await get_profile(current_store(), user_of(config))   # the user's own rates and budget (onboarding)
+    floor = prof["min_hourly_rate"] if btype == "hourly" else prof["min_fixed_budget"]
     own_rate = (await tb.call("pricing", "list_skills")).get("hourly_rate")   # the freelancer's own rate
     if market and btype == "hourly" and own_rate:
         amount = (statistics.median(market) + own_rate) / 2
@@ -45,8 +48,9 @@ async def pricing(state, config: RunnableConfig):
         amount = floor; rationale.append(f"raised to your floor ${floor}")
     balance = (await tb.call("pricing", "get_connects_balance"))["balance"]
     cost = job.get("connects_cost", 0)
-    worth = cost <= balance and state["fit"]["fit_score"] >= c["decision"]["min_fit"]
-    rationale.append(f"{cost} Connects of {balance} left: {'worth it' if worth else 'NOT worth it'}")
+    budget = int(prof["weekly_connects_budget"])
+    worth = cost <= balance and cost <= budget and state["fit"]["fit_score"] >= c["decision"]["min_fit"]
+    rationale.append(f"{cost} Connects of {balance} left (weekly budget {budget}): {'worth it' if worth else 'NOT worth it'}")
     q = PriceQuote(amount=round(amount, 2), budget_type=btype, rationale=rationale,
                    market={"skills": used, "position": pos}, connects_cost=cost, connects_balance=balance,
                    connects_worth_it=worth)

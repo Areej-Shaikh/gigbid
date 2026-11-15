@@ -8,6 +8,7 @@ import { JobDetail } from "./app/JobDetail";
 import { Layout } from "./app/Layout";
 import { Login } from "./app/Login";
 import { Messages } from "./app/Messages";
+import { Onboarding } from "./app/Onboarding";
 import { Pipeline } from "./app/Pipeline";
 import { Settings } from "./app/Settings";
 import "./styles.css";
@@ -28,6 +29,7 @@ createRoot(document.getElementById("root")!).render(
           <Route path="messages" element={<Messages />} />
           <Route path="analytics" element={<Analytics />} />
           <Route path="settings" element={<Settings />} />
+          <Route path="onboarding" element={<Onboarding />} />
         </Route>
       </Routes>
     </BrowserRouter>

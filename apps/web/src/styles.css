@@ -134,3 +134,15 @@ th, td { text-align: left; padding: .4rem .5rem; border-bottom: 1px solid var(--
 .mem { list-style: none; padding: 0; margin: 0; }
 .mem li { display: flex; justify-content: space-between; align-items: flex-start; gap: .75rem; padding: .5rem 0; border-top: 1px solid var(--line); }
 .small-btn { padding: .2rem .6rem; font-size: .85rem; flex-shrink: 0; }
+
+/* onboarding */
+.onboarding { display: grid; gap: 14px; max-width: 760px; }
+.choices { display: flex; flex-wrap: wrap; gap: 8px; }
+.choice { display: inline-flex; align-items: center; gap: 6px; padding: 8px 12px; border: 1px solid var(--line, #d6d9e0); border-radius: 8px; cursor: pointer; }
+.choice.on { border-color: var(--accent, #3b5bdb); background: rgba(59, 91, 219, 0.08); }
+.choice input { width: auto; }
+/* proposal studio: regenerate one paragraph */
+.para { position: relative; padding: 2px 0; }
+.para + .para { margin-top: 6px; }
+.para .regen { margin-left: 6px; font-size: 12px; padding: 1px 6px; }
+.suggestion { border: 1px dashed var(--accent, #3b5bdb); border-radius: 8px; padding: 8px 10px; margin: 8px 0; }

@@ -1,7 +1,7 @@
 """Request / response models. The TypeScript client is generated from these (OpenAPI)."""
 from typing import Any, Literal
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 
 class LoginIn(BaseModel):
@@ -204,3 +204,44 @@ class CheckpointHistory(BaseModel):
 
 class ReplayIn(BaseModel):
     checkpoint_id: str
+
+
+# ---------------- onboarding / profile ----------------
+class ProfileIn(BaseModel):
+    persona: str | None = None
+    min_hourly_rate: float | None = Field(default=None, ge=1, le=1000)
+    min_fixed_budget: float | None = Field(default=None, ge=1, le=100_000)
+    weekly_connects_budget: int | None = Field(default=None, ge=0, le=1000)
+    saved_searches: list[str] | None = None
+    onboarded: bool | None = None
+
+
+class ProfileOut(BaseModel):
+    username: str
+    persona: str
+    personas: list[str]
+    min_hourly_rate: float
+    min_fixed_budget: float
+    weekly_connects_budget: int
+    saved_searches: list[str]
+    marketplace: str
+    upwork_connected: bool
+    onboarded: bool
+
+
+class PortfolioUpload(BaseModel):
+    persona: str
+    kind: str
+    evidence_ids: list[str]
+
+
+# ---------------- proposal studio: regenerate one paragraph ----------------
+class RegenerateIn(BaseModel):
+    paragraph: str = Field(min_length=10, max_length=3000)
+    instruction: str | None = Field(default=None, max_length=300)
+
+
+class RegenerateOut(BaseModel):
+    paragraph: str
+    model: str
+    removed_by_compliance: list[str] = []
