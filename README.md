@@ -1,5 +1,7 @@
 # GigBid: a multi-agent freelancer copilot
 
+![GigBid demo: one job from inbox to approved proposal](docs/images/demo.gif)
+
 GigBid reads freelance job posts, decides which ones are worth bidding on, and drafts evidence-backed
 proposals and client replies. **A human approves every proposal and every message before anything is sent.**
 
@@ -43,8 +45,16 @@ flowchart LR
   API & BG & M & P & W -. OTLP traces .-> PX[Phoenix]
 ```
 
+Both agent graphs, rendered from the compiled LangGraph objects (dotted edges are conditional):
+
+| Bid graph | Conversation graph |
+|---|---|
+| <img src="docs/images/bid_graph.png" width="260"> | <img src="docs/images/conversation_graph.png" width="260"> |
+
 Details: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) · design decisions: [docs/adr/](docs/adr/) ·
-MCP tools and trust boundaries: [docs/TOOLS.md](docs/TOOLS.md) · security and injection results: [docs/SECURITY.md](docs/SECURITY.md)
+MCP tools and trust boundaries: [docs/TOOLS.md](docs/TOOLS.md) · security and injection results: [docs/SECURITY.md](docs/SECURITY.md) ·
+operations and budgets: [docs/RUNBOOK.md](docs/RUNBOOK.md) · R&D report: [docs/REPORT.md](docs/REPORT.md) ·
+write-up: [docs/WRITEUP.md](docs/WRITEUP.md)
 
 ## Quick start
 
@@ -106,11 +116,41 @@ statistically significant (p = 0.34), so BM25 ships because it is cheaper and si
 meaningful): bid recall 0.867, **0.67 unsupported claims per proposal before the Claim Verifier and 0 after**,
 p50 34 s per job, about 8k tokens per job (21 of the LLM calls fell back to rules because of rate limits).
 
+**Multi-agent comparison** (R&D question C: one ReAct agent vs a prebuilt supervisor vs this graph, same model and
+tools, `evals/runners/architecture_eval.py`): the harness is complete, but the free LLM quota ran out before the
+comparison could run, so no table is claimed. See the report, section 5.
+
+**Tool granularity** (R&D question A, `evals/results/tool_granularity_table.md`; 28 of 40 tasks completed before the
+free daily quota ran out, paired across all three tool sets, gpt-oss-20b):
+
+| Tool set | Tool-selection accuracy | Argument accuracy | Tokens per task |
+|---|---|---|---|
+| 13 fine-grained tools | 93% | 93% | 1,344 |
+| 3 coarse tools | 93% | 89% | **727** |
+| 13 tools, rewritten descriptions | **96%** | **96%** | 1,562 |
+
+**Proposal A/B test** (signature extension X2, [docs/EXTENSION.md](docs/EXTENSION.md)): evidence-first 61.3% vs
+plan-first 54.2% reply rate on 142 paired jobs; exact McNemar p = 0.24, so the control ships.
+
 **Prompt injection:** 42 attacks (24 hidden in job posts, 18 in client messages) run against the real graphs
 with defences off and on. Results and method: [docs/SECURITY.md](docs/SECURITY.md).
 
 CI runs a 30-job smoke evaluation on every pull request and fails if any threshold in
 [evals/thresholds.json](evals/thresholds.json) is missed (bid F1 ≥ 0.88, scam recall ≥ 0.95, 0 unsupported claims after verification, …).
+
+## Traces
+
+Every run is one OpenTelemetry trace from the browser request through the API, the graph, each LLM call (model,
+tokens, USD cost) and every MCP server process into the audit log. Locally: `docker compose up` and open
+http://localhost:6006 (Phoenix). Public trace links need a hosted backend (for example Langfuse Cloud); switching to one is a configuration change only (`OTEL_EXPORTER_OTLP_*`, `TRACE_URL_TEMPLATE`), and was not done for this submission..
+
+## Use the Portfolio MCP server on its own
+
+```bash
+pip install gigbid-portfolio-mcp      # or: uvx gigbid-portfolio-mcp
+```
+
+Plug your own portfolio into Claude Desktop, Cursor or VS Code: [packages/portfolio-mcp/README.md](packages/portfolio-mcp/README.md).
 
 ## Tests
 
@@ -127,7 +167,9 @@ exported spans, MCP tool schema snapshots, duplicate-key detection in config.
 ```
 agent/          graphs, nodes (one file per agent), prompts, config.yaml, memory, tracing, security
 mcp_servers/    marketplace (port + GigSim adapter), portfolio (RAG), workspace (calendar, drafts)
-rag/            ingestion, retrievers, variants V0-V4, V8
+rag/            ingestion (PDF CV, GitHub via MCP), retrievers, variants V0-V4, V8
+worker/         Arq + Redis: scheduled scouting of saved searches, de-duplication
+packages/       portfolio-mcp: the Portfolio MCP server as a standalone PyPI package
 apps/api/       FastAPI: runs, approvals, conversations, memory, SSE streaming
 apps/web/       React + Vite client (typed from the OpenAPI schema), Playwright tests
 gigsim/         mock marketplace with simulated clients
@@ -135,9 +177,17 @@ evals/          datasets, runners, results, thresholds
 infra/          docker-compose, Dockerfiles      render.yaml  free-tier deployment blueprint
 ```
 
+## Résumé bullet
+
+- Built GigBid, a LangGraph multi-agent freelance copilot (9 agents, 3 MCP servers, human approval of every write);
+  choosing BM25 over a higher-recall hybrid retriever by end-to-end evaluation cut wasted bids from 21 to 11 per 180 jobs (bid F1 0.916).
+- Added claim verification that removed all unsupported proposal claims (0.67 → 0 per proposal) and measured
+  prompt-injection defences on 42 planted attacks; deployed FastAPI + React with Postgres checkpoints and CI evaluation gates.
+
 ## Limitations
 
-- The marketplace is a mock. A live Upwork adapter (OAuth) is not implemented.
+- Grading runs on GigSim, a mock marketplace. The live Upwork adapter (OAuth 2.1, encrypted per-user tokens,
+  drafts only) is built and tested against a fake server, but not against the real Upwork server, which needs an approved account.
 - Most large-scale numbers use the rule-based profile, because the free LLM tier allows about 200k tokens
   per model per day (a full LLM run of the dev set needs about 1.5M).
 - Outcome numbers come from simulated clients, not real ones.

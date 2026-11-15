@@ -1,138 +1,291 @@
 # GigBid: R&D Report
 
-**AI-4016 R&D Assignment: a multi-agent freelancer copilot**
-Live demo: https://gigbid-wtvi.onrender.com · Code: https://github.com/Areej-Shaikh/gigbid
+**AI-4016 R&D Assignment, an engineering design review.** Live demo: https://gigbid-wtvi.onrender.com ·
+Code: https://github.com/Areej-Shaikh/gigbid · Every number below cites a file in `evals/results/` (abbreviated
+`R/`), a test, or a document in the repo.
 
-## 1. Problem and approach
+---
 
-Freelancers spend paid "Connects" on every proposal, and most proposals get no reply. Generic, AI-written
-proposals make this worse. GigBid's goal is **fewer, better bids**: skip jobs that are scams or out of niche,
-and write short proposals in which every claim is backed by real evidence from the freelancer's own portfolio.
-A human approves every proposal and message before anything is sent.
+## 1. Problem and constraints
 
-Design principles:
-1. **Explicit graph, typed handoffs.** LLMs do bounded work inside nodes; they never decide control flow or touch write tools (ADR 0001).
-2. **Least-privilege tools over MCP.** Agents that read untrusted text have no write tools; writes happen only after a human approval interrupt (ADR 0002).
-3. **Everything measurable.** Every claim in this report comes from a reproducible run in `evals/results/`.
-4. **Degrade, never die.** Each LLM node has a rule-based fallback (ADR 0004); runs and approvals are durable (ADR 0005).
+**Workflow.** A freelancer scans job feeds, spends paid Connects on bids, writes proposals and answers clients.
+The expensive mistakes are bidding on scams or off-niche jobs, and sending generic proposals that get ignored.
+GigBid automates discovery, assessment and drafting; **the freelancer makes every decision**.
 
-## 2. System
+**What must never be automated** (enforced in code, not in prompts):
+- Sending a proposal, a message, or spending Connects: always behind a LangGraph `interrupt()` and a human
+  approval in the UI. Live Upwork writes are created as drafts the user confirms again on Upwork.
+- Claiming experience: every experience sentence must cite portfolio evidence; uncited or unsupported claims are
+  removed before a human sees the draft.
+- Leaving the platform: contact details, off-platform contact or payment, and guarantees are removed by policy rules.
 
-- **Bid graph:** Intake → Job Analyst ∥ Risk Assessor ∥ Fit Matcher → decide → Pricing → Writer → Claim Verifier → Critic (≤ 2 revisions) → Compliance Guard → dry-run preview → human approval → submit.
-- **Conversation graph:** read messages → classify intent → (calendar slots) → Client Liaison draft → Compliance → preview → human approval → send (+ calendar hold).
-- **MCP servers:** marketplace (GigSim adapter; rate limit; audit log), portfolio (RAG over the freelancer's case studies, repos and reviews), workspace (calendar, email drafts).
-- **Memory:** style rules promoted from repeated human edits; outcome statistics per job category.
-- **Platform:** FastAPI + React with live SSE timelines; Postgres checkpoints; OpenTelemetry traces end to end; CI with an evaluation gate; deployed on Render.
+**Budgets** (declared in `docs/RUNBOOK.md`; measured values in §10):
 
-Full details: `docs/ARCHITECTURE.md`.
+| Budget | Declared |
+|---|---|
+| p95 latency per job analysed (rule profile / LLM profile) | ≤ 5 s / ≤ 90 s |
+| Tokens per job analysed (LLM) | ≤ 15k (hard stop at 60k per thread) |
+| Cost per job analysed / per proposal | ≤ $0.005 / ≤ $0.01 |
+| Hosting | $0 (Render free web service + free Postgres) |
 
-## 3. Data
+## 2. Architecture
 
-GigSim is a mock marketplace built from public Kaggle job and price data plus synthetic clients (`docs/DATA_CARD.md`).
-The **dev set** has 180 labelled jobs: 3 freelancer personas × 6 job styles (explicit, vague, synonym, multi-requirement,
-off-niche, scam), with gold evidence per job and a fair price band. Simulated clients reply more often to proposals
-that cite evidence, mention the client's skills and avoid generic openings. **Outcome numbers are simulated, not real.**
+| Bid graph | Conversation graph |
+|---|---|
+| ![bid graph](images/bid_graph.png) | ![conversation graph](images/conversation_graph.png) |
 
-## 4. Results
+*Both rendered from the compiled LangGraph objects (`python scripts/run_bid.py --graph`); dotted edges are conditional.*
 
-### 4.1 Retrieval (Recall@5 / MRR / nDCG@10 over gold evidence)
+**Bid graph** (one thread per user and job): intake → **Job Analyst ∥ Risk Assessor ∥ Fit Matcher** (`Send`) →
+decide (skip / watch / bid) → Pricing → Writer → Claim Verifier → Critic (≤ 2 revisions) → Compliance Guard →
+dry-run preview → **human approval** → submit. **Conversation graph** (one thread per user and client): read →
+classify intent → (calendar slots) → Client Liaison → Compliance → preview → **approval** → send + calendar hold.
 
-| Variant | Recall@5 | MRR | nDCG@10 | p95 latency |
+| Part | Design | Why |
+|---|---|---|
+| Marketplace port | One interface, two adapters: GigSim and live Upwork (MCP Streamable HTTP, OAuth 2.1, encrypted per-user tokens) | The graph cannot tell which marketplace it uses (R1) |
+| MCP servers (ours) | Marketplace (read + write, idempotency keys, dry-run, bearer auth, rate limit, audit log), Portfolio (read-only RAG), Workspace (calendar, email drafts) | Every capability is a tested tool with a schema (R2) |
+| Third-party MCP | Upwork (live mode), GitHub (read-only repo ingestion) | `docs/TOOLS.md` gives the trust rationale |
+| Stores | Postgres checkpointer (state + history), LangGraph store (memory), JSON run index | Approvals survive restarts; replay from any checkpoint |
+| Worker | Arq + Redis: scheduled scouting, de-duplication | No long work in web requests (E1) |
+
+**State, trace and memory are kept apart.** *State* (`agent/state.py`) holds what this job needs now (job,
+analyses, evidence, decision, price, drafts, critiques, approvals), with reducers where the parallel branches
+write. The *execution trace* (`trace` field + OpenTelemetry spans) records every node, tool call, model, token
+count and cost for audit. *Long-term memory* (style rules, outcome statistics) is written only by explicit
+promotion rules (`agent/memory/promotion_rules.py`); raw tool output never enters it.
+
+**Why each agent exists.** Analyst: structured `JobSpec` from messy posts. Risk Assessor: rule-based, cheap,
+explainable scam and injection flags. Fit Matcher: requirement → evidence matrix. Pricing: deterministic (market
+percentiles, client spend, floor) so an LLM never sets a price. Writer: cited draft. Claim Verifier: removes
+unsupported claims. Critic: quality loop. Compliance Guard: policy pack. Client Liaison: replies and slots.
+Agents exchange Pydantic hand-offs (`agent/handoffs.py`), never free text, for anything a later step decides on.
+
+## 3. R&D question A: tool granularity
+
+**Hypothesis.** Fewer, coarser tools cut prompt tokens but lower argument accuracy, because the model must
+build an untyped `params` object; rewriting the fine-grained descriptions (when to use, when not, argument hints)
+raises tool-selection accuracy over the original descriptions.
+
+**Setup** (`evals/runners/tool_granularity.py`). 40 requests with a known correct call
+(`evals/datasets/tool_tasks.json`, covering all 13 marketplace and portfolio tools including writes and dry-run
+semantics). Three tool sets, same model and system prompt, one forced tool call per task: **fine** (13 real MCP
+tools), **coarse** (3 tools: `marketplace_read`, `portfolio_read`, `marketplace_write`, each an operation enum +
+params), **rewritten** (13 tools, descriptions in `evals/datasets/tool_descriptions_rewritten.json`). Argument
+accuracy requires every gold argument right (ids, numbers, booleans exact; free-text queries by keyword overlap).
+
+**Results** (`R/tool_granularity_table.md`, gpt-oss-20b, temperature 0; the free daily token quota stopped the run
+after **28 of the 40 tasks** had been completed under all three sets, so this is a paired comparison on 28):
+
+| Tool set | Tools | Tool-selection accuracy | Argument accuracy | Tokens per task |
 |---|---|---|---|---|
-| BM25 | 0.640 | 0.835 | 0.702 | 11 ms |
-| V0 dense | 0.678 | 0.800 | 0.715 | 52 ms |
-| V1 query decomposition | 0.561 | 0.684 | 0.520 | 101 ms |
-| **V2 hybrid (BM25 + dense, RRF)** | **0.713** | **0.838** | **0.751** | 38 ms |
-| V3 + cross-encoder rerank | 0.659 | 0.812 | 0.714 | 3.1 s |
-| V4 + outcome boost | 0.447 | 0.623 | 0.561 | 3.0 s |
-| V8 corrective (refuse weak evidence) | 0.278 | 0.385 | 0.302 | 10 s |
+| fine (original descriptions) | 13 | 26/28 = 93% | 26/28 = 93% | 1,344 |
+| coarse | 3 | 26/28 = 93% | 25/28 = 89% | **727** |
+| rewritten descriptions | 13 | **27/28 = 96%** | **27/28 = 96%** | 1,562 |
 
-By job style, every retriever is strong on explicit posts (BM25 0.92) and weak on vague ones (BM25 0.31, V2 0.45).
-V8 is the only variant that refuses to return evidence for off-niche jobs (false-evidence rate 0.0 vs 1.0), but it
-also refuses 60% of in-niche requirements, so it is too conservative to ship.
+**Conclusion.** Both halves of the hypothesis point the right way, with small margins on 28 tasks. Coarse tools cut
+**46% of the tokens** (the tool schemas are most of the prompt) at the same selection accuracy, but lost one task on
+arguments: with an untyped `params` object the model wrote `types: ["case study"]` instead of the enum value
+`case_study`, a mistake the fine-grained JSON schema prevents. Rewritten descriptions fixed one wrong selection
+("what client reviews mention FastAPI?" went to `get_client_history` with the original wording) for 16% more tokens.
+One failure survived every set: "find my past proposals that won…" was routed to the marketplace's
+`list_proposals`, because GigBid has two meanings of *proposal* (sent ones on the marketplace, past ones as portfolio
+evidence); that is a naming problem no description fixes. **Decision:** keep fine-grained typed tools (argument
+correctness matters most for write tools) and adopt the rewritten descriptions; next step (not yet done): rename the
+portfolio evidence type `proposal` → `past_proposal`. With 28 tasks one task is 3.6 points, so none of the differences is statistically significant.
 
-**Ablation** (removing one component from the full V4 pipeline): removing the reranker costs the most (−0.17 Recall@5);
-removing the outcome boost *improves* recall by 0.22. The outcome prior, learned from too few outcomes, pushed generic
-"winning" evidence above relevant evidence.
+## 4. R&D question B: retrieval, verification and what ships
 
-### 4.2 Retrieval quality is not decision quality
+**Hypothesis (stated before running).** Hybrid retrieval (V2) raises evidence Recall@5 over the naive dense
+baseline (V0) by at least 5 points, and better retrieval yields better bid decisions and reply rates.
 
-Full bid graph, 180 jobs, rule-based profile:
+**Retrieval** (`R/rag_table.md`, gold evidence per dev job):
 
-| | BM25 | V2 @ 0.025 | V2 @ 0.02 | V2 @ 0.017 |
+| Variant | Recall@5 | MRR | nDCG@10 | p95 ms |
 |---|---|---|---|---|
-| Bid precision | 0.923 | 0.937 | 0.887 | 0.864 |
-| Bid recall | 0.910 | 0.826 | 0.868 | 0.924 |
-| **Bid F1** | **0.916** | 0.878 | 0.877 | 0.893 |
-| Critic approved | 89.7% | 75.9% | 73.9% | 70.3% |
+| BM25 | 0.640 | 0.835 | 0.702 | 11 |
+| V0 naive dense | 0.678 | 0.800 | 0.715 | 52 |
+| V1 requirement decomposition | 0.561 | 0.684 | 0.520 | 101 |
+| **V2 hybrid (BM25 + dense, RRF)** | **0.713** | **0.838** | **0.751** | 38 |
+| V3 + cross-encoder rerank | 0.659 | 0.812 | 0.714 | 3,060 |
+| V4 + outcome-aware boost | 0.447 | 0.623 | 0.561 | 2,980 |
+| V8 corrective (grade, re-query, refuse) | 0.278 | 0.385 | 0.302 | 9,989 |
 
-With simulated outcomes (BM25 vs V2 @ 0.017): wasted bids on skip-labelled jobs **11 vs 21**, reply rate 61.3% vs
-55.8%, interview rate 27.5% vs 20.8%. The reply-rate difference is not statistically significant (p = 0.34).
+The first half of the hypothesis holds: V2 beats V0 by 3.5 points of Recall@5 (less than the 5 predicted), and
+is best on every metric. By job type, all retrievers do well on explicit posts (BM25 0.92) and poorly on vague
+ones (BM25 0.31, V2 0.45). V8 is the only variant that refuses to supply evidence for off-niche jobs (false-evidence
+rate 0.0 vs 1.0 for all others) but it also refuses 60% of in-niche requirements.
 
-**Finding:** the retriever with the best recall made worse bid decisions. Hybrid fusion gives every job some
-"related" evidence, so the Fit Matcher sees coverage on off-niche jobs and over-bids; sweeping the coverage
-threshold trades precision for recall but never beats BM25's F1. **Decision:** ship BM25 (ADR 0003). It is also the
-only option that fits the free deployment (no model download, 11 ms p95).
+**Ablation** (`R/ablation_table.md`, full V4 pipeline minus one component): removing the reranker costs the most
+(−0.17 Recall@5); removing the outcome boost *raises* recall by 0.22: with few labelled outcomes the prior promotes
+generic "winning" evidence over relevant evidence.
 
-### 4.3 Claim verification
+**Claim verification (B3).** On 30 dev jobs with the LLM writer (`R/graph_llm_table.md`), the writer produced
+**0.67 unsupported claims per proposal** before verification and **0 after**: the verifier removes or forces a
+rewrite of every claim whose cited evidence does not contain it. CI fails if `unsupported_after` > 0.
 
-On a 30-job LLM run (Groq; all bid-labelled jobs), the writer produced **0.67 unsupported claims per proposal**
-(claims whose cited evidence did not contain them, or with no citation). The Claim Verifier removed all of them
-before the Critic: **0 unsupported claims reached the human**. CI enforces `unsupported_after = 0`.
+**Decisions and outcomes: where better retrieval did not help** (full bid graph, 180 dev jobs, rule profile,
+`R/outcomes_bm25_table.md`, `R/outcomes_v2_hybrid_table.md`; per-type numbers from the same result files):
 
-### 4.4 Safety
+| | BM25 | V2 hybrid |
+|---|---|---|
+| Bid F1 (all) | **0.916** | 0.893 |
+| Wasted bids on skip-labelled jobs | **11** | 21 |
+| Reply rate (simulated clients) | 61.3% | 55.8% (p = 0.34, not significant) |
+| Decision accuracy on **synonym** posts | 0.94 | **1.00** |
+| Reply rate on synonym posts | **52.9%** | 47.2% |
+| Decision accuracy on **off-niche** posts | **0.54** | 0.12 |
+| By persona, bid F1 (AI/ML · data · full-stack) | 0.860 · 0.938 · 0.948 | 0.866 · 0.900 · 0.911 |
 
-- **Scams:** scam precision and recall 1.0 on the 12 scam jobs in the dev set (rule-based Risk Assessor).
-- **Prompt injection:** see 4.5.
-- **Durability:** killing the API container while a proposal waited for approval, restarting, and approving
-  produced exactly one proposal and charged Connects once (Postgres checkpoints + idempotency keys).
-- **Privacy:** an integration test sends a client message with an email, phone number and card number through
-  the whole system and checks that none of them appear in exported trace spans.
+**Why.** V2 fixes exactly what it should: posts that describe a need without naming the skill ("predict which
+customers are about to stop paying" = churn modelling) get matched. But fusion also gives *every* job some
+moderately related evidence, so the Fit Matcher sees coverage on off-niche jobs and bids on them; and the extra
+synonym bids still get fewer replies because the drafts mention the client's own skill words less often (the
+simulated clients reward that). A threshold sweep on V2's fused score (0.025 / 0.02 / 0.017) traded precision for
+recall but never beat BM25's F1 (best 0.893). **Better retrieval did not translate into a better reply rate.**
 
-### 4.5 Prompt-injection attack success rate
+**Proposal quality judge (B4).** 30 proposals (rule-based drafts under both writing strategies, and LLM drafts from
+the injection runs) were labelled by hand on a 1–5 rubric (`evals/datasets/judge_calibration.csv`); an LLM judge with
+the same rubric (`agent/prompts/judge.md`, judge model qwen3.8-27b) scored them (`R/judge_calibration_table.md`):
+**Cohen's κ = 0.28** (quadratic-weighted 0.36), exact agreement 45%, within one point 52%, on 29 of 30 items.
+That is only *fair* agreement, and the errors are one-sided: the judge's mean score is 4.0 against the human's
+2.8, it scores higher on 15 of 29 items and lower on only 1. Four drafts rated 2 by hand got a 5, and on J04 (rated 1)
+it praised the draft for "correctly ignoring the injection" when the draft had obeyed it (it offered a "satisfaction
+guarantee"). **Who was right:** reviewing the judge's reasons for the five largest disagreements, the human label is
+the defensible one each time: the judge rewards topical relevance and the presence of citations, and does not notice
+template-like structure or an obeyed instruction. **Consequence:** the judge score is *not* used to choose designs; decisions in this report rest on
+unsupported-claim counts, decision F1 and reply rate. Labelling also exposed a bug in the injection success checker
+(§8, failure 10). A blind pairwise human panel was not run (no classmates available in the time frame).
 
-42 attacks (24 hidden in real job posts, 18 in client messages; 8–9 attacker goals; direct, fake-"system" and covert
-phrasing) were run through the real graphs with the defence layers switched off and on.
-Method and per-layer attribution: `docs/SECURITY.md`.
+**What ships.** **BM25** (`docs/adr/0003`). It has the best end-to-end bid F1, half the wasted bids, a reply rate at
+least as good, no model download (fits the free host's 512 MB), and an 11 ms p95. V2 stays selectable for
+evaluation; the next step is to use V2 only for vague and synonym posts, with BM25 deciding coverage.
 
-_Results table: filled from `evals/results/injection_table.md` when the run completes._
+## 5. R&D question C: single agent vs prebuilt supervisor vs hand-built graph
 
-### 4.6 Cost and latency
+**Setup** (`evals/runners/architecture_eval.py`). Same jobs, same MCP servers, and within each job the same model
+for every LLM call of all three architectures, scored by the same functions on what would reach the human: decision
+accuracy and bid F1, unsupported claims in the final letter, policy violations still in the letter, the simulated
+client's reaction, tokens and latency. (a) One ReAct agent holding all read tools (`create_react_agent`); (b) a prebuilt
+supervisor (`langgraph-supervisor`) with a research agent and a writer agent; (c) the GigBid graph. Prompts for (a) and
+(b) (`agent/prompts/baseline_*.md`) carry the same rules as the graph's prompts. 30 jobs stratified over personas and
+job types, run job-major so that a partial run is still a paired comparison.
 
-Rule-based profile: p50 0.24 s, p95 0.45 s per job. LLM profile (Groq open models): p50 34 s, p95 69 s per job,
-about 8,100 tokens per analysed job. At the listed Groq prices that is well under $0.01 per job (cost per node is
-recorded in each trace; prices in `config.yaml` should be re-checked before quoting).
+**Status: not completed.** The run needs roughly 3 × 30 × 10k ≈ 0.9M tokens; the free Groq tier allows about 200k
+per model per day, and that budget was already spent by the injection and tool studies. Spreading jobs over three
+models and retrying every 10 minutes produced only **one** valid run (the graph on one vague job, correctly skipped)
+before the deadline, so there is **no comparison table** to report and no claim is made about which architecture
+wins. Running a local 3B model instead was tried and rejected: one analyst call took over four minutes on this CPU.
+The harness, prompts and scoring are complete and run with one command (`--models <ids>`) on any OpenAI-compatible
+provider; on a paid tier it costs under $1.
 
-## 5. Failure analysis
+**What the other measurements already say about the question.** Two properties that the comparison would test are
+built into the graph and measured elsewhere: the claim verifier removed every unsupported claim (0.67 → 0 per
+proposal, §4), and the rule-based Risk Assessor caught 100% of the dev-set scams before any LLM wrote a word. A single
+ReAct agent has no structural step that guarantees either; it has to remember to check. The cost side favours the
+single agent: the graph spends about 8k tokens per analysed job, and a skipped scam costs one small-model call.
+**Expected result (hypothesis, not measured):** the single agent is competitive on explicit posts and cheaper, and
+loses on scams, injected posts and unsupported claims, where the graph's fixed checkpoints matter.
 
-| # | Failure | Cause | Fix / status |
+## 6. The change request
+
+No "platform policy update" for GigSim was published during the assignment period, so there was no official change to
+absorb. To still measure how the design handles one, I ran a **rehearsal** with a realistic rule of the same kind.
+
+**Rehearsal.** New rule: *proposals must not mention other
+freelance platforms*. Change = one line in `agent/config.yaml` (`compliance.rules`, new id `competitor_platform`)
+and one row in `data/policy_pack/marketplace_policy.md`; **2 lines, no Python, 51 seconds** from edit to all 42
+unit tests passing and the 30-job smoke evaluation meeting every threshold. With only the config edited, CI failed
+(`tests/unit/test_policy_pack.py` requires every enforced rule to be documented and vice versa), so a policy change
+cannot ship half-done. A **new cost** (e.g. more Connects per bid) needs no change at all: Connects cost comes from
+the marketplace per job, and the Pricing Strategist compares it with the balance on every run.
+
+**What it says about the design.** Rules, thresholds, prompts and model routing live in configuration and versioned
+prompt files; code holds only mechanisms. The cost of a policy update is proportional to the policy text.
+
+## 7. Signature extension: X2 proposal experiments
+
+Two proposal strategies run as an A/B test in GigSim (`docs/EXTENSION.md`): **evidence-first** (problem → 2–3 cited
+results → plan → rate) and **plan-first** (problem → concrete delivery plan → one cited result → rate). Each job gets
+an arm from a stable hash of its id (`agent/experiments.py`), so a resumed run never switches strategy; the arm is
+recorded in the trace. `evals/runners/ab_test.py` runs all 180 dev jobs through the full graph under both arms.
+
+| | evidence-first | plan-first |
+|---|---|---|
+| Reply rate, paired (142 jobs submitted under both) | **61.3%** | 54.2% |
+| Reply rate, realistic hash split | 68.8% (n = 77) | 55.4% (n = 65) |
+| Significance | exact McNemar p = 0.24; Fisher p = 0.12 | |
+
+Not significant; with ~70 jobs per arm only a ~24-point difference is detectable with 80% power. By the pre-set
+rule the control ships (`experiment.enabled: false`); the tests (`evals/stats.py`) are validated against textbook values.
+
+## 8. Failure analysis
+
+Failed dev jobs grouped into the required taxonomy. Sources: BM25 rule-profile run (`R/outcomes_bm25_results.json`),
+LLM run (`R/graph_llm_results.json`), injection runs (`R/injection_results.json`).
+
+| # | Category | Dev job(s) | What went wrong | Fix tried | Worked? |
+|---|---|---|---|---|---|
+| 1 | Missed evidence | dev-0011, dev-0015 (synonym) | "Predict which customers are about to stop paying": no keyword overlap with churn evidence, fit 0.0, skipped | V2 hybrid retrieval | **Yes** for these (fit 1.0, bid), but caused #3 |
+| 2 | Wrong skip | dev-0002, dev-0006, dev-0022, dev-0034 (vague) | "Project help wanted": no concrete requirement; 11 of 13 wrong skips are vague posts | V2 hybrid; threshold sweep | **No** (V2 also skips them; vague accuracy 0.69 for both) |
+| 3 | Wrong bid | dev-0049, dev-0051, dev-0054, dev-0055 (off-niche) | Marketing-attribution / segmentation / dashboard posts for the AI/ML persona matched generic data-science evidence (fit 1.0) | Threshold sweep on fit score; V8 corrective RAG | **Partly**: V8 refuses them but also 60% of real requirements; not shipped |
+| 4 | Unsupported claim | dev-0003, dev-0065, dev-0066 (2 each) | LLM writer cited evidence that did not contain the claimed number or result | Claim Verifier + removed claims fed back to the writer | **Yes**: 0 unsupported after verification on all 30 |
+| 5 | Unsupported claim (loop) | Critic loop on early runs | Writer re-wrote the same removed claim each revision; loop never converged | Tell the writer exactly which claims were removed and why | **Yes** |
+| 6 | Generic opening / weak draft | dev-0063, dev-0067, dev-0079 | Rule-profile drafts not approved by the Critic (length / coverage) | Critic sends back ≤ 2×; strategy prompts | **Partly**: 89.7% approved (BM25) |
+| 7 | Tool error | dev-0007, dev-0008, dev-0062–0067 | Provider rate limits made LLM nodes fall back to rules silently (14 of 30 LLM runs) | Wait out per-minute limits, retry bad JSON once, mark fallbacks invalid in evals | **Yes** for per-minute limits; daily quota remains a hard limit |
+| 8 | Tool error | all LLM runs | Configured fallback model `llama-3.1-8b-instant` had been retired (404) | Fallback → `gpt-oss-120b`; caught by the eval validity check | **Yes** |
+| 9 | Injection | inj-job-10/12/14/16 (fake "system:" policy) | With defences off, the writer followed: canary code, "I accept PayPal", "$5", a bit.ly link | Defence layers (§9) | Not measured with defences on (quota); every one of these four goals is a policy-pack rule or matches the `system:` injection rule |
+| 10 | Injection (measurement) | inj-job-05 | Writer promised a "satisfaction guarantee"; the success checker counted it as a refusal because the sentence also said "no cost" | Negation must precede the goal phrase; regression test | **Yes** (OFF success 4/14 → 5/14) |
+| 11 | Compliance miss (false positive) | live job-00100 "OpenAI WhatsApp chatbot" | Scam rule flags the word WhatsApp although the client wants a WhatsApp *bot* | none yet | **No**: needs context (is WhatsApp the product or the channel?) |
+| 12 | Mispriced | none | 100% of prices inside the fair band (`R/outcomes_bm25_table.md`) | deterministic pricing | n/a |
+
+## 9. Safety and platform respect
+
+**Never:** send without approval; claim unsupported experience; share contact details or move off-platform;
+scrape, automate a browser, or use session cookies; log tokens or PII.
+
+**Enforcement.** Human approval via `interrupt()` before every write (structural: no other path to a write tool);
+per-agent tool allowlists (agents that read untrusted text have no write tools); forced `dry_run` in previews;
+idempotency keys (a crash-and-resume submitted exactly once: killed the API mid-approval, restarted, approved: one
+proposal, Connects charged once); Compliance Guard (policy pack); PII masking in the audit log and every exported
+trace span (tested); OAuth tokens encrypted per user (Fernet), never logged; runs, threads and memory scoped per user
+(tested); per-user rate limit under GigSim's; conservative live polling (`docs/RUNBOOK.md`).
+
+**Prompt injection** (`docs/SECURITY.md`, `R/injection_table.md`): 42 attacks (24 in job posts, 18 in client
+messages; direct, fake-system and covert phrasing). Paired attack success rate on the same attacks:
+
+| | Defences OFF | Defences ON |
+|---|---|---|
+| Direct + fake-system job-post attacks (valid runs) | **5/14 = 36%** (95% CI 16–61%) | 2 measured, 0 succeeded (too few for a rate) |
+| Fake "system:" phrasing | 4/7 | not reached |
+
+The ON half of the paired run was cut short by the daily token limit after 2 of the 14 attacks (both blocked; both had
+also failed with defences off), so **the "after defences" attack success rate is not measured** and is not claimed. What
+can be said from the design and from tests: each of the five goals that succeeded with defences off is either removed by
+the Compliance Guard (PayPal, links, guarantees, prices below the floor are policy-pack rules, unit-tested) or flagged by
+the injection rule (`system:`), which warns the writer; the canary string is the one goal no output filter removes.
+
+**What still gets through.** Covert requests phrased as ordinary client wishes are not caught by the regex layer
+and rely on the model and the output guard; the scam rule over-flags "WhatsApp" as a product (§8 #11); a determined
+attacker can make the writer emphasise misleading-but-true evidence, which no output filter detects.
+
+## 10. Hidden test results against the declared budgets
+
+The hidden test set runs against the live URL after the deadline, so its numbers are not available to this report.
+Dev-set measurements against the declared budgets:
+
+| Budget | Declared | Measured (dev set) | Source |
 |---|---|---|---|
-| 1 | Best-recall retriever made worse bids (4.2) | Fusion scores are not comparable to a fixed coverage threshold; loosely related evidence counts as coverage | Shipped BM25; per-retriever thresholds in config; open: calibrate the threshold per persona |
-| 2 | Outcome boost (V4) hurt recall by 0.22 | Prior learned from too few outcomes favours generic evidence | Disabled in the deployed variant; needs a minimum-sample rule like the outcome memory has |
-| 3 | Vague job posts: Recall@5 0.31 (BM25) | No keyword overlap with the evidence | Open: query rewriting by the Job Analyst before retrieval |
-| 4 | Writer re-used the same unsupported claim in every revision, so the critic loop never converged | The writer was not told *which* claims were removed | The verifier's removed claims and reasons are now fed back to the writer |
-| 5 | Writer reversed numbers ("fell from 13% to 22%") | Synthetic evidence had the direction wrong in generation, and prompts did not ask to keep direction | Fixed the generator; writer prompt requires copying numbers with their direction |
-| 6 | Every LLM cost showed $0 | `config.yaml` had two `pricing:` keys; YAML silently kept the second | Renamed to `llm_pricing`; a test now fails on any duplicate config key |
-| 7 | Injection evaluation looked perfect, but the agents had silently fallen back to templates | Free-tier daily quota exhausted; fallbacks hide provider errors | Runner marks such cases invalid and stops at the daily limit; per-minute limits are now waited out |
-| 8 | Configured fallback model returned 404 | Groq retired `llama-3.1-8b-instant` | Fallback changed to `gpt-oss-120b`; failure surfaced by the validity check in #7 |
-| 9 | Two users analysing the same job would share one run | Threads keyed by job id only | Threads, runs, events and index keyed by user (tenant scoping), with a test |
-| 10 | Conversation run crashed silently | A duplicate keyword argument in a background task; the exception was never observed | Background tasks now log crashes and tell the UI |
-| 11 | Masking turned dates into "[PHONE]" | Phone regex too broad | Phone needs 9+ digits and must not be an ISO date |
+| p95 per job, rule profile | ≤ 5 s | 0.45 s (180 jobs) | `R/outcomes_bm25_table.md` |
+| p95 per job, LLM profile | ≤ 90 s | 69 s (30 jobs) | `R/graph_llm_table.md` |
+| Tokens per job / per proposal | ≤ 15k | 8.1k / 9.2k | `R/graph_llm_results.json` |
+| Cost per job / per proposal | ≤ $0.005 / $0.01 | ≈ $0.002 / $0.0022 (80% input tokens at Groq list prices) | same, `agent/config.yaml → llm_pricing` |
+| Unsupported claims after verification | 0 | 0 | `R/graph_llm_table.md`, CI gate |
 
-## 6. Limitations and scope cuts
+**Optimisation that helped:** routing frequent nodes to the small model and keeping risk, decision and pricing
+rule-based; a skipped scam costs one small-model call.
 
-Stated honestly, in order of impact:
-- **Mock marketplace only.** The live Upwork adapter (OAuth, encrypted tokens) and a GitHub MCP server were not built.
-- **LLM evaluations are small.** Groq's free tier allows about 200k tokens per model per day; one full LLM pass over
-  the dev set needs about 1.5M. Large-scale numbers therefore use the rule-based profile, and LLM numbers come from
-  30-job and 42-attack runs.
-- **Outcomes are simulated.** Reply rates measure what GigSim's simulated clients reward, not real clients.
-- **Not done:** calibrated LLM judge (Cohen's κ against hand labels), human pairwise panel, R&D question A
-  (tool granularity), PDF CV / GitHub ingestion, background worker with schedules, signature extension.
-
-## 7. What I would do next
-
-1. Calibrate an LLM judge on 30 hand-labelled proposals, then use it to compare BM25 and V2 *proposal quality*, not only decisions.
-2. Query rewriting for vague posts (largest retrieval gap).
-3. Run the LLM evaluations on a paid tier for statistically meaningful sample sizes.
-4. Live marketplace adapter behind the existing port, reusing the same allowlists and approval flow.
+**Known operational limit, without excuses:** on Groq's free tier each model allows about 200k tokens per day.
+The deployed app never breaks (every node has a rule fallback), but on the hidden run any job analysed after the
+quota is spent will be drafted by the rule-based writer, and large LLM evaluations in this report are smaller than
+the rule-profile ones for the same reason.
