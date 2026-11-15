@@ -25,6 +25,9 @@ createRoot(document.getElementById("root")!).render(
         <Route element={<Private><Layout /></Private>}>
           <Route index element={<Inbox />} />
           <Route path="jobs/:id" element={<JobDetail />} />
+          {/* the job page holds the Proposal studio and the live agent run viewer, so both routes open it */}
+          <Route path="studio/:id" element={<JobDetail />} />
+          <Route path="runs/:id" element={<JobDetail />} />
           <Route path="pipeline" element={<Pipeline />} />
           <Route path="messages" element={<Messages />} />
           <Route path="analytics" element={<Analytics />} />
