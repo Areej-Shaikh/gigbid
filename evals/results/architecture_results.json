@@ -1,0 +1,27 @@
+{
+ "tag": "models=openai/gpt-oss-120b, openai/gpt-oss-20b, qwen/qwen3.8-27b (one per job, same for all three architectures) via open profile; 30 stratified dev jobs; RAG_VARIANT=bm25; PARTIAL (daily token limit)",
+ "rows": [
+  {
+   "arch": "graph",
+   "job_id": "dev-0002",
+   "persona": "ai_ml_engineer",
+   "style": "vague",
+   "label": "bid",
+   "scam": false,
+   "action": "skip",
+   "price": null,
+   "tokens": 1553,
+   "caught_by_guard": 0,
+   "unsupported_removed": 0,
+   "valid": true,
+   "model": "openai/gpt-oss-20b",
+   "letter": "",
+   "claims": 0,
+   "unsupported": 0,
+   "violations_in_letter": 0,
+   "price_below_floor": false,
+   "reaction": null,
+   "seconds": 1.5
+  }
+ ]
+}
