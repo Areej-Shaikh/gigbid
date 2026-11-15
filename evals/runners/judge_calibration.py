@@ -19,12 +19,15 @@ import os
 from contextlib import AsyncExitStack
 from pathlib import Path
 
+from dotenv import load_dotenv
 from pydantic import BaseModel, Field
 
 from agent.config import cfg
 from agent.llm import structured
 from agent.nodes.common import prompt
 from evals.stats import cohen_kappa
+
+load_dotenv()
 
 SHEET = Path("evals/datasets/judge_calibration.csv")
 OUT = Path("evals/results")
@@ -152,6 +155,7 @@ def main():
     ap.add_argument("--force", action="store_true")
     ap.add_argument("--model", help="judge model id (default: the profile's strong model)")
     a = ap.parse_args()
+    cfg()["llm_rate_limit_retries"] = 8          # free-tier per-minute limits: wait instead of falling back
     if a.model:
         cfg()["profiles"][cfg()["profile"]]["models"]["strong"] = a.model
     prepare(a.force) if a.step == "prepare" else judge()
